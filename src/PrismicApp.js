@@ -40,7 +40,7 @@ export default class PrismicApp extends React.Component {
 
   render() {
     return (
-      <div id="main__site">
+      <div>
         <App prismicCtx={this.state.prismicCtx} />
       </div>
     );

@@ -16,11 +16,9 @@ import NotFound from './NotFound';
 export default class App extends React.Component {
   render () {
     return (
-      <div>
       <Router>
         <Route render={({ location }) => (
           <ScrollToTop location={ location }>
-          <div id="main__content">
             <TransitionGroup className='transition__group'>
               <Globals prismicCtx={this.props.prismicCtx} />
                 <CSSTransition key={location.key} classNames="fade" timeout={1100}>
@@ -64,12 +62,10 @@ export default class App extends React.Component {
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
-            </div>
             </ScrollToTop>
           )}
         />
       </Router>
-      </div>
     )
   }
 };

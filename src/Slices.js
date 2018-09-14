@@ -40,7 +40,7 @@ export default class Slices extends React.Component {
           );
         }
         // Video Embed
-        else if (slice.slice_type === 'video_embed') {
+        else if (slice.slice_type === 'video') {
           const embedContent = slice.items.map(function(video, embedIndex){
             return <div className="media" dangerouslySetInnerHTML={{ __html: video.embed.html }} />
           });

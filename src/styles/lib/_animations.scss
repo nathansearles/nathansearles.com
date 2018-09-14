@@ -1,11 +1,11 @@
 .transition__group .page {
   height: 100vh;
-  padding-top: calc(6.5% + 64px);
-  padding-bottom: calc(6.5% + 64px);
+  padding-top: calc(10%);
+  padding-bottom: calc(10% + 96px);
   align-self: center;
   overflow-y: auto;
   position: fixed;
-  top: 0;
+  top: 64px;
   width: 100%;
   -webkit-overflow-scrolling: touch;
 }
