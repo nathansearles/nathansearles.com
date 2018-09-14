@@ -1,0 +1,11 @@
+// Font settings
+@mixin regular-font() {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin bold-font() {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}

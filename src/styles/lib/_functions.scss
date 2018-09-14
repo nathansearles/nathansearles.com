@@ -1,0 +1,11 @@
+// Define top-level functions
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+@function rem-calc($value) {
+  $rem: (1 / strip-unit($font-size)) !default;
+  @return (strip-unit($value) * $rem + rem);
+}
+@function css-color($color) {
+  @return map_get($css-colors, $color);
+}

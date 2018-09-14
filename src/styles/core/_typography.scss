@@ -1,0 +1,75 @@
+// Typography
+
+%h {
+  @include bold-font;
+  margin-top: $spacing*2;
+  margin-bottom: $spacing*2;
+  line-height: $line-height--heading;
+
+  + p {
+    margin-top: 0;
+  }
+}
+
+.h1,
+h1 {
+  @extend %h;
+  @include font-size(h1);
+}
+
+.h2,
+h2 {
+  @extend %h;
+  @include font-size(h2);
+}
+
+.h3,
+h3 {
+  @extend %h;
+  // @include bold-font;
+  margin-bottom: $spacing/2;
+  @include font-size(h3);
+}
+
+.h4,
+h4 {
+  @extend %h;
+  @include regular-font;
+  color: $color-secondary;
+  line-height: 1.5;
+  @include font-size(h4);
+}
+
+.h5,
+h5 {
+  @extend %h;
+  @include font-size(h5);
+}
+
+.p,
+ol,
+p,
+ul {
+  @include font-size(base);
+  color: $color-secondary;
+  // margin-top: $spacing;
+  margin-bottom: $spacing*2;
+}
+
+ol,
+ul {
+  &.list-inline {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+
+    li {
+      display: inline;
+    }
+  }
+}
+
+.small,
+small {
+  font-size: 80%;
+}

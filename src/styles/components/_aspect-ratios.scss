@@ -1,0 +1,47 @@
+.aspect {
+  position: relative;
+  width: 100%;
+  height: 0;
+
+  &__wide {
+    $height: percentage(9 / 16);
+    padding-bottom: $height;
+  }
+
+  &__square {
+    $height: percentage(1 / 1);
+    padding-bottom: $height;
+  }
+
+  &__portrait {
+    $height: percentage(1.5 / 1);
+    padding-bottom: $height;
+  }
+  @include breakpoint(lg) {
+    &__wide\@lg {
+      $height: percentage(9 / 16);
+      padding-bottom: $height;
+    }
+  }
+
+  .aspect__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  img,
+  picture {
+    width: 100%;
+    height: auto;
+  }
+
+  embed,
+  iframe,
+  object {
+    width: 100%;
+    height: 100%;
+  }
+}

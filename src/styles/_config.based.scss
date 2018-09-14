@@ -1,0 +1,21 @@
+// Based.css overrides
+// If you're not using Based.css, you can delete this file
+
+// Features
+$based-root: false; // disables root styling, inherit from Uno
+
+// Spacing
+$based_spacing: 12px;
+$based_spacing-multiplier: 4;
+
+// Grid
+$based_grid-columns: 12;
+$based_grid-max-width: 1600px;
+$based_grid-gutter-width: $based_spacing;
+$based_grid-breakpoints: (
+  sm: 544px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1600px
+);

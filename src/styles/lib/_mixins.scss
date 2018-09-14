@@ -1,0 +1,55 @@
+// Reusable bits of code
+
+@mixin breakpoint($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media (min-width: #{$query}) {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin font-size($size) {
+  $base: $font-size;
+  $h5: $base;
+  $h4: 24;
+  $h3: 24;
+  $h2: 36;
+  $h1: 42;
+
+  @if $size == base {
+    font-size: rem-calc($base);
+  } @else if $size == h5 {
+    font-size: rem-calc($h5);
+  } @else if $size == h4 {
+    font-size: rem-calc($h4);
+  } @else if $size == h3 {
+    font-size: rem-calc($h3);
+  } @else if $size == h2 {
+    font-size: rem-calc($h2);
+  } @else if $size == h1 {
+    font-size: rem-calc($h1);
+  } @else if $size == sm {
+    font-size: 80%;
+  } @else {
+    @error 'font-size mixin supports: base, h1, h2, h3, h4, h5, sm';
+  }
+}
+
+@mixin maintain-aspect-ratio($w: 1, $h: 1) {
+  $width: 100%;
+  $height: percentage($h / $w);
+
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
+}

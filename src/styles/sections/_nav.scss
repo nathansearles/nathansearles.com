@@ -1,0 +1,53 @@
+.page-navigation {
+  background-color: $color-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 15;
+  padding: $based_spacing 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+
+    li:first-child {
+      margin-right: auto;
+    }
+  }
+
+  a {
+    display: block;
+
+    &:link,
+    &:visited {
+      padding: $based_spacing/2 $based_spacing;
+      @include bold-font;
+      color: $color-black;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+    }
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: $color-black;
+      text-decoration: none;
+    }
+  }
+
+  li:first-child {
+    a {
+      &.active {
+        color: $color-black;
+      }
+
+      &:link,
+      &:visited {}
+    }
+  }
+}

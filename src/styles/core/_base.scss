@@ -1,0 +1,61 @@
+// Base application styles
+@include root;
+
+html {
+  /* Adjust font size */
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* Font varient */
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  /* Smoothing */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+body {
+  @include regular-font;
+  margin: 0;
+  color: $color-black;
+  background-color: $color-white;
+  line-height: $line-height;
+}
+
+blockquote,
+dl,
+ol,
+pre,
+table,
+ul {
+  margin-top: $spacing;
+  margin-bottom: $spacing;
+}
+
+ol,
+ul {
+  list-style: initial;
+}
+
+a {
+  color: rgba($color-primary, 0.9);
+  transition: color 250 ease;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($color-primary, 25%);
+    text-decoration: none;
+  }
+}
+
+b,
+strong {
+  @include bold-font;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid $color-secondary;
+}
