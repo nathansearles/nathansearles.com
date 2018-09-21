@@ -11,7 +11,7 @@ export default class Page extends React.Component {
       notFound: false,
     }
   }
-
+  // https://hackernoon.com/replacing-componentwillreceiveprops-with-getderivedstatefromprops-c3956f7ce607
   componentWillMount() {
     this.fetchPage(this.props);
   }
