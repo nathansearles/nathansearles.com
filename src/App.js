@@ -21,7 +21,7 @@ export default class App extends React.Component {
           <ScrollToTop location={ location }>
             <TransitionGroup className='transition__group'>
               <Globals prismicCtx={this.props.prismicCtx} />
-                <CSSTransition key={location.key} classNames="fade" timeout={1100}>
+                <CSSTransition key={location.pathname} classNames="fade" timeout={1100}>
                   <Switch location={location}>
                     <Route
                       exact
