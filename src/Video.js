@@ -1,53 +1,41 @@
-import React from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 
-export default class Video extends React.Component {
-  constructor(props) {
-    super(props);
+const Video = (props) => {
+  const [loaded, setLoaded] = useState(false);
+  const videoRef = useRef();
 
-    this.state = {
-      loaded: false
-    }
-
-    this.videoRef = React.createRef();
-    this.handleVideoLoaded = this.handleVideoLoaded.bind(this);
-  }
-
-  handleVideoLoaded() {
-    const video = this.videoRef.current;
-    if (!this.state.loaded) {
-      this.setState({ loaded: true });
+  function handleVideoLoaded() {
+    const video = videoRef.current;
+    if (!loaded) {
+      setLoaded(true);
       if (video.classList.contains('video__loading')) {
         video.classList.add('video__loaded');
       }
     }
   }
 
-  componentDidMount() {
-    const video = this.videoRef.current;
+  useEffect(()=>{
+    const video = videoRef.current;
     if (video.oncanplay) {
-      this.handleVideoLoaded();
+      handleVideoLoaded();
     } else {
       video.classList.add('video__loading')
     }
-  }
+  });
 
-  render() {
-    if (this.props.video) {
-      const video = this.props.video;
-
-      return (
-        <video
-          muted
-          autoPlay
-          playsInline
-          loop
-          src={video}
-          ref={this.videoRef}
-          onCanPlay={this.handleVideoLoaded}
-        />
-      );
-    } else {
-      return null;
-    }
-  }
+  return (
+    props.video &&
+    <video
+        muted
+        autoPlay
+        playsInline
+        loop
+        src={props.video}
+        ref={videoRef}
+        onCanPlay={handleVideoLoaded}
+      />
+  );
 }
+
+export default Video;
+

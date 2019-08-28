@@ -8,7 +8,7 @@ export default function NotFound() {
             <div className="col span-12 span-8@md text-center">
               <h1>Connection Error</h1>
               <p>Looks like your browser could be blocking access to https://prismic.io the CMS that powers this site. Check your ad blockers and try again.</p>
-              <h3><span>✌</span></h3>
+              <h3><span role="img" aria-label="jsx-a11y/accessible-emoji">✌</span></h3>
             </div>
           </div>
       </div>
