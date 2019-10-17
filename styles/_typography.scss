@@ -1,0 +1,136 @@
+h1,
+.h1 {
+  @include bold-font;
+  color: $color-black;
+  font-size: 3.3rem;
+  line-height: 3.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+h2,
+.h2 {
+  @include bold-font;
+  color: $color-black;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+h3,
+.h3 {
+  @include bold-font;
+  color: $color-black;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+h4,
+.h4 {
+  @include semibold-font;
+  color: $color-black;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+h5,
+.h5 {
+  @include semibold-font;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  @include regular-font;
+  color: $color-secondary;
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  @include regular-font;
+  color: $color-secondary;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a,
+b,
+i,
+strong,
+em,
+small,
+code {
+  line-height: 0;
+}
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+p.lead {
+  @include semibold-font;
+  color: $color-black;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @include breakpoint(md) {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+hr {
+  border-color: $color-primary;
+  margin: 36px 0;
+}
+
+strong {
+  @include semibold-font;
+}
+
+a {
+  &:link,
+  &:visited {
+    color: $color-black;
+    text-decoration: none;
+    @include semibold-font;
+    transition: color 350ms ease-out;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-secondary;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
