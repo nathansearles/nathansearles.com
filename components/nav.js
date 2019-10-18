@@ -45,7 +45,7 @@ const Nav = props => {
           <ul>
             {links.map(({ key, href, label }) => (
               <li key={key}>
-                <Link href={href} as={href} activeClassName="active">
+                <Link href={href} activeClassName="active">
                   <a>
                     <span>{label}</span>
                   </a>
