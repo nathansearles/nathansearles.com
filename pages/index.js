@@ -1,11 +1,9 @@
-import React from "react";
 import fetch from "isomorphic-unfetch";
 import { absoluteUrl, pageTransitions } from "../utilities";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
-
 import "../styles/styles.scss";
 
 const Home = ({ projects }) => {

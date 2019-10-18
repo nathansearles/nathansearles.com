@@ -1,5 +1,3 @@
-import React from "react";
-import Head from "next/head";
 import { motion } from "framer-motion";
 import { pageTransitions } from "../utilities";
 import Title from "../components/Head";
