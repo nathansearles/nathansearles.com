@@ -6,7 +6,7 @@ import ScrollController from "../components/ScrollControlller";
 class Site extends App {
   constructor() {
     super();
-    this.state = { theme: "light" };
+    this.state = { theme: "default" };
   }
 
   componentDidMount() {
