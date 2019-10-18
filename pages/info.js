@@ -51,7 +51,6 @@ const Info = () => (
               Feel free to get in touch{" "}
               <a href="mailto:nsearles@gmail.com">nsearles@gmail.com</a>
             </p>
-            {/* testing... */}
           </div>
         </div>
       </div>
