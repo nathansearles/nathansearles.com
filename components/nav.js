@@ -4,7 +4,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks
 } from "body-scroll-lock";
-import Link from "../components/Link";
+import Link from "./Link";
 
 const links = [
   { href: "/", label: "Projects" },
