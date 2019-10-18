@@ -42,7 +42,7 @@ const Home = ({ projects }) => {
                   <a>
                     <div className="thumbnail">
                       <div className="image">
-                        <img src={project.thumbnail} />
+                        <img src={project.thumbnail} alt={project.name} />
                       </div>
                     </div>
                     <h2>{project.name}</h2>

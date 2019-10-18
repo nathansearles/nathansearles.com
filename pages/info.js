@@ -27,7 +27,11 @@ const Info = () => (
       <div className="page-body layout-info">
         <div className="portrait">
           <div>
-            <img className="shadow" src="/static/images/nathan-searles.jpg" />
+            <img
+              className="shadow"
+              src="/static/images/nathan-searles.jpg"
+              alt="Nathan Searles"
+            />
             <p className="caption">
               Photo by{" "}
               <a href="http://www.pavlinasummers.com/" target="_blank">
