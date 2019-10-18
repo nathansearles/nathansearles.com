@@ -25,7 +25,6 @@ nav.top-nav {
     display: inline;
     padding: 4px 0;
     @include bold-font;
-    color: $color-black;
     font-size: 0.8rem;
     line-height: 1rem;
     margin-top: 1.5rem;
@@ -34,10 +33,16 @@ nav.top-nav {
     text-transform: uppercase;
     width: auto;
     margin-right: auto;
+
+    @include themed() {
+      color: t($text);
+    }
     span.desc {
-      color: $color-secondary;
       @include regular-font;
       display: block;
+      @include themed() {
+        color: t($text-secondary);
+      }
       @include breakpoint(md) {
         display: inline;
       }
@@ -78,12 +83,18 @@ nav.top-nav {
       padding: 4px 8px;
       margin: 0 8px;
       display: inline-block;
+      @include themed() {
+        color: t($text);
+      }
       span {
         border-bottom: 2px solid transparent;
       }
       &.active {
         span {
           color: $color-black;
+          @include themed() {
+            color: t($text);
+          }
           border-bottom: 2px solid $color-primary;
         }
       }
@@ -109,7 +120,9 @@ nav.top-nav {
       height: 2px;
       width: 100%;
       display: block;
-      background: #000;
+      @include themed() {
+        background-color: t($text);
+      }
       + .bar {
         margin-top: 3px;
       }
@@ -131,11 +144,15 @@ nav.side-nav {
   right: 0;
   bottom: 0;
   z-index: 1000;
-  background-color: $color-white;
   padding: 24px 0;
   visibility: hidden;
   transition: transform 350ms ease-out, visibility 350ms ease-out;
   transform: translateX(100%);
+
+  @include themed() {
+    background-color: t($bg);
+  }
+
   &.nav-open {
     visibility: visible !important;
     transform: translateX(0%);
@@ -160,7 +177,6 @@ nav.side-nav {
     &:link,
     &:visited {
       @include bold-font;
-      color: $color-black;
       font-size: 0.8rem;
       line-height: 1rem;
       letter-spacing: 0.025em;
@@ -169,12 +185,17 @@ nav.side-nav {
       padding: 4px 8px;
       margin: 0 8px;
       display: block;
+      @include themed() {
+        color: t($text);
+      }
       span {
         border-bottom: 2px solid transparent;
       }
       &.active {
         span {
-          color: $color-black;
+          @include themed() {
+            color: t($text);
+          }
           border-bottom: 2px solid $color-primary;
         }
       }
@@ -192,15 +213,6 @@ nav.side-nav {
     right: 64px;
     z-index: 40;
     text-transform: uppercase;
-    p {
-      color: #4a4a4a;
-      @include semibold-font;
-      font-size: 0.8rem;
-      line-height: 1rem;
-      letter-spacing: 0.025em;
-      text-transform: uppercase;
-      margin: 0;
-    }
     @include breakpoint(lg) {
       display: none;
     }
@@ -208,7 +220,9 @@ nav.side-nav {
       height: 2px;
       width: 23px;
       display: block;
-      background: #000;
+      @include themed() {
+        background-color: t($text);
+      }
       &:first-child {
         transform: rotate(45deg);
       }

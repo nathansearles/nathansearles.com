@@ -1,39 +1,47 @@
 h1,
 .h1 {
   @include bold-font;
-  color: $color-black;
   font-size: 3.3rem;
   line-height: 3.5rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
+  @include themed() {
+    color: t($text);
+  }
 }
 h2,
 .h2 {
   @include bold-font;
-  color: $color-black;
   font-size: 1.5rem;
   line-height: 2.2rem;
   margin-top: 1.5rem;
   margin-bottom: 0;
+  @include themed() {
+    color: t($text);
+  }
 }
 h3,
 .h3 {
   @include bold-font;
-  color: $color-black;
   font-size: 1rem;
   line-height: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  @include themed() {
+    color: t($text);
+  }
 }
 h4,
 .h4 {
   @include semibold-font;
-  color: $color-black;
   font-size: 1rem;
   line-height: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 0rem;
+  @include themed() {
+    color: t($text);
+  }
 }
 h5,
 .h5 {
@@ -50,19 +58,24 @@ pre,
 table,
 blockquote {
   @include regular-font;
-  color: $color-secondary;
+
   margin-top: 0rem;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
+  @include themed() {
+    color: t($text-secondary);
+  }
 }
 ul ul,
 ol ol,
 ul ol,
 ol ul {
   @include regular-font;
-  color: $color-secondary;
   margin-top: 0rem;
   margin-bottom: 0rem;
+  @include themed() {
+    color: t($text-secondary);
+  }
 }
 
 hr,
@@ -94,11 +107,13 @@ sub {
 
 p.lead {
   @include semibold-font;
-  color: $color-black;
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  @include themed() {
+    color: t($text);
+  }
   @include breakpoint(md) {
     font-size: 2rem;
     line-height: 2.8rem;
@@ -108,8 +123,10 @@ p.lead {
 }
 
 hr {
-  border-color: $color-primary;
   margin: 36px 0;
+  @include themed() {
+    border-color: t($text);
+  }
 }
 
 strong {
@@ -119,15 +136,19 @@ strong {
 a {
   &:link,
   &:visited {
-    color: $color-black;
     text-decoration: none;
     @include semibold-font;
     transition: color 350ms ease-out;
+    @include themed() {
+      color: t($text);
+    }
   }
   &:hover,
   &:active,
   &:focus {
-    color: $color-secondary;
+    @include themed() {
+      color: t($text-secondary);
+    }
   }
 }
 

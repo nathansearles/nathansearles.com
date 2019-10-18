@@ -16,14 +16,20 @@ html {
 body {
   @include regular-font;
   margin: 0;
-  color: $color-secondary;
-  background-color: #fafafa;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.011em;
 
   /* Disable tap highlight */
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.theme {
+  transition: background-color 350ms ease-out, color 350ms ease-out;
+  @include themed() {
+    background-color: t($bg);
+    color: t($text-secondary);
+  }
 }
 
 #siteWrapper {
@@ -33,12 +39,9 @@ body {
   margin: 0 auto;
   position: relative;
   padding-bottom: 96px;
+
   & > div {
     grid-column: content;
-  }
-
-  &.dark {
-    background-color: #111;
   }
 }
 
@@ -121,10 +124,14 @@ body {
 
 .caption {
   font-size: 0.6rem;
-  color: $color-secondary;
   text-align: center;
+  @include themed() {
+    color: t($text-secondary);
+  }
   a {
-    color: $color-secondary;
     text-decoration: none;
+    @include themed() {
+      color: t($text-secondary);
+    }
   }
 }

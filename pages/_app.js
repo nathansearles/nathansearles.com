@@ -9,15 +9,23 @@ class Site extends App {
       // Handle scroll with ScrollController
       history.scrollRestoration = "manual";
     }
+    const colorScheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches;
   }
   render() {
     const { Component, pageProps, router } = this.props;
 
     return (
       <ScrollController>
-        <AnimatePresence exitBeforeEnter initial={false}>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
+        <div
+          className={`theme ${
+            this.colorScheme ? "theme-dark" : "theme--default"
+          }`}
+        >
+          <AnimatePresence exitBeforeEnter initial={false}>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </div>
       </ScrollController>
     );
   }

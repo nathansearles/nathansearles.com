@@ -19,15 +19,20 @@
     h2 {
       @include bold-font;
       font-size: 1rem;
-      color: $color-black;
       margin: 0;
       line-height: 2.5rem;
+
+      @include themed() {
+        color: t($text);
+      }
     }
 
     p {
       margin: 0;
       font-size: 16px;
-      color: $color-secondary;
+      @include themed() {
+        color: t($text-secondary);
+      }
       @include breakpoint(md) {
         opacity: 0;
         transform: translateY(8px);
@@ -47,7 +52,9 @@
         text-decoration: none;
         @include breakpoint(md) {
           h2 {
-            color: $color-black;
+            @include themed() {
+              color: t($text);
+            }
           }
 
           p {
