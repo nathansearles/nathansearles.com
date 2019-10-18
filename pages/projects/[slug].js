@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { absoluteUrl } from "../../utilities";
 import Error from "../_error";
 import Image from "../../components/Image";
-import Nav from "../../components/nav";
+import Nav from "../../components/Nav";
 import "../../styles/styles.scss";
 
 const Project = ({ project, status }) => {

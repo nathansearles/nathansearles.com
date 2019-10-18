@@ -4,7 +4,7 @@ import { absoluteUrl, pageTransitions } from "../utilities";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Title from "../components/Head";
-import Nav from "../components/nav";
+import Nav from "../components/Nav";
 
 import "../styles/styles.scss";
 
