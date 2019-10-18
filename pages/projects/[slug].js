@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import Head from "next/head";
+import React from "react";
 import fetch from "isomorphic-unfetch";
 import { motion } from "framer-motion";
+import Title from "../../components/Head";
 import { absoluteUrl } from "../../utilities";
 import Error from "../_error";
 import Image from "../../components/Image";
@@ -9,16 +9,12 @@ import Nav from "../../components/Nav";
 import "../../styles/styles.scss";
 
 const Project = ({ project, status }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return status === 200 ? (
     <>
-      <Head>
-        <title>{project.name}</title>
-      </Head>
+      <Title title={project.name}></Title>
+
       <Nav />
+
       <motion.div
         initial="initial"
         animate="enter"
