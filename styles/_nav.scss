@@ -51,7 +51,9 @@ nav.top-nav {
     @include breakpoint(lg) {
       flex-wrap: nowrap;
       display: flex;
-      margin-right: -18px;
+      position: relative;
+      top: -2px;
+      right: -18px;
     }
     li a span {
       display: block;
