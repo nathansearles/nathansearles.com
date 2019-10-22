@@ -1,19 +1,19 @@
-img {
-  &.image__loading {
-    transition: opacity 600ms ease-out;
-    opacity: 0;
-  }
+// img {
+//   &.image__loading {
+//     transition: opacity 600ms ease-out;
+//     opacity: 0;
+//   }
 
-  &.image__loaded {
-    opacity: 1;
-  }
-}
+//   &.image__loaded {
+//     opacity: 1;
+//   }
+// }
 
-picture,
-div {
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-}
+// picture,
+// div {
+//   img {
+//     display: block;
+//     width: 100%;
+//     height: auto;
+//   }
+// }

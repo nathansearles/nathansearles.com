@@ -3,6 +3,8 @@ import { pageTransitions } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
 
+import { styledPage, styledInfo } from "../styles/styles.js";
+
 const Info = () => (
   <>
     <Title title="Info" />
@@ -56,6 +58,8 @@ const Info = () => (
         </div>
       </div>
     </motion.div>
+    <style jsx>{styledPage}</style>
+    <style jsx>{styledInfo}</style>
   </>
 );
 

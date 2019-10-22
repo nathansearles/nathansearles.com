@@ -1,8 +1,18 @@
 /* styles.js */
-import baseStyles from "./base.js";
+import base from "./base.js";
+import typography from "./typography.js";
+import page from "./page.js";
+import project from "./project.js";
+import projects from "./projects.js";
+import info from "./info.js";
 
 // Global styles
-export const base = baseStyles;
+export const styledBase = base;
+export const styledTypography = typography;
+export const styledPage = page;
+export const styledProject = project;
+export const styledProjects = projects;
+export const styledInfo = info;
 
 // // Scoped styles
 // export const button = css`

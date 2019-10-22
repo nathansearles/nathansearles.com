@@ -5,6 +5,8 @@ import Link from "next/link";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
 
+import { styledPage, styledProjects } from "../styles/styles.js";
+
 const Home = ({ projects }) => {
   return (
     <>
@@ -53,6 +55,8 @@ const Home = ({ projects }) => {
           </div>
         </div>
       </motion.div>
+      <style jsx>{styledPage}</style>
+      <style jsx>{styledProjects}</style>
     </>
   );
 };

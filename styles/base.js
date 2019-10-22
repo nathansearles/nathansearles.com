@@ -1,4 +1,5 @@
 import css from "styled-jsx/css";
+import theme from "./variables";
 
 export default css.global`
   // Inter: https://rsms.me/inter/
@@ -74,12 +75,87 @@ export default css.global`
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
 
-  button {
-    appearance: none;
-    border: none;
-    background: transparent;
-    outline: none;
-    appearance: none;
-    cursor: pointer;
+  #siteWrapper {
+    display: grid;
+    grid-template-columns: [leftGutter] 1fr [content] 10fr [rightGutter] 1fr;
+    max-width: ${theme.maxWidth};
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 96px;
+
+    & > div {
+      grid-column: content;
+    }
+  }
+
+  .aspect {
+    position: relative;
+    width: 100%;
+    height: 0;
+
+    &__wide {
+      $height: 56.25%;
+      padding-bottom: $height;
+    }
+
+    &__square {
+      $height: 100%;
+      padding-bottom: $height;
+    }
+
+    &__portrait {
+      $height: 105%;
+      padding-bottom: $height;
+    }
+
+    @media (${theme.breakpoint.md}) {
+      &__wide--md {
+        $height: 56.25%;
+        padding-bottom: $height;
+      }
+    }
+
+    .aspect__content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    img,
+    picture {
+      width: auto;
+      height: 100%;
+    }
+
+    embed,
+    iframe,
+    object {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .shadow {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04),
+      0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04),
+      0 16px 32px rgba(0, 0, 0, 0.04), 0 32px 64px rgba(0, 0, 0, 0.04);
+  }
+
+  .caption {
+    font-size: 0.6rem;
+    text-align: center;
+    color: ${theme.color.secondary};
+    a {
+      text-decoration: none;
+      color: ${theme.color.secondary};
+    }
   }
 `;

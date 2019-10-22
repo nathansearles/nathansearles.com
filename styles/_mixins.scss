@@ -1,25 +1,25 @@
-$breakpoints: (
-  sm: 544px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1280px,
-  xxl: 1600px
-);
+// $breakpoints: (
+//   sm: 544px,
+//   md: 768px,
+//   lg: 1024px,
+//   xl: 1280px,
+//   xxl: 1600px
+// );
 
-@mixin breakpoint($breakpoint) {
-  $raw-query: map-get($breakpoints, $breakpoint);
+// @mixin breakpoint($breakpoint) {
+//   $raw-query: map-get($breakpoints, $breakpoint);
 
-  @if $raw-query {
-    $query: if(
-      type-of($raw-query) == "string",
-      unquote($raw-query),
-      inspect($raw-query)
-    );
+//   @if $raw-query {
+//     $query: if(
+//       type-of($raw-query) == "string",
+//       unquote($raw-query),
+//       inspect($raw-query)
+//     );
 
-    @media (min-width: #{$query}) {
-      @content;
-    }
-  } @else {
-    @error 'No value found for `#{$breakpoint}`.';
-  }
-}
+//     @media (min-width: #{$query}) {
+//       @content;
+//     }
+//   } @else {
+//     @error 'No value found for `#{$breakpoint}`.';
+//   }
+// }
