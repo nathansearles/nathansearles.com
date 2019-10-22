@@ -73,4 +73,13 @@ export default css.global`
     /* Disable tap highlight */
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
+
+  button {
+    appearance: none;
+    border: none;
+    background: transparent;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+  }
 `;
