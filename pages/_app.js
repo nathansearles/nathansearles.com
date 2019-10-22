@@ -2,7 +2,7 @@ import React from "react";
 import App from "next/app";
 import { AnimatePresence } from "framer-motion";
 import ScrollController from "../components/ScrollControlller";
-import { base } from "../styles/styles.js";
+import { body } from "../styles/styles.js";
 
 class Site extends App {
   constructor() {
@@ -34,7 +34,7 @@ class Site extends App {
           </AnimatePresence>
         </div>
         <style jsx global>
-          {base}
+          {body}
         </style>
       </ScrollController>
     );

@@ -1,6 +1,5 @@
 /* styles.js */
 import css from "styled-jsx/css";
-import baseStyles from "./_base.scss";
 
 // Scoped styles
 export const button = css`
@@ -10,7 +9,12 @@ export const button = css`
 `;
 
 // Global styles
-export const base = baseStyles;
+export const body = css.global`
+  body {
+    color: red;
+    font-family: sans-serif;
+  }
+`;
 
 // Resolved styles
 export const link = css.resolve`
