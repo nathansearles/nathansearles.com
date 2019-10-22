@@ -5,7 +5,6 @@ import { absoluteUrl } from "../../utilities";
 import Error from "../_error";
 import Image from "../../components/Image";
 import Nav from "../../components/Nav";
-import "../../styles/styles.scss";
 
 const Project = ({ project, status }) => {
   return status === 200 ? (

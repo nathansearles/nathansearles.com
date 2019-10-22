@@ -1,0 +1,33 @@
+@import "../node_modules/reset-css/sass/_reset.scss";
+@import "./_variables";
+@import "./_themes";
+@import "./_mixins";
+@import "./_aspect-ratios";
+@import "./_fonts";
+@import "./_typography";
+
+html {
+  font-size: 18px;
+  line-height: 30px;
+  -webkit-text-size-adjust: 100%;
+  /* Font varient */
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  /* Smoothing */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+body {
+  @include regular-font;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.011em;
+
+  /* Disable tap highlight */
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}

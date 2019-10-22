@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { pageTransitions } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
-import "../styles/styles.scss";
 
 const Info = () => (
   <>
