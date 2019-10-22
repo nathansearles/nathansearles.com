@@ -2,7 +2,7 @@ const colorValues = {
   primary: "#ffd83d",
   offBlack: "#262626",
   black: "#212121",
-  secondary: "#4a4a4a",
+  secondary: "rgba(33, 33, 33, 0.75)",
   gray: "#4a4a4a",
   offWhite: "#fafafa",
   white: "#ffffff"

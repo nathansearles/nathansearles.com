@@ -1,5 +1,5 @@
 import css from "styled-jsx/css";
-import theme from "./variables";
+import theme from "./_variables";
 
 export default css`
   .page-hero {
@@ -9,7 +9,7 @@ export default css`
       padding: 0 calc(100vw / 16) 48px;
     }
 
-    h3:first-of-type {
+    :global(h3:first-of-type) {
       margin-top: 0;
     }
   }
@@ -17,7 +17,7 @@ export default css`
   .page-body {
     padding: 16px 0;
 
-    h3:first-of-type {
+    :global(h3:first-of-type) {
       margin-top: 0;
     }
   }

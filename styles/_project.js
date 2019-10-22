@@ -1,5 +1,5 @@
 import css from "styled-jsx/css";
-import theme from "./variables";
+import theme from "./_variables";
 
 export default css`
   .project-hero {
@@ -12,7 +12,8 @@ export default css`
     @media (${theme.breakpoint.md}) {
       padding: 16px calc(100vw / 16);
     }
-    h3:first-of-type {
+
+    :global(h3:first-of-type) {
       margin-top: 0;
     }
   }

@@ -16,7 +16,7 @@ const Info = () => (
       animate="enter"
       exit="exit"
       variants={pageTransitions}
-      id="siteWrapper"
+      className="site-wrapper"
     >
       <div className="page-hero">
         <p className="lead">

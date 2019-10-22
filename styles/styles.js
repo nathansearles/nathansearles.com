@@ -1,41 +1,19 @@
-/* styles.js */
-import base from "./base.js";
-import typography from "./typography.js";
-import page from "./page.js";
-import project from "./project.js";
-import projects from "./projects.js";
-import info from "./info.js";
+import base from "./_base.js";
+import typography from "./_typography.js";
+import nav from "./_nav.js";
+import page from "./_page.js";
+import project from "./_project.js";
+import projects from "./_projects.js";
+import tech from "./_tech.js";
+import experience from "./_experience.js";
+import info from "./_info.js";
 
-// Global styles
 export const styledBase = base;
 export const styledTypography = typography;
+export const styledNav = nav;
 export const styledPage = page;
 export const styledProject = project;
 export const styledProjects = projects;
+export const styledTech = tech;
+export const styledExperience = experience;
 export const styledInfo = info;
-
-// // Scoped styles
-// export const button = css`
-//   button {
-//     color: hotpink;
-//   }
-// `;
-
-// // Global styles
-// export const base = baseCSS;
-
-// // Resolved styles
-// export const link = css.resolve`
-//   a {
-//     color: green;
-//   }
-// `;
-// // link.className -> scoped className to apply to `a` elements e.g. jsx-123
-// // link.styles -> styles element to render inside of your component
-
-// // Works also with default exports
-// export default css`
-//   div {
-//     color: blue;
-//   }
-// `;

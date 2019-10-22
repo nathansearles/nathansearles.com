@@ -3,6 +3,8 @@ import { pageTransitions } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
 
+import { styledPage } from "../styles/styles.js";
+
 const Error = ({ projects }) => {
   return (
     <>
@@ -15,7 +17,7 @@ const Error = ({ projects }) => {
         animate="enter"
         exit="exit"
         variants={pageTransitions}
-        id="siteWrapper"
+        className="site-wrapper"
       >
         <div className="page-hero">
           <div>
@@ -23,6 +25,7 @@ const Error = ({ projects }) => {
           </div>
         </div>
       </motion.div>
+      <style jsx>{styledPage}</style>
     </>
   );
 };

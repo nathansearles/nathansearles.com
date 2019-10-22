@@ -19,7 +19,7 @@ const Home = ({ projects }) => {
         animate="enter"
         exit="exit"
         variants={pageTransitions}
-        id="siteWrapper"
+        className="site-wrapper"
       >
         <div className="page-hero">
           <div>

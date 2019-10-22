@@ -1,5 +1,5 @@
 import css from "styled-jsx/css";
-import theme from "./variables";
+import theme from "./_variables";
 
 export default css.global`
   // Inter: https://rsms.me/inter/
@@ -30,25 +30,6 @@ export default css.global`
       url("/static/fonts/Inter-Bold.woff") format("woff");
   }
 
-  @mixin regular-font() {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-  }
-
-  @mixin semibold-font() {
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-  }
-
-  @mixin bold-font() {
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-  }
-
   html {
     font-size: 18px;
     line-height: 30px;
@@ -65,17 +46,42 @@ export default css.global`
   }
 
   body {
-    @include regular-font;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
     margin: 0;
     font-size: 1rem;
     line-height: 1.5rem;
     letter-spacing: -0.011em;
-
+    background-color: ${theme.color.offWhite};
     /* Disable tap highlight */
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
 
-  #siteWrapper {
+  .theme {
+    background-color: ${theme.color.offWhite};
+    color: ${theme.color.secondary};
+    height: 100vh;
+    width: 100vw;
+
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 0.15s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .site-wrapper {
     display: grid;
     grid-template-columns: [leftGutter] 1fr [content] 10fr [rightGutter] 1fr;
     max-width: ${theme.maxWidth};
@@ -104,7 +110,7 @@ export default css.global`
     }
 
     &__portrait {
-      $height: 105%;
+      $height: 150%;
       padding-bottom: $height;
     }
 
@@ -157,5 +163,29 @@ export default css.global`
       text-decoration: none;
       color: ${theme.color.secondary};
     }
+  }
+
+  .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 72px 0;
+  }
+
+  .embed-container embed,
+  .embed-container iframe,
+  .embed-container object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .media {
+    width: 100%;
+    display: block;
   }
 `;

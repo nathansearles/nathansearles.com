@@ -43,8 +43,8 @@ const Image = props => {
           div {
             img {
               display: block;
-              width: 100%;
-              height: auto;
+              width: auto;
+              height: 100%;
             }
           }
         `}</style>

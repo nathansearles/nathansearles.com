@@ -3,6 +3,8 @@ import { pageTransitions } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
 
+import { styledPage, styledExperience } from "../styles/styles.js";
+
 const Experience = () => (
   <>
     <Title title="Experience" />
@@ -14,7 +16,7 @@ const Experience = () => (
       animate="enter"
       exit="exit"
       variants={pageTransitions}
-      id="siteWrapper"
+      className="site-wrapper"
     >
       <div className="page-hero">
         <p className="lead">
@@ -26,8 +28,6 @@ const Experience = () => (
           strategy, design, development, back-end services, and deployments.
           Taking a component-based approach to building responsive web sites
           with a focus on design and user experience.
-          {/* ,
-          utilizing RESTful APIs,  */}
         </p>
       </div>
 
@@ -80,6 +80,8 @@ const Experience = () => (
         </div>
       </div>
     </motion.div>
+    <style jsx>{styledPage}</style>
+    <style jsx>{styledExperience}</style>
   </>
 );
 

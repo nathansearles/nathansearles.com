@@ -32,7 +32,7 @@ const Project = ({ project, status }) => {
             transition: { duration: 0.35, ease: [0.4, 0.0, 1, 1] }
           }
         }}
-        id="siteWrapper"
+        className="site-wrapper"
       >
         <div>
           <div className="project-hero">
