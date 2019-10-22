@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
-import "../styles/styles.scss";
+
+import { styledPage, styledProjects } from "../styles/styles.js";
 
 const Home = ({ projects }) => {
   return (
@@ -18,7 +19,7 @@ const Home = ({ projects }) => {
         animate="enter"
         exit="exit"
         variants={pageTransitions}
-        id="siteWrapper"
+        className="site-wrapper"
       >
         <div className="page-hero">
           <div>
@@ -54,6 +55,8 @@ const Home = ({ projects }) => {
           </div>
         </div>
       </motion.div>
+      <style jsx>{styledPage}</style>
+      <style jsx>{styledProjects}</style>
     </>
   );
 };

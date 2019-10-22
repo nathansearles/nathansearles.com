@@ -2,6 +2,7 @@ import React from "react";
 import App from "next/app";
 import { AnimatePresence } from "framer-motion";
 import ScrollController from "../components/ScrollControlller";
+import { styledReset, styledBase, styledTypography } from "../styles/styles.js";
 
 class Site extends App {
   constructor() {
@@ -32,6 +33,15 @@ class Site extends App {
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </div>
+        <style jsx global>
+          {styledReset}
+        </style>
+        <style jsx global>
+          {styledBase}
+        </style>
+        <style jsx global>
+          {styledTypography}
+        </style>
       </ScrollController>
     );
   }

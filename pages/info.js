@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { pageTransitions } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
-import "../styles/styles.scss";
+
+import { styledPage, styledInfo } from "../styles/styles.js";
 
 const Info = () => (
   <>
@@ -15,7 +16,7 @@ const Info = () => (
       animate="enter"
       exit="exit"
       variants={pageTransitions}
-      id="siteWrapper"
+      className="site-wrapper"
     >
       <div className="page-hero">
         <p className="lead">
@@ -57,6 +58,8 @@ const Info = () => (
         </div>
       </div>
     </motion.div>
+    <style jsx>{styledPage}</style>
+    <style jsx>{styledInfo}</style>
   </>
 );
 
