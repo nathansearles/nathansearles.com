@@ -4,7 +4,7 @@ export const projects = [
     slug: "the-james-brand",
     name: "The James Brand",
     desc: "Website, eComm, DevOps",
-    thumbnail: "project-james-preview_d1xduh",
+    thumbnail: "project-james-preview_jnqrca",
     image: "project-james-website_mmzvbe",
     body:
       '<h3>The James Brand</h3><p>Website, eComm, DevOps</p><p>For James we created an experience that helps users better understand their products and which is right for them. The product story pages show the products through the people that use them. The shop pages allows users to quickly configure products and seamlessly step through the checkout process.</p><p>The site is a traditional responsive front-end powered by Craft CMS and Shopify. To better mange product content within Shopify we used Craft\'s Element API to push content capabilities. In the latest iteration we moved images to Imgix CDN using Picture element on the front-end to load the appropriate image for the device. We upgraded the sever to a custom built LAMP stack on DigitalOcean and moved from Craft 2 to Craft 3. These updates greatly decreased load times going from ~7s to a more reasonable ~750ms.</p><p><a href="https://thejamesbrand.com/">https://thejamesbrand.com</a></p><h3>Role</h3><p>Technical Director, DevOps, Front-end</p><h3>Technology</h3><p>LAMP, Craft CMS, Shopify, Imgix, Elemental API, Gulp</p><h3>Team</h3><p><a href="http://cabe.io/">Cabe Branson</a>, <a href="http://www.zacharyallott.com">Zach Allott</a>, <a href="http://www.austenezzell.com">Austen Ezzell</a>, <a href="http://thisisusefulinformation.com/">Steve Ebert</a>, <a href="http://www.pavlinasummers.com/">Pavlina Summers</a>, <a href="https://cincodesign.com/">Kirk James</a></p>'
