@@ -110,7 +110,7 @@ export default css.global`
     }
 
     &__portrait {
-      $height: 150%;
+      $height: 133%;
       padding-bottom: $height;
     }
 
@@ -127,14 +127,13 @@ export default css.global`
       right: 0;
       bottom: 0;
       left: 0;
-      display: flex;
-      justify-content: center;
     }
 
     img,
     picture {
-      width: auto;
+      width: 100%;
       height: 100%;
+      display: block;
     }
 
     embed,

@@ -26,6 +26,8 @@ export default css`
 
     .portrait {
       grid-column: image;
+      display: flex;
+      flex-direction: column;
     }
 
     .content {

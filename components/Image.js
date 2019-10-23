@@ -2,54 +2,133 @@ import React, { useRef, useEffect } from "react";
 
 const Image = props => {
   const imageRef = useRef();
+  const cdnBase = "https://res.cloudinary.com/dzlgbk52d/image/upload";
+  const imageSrc = props.src;
+  const aspectRatio = props.aspectRatio;
+
+  const aspectRatios = {
+    landscape: {
+      sm: "ar_1:1,c_fill",
+      md: "ar_16:9,c_fill",
+      lg: "ar_16:9,c_fill",
+      xl: "ar_16:9,c_fill"
+    },
+    portrait: {
+      sm: "ar_3:4,c_fill",
+      md: "ar_3:4,c_fill",
+      lg: "ar_3:4,c_fill",
+      xl: "ar_3:4,c_fill"
+    },
+    square: {
+      sm: "ar_1:1,c_fill",
+      md: "ar_1:1,c_fill",
+      lg: "ar_1:1,c_fill",
+      xl: "ar_1:1,c_fill"
+    }
+  };
+
+  const handleAspectRatio = (breakpoint, ratio = "landscape") => {
+    return aspectRatios[ratio] && aspectRatios[ratio][breakpoint];
+  };
+
+  const transformation = {
+    sm: `${handleAspectRatio("sm", aspectRatio)},f_auto,q_auto:best,w_544`,
+    md: `${handleAspectRatio("md", aspectRatio)},f_auto,q_auto:best,w_768`,
+    lg: `${handleAspectRatio("lg", aspectRatio)},f_auto,q_auto:best,w_1024`,
+    xl: `${handleAspectRatio("xl", aspectRatio)},f_auto,q_auto:best,w_1280`
+  };
+
+  const dimension = {
+    sm: "544",
+    md: "768",
+    lg: "1024",
+    xl: "1280"
+  };
+
+  const handleSrcSet = (breakpoint, dpr = 3) => {
+    // dpr = Device Pixel Ratio
+
+    // Define the pixel density from dpr
+    const density = Array.from(Array(dpr).keys());
+
+    // Create empty storage array
+    let set = [];
+
+    density.map((item, index) => {
+      const transform = `${transformation[breakpoint]},dpr_${index + 1}.0`;
+      const src = `${cdnBase}/${transform}/${imageSrc} ${index + 1}x`;
+      return set.push(src);
+    });
+
+    // Return defined srcSet
+    return set;
+  };
 
   function handleImageLoaded() {
-    const image = imageRef.current;
-    image.classList.add("image__loaded");
+    const picture = imageRef.current;
+    const image = picture.querySelector("img");
+    picture.classList.remove("image__loaded");
+    picture.classList.add("image__loading");
+    if (image.complete) {
+      picture.classList.add("image__loaded");
+    }
   }
 
   useEffect(() => {
-    const image = imageRef.current;
-    if (image.complete) {
-      image.classList.add("image__loaded");
-    }
-  });
+    handleImageLoaded();
+  }, []);
 
   return (
-    props.src && (
-      <>
-        <div className="aspect__content">
-          <img
-            ref={imageRef}
-            onLoad={handleImageLoaded}
-            className="image__loading"
-            src={props.src}
-            alt={props.alt}
+    <>
+      <div className="aspect__content">
+        <picture ref={imageRef}>
+          <source
+            media={`(min-width: ${dimension.xl}px)`}
+            width={dimension.xl}
+            height={dimension.xl * 0.5625}
+            srcSet={handleSrcSet("xl")}
           />
-        </div>
-        <style jsx>{`
-          img {
-            &.image__loading {
-              transition: opacity 600ms ease-out;
-              opacity: 0;
-            }
-
-            &.image__loaded {
-              opacity: 1;
-            }
+          <source
+            media={`(min-width: ${dimension.lg}px)`}
+            width={dimension.lg}
+            height={dimension.lg * 0.5625}
+            srcSet={handleSrcSet("lg")}
+          />
+          <source
+            media={`(min-width: ${dimension.md}px)`}
+            width={dimension.md}
+            height={dimension.md}
+            srcSet={handleSrcSet("md")}
+          />
+          <img
+            alt={props.alt}
+            onLoad={handleImageLoaded}
+            width={dimension.sm}
+            height={dimension.sm}
+            srcSet={handleSrcSet("sm")}
+            src={handleSrcSet("sm")}
+          />
+        </picture>
+      </div>
+      <style jsx>{`
+        picture {
+          &.image__loading {
+            transition: opacity 600ms ease-out;
+            opacity: 0;
           }
 
-          picture,
-          div {
-            img {
-              display: block;
-              width: auto;
-              height: 100%;
-            }
+          &.image__loaded {
+            opacity: 1;
           }
-        `}</style>
-      </>
-    )
+        }
+
+        picture img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      `}</style>
+    </>
   );
 };
 
