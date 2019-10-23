@@ -8,22 +8,22 @@ const Image = props => {
 
   const aspectRatios = {
     landscape: {
-      sm: "ar_1:1,c_fill",
-      md: "ar_16:9,c_fill",
-      lg: "ar_16:9,c_fill",
-      xl: "ar_16:9,c_fill"
+      sm: "ar_1:1,c_fill,w_639",
+      md: "ar_16:9,c_fill,w_853",
+      lg: "ar_16:9,c_fill,w_1067",
+      xl: "ar_16:9,c_fill,w_1067"
     },
     portrait: {
-      sm: "ar_3:4,c_fill",
-      md: "ar_3:4,c_fill",
-      lg: "ar_3:4,c_fill",
-      xl: "ar_3:4,c_fill"
+      sm: "ar_3:4,c_fill,w_639",
+      md: "ar_3:4,c_fill,w_414",
+      lg: "ar_3:4,c_fill,w_331",
+      xl: "ar_3:4,c_fill,w_331"
     },
     square: {
-      sm: "ar_1:1,c_fill",
-      md: "ar_1:1,c_fill",
-      lg: "ar_1:1,c_fill",
-      xl: "ar_1:1,c_fill"
+      sm: "ar_1:1,c_fill,w_639",
+      md: "ar_1:1,c_fill,w_414",
+      lg: "ar_1:1,c_fill,w_339",
+      xl: "ar_1:1,c_fill,w_339"
     }
   };
 
@@ -32,10 +32,10 @@ const Image = props => {
   };
 
   const transformation = {
-    sm: `${handleAspectRatio("sm", aspectRatio)},f_auto,q_auto:best,w_544`,
-    md: `${handleAspectRatio("md", aspectRatio)},f_auto,q_auto:best,w_768`,
-    lg: `${handleAspectRatio("lg", aspectRatio)},f_auto,q_auto:best,w_1024`,
-    xl: `${handleAspectRatio("xl", aspectRatio)},f_auto,q_auto:best,w_1280`
+    sm: `${handleAspectRatio("sm", aspectRatio)},f_auto,q_auto:best`,
+    md: `${handleAspectRatio("md", aspectRatio)},f_auto,q_auto:best`,
+    lg: `${handleAspectRatio("lg", aspectRatio)},f_auto,q_auto:best`,
+    xl: `${handleAspectRatio("xl", aspectRatio)},f_auto,q_auto:best`
   };
 
   const dimension = {
