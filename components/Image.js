@@ -39,12 +39,36 @@ const Image = props => {
   };
 
   const dimension = {
+    landscape: {
+      sm: "639",
+      md: "853",
+      lg: "1067",
+      xl: "1067"
+    },
+    portrait: {
+      sm: "639",
+      md: "414",
+      lg: "331",
+      xl: "331"
+    },
+    square: {
+      sm: "639",
+      md: "414",
+      lg: "339",
+      xl: "339"
+    }
+  };
+
+  const handleDimension = (breakpoint, ratio = "landscape") => {
+    return dimension[ratio] && dimension[ratio][breakpoint];
+  };
+
+  const breakpoint = {
     sm: "544",
     md: "768",
     lg: "1024",
     xl: "1280"
   };
-
   const handleSrcSet = (breakpoint, dpr = 3) => {
     // dpr = Device Pixel Ratio
 
@@ -83,28 +107,28 @@ const Image = props => {
       <div className="aspect__content">
         <picture ref={imageRef}>
           <source
-            media={`(min-width: ${dimension.xl}px)`}
-            width={dimension.xl}
-            height={dimension.xl * 0.5625}
+            media={`(min-width: ${breakpoint.xl}px)`}
+            width={handleDimension("xl", aspectRatio)}
+            height={handleDimension("xl", aspectRatio) * 0.5625}
             srcSet={handleSrcSet("xl")}
           />
           <source
-            media={`(min-width: ${dimension.lg}px)`}
-            width={dimension.lg}
-            height={dimension.lg * 0.5625}
+            media={`(min-width: ${breakpoint.lg}px)`}
+            width={handleDimension("lg", aspectRatio)}
+            height={handleDimension("lg", aspectRatio) * 0.5625}
             srcSet={handleSrcSet("lg")}
           />
           <source
-            media={`(min-width: ${dimension.md}px)`}
-            width={dimension.md}
-            height={dimension.md}
+            media={`(min-width: ${breakpoint.md}px)`}
+            width={handleDimension("md", aspectRatio)}
+            height={handleDimension("md", aspectRatio)}
             srcSet={handleSrcSet("md")}
           />
           <img
             alt={props.alt}
             onLoad={handleImageLoaded}
-            width={dimension.sm}
-            height={dimension.sm}
+            width={handleDimension("sm", aspectRatio)}
+            height={handleDimension("sm", aspectRatio)}
             srcSet={handleSrcSet("sm")}
             src={handleSrcSet("sm")}
           />
