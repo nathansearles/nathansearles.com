@@ -8,18 +8,21 @@ const Image = props => {
 
   const aspectRatios = {
     landscape: {
+      xs: "ar_1:1,c_fill,w_400",
       sm: "ar_1:1,c_fill,w_639",
       md: "ar_16:9,c_fill,w_853",
       lg: "ar_16:9,c_fill,w_1067",
       xl: "ar_16:9,c_fill,w_1067"
     },
     portrait: {
+      xs: "ar_3:4,c_fill,w_400",
       sm: "ar_3:4,c_fill,w_639",
       md: "ar_3:4,c_fill,w_414",
       lg: "ar_3:4,c_fill,w_331",
       xl: "ar_3:4,c_fill,w_331"
     },
     square: {
+      xs: "ar_1:1,c_fill,w_400",
       sm: "ar_1:1,c_fill,w_639",
       md: "ar_1:1,c_fill,w_414",
       lg: "ar_1:1,c_fill,w_339",
@@ -32,6 +35,7 @@ const Image = props => {
   };
 
   const transformation = {
+    xs: `${handleAspectRatio("xs", aspectRatio)},f_auto,q_auto:best`,
     sm: `${handleAspectRatio("sm", aspectRatio)},f_auto,q_auto:best`,
     md: `${handleAspectRatio("md", aspectRatio)},f_auto,q_auto:best`,
     lg: `${handleAspectRatio("lg", aspectRatio)},f_auto,q_auto:best`,
@@ -40,18 +44,21 @@ const Image = props => {
 
   const dimension = {
     landscape: {
+      xs: "400",
       sm: "639",
       md: "853",
       lg: "1067",
       xl: "1067"
     },
     portrait: {
+      xs: "400",
       sm: "639",
       md: "414",
       lg: "331",
       xl: "331"
     },
     square: {
+      xs: "400",
       sm: "639",
       md: "414",
       lg: "339",
@@ -64,6 +71,7 @@ const Image = props => {
   };
 
   const breakpoint = {
+    xs: "480",
     sm: "544",
     md: "768",
     lg: "1024",
@@ -124,13 +132,19 @@ const Image = props => {
             height={handleDimension("md", aspectRatio)}
             srcSet={handleSrcSet("md")}
           />
-          <img
-            alt={props.alt}
-            onLoad={handleImageLoaded}
+          <source
+            media={`(min-width: ${breakpoint.sm}px)`}
             width={handleDimension("sm", aspectRatio)}
             height={handleDimension("sm", aspectRatio)}
             srcSet={handleSrcSet("sm")}
-            src={handleSrcSet("sm")}
+          />
+          <img
+            alt={props.alt}
+            onLoad={handleImageLoaded}
+            width={handleDimension("xs", aspectRatio)}
+            height={handleDimension("xs", aspectRatio)}
+            srcSet={handleSrcSet("xs")}
+            src={handleSrcSet("xs")}
           />
         </picture>
       </div>
