@@ -35,11 +35,11 @@ const Image = props => {
   };
 
   const transformation = {
-    xs: `${handleAspectRatio("xs", aspectRatio)},f_auto,q_auto:best`,
-    sm: `${handleAspectRatio("sm", aspectRatio)},f_auto,q_auto:best`,
-    md: `${handleAspectRatio("md", aspectRatio)},f_auto,q_auto:best`,
-    lg: `${handleAspectRatio("lg", aspectRatio)},f_auto,q_auto:best`,
-    xl: `${handleAspectRatio("xl", aspectRatio)},f_auto,q_auto:best`
+    xs: `${handleAspectRatio("xs", aspectRatio)},f_auto`,
+    sm: `${handleAspectRatio("sm", aspectRatio)},f_auto`,
+    md: `${handleAspectRatio("md", aspectRatio)},f_auto`,
+    lg: `${handleAspectRatio("lg", aspectRatio)},f_auto`,
+    xl: `${handleAspectRatio("xl", aspectRatio)},f_auto`
   };
 
   const dimension = {
