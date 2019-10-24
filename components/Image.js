@@ -8,21 +8,21 @@ const Image = props => {
 
   const aspectRatios = {
     landscape: {
-      xs: "ar_1:1,c_fill,w_400",
+      xs: "ar_1:1,c_fill,w_380",
       sm: "ar_1:1,c_fill,w_639",
       md: "ar_16:9,c_fill,w_853",
       lg: "ar_16:9,c_fill,w_1067",
       xl: "ar_16:9,c_fill,w_1067"
     },
     portrait: {
-      xs: "ar_3:4,c_fill,w_400",
+      xs: "ar_3:4,c_fill,w_380",
       sm: "ar_3:4,c_fill,w_639",
       md: "ar_3:4,c_fill,w_414",
       lg: "ar_3:4,c_fill,w_331",
       xl: "ar_3:4,c_fill,w_331"
     },
     square: {
-      xs: "ar_1:1,c_fill,w_400",
+      xs: "ar_1:1,c_fill,w_380",
       sm: "ar_1:1,c_fill,w_639",
       md: "ar_1:1,c_fill,w_414",
       lg: "ar_1:1,c_fill,w_339",
@@ -44,21 +44,21 @@ const Image = props => {
 
   const dimension = {
     landscape: {
-      xs: "400",
+      xs: "380",
       sm: "639",
       md: "853",
       lg: "1067",
       xl: "1067"
     },
     portrait: {
-      xs: "400",
+      xs: "380",
       sm: "639",
       md: "414",
       lg: "331",
       xl: "331"
     },
     square: {
-      xs: "400",
+      xs: "380",
       sm: "639",
       md: "414",
       lg: "339",
