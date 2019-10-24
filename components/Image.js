@@ -77,7 +77,7 @@ const Image = props => {
     lg: "1024",
     xl: "1280"
   };
-  const handleSrcSet = (breakpoint, dpr = 3) => {
+  const handleSrcSet = (breakpoint, dpr = 2) => {
     // dpr = Device Pixel Ratio
 
     // Define the pixel density from dpr
