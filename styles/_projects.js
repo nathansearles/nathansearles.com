@@ -59,8 +59,8 @@ export default css`
               transform: translateY(0%);
             }
 
-            .thumbnail .image {
-              img {
+            .thumbnail :global(picture) {
+              :global(img) {
                 transform: scale(1.035);
               }
             }
@@ -69,17 +69,13 @@ export default css`
       }
 
       .thumbnail {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-top: 100%;
         overflow: hidden;
         border-radius: 4px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04),
           0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04),
           0 16px 32px rgba(0, 0, 0, 0.04), 0 32px 64px rgba(0, 0, 0, 0.04);
 
-        .image {
+        :global(picture) {
           position: absolute;
           top: 0;
           right: 0;
@@ -87,12 +83,9 @@ export default css`
           left: 0;
           width: 100%;
           height: auto;
-          display: flex;
-          justify-content: center;
-
-          img {
-            width: auto;
-            height: 100%;
+          :global(img) {
+            width: 100%;
+            height: auto;
             position: relative;
             transform: scale(1, 1);
             transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
