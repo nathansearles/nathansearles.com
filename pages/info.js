@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { pageTransitions } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
-import "../styles/styles.scss";
+import Image from "../components/Image";
+
+import { styledPage, styledInfo } from "../styles/styles.js";
 
 const Info = () => (
   <>
@@ -15,7 +17,7 @@ const Info = () => (
       animate="enter"
       exit="exit"
       variants={pageTransitions}
-      id="siteWrapper"
+      className="site-wrapper"
     >
       <div className="page-hero">
         <p className="lead">
@@ -26,19 +28,19 @@ const Info = () => (
 
       <div className="page-body layout-info">
         <div className="portrait">
-          <div>
-            <img
-              className="shadow"
-              src="/static/images/nathan-searles.jpg"
+          <div className="aspect aspect__portrait shadow">
+            <Image
+              src="nathan-searles_zmyp5o.jpg"
               alt="Nathan Searles"
+              aspectRatio={"portrait"}
             />
-            <p className="caption">
-              Photo by{" "}
-              <a href="http://www.pavlinasummers.com/" target="_blank">
-                Pavlina Summers
-              </a>
-            </p>
           </div>
+          <p className="caption">
+            Photo by{" "}
+            <a href="http://www.pavlinasummers.com/" target="_blank">
+              Pavlina Summers
+            </a>
+          </p>
         </div>
 
         <div className="content">
@@ -57,6 +59,8 @@ const Info = () => (
         </div>
       </div>
     </motion.div>
+    <style jsx>{styledPage}</style>
+    <style jsx>{styledInfo}</style>
   </>
 );
 

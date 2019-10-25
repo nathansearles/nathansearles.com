@@ -6,6 +6,8 @@ import {
 } from "body-scroll-lock";
 import Link from "./Link";
 
+import { styledNav } from "../styles/styles.js";
+
 const links = [
   { href: "/", label: "Projects" },
   { href: "/tech", label: "Tech" },
@@ -89,6 +91,8 @@ const Nav = props => {
         onClick={handleMenuToggle}
         className={`ui-mask ${isMenuOpen ? "nav-open" : ""}`}
       ></div>
+
+      <style jsx>{styledNav}</style>
     </>
   );
 };

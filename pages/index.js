@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
-import "../styles/styles.scss";
+import Image from "../components/Image";
+
+import { styledPage, styledProjects } from "../styles/styles.js";
 
 const Home = ({ projects }) => {
   return (
@@ -18,7 +20,7 @@ const Home = ({ projects }) => {
         animate="enter"
         exit="exit"
         variants={pageTransitions}
-        id="siteWrapper"
+        className="site-wrapper"
       >
         <div className="page-hero">
           <div>
@@ -40,10 +42,12 @@ const Home = ({ projects }) => {
                   as={`/projects/${project.slug}`}
                 >
                   <a>
-                    <div className="thumbnail">
-                      <div className="image">
-                        <img src={project.thumbnail} alt={project.name} />
-                      </div>
+                    <div className="thumbnail aspect aspect__square">
+                      <Image
+                        src={project.thumbnail}
+                        alt={project.name}
+                        aspectRatio={"square"}
+                      />
                     </div>
                     <h2>{project.name}</h2>
                     <p>{project.desc}</p>
@@ -54,6 +58,8 @@ const Home = ({ projects }) => {
           </div>
         </div>
       </motion.div>
+      <style jsx>{styledPage}</style>
+      <style jsx>{styledProjects}</style>
     </>
   );
 };

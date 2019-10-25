@@ -5,7 +5,8 @@ import { absoluteUrl } from "../../utilities";
 import Error from "../_error";
 import Image from "../../components/Image";
 import Nav from "../../components/Nav";
-import "../../styles/styles.scss";
+
+import { styledProject } from "../../styles/styles.js";
 
 const Project = ({ project, status }) => {
   return status === 200 ? (
@@ -31,11 +32,11 @@ const Project = ({ project, status }) => {
             transition: { duration: 0.35, ease: [0.4, 0.0, 1, 1] }
           }
         }}
-        id="siteWrapper"
+        className="site-wrapper"
       >
         <div>
           <div className="project-hero">
-            <div className="aspect aspect__square aspect__wide@md shadow">
+            <div className="aspect aspect__square aspect__wide--md shadow">
               <Image src={project.image} alt={project.name} />
             </div>
           </div>
@@ -45,6 +46,7 @@ const Project = ({ project, status }) => {
           />
         </div>
       </motion.div>
+      <style jsx>{styledProject}</style>
     </>
   ) : (
     <Error />
