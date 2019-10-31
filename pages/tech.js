@@ -39,14 +39,12 @@ const Tech = () => (
             <dd>PHP</dd>
             <dd>MySQL</dd>
             <dd>Bash</dd>
+            <dd>LAMP</dd>
           </dl>
           <dl>
             <dt>DevOps</dt>
-            <dd>LAMP</dd>
-            <dd>Bash</dd>
-            <dd>SSH</dd>
-            <dd>Ubuntu</dd>
             <dd>Git</dd>
+            <dd>SSH</dd>
             <dd>CI/CD</dd>
           </dl>
           <dl>
@@ -60,7 +58,7 @@ const Tech = () => (
             <dt>Platforms</dt>
             <dd>GitHub</dd>
             <dd>Craft CMS</dd>
-            <dd>Wordpress</dd>
+            <dd>WordPress</dd>
             <dd>Shopify</dd>
             <dd>Prismic</dd>
             <dd>DigitalOcean</dd>
