@@ -66,8 +66,8 @@ export default css.global`
     width: 100vw;
 
     animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-delay: 0.15s;
+    animation-duration: 0.85s;
+    animation-delay: 0.05s;
     animation-fill-mode: both;
   }
 
