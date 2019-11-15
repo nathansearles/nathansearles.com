@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { pageTransitions } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
@@ -30,13 +29,11 @@ const Info = () => (
       <div className="page-body layout-info">
         <div className="portrait">
           <div className="aspect aspect__portrait shadow">
-            <LazyLoadComponent>
-              <Image
-                src="nathan-searles_zmyp5o.jpg"
-                alt="Nathan Searles"
-                aspectRatio={"portrait"}
-              />
-            </LazyLoadComponent>
+            <Image
+              src="nathan-searles_zmyp5o.jpg"
+              alt="Nathan Searles"
+              aspectRatio={"portrait"}
+            />
           </div>
           <p className="caption">
             Photo by{" "}

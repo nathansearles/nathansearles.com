@@ -1,7 +1,6 @@
 import fetch from "isomorphic-unfetch";
 import { absoluteUrl, pageTransitions } from "../utilities";
 import { motion } from "framer-motion";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
 import Link from "next/link";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
@@ -44,13 +43,11 @@ const Home = ({ projects }) => {
                 >
                   <a>
                     <div className="thumbnail aspect aspect__square">
-                      <LazyLoadComponent>
-                        <Image
-                          src={project.thumbnail}
-                          alt={project.name}
-                          aspectRatio={"square"}
-                        />
-                      </LazyLoadComponent>
+                      <Image
+                        src={project.thumbnail}
+                        alt={project.name}
+                        aspectRatio={"square"}
+                      />
                     </div>
                     <h2>{project.name}</h2>
                     <p>{project.desc}</p>

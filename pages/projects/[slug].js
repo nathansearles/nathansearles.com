@@ -1,6 +1,5 @@
 import fetch from "isomorphic-unfetch";
 import { motion } from "framer-motion";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
 import Title from "../../components/Head";
 import { absoluteUrl } from "../../utilities";
 import Error from "../_error";
@@ -38,9 +37,7 @@ const Project = ({ project, status }) => {
         <div>
           <div className="project-hero">
             <div className="aspect aspect__square aspect__wide--md shadow">
-              <LazyLoadComponent>
-                <Image src={project.image} alt={project.name} />
-              </LazyLoadComponent>
+              <Image src={project.image} alt={project.name} />
             </div>
           </div>
           <div
