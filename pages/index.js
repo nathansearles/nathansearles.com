@@ -1,5 +1,5 @@
 import fetch from "isomorphic-unfetch";
-import { absoluteUrl, pageTransitions } from "../utilities";
+import { absoluteUrl, pageTransition } from "../utilities";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Title from "../components/Head";
@@ -19,7 +19,7 @@ const Home = ({ projects }) => {
         initial="initial"
         animate="enter"
         exit="exit"
-        variants={pageTransitions}
+        variants={pageTransition}
         className="site-wrapper"
       >
         <div className="page-hero">

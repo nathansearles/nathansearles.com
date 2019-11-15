@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { pageTransitions } from "../utilities";
+import { pageTransition } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
 import Image from "../components/Image";
@@ -16,7 +16,7 @@ const Info = () => (
       initial="initial"
       animate="enter"
       exit="exit"
-      variants={pageTransitions}
+      variants={pageTransition}
       className="site-wrapper"
     >
       <div className="page-hero">

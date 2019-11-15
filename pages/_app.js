@@ -23,6 +23,7 @@ class Site extends App {
       this.setState({ theme: "dark" });
     }
   }
+
   render() {
     const { Component, pageProps, router } = this.props;
 

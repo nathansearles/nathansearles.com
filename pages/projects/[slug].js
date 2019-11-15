@@ -1,7 +1,7 @@
 import fetch from "isomorphic-unfetch";
 import { motion } from "framer-motion";
 import Title from "../../components/Head";
-import { absoluteUrl } from "../../utilities";
+import { absoluteUrl, projectTransition } from "../../utilities";
 import Error from "../_error";
 import Image from "../../components/Image";
 import Nav from "../../components/Nav";
@@ -19,19 +19,7 @@ const Project = ({ project, status }) => {
         initial="initial"
         animate="enter"
         exit="exit"
-        variants={{
-          initial: { scale: 0.975, opacity: 0 },
-          enter: {
-            scale: 1,
-            opacity: 1,
-            transition: { duration: 0.35, ease: [0.0, 0.0, 0.2, 1] }
-          },
-          exit: {
-            scale: 0.975,
-            opacity: 0,
-            transition: { duration: 0.35, ease: [0.4, 0.0, 1, 1] }
-          }
-        }}
+        variants={projectTransition}
         className="site-wrapper"
       >
         <div>
