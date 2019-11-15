@@ -2,34 +2,6 @@ import css from "styled-jsx/css";
 import theme from "./_variables";
 
 export default css.global`
-  // Inter: https://rsms.me/inter/
-  @font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-display: fallback;
-    src: url("/static/fonts/Inter-Regular.woff2") format("woff2"),
-      url("/static/fonts/Inter-Regular.woff") format("woff");
-  }
-
-  @font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-display: fallback;
-    src: url("/static/fonts/Inter-SemiBold.woff2") format("woff2"),
-      url("/static/fonts/Inter-SemiBold.woff") format("woff");
-  }
-
-  @font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-display: fallback;
-    src: url("/static/fonts/Inter-Bold.woff2") format("woff2"),
-      url("/static/fonts/Inter-Bold.woff") format("woff");
-  }
-
   html {
     font-size: 18px;
     line-height: 30px;
