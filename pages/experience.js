@@ -60,7 +60,7 @@ const Experience = () => (
 
           <div className="box">
             <h2>The Brigade</h2>
-            <p>Partner &amp; Directory of Technology</p>
+            <p>Partner &amp; Director of Technology</p>
             <p>
               Co-founded and helped run all aspects of a newly-formed digital
               agency. Oversaw new business, project, account, and team
