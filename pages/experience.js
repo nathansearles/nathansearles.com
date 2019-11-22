@@ -48,7 +48,7 @@ const Experience = () => (
 
           <div className="box">
             <h2>Fuzzco</h2>
-            <p>Directory of Technology</p>
+            <p>Director of Technology</p>
             <p>
               Managed team of developers and established a technology process.
               Oversaw a roster of existing Wordpress websites, supported new
