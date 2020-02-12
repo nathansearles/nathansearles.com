@@ -5,10 +5,7 @@ import ScrollController from "../components/ScrollControlller";
 import { styledReset, styledBase, styledTypography } from "../styles/styles.js";
 
 class Site extends App {
-  constructor() {
-    super();
-    this.state = { theme: "default" };
-  }
+  state = { theme: "default" };
 
   componentDidMount() {
     if ("scrollRestoration" in history) {

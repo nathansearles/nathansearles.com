@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { pageTransition } from "../utilities";
 import Title from "../components/Head";
+import Hero from "../components/Hero";
 import Nav from "../components/Nav";
 
 import { styledPage, styledExperience } from "../styles/styles.js";
@@ -18,7 +19,7 @@ const Experience = () => (
       variants={pageTransition}
       className="site-wrapper"
     >
-      <div className="page-hero">
+      <Hero>
         <p className="lead">
           A background in front-end development,{" "}
           <span className="nowrap">user experience</span> and design.
@@ -29,7 +30,7 @@ const Experience = () => (
           Taking a component-based approach to building responsive web sites
           with a focus on design and user experience.
         </p>
-      </div>
+      </Hero>
 
       <div className="page-body">
         <h3>Past experience</h3>

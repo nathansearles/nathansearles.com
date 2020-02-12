@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { pageTransition } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
+import Hero from "../components/Hero";
 import Image from "../components/Image";
 
 import { styledPage, styledInfo } from "../styles/styles.js";
@@ -19,12 +20,12 @@ const Info = () => (
       variants={pageTransition}
       className="site-wrapper"
     >
-      <div className="page-hero">
+      <Hero>
         <p className="lead">
           A Portland, Oregon based developer that uses technology to elevate
           user experience and design of digital experiences.
         </p>
-      </div>
+      </Hero>
 
       <div className="page-body layout-info">
         <div className="portrait">

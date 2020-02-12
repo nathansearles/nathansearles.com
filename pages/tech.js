@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { pageTransition } from "../utilities";
 import Title from "../components/Head";
+import Hero from "../components/Hero";
 import Nav from "../components/Nav";
 
 import { styledPage, styledTech } from "../styles/styles.js";
@@ -18,11 +19,11 @@ const Tech = () => (
       variants={pageTransition}
       className="site-wrapper"
     >
-      <div className="page-hero">
+      <Hero>
         <p className="lead">
           Tech stack used for front-end, back-end services, and deployments.
         </p>
-      </div>
+      </Hero>
 
       <div className="page-body">
         <div className="boxed-lists">

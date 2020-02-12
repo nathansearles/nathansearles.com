@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
+import Hero from "../components/Hero";
 import Image from "../components/Image";
 
 import { styledPage, styledProjects } from "../styles/styles.js";
@@ -22,14 +23,12 @@ const Home = ({ projects }) => {
         variants={pageTransition}
         className="site-wrapper"
       >
-        <div className="page-hero">
-          <div>
-            <p className="lead">
-              Web developer focused on technology that drives great user
-              experience and design.
-            </p>
-          </div>
-        </div>
+        <Hero>
+          <p className="lead">
+            Web developer focused on technology that drives great user
+            experience and design.
+          </p>
+        </Hero>
 
         <div className="page-body">
           <h3>Select projects</h3>
