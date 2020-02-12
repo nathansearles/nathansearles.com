@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import { pageTransition } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
+import Page from "../components/Page";
 import Hero from "../components/Hero";
+import Body from "../components/Body";
 import Image from "../components/Image";
 
-import { styledPage, styledInfo } from "../styles/styles.js";
+import { styledInfo } from "../styles/styles.js";
 
 const Info = () => (
   <>
@@ -13,13 +15,7 @@ const Info = () => (
 
     <Nav />
 
-    <motion.div
-      initial="initial"
-      animate="enter"
-      exit="exit"
-      variants={pageTransition}
-      className="site-wrapper"
-    >
+    <Page>
       <Hero>
         <p className="lead">
           A Portland, Oregon based developer that uses technology to elevate
@@ -27,7 +23,7 @@ const Info = () => (
         </p>
       </Hero>
 
-      <div className="page-body layout-info">
+      <Body className="layout-info">
         <div className="portrait">
           <div className="aspect aspect__portrait shadow">
             <Image
@@ -58,9 +54,8 @@ const Info = () => (
             </p>
           </div>
         </div>
-      </div>
-    </motion.div>
-    <style jsx>{styledPage}</style>
+      </Body>
+    </Page>
     <style jsx>{styledInfo}</style>
   </>
 );

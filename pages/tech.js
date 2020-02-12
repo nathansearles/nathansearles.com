@@ -1,10 +1,9 @@
-import { motion } from "framer-motion";
-import { pageTransition } from "../utilities";
 import Title from "../components/Head";
+import Page from "../components/Page";
 import Hero from "../components/Hero";
+import Body from "../components/Body";
 import Nav from "../components/Nav";
-
-import { styledPage, styledTech } from "../styles/styles.js";
+import theme from "../styles/_variables";
 
 const Tech = () => (
   <>
@@ -12,21 +11,15 @@ const Tech = () => (
 
     <Nav />
 
-    <motion.div
-      initial="initial"
-      animate="enter"
-      exit="exit"
-      variants={pageTransition}
-      className="site-wrapper"
-    >
+    <Page>
       <Hero>
         <p className="lead">
           Tech stack used for front-end, back-end services, and deployments.
         </p>
       </Hero>
 
-      <div className="page-body">
-        <div className="boxed-lists">
+      <Body>
+        <div className="boxes">
           <dl>
             <dt>Front-end</dt>
             <dd>React</dd>
@@ -65,10 +58,47 @@ const Tech = () => (
             <dd>DigitalOcean</dd>
           </dl>
         </div>
-      </div>
-    </motion.div>
-    <style jsx>{styledPage}</style>
-    <style jsx>{styledTech}</style>
+      </Body>
+    </Page>
+    <style jsx>{`
+      .boxes {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 16px;
+        row-gap: 24px;
+        @media (${theme.breakpoint.md}) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media (${theme.breakpoint.lg}) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        dl {
+          background-color: ${theme.color.white};
+          padding: 24px;
+          display: inline-block;
+          text-align: center;
+          border-radius: 4px;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.025),
+            0 2px 2px rgba(0, 0, 0, 0.025), 0 4px 4px rgba(0, 0, 0, 0.025),
+            0 6px 8px rgba(0, 0, 0, 0.025), 0 8px 16px rgba(0, 0, 0, 0.025);
+          dt {
+            font-weight: ${theme.font.bold};
+            font-size: 0.75rem;
+            line-height: 1rem;
+            margin: 0 0 0.5rem;
+            color: ${theme.color.black};
+            text-transform: uppercase;
+          }
+          dd {
+            display: inline-block;
+            margin: 0 6px;
+            font-size: 0.9rem;
+            line-height: 1.6rem;
+            color: ${theme.color.black};
+          }
+        }
+      }
+    `}</style>
   </>
 );
 

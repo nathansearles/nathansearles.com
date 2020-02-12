@@ -53,19 +53,6 @@ export default css.global`
     }
   }
 
-  .site-wrapper {
-    display: grid;
-    grid-template-columns: [leftGutter] 1fr [content] 10fr [rightGutter] 1fr;
-    max-width: ${theme.maxWidth};
-    margin: 0 auto;
-    position: relative;
-    padding-bottom: 96px;
-
-    & > div {
-      grid-column: content;
-    }
-  }
-
   .aspect {
     position: relative;
     width: 100%;

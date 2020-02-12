@@ -1,13 +1,14 @@
 import fetch from "isomorphic-unfetch";
-import { absoluteUrl, pageTransition } from "../utilities";
-import { motion } from "framer-motion";
+import { absoluteUrl } from "../utilities";
 import Link from "next/link";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
+import Page from "../components/Page";
 import Hero from "../components/Hero";
+import Body from "../components/Body";
 import Image from "../components/Image";
 
-import { styledPage, styledProjects } from "../styles/styles.js";
+import { styledProjects } from "../styles/styles.js";
 
 const Home = ({ projects }) => {
   return (
@@ -16,13 +17,7 @@ const Home = ({ projects }) => {
 
       <Nav />
 
-      <motion.div
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={pageTransition}
-        className="site-wrapper"
-      >
+      <Page>
         <Hero>
           <p className="lead">
             Web developer focused on technology that drives great user
@@ -30,7 +25,7 @@ const Home = ({ projects }) => {
           </p>
         </Hero>
 
-        <div className="page-body">
+        <Body>
           <h3>Select projects</h3>
           <div id="projects">
             {projects.map(project => (
@@ -55,9 +50,8 @@ const Home = ({ projects }) => {
               </div>
             ))}
           </div>
-        </div>
-      </motion.div>
-      <style jsx>{styledPage}</style>
+        </Body>
+      </Page>
       <style jsx>{styledProjects}</style>
     </>
   );

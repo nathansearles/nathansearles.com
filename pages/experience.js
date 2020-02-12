@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { pageTransition } from "../utilities";
 import Title from "../components/Head";
+import Page from "../components/Page";
 import Hero from "../components/Hero";
+import Body from "../components/Body";
 import Nav from "../components/Nav";
 
-import { styledPage, styledExperience } from "../styles/styles.js";
+import { styledExperience } from "../styles/styles.js";
 
 const Experience = () => (
   <>
@@ -12,13 +14,7 @@ const Experience = () => (
 
     <Nav />
 
-    <motion.div
-      initial="initial"
-      animate="enter"
-      exit="exit"
-      variants={pageTransition}
-      className="site-wrapper"
-    >
+    <Page>
       <Hero>
         <p className="lead">
           A background in front-end development,{" "}
@@ -32,7 +28,7 @@ const Experience = () => (
         </p>
       </Hero>
 
-      <div className="page-body">
+      <Body>
         <h3>Past experience</h3>
         <div className="boxes">
           <div className="box">
@@ -79,9 +75,8 @@ const Experience = () => (
             </p>
           </div>
         </div>
-      </div>
-    </motion.div>
-    <style jsx>{styledPage}</style>
+      </Body>
+    </Page>
     <style jsx>{styledExperience}</style>
   </>
 );

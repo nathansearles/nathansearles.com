@@ -20,7 +20,7 @@ export const pageTransition = {
   initial: { opacity: 0 },
   enter: {
     opacity: 1,
-    transition: { duration: 0.4, ease: [0.0, 0.0, 0.2, 1] }
+    transition: { duration: 0.8, ease: [0.0, 0.0, 0.2, 1] }
   },
   exit: {
     opacity: 0,

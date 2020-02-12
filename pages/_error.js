@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 import { pageTransition } from "../utilities";
+import Page from "../components/Page";
 import Title from "../components/Head";
 import Hero from "../components/Hero";
 import Nav from "../components/Nav";
-
-import { styledPage } from "../styles/styles.js";
 
 const Error = ({ projects }) => {
   return (
@@ -13,18 +12,11 @@ const Error = ({ projects }) => {
 
       <Nav />
 
-      <motion.div
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={pageTransition}
-        className="site-wrapper"
-      >
+      <Page>
         <Hero>
           <p className="lead">Hmm, this page isn't here. ¯\_(ツ)_/¯</p>
         </Hero>
-      </motion.div>
-      <style jsx>{styledPage}</style>
+      </Page>
     </>
   );
 };
