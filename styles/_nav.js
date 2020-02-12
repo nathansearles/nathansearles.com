@@ -29,11 +29,11 @@ export default css`
       display: inline;
       padding: 4px 0;
       font-weight: ${theme.font.bold};
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       line-height: 1rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
-      letter-spacing: 0.025em;
+      /* letter-spacing: 0.025em; */
       text-transform: uppercase;
       width: auto;
       margin-right: auto;
@@ -74,9 +74,8 @@ export default css`
       &:visited {
         font-weight: ${theme.font.bold};
         color: ${theme.color.black};
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         line-height: 1rem;
-        letter-spacing: 0.025em;
         text-transform: uppercase;
         text-decoration: none;
         padding: 4px 8px;
@@ -85,12 +84,29 @@ export default css`
 
         span {
           border-bottom: 2px solid transparent;
+          &:after {
+            transform: scaleX(0);
+            transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+          }
         }
         &.active {
           span {
+            position: relative;
             color: ${theme.color.black};
-
-            border-bottom: 2px solid ${theme.color.primary};
+            &:after {
+              content: "";
+              display: block;
+              height: 2px;
+              width: 110%;
+              background-color: ${theme.color.black};
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              margin-top: -1px;
+              margin-left: -55%;
+              transform-origin: 100% 50%;
+              transform: scaleX(1);
+            }
           }
         }
       }

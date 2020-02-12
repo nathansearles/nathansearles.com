@@ -41,9 +41,7 @@ const Nav = props => {
     <>
       <nav className="top-nav" role="navigation">
         <div>
-          <h1>
-            Nathan Searles <span className="desc">Web Developer</span>
-          </h1>
+          <h1>Nathan Searles</h1>
           <ul>
             {links.map(({ key, href, label }) => (
               <li key={key}>
