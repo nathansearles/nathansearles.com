@@ -7,9 +7,10 @@ const Hero = props => {
       <style jsx>{`
         .Hero {
           padding: ${props.project ? "36px 0" : "24px 0 48px"};
-          margin: 10vh 0;
+
           text-align: center;
           @media (${theme.breakpoint.lg}) {
+            margin: 10vh 0;
             padding: ${props.project ? "36px 0" : "0 calc(100vw / 16)"};
           }
 
