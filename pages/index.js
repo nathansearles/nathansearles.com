@@ -1,14 +1,12 @@
 import fetch from "isomorphic-unfetch";
 import { absoluteUrl } from "../utilities";
-import Link from "next/link";
+
 import Title from "../components/Head";
 import Nav from "../components/Nav";
 import Page from "../components/Page";
 import Hero from "../components/Hero";
 import Body from "../components/Body";
-import Image from "../components/Image";
-
-import { styledProjects } from "../styles/styles.js";
+import Projects from "../components/Projects";
 
 const Home = ({ projects }) => {
   return (
@@ -27,32 +25,9 @@ const Home = ({ projects }) => {
 
         <Body>
           <h3>Select projects</h3>
-          <div id="projects">
-            {projects.map(project => (
-              <div className="project" key={project.slug}>
-                <Link
-                  scroll={false}
-                  href="/projects/[slug]"
-                  as={`/projects/${project.slug}`}
-                >
-                  <a>
-                    <div className="thumbnail aspect aspect__square">
-                      <Image
-                        src={project.thumbnail}
-                        alt={project.name}
-                        aspectRatio={"square"}
-                      />
-                    </div>
-                    <h2>{project.name}</h2>
-                    <p>{project.desc}</p>
-                  </a>
-                </Link>
-              </div>
-            ))}
-          </div>
+          <Projects projects={projects} />
         </Body>
       </Page>
-      <style jsx>{styledProjects}</style>
     </>
   );
 };

@@ -110,6 +110,17 @@ const Image = props => {
     handleImageLoaded();
   }, []);
 
+  const hoverableStyles = `
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  
+`;
+
   return (
     <>
       <div className="aspect__content">
@@ -158,12 +169,35 @@ const Image = props => {
           &.image__loaded {
             opacity: 1;
           }
+
+          ${props.hoverable &&
+            `
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+          `}
         }
 
         picture img {
           display: block;
           width: 100%;
           height: auto;
+          ${props.hoverable &&
+            `
+            transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+            transform: scale(1);
+          `}
+        }
+
+        picture img {
+          ${props.hovering &&
+            `
+            transform: scale(1.085);
+          `}
         }
       `}</style>
     </>

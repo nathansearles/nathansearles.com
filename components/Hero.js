@@ -2,15 +2,15 @@ import theme from "../styles/_variables";
 
 const Hero = props => {
   return (
-    <div className="page-hero">
+    <div className="Hero">
       <div>{props.children}</div>
       <style jsx>{`
-        .page-hero {
-          padding: 24px 0 48px;
+        .Hero {
+          padding: ${props.project ? "36px 0" : "24px 0 48px"};
           margin: 10vh 0;
           text-align: center;
           @media (${theme.breakpoint.lg}) {
-            padding: 0 calc(100vw / 16);
+            padding: ${props.project ? "36px 0" : "0 calc(100vw / 16)"};
           }
 
           h3:first-of-type {

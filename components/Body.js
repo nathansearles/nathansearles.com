@@ -1,3 +1,5 @@
+import theme from "../styles/_variables";
+
 const Body = props => {
   return (
     <div className="page-body">
@@ -5,6 +7,12 @@ const Body = props => {
       <style jsx>{`
         .page-body {
           padding: 16px 0;
+
+          @media (${theme.breakpoint.md}) {
+            padding: ${props.project
+              ? "0 calc(100vw / 8)"
+              : "16px calc(100vw / 16)"};
+          }
 
           h3:first-of-type {
             margin-top: 0;

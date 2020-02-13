@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-import { pageTransition } from "../utilities";
+import { pageTransition, projectTransition } from "../utilities";
 import theme from "../styles/_variables";
 
 const Page = props => {
+  const transition = props.project ? projectTransition : pageTransition;
   return (
     <motion.div
       initial="initial"
       animate="enter"
       exit="exit"
-      variants={pageTransition}
+      variants={transition}
     >
       <div className="wrapper">
         <div className="content">{props.children}</div>
