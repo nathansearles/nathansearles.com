@@ -107,6 +107,15 @@ const Info = () => (
           height: auto;
         }
       }
+      .caption {
+        font-size: 0.6rem;
+        text-align: center;
+        color: ${theme.color.secondary};
+        a {
+          text-decoration: none;
+          color: ${theme.color.secondary};
+        }
+      }
     `}</style>
   </>
 );

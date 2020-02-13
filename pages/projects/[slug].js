@@ -27,6 +27,31 @@ const Project = ({ project, status }) => {
           <div dangerouslySetInnerHTML={{ __html: project.body }} />
         </Body>
       </Page>
+      <style jsx global>{`
+        .embed-container {
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+          overflow: hidden;
+          max-width: 100%;
+          margin: 72px 0;
+        }
+
+        .embed-container embed,
+        .embed-container iframe,
+        .embed-container object {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .media {
+          width: 100%;
+          display: block;
+        }
+      `}</style>
     </>
   ) : (
     <Error />

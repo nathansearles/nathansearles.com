@@ -2,9 +2,10 @@ import React from "react";
 import App from "next/app";
 import { AnimatePresence } from "framer-motion";
 import ScrollController from "../components/ScrollControlller";
-import { styledBase, styledTypography } from "../styles/styles.js";
 
 import reset from "../styles/_reset.js";
+import base from "../styles/_base.js";
+import typography from "../styles/_typography.js";
 
 class Site extends App {
   state = { theme: "default" };
@@ -37,10 +38,10 @@ class Site extends App {
           {reset}
         </style>
         <style jsx global>
-          {styledBase}
+          {base}
         </style>
         <style jsx global>
-          {styledTypography}
+          {typography}
         </style>
       </ScrollController>
     );

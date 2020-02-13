@@ -117,38 +117,4 @@ export default css.global`
       0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04),
       0 16px 32px rgba(0, 0, 0, 0.04), 0 32px 64px rgba(0, 0, 0, 0.04);
   }
-
-  .caption {
-    font-size: 0.6rem;
-    text-align: center;
-    color: ${theme.color.secondary};
-    a {
-      text-decoration: none;
-      color: ${theme.color.secondary};
-    }
-  }
-
-  .embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    margin: 72px 0;
-  }
-
-  .embed-container embed,
-  .embed-container iframe,
-  .embed-container object {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .media {
-    width: 100%;
-    display: block;
-  }
 `;
