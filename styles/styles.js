@@ -6,7 +6,6 @@ import nav from "./_nav.js";
 import project from "./_project.js";
 import projects from "./_projects.js";
 
-import experience from "./_experience.js";
 import info from "./_info.js";
 
 export const styledReset = reset;
@@ -17,5 +16,4 @@ export const styledNav = nav;
 export const styledProject = project;
 export const styledProjects = projects;
 
-export const styledExperience = experience;
 export const styledInfo = info;
