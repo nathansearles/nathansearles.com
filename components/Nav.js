@@ -4,6 +4,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks
 } from "body-scroll-lock";
+import Link from "./Link";
 
 import NavItem from "./NavItem";
 import NavToggle from "./NavToggle";
@@ -39,9 +40,11 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="top-nav" role="navigation">
+      <nav className="MainNav" role="navigation">
         <div>
-          <h1>Nathan Searles</h1>
+          <Link href="/">
+            <h1>Nathan Searles</h1>
+          </Link>
           <ul>
             {links.map(({ key, href, label }) => (
               <NavItem key={key} href={href} label={label} />
@@ -52,7 +55,7 @@ const Nav = () => {
       </nav>
 
       <nav
-        className={`side-nav ${sideNavOpen ? "nav-open" : ""}`}
+        className={`SideNav ${sideNavOpen ? "nav-open" : ""}`}
         role="navigation"
         ref={ref}
         style={{ visibility: "hidden" }}
@@ -67,11 +70,11 @@ const Nav = () => {
       </nav>
       <div
         onClick={handleMenuToggle}
-        className={`ui-mask ${sideNavOpen ? "nav-open" : ""}`}
+        className={`UiMask ${sideNavOpen ? "nav-open" : ""}`}
       ></div>
 
       <style jsx>{`
-        nav.top-nav {
+        nav.MainNav {
           display: grid;
           grid-template-columns: [leftGutter] 1fr [content] 10fr [rightGutter] 1fr;
           max-width: ${theme.maxWidth};
@@ -86,7 +89,7 @@ const Nav = () => {
             flex-wrap: nowrap;
           }
           h1 {
-            display: inline;
+            cursor: pointer;
             padding: 4px 0;
             font-weight: ${theme.font.bold};
             font-size: 0.75rem;
@@ -121,7 +124,7 @@ const Nav = () => {
           }
         }
 
-        nav.side-nav {
+        nav.SideNav {
           width: 280px;
           overflow-y: auto;
           position: fixed;
@@ -151,7 +154,7 @@ const Nav = () => {
             top: 15px;
           }
         }
-        .ui-mask {
+        .UiMask {
           background-color: rgba(0, 0, 0, 0.5);
           bottom: 0;
           left: 0;
