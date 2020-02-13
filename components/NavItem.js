@@ -28,28 +28,28 @@ const NavItem = props => {
             display: inline-block;
 
             span {
+              position: relative;
               border-bottom: 2px solid transparent;
               &:after {
                 transform: scaleX(0);
-                transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+                content: "";
+                display: block;
+                height: 2px;
+                width: 110%;
+                background-color: ${theme.color.black};
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-top: -1px;
+                margin-left: -55%;
+                transform-origin: 0% 50%;
+                transition: transform 0.35s cubic-bezier(0.77, 0, 0.175, 1);
               }
             }
             &.active {
               span {
-                position: relative;
                 color: ${theme.color.black};
                 &:after {
-                  content: "";
-                  display: block;
-                  height: 2px;
-                  width: 110%;
-                  background-color: ${theme.color.black};
-                  position: absolute;
-                  left: 50%;
-                  top: 50%;
-                  margin-top: -1px;
-                  margin-left: -55%;
-                  transform-origin: 100% 50%;
                   transform: scaleX(1);
                 }
               }
