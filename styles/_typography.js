@@ -24,11 +24,12 @@ export default css.global`
   h3,
   .h3 {
     font-weight: ${theme.font.bold};
-    font-size: 1rem;
+    font-size: 0.75rem;
     line-height: 1rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     color: ${theme.color.black};
+    text-transform: uppercase;
   }
   h4,
   .h4 {

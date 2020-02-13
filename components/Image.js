@@ -161,6 +161,8 @@ const Image = props => {
       </div>
       <style jsx>{`
         picture {
+          display: block;
+
           &.image__loading {
             transition: opacity 600ms ease-out;
             opacity: 0;
@@ -179,6 +181,7 @@ const Image = props => {
             left: 0;
             width: 100%;
             height: auto;
+            overflow: hidden;
           `}
         }
 
@@ -186,18 +189,20 @@ const Image = props => {
           display: block;
           width: 100%;
           height: auto;
+          position: relative;
           ${props.hoverable &&
             `
-            transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+            transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
             transform: scale(1);
           `}
         }
 
         picture img {
-          ${props.hovering &&
-            `
-            transform: scale(1.085);
-          `}
+          ${props.hovering
+            ? `
+            transform: scale(1.065);
+          `
+            : ""}
         }
       `}</style>
     </>

@@ -9,9 +9,7 @@ const Body = props => {
           padding: 16px 0;
 
           @media (${theme.breakpoint.md}) {
-            padding: ${props.project
-              ? "0 calc(100vw / 8)"
-              : "16px calc(100vw / 16)"};
+            padding: ${props.project ? "0 calc(100vw / 16)" : "16px 0"};
           }
 
           h3:first-of-type {

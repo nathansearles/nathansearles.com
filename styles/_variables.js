@@ -4,7 +4,7 @@ const colorValues = {
   black: "#141414",
   secondary: "rgba(33, 33, 33, 0.75)",
   gray: "#4a4a4a",
-  offWhite: "#f2f2f2",
+  offWhite: "#f4f4f4",
   white: "#ffffff"
 };
 

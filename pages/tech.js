@@ -77,7 +77,7 @@ const Tech = () => (
           padding: 24px;
           display: inline-block;
           text-align: center;
-          border-radius: 4px;
+
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.025),
             0 2px 2px rgba(0, 0, 0, 0.025), 0 4px 4px rgba(0, 0, 0, 0.025),
             0 6px 8px rgba(0, 0, 0, 0.025), 0 8px 16px rgba(0, 0, 0, 0.025);

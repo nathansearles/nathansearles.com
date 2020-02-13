@@ -35,7 +35,7 @@ const Project = props => {
           h2 {
             font-weight: ${theme.font.bold};
             font-size: 1rem;
-            margin: 0;
+            margin: 8px 0 0;
             line-height: 2.5rem;
             color: ${theme.color.black};
           }
@@ -70,21 +70,22 @@ const Project = props => {
                   opacity: 1;
                   transform: translateY(0%);
                 }
-
-                .Thumbnail img {
-                  transform: scale(1.035);
-                }
               }
             }
           }
 
           .Thumbnail {
             overflow: hidden;
-            border-radius: 4px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
               0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04),
               0 8px 16px rgba(0, 0, 0, 0.04), 0 16px 32px rgba(0, 0, 0, 0.04),
               0 32px 64px rgba(0, 0, 0, 0.04);
+            transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+            transform: scale(1);
+          }
+
+          .Thumbnail {
+            ${hovered ? `transform: scale(1.025);` : ""}
           }
         }
       `}</style>
