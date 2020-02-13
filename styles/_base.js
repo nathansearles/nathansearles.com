@@ -31,6 +31,11 @@ export default css.global`
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
 
+  ::selection {
+    background-color: ${theme.color.black};
+    color: ${theme.color.white};
+  }
+
   .theme {
     background-color: ${theme.color.offWhite};
     color: ${theme.color.secondary};
