@@ -17,10 +17,9 @@ const Tech = () => (
           Tech stack used for front-end, back-end services, and deployments.
         </p>
         <p>
-          High-level overview of my go-to tool set for development projects,
-          back-end services, and deployments. Taking a component-based approach
-          to building responsive websites with a focus on design and user
-          experience.
+          High-level overview of my go-to tool set for development projects.
+          Taking a component-based approach to building responsive websites with
+          a focus on design and user experience.
         </p>
       </Hero>
 
