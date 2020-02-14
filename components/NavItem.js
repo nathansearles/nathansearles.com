@@ -47,15 +47,14 @@ const NavItem = props => {
                 content: "";
                 display: block;
                 height: 2px;
-                width: 110%;
+                width: 100%;
                 background-color: ${theme.color.black};
                 position: absolute;
                 left: 50%;
-                top: 50%;
-                margin-top: -1px;
-                margin-left: -55%;
+                bottom: -4px;
+                margin-left: -50%;
                 transform-origin: 50% 50%;
-                transition: transform 450ms cubic-bezier(0.19, 1, 0.22, 1);
+                transition: transform 400ms cubic-bezier(0.19, 1, 0.22, 1);
               }
             }
             &.active {
@@ -84,11 +83,11 @@ const NavItem = props => {
                 background-color: ${theme.color.black};
                 position: absolute;
                 left: 50%;
-                top: 2px;
+                bottom: -4px;
                 margin-top: -6px;
                 margin-left: calc(-50% - 10px);
                 transform-origin: 50% 50%;
-                transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
+                transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
               }
             }
 
@@ -96,12 +95,12 @@ const NavItem = props => {
               color: ${theme.color.black};
               span {
                 &:before {
-                  width: 110%;
+                  width: 100%;
                   height: 2px;
+
                   left: 50%;
-                  top: 50%;
-                  margin-top: -1px;
-                  margin-left: -55%;
+                  bottom: -4px;
+                  margin-left: -50%;
                 }
               }
             }
