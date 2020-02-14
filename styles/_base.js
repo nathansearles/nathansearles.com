@@ -39,7 +39,7 @@ export default css.global`
   .theme {
     background-color: ${theme.color.offWhite};
     color: ${theme.color.secondary};
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 
     animation-name: fadeIn;
