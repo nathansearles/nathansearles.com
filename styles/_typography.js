@@ -14,7 +14,7 @@ export default css.global`
   }
   h2,
   .h2 {
-    font-weight: ${theme.font.bold};
+    font-weight: ${theme.font.regular};
     font-size: 1.5rem;
     line-height: 2.2rem;
     margin-top: 1.5rem;

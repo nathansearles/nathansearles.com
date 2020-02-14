@@ -47,8 +47,9 @@ const Project = props => {
             @media (${theme.breakpoint.md}) {
               opacity: 0;
               transform: translateY(8px);
-              transition: transform 250ms cubic-bezier(0.77, 0, 0.175, 1) 100ms,
-                opacity 250ms cubic-bezier(0.77, 0, 0.175, 1) 100ms;
+              transition: transform 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
+                  100ms,
+                opacity 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms;
             }
           }
 
@@ -80,7 +81,8 @@ const Project = props => {
               0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04),
               0 8px 16px rgba(0, 0, 0, 0.04), 0 16px 32px rgba(0, 0, 0, 0.04),
               0 32px 64px rgba(0, 0, 0, 0.04);
-            transition: transform 350ms cubic-bezier(0.77, 0, 0.175, 1) 100ms;
+            transition: transform 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
+              100ms;
             transform: scale(1);
           }
 

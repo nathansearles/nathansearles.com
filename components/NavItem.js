@@ -54,8 +54,8 @@ const NavItem = props => {
                 top: 50%;
                 margin-top: -1px;
                 margin-left: -55%;
-                transform-origin: 0% 50%;
-                transition: transform 0.35s cubic-bezier(0.77, 0, 0.175, 1);
+                transform-origin: 50% 50%;
+                transition: transform 450ms cubic-bezier(0.19, 1, 0.22, 1);
               }
             }
             &.active {
@@ -88,7 +88,7 @@ const NavItem = props => {
                 margin-top: -6px;
                 margin-left: calc(-50% - 10px);
                 transform-origin: 50% 50%;
-                transition: all 250ms cubic-bezier(0.77, 0, 0.175, 1);
+                transition: all 450ms cubic-bezier(0.19, 1, 0.22, 1);
               }
             }
 

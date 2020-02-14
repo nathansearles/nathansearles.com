@@ -181,7 +181,7 @@ const Image = props => {
           position: relative;
           ${props.hoverable &&
             `
-            transition: transform 350ms cubic-bezier(0.77, 0, 0.175, 1) 100ms;
+            transition: transform 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms;
             transform: scale(1);
           `}
         }
