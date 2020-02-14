@@ -17,7 +17,7 @@ const Home = ({ projects }) => {
 
       <Page>
         <Hero>
-          <p className="lead">
+          <p className="larger">
             Developer focused on technology that drives great user experience
             and design.
           </p>

@@ -1,0 +1,55 @@
+import { motion } from "framer-motion";
+import { pageTransition } from "../utilities";
+import Title from "../components/Head";
+import Nav from "../components/Nav";
+import Page from "../components/Page";
+import Hero from "../components/Hero";
+import Body from "../components/Body";
+import Image from "../components/Image";
+
+import theme from "../styles/_variables";
+
+const Info = () => (
+  <>
+    <Title title="Info" />
+
+    <Nav />
+
+    <Page>
+      <Hero>
+        <div className="aspect aspect__square shadow circle">
+          <Image
+            src="nathan-searles-2018-square_o8pgtt.jpg"
+            alt="Nathan Searles"
+            aspectRatio={"square"}
+            circle
+          />
+        </div>
+        <p className="larger">
+          Hey, I'm Nathan, a Portland, Oregon based developer and technical
+          leader.
+        </p>
+
+        <p className="large">
+          I'm currently looking for technical leadership and development
+          opportunities with a team that's passionate about UX and design.
+        </p>
+
+        <p className="large">
+          Have a great opportunity? Shoot me an email and let's chat.{" "}
+          <a href="mailto:nsearles@gmail.com">nsearles@gmail.com</a>
+        </p>
+      </Hero>
+    </Page>
+    <style jsx>{`
+      .circle {
+        width: 200px;
+        padding-bottom: 200px;
+        border-radius: 200px;
+        margin: 0 auto 3rem;
+      }
+    `}</style>
+  </>
+);
+
+export default Info;

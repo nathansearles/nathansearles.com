@@ -13,7 +13,7 @@ const Tech = () => (
 
     <Page>
       <Hero>
-        <p className="lead">
+        <p className="larger">
           Tech stack used for front-end, back-end services, and deployments.
         </p>
       </Hero>

@@ -15,7 +15,7 @@ const Experience = () => (
 
     <Page>
       <Hero>
-        <p className="lead">
+        <p className="larger">
           A background in front-end development,{" "}
           <span className="nowrap">user experience</span> and design.
         </p>

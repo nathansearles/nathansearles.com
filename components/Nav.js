@@ -11,10 +11,10 @@ import NavToggle from "./NavToggle";
 import theme from "../styles/_variables";
 
 const links = [
-  { href: "/", label: "Projects" },
-  { href: "/tech", label: "Tech" },
-  { href: "/experience", label: "Experience" },
-  { href: "/info", label: "Info" }
+  { href: "/", label: "Projects", style: "text" },
+  { href: "/tech", label: "Tech", style: "text" },
+  { href: "/experience", label: "Experience", style: "text" },
+  { href: "/hire-me", label: "Hire Me", style: "box" }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`;
   return link;
@@ -46,8 +46,8 @@ const Nav = () => {
             <h1>Nathan Searles</h1>
           </Link>
           <ul>
-            {links.map(({ key, href, label }) => (
-              <NavItem key={key} href={href} label={label} />
+            {links.map(link => (
+              <NavItem key={link.key} {...link} />
             ))}
           </ul>
           <NavToggle handleMenuToggle={handleMenuToggle} />
@@ -62,8 +62,8 @@ const Nav = () => {
       >
         <div>
           <ul>
-            {links.map(({ key, href, label }) => (
-              <NavItem key={key} href={href} label={label} sidenav />
+            {links.map(link => (
+              <NavItem key={link.key} {...link} sidenav />
             ))}
           </ul>
         </div>

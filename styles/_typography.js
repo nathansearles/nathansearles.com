@@ -98,7 +98,7 @@ export default css.global`
     bottom: -0.25em;
   }
 
-  p.lead {
+  p.larger {
     font-weight: ${theme.font.regular};
     font-size: 1.6rem;
     line-height: 2.4rem;
@@ -108,6 +108,21 @@ export default css.global`
     @media (${theme.breakpoint.md}) {
       font-size: 2.2rem;
       line-height: 3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  p.large {
+    font-weight: ${theme.font.regular};
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: ${theme.color.black};
+    @media (${theme.breakpoint.md}) {
+      font-size: 1.4rem;
+      line-height: 2.3rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
     }
