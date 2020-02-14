@@ -1,13 +1,3 @@
-const colorValues = {
-  primary: "#3433FF",
-  offBlack: "#262626",
-  black: "#111111",
-  secondary: "rgba(33, 33, 33, 0.75)",
-  gray: "#4a4a4a",
-  offWhite: "#f4f4f4",
-  white: "#ffffff"
-};
-
 const theme = {
   font: {
     regular: 400,
@@ -15,15 +5,6 @@ const theme = {
     bold: 700
   },
   maxWidth: "1280px",
-  color: {
-    primary: colorValues.primary,
-    offBlack: colorValues.offBlack,
-    black: colorValues.black,
-    secondary: colorValues.secondary,
-    gray: colorValues.gray,
-    offWhite: colorValues.offWhite,
-    white: colorValues.white
-  },
   breakpoint: {
     sm: "min-width: 544px",
     md: "min-width: 768px",

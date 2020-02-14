@@ -99,15 +99,7 @@ const Nav = () => {
             text-transform: uppercase;
             width: auto;
             margin-right: auto;
-            color: ${theme.color.black};
-            span.desc {
-              font-weight: ${theme.font.regular};
-              color: ${theme.color.secondary};
-              display: block;
-              @media (${theme.breakpoint.md}) {
-                display: inline;
-              }
-            }
+            color: var(--font);
           }
           ul {
             display: none;
@@ -136,7 +128,7 @@ const Nav = () => {
           visibility: hidden;
           transition: transform 350ms ease-out, visibility 350ms ease-out;
           transform: translateX(100%);
-          background-color: ${theme.color.offWhite};
+          background-color: var(--background);
           &.nav-open {
             visibility: visible !important;
             transform: translateX(0%);

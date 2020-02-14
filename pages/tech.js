@@ -75,7 +75,7 @@ const Tech = () => (
           grid-template-columns: repeat(2, 1fr);
         }
         dl {
-          background-color: ${theme.color.white};
+          background-color: var(--background-secondary);
           padding: 24px;
           display: inline-block;
           text-align: center;
@@ -89,14 +89,13 @@ const Tech = () => (
             line-height: 2.2rem;
             margin-top: 0;
             margin-bottom: 0.5rem;
-            color: ${theme.color.black};
+            color: var(--font);
           }
           dd {
             display: inline-block;
             margin: 0 6px;
             font-size: 1rem;
             line-height: 1.6rem;
-            // color: ${theme.color.black};
           }
         }
       }

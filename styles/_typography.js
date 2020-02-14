@@ -10,7 +10,7 @@ export default css.global`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
-    color: ${theme.color.black};
+    color: var(--font);
   }
   h2,
   .h2 {
@@ -19,7 +19,7 @@ export default css.global`
     line-height: 2.2rem;
     margin-top: 1.5rem;
     margin-bottom: 0;
-    color: ${theme.color.black};
+    color: var(--font);
   }
   h3,
   .h3 {
@@ -28,7 +28,7 @@ export default css.global`
     line-height: 1rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
-    color: ${theme.color.black};
+    color: var(--font);
     text-transform: uppercase;
   }
   h4,
@@ -38,7 +38,7 @@ export default css.global`
     line-height: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 0rem;
-    color: ${theme.color.black};
+    color: var(--font);
   }
   h5,
   .h5 {
@@ -59,7 +59,7 @@ export default css.global`
     margin-top: 0rem;
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
-    color: ${theme.color.secondary};
+    color: var(--font-secondary);
   }
   ul ul,
   ol ol,
@@ -68,7 +68,7 @@ export default css.global`
     font-weight: ${theme.font.regular};
     margin-top: 0rem;
     margin-bottom: 0rem;
-    color: ${theme.color.secondary};
+    color: var(--font-secondary);
   }
 
   hr,
@@ -104,7 +104,7 @@ export default css.global`
     line-height: 2.4rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: ${theme.color.black};
+    color: var(--font);
     @media (${theme.breakpoint.md}) {
       font-size: 2.2rem;
       line-height: 3rem;
@@ -119,7 +119,7 @@ export default css.global`
     line-height: 1.8rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: ${theme.color.black};
+    color: var(--font);
     @media (${theme.breakpoint.md}) {
       font-size: 1.4rem;
       line-height: 2.3rem;
@@ -138,12 +138,12 @@ export default css.global`
       text-decoration: none;
       font-weight: ${theme.font.semibold};
       transition: color 350ms ease-out;
-      color: ${theme.color.primary};
+      color: var(--primary);
     }
     &:hover,
     &:active,
     &:focus {
-      color: ${theme.color.primary};
+      color: var(--primary);
     }
   }
 

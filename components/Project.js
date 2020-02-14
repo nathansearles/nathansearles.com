@@ -37,13 +37,13 @@ const Project = props => {
             font-size: 1rem;
             margin: 8px 0 0;
             line-height: 2.5rem;
-            color: ${theme.color.black};
+            color: var(--font);
           }
 
           p {
             margin: 0;
             font-size: 16px;
-            color: ${theme.color.secondary};
+            color: var(--font-secondary);
             @media (${theme.breakpoint.md}) {
               opacity: 0;
               transform: translateY(8px);
@@ -64,7 +64,7 @@ const Project = props => {
               text-decoration: none;
               @media (${theme.breakpoint.md}) {
                 h2 {
-                  color: ${theme.color.black};
+                  color: var(--font);
                 }
 
                 p {

@@ -18,7 +18,7 @@ const NavItem = props => {
           &:link,
           &:visited {
             font-weight: ${theme.font.bold};
-            color: ${theme.color.black};
+            color: var(--font);
             font-size: 0.75rem;
             line-height: 1rem;
             text-transform: uppercase;
@@ -48,7 +48,7 @@ const NavItem = props => {
                 display: block;
                 height: 2px;
                 width: 100%;
-                background-color: ${theme.color.black};
+                background-color: var(--background-inverted);
                 position: absolute;
                 left: 50%;
                 bottom: -4px;
@@ -59,7 +59,7 @@ const NavItem = props => {
             }
             &.active {
               span {
-                color: ${theme.color.black};
+                color: var(--font);
                 &:after {
                   transform: scaleX(1);
                 }
@@ -72,7 +72,7 @@ const NavItem = props => {
           &:link,
           &:visited {
             position: relative;
-            color: ${theme.color.white};
+            color: var(--font-inverted);
             span {
               &:before {
                 z-index: -1;
@@ -80,7 +80,7 @@ const NavItem = props => {
                 display: block;
                 width: calc(100% + 20px);
                 height: calc(100% + 8px);
-                background-color: ${theme.color.black};
+                background-color: var(--background-inverted);
                 position: absolute;
                 left: 50%;
                 bottom: -4px;
@@ -92,7 +92,7 @@ const NavItem = props => {
             }
 
             &.active {
-              color: ${theme.color.black};
+              color: var(--font);
               span {
                 &:before {
                   width: 100%;

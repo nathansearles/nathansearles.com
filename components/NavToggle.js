@@ -34,7 +34,7 @@ const NavToggle = props => {
             height: 2px;
             width: 100%;
             display: block;
-            background-color: ${theme.color.black};
+            background-color: var(--background-inverted);
             + .bar {
               margin-top: 3px;
             }

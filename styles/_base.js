@@ -2,6 +2,36 @@ import css from "styled-jsx/css";
 import theme from "./_variables";
 
 export default css.global`
+  :root {
+    --primary: #3433ff;
+    --background: #f4f4f4;
+    --background-secondary: #ffffff;
+    --background-inverted: #111111;
+    --font: #111111;
+    --font-secondary: rgba(33, 33, 33, 0.75);
+    --font-inverted: #ffffff;
+  }
+
+  [data-theme="dark"] {
+    --primary: #4746ff;
+    --background: #1e1e1e;
+    --background-secondary: #2a2a2a;
+    --background-inverted: #e5e5e5;
+    --font: #e5e5e5;
+    --font-secondary: #9a9a9a;
+    --font-inverted: #2a2a2a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --primary: #4746ff;
+    --background: #1e1e1e;
+    --background-secondary: #2a2a2a;
+    --background-inverted: #e5e5e5;
+    --font: #e5e5e5;
+    --font-secondary: #9a9a9a;
+    --font-inverted: #2a2a2a;
+  }
+
   html {
     font-size: 18px;
     line-height: 30px;
@@ -15,6 +45,7 @@ export default css.global`
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+    background-color: var(--background);
   }
 
   body {
@@ -26,19 +57,19 @@ export default css.global`
     font-size: 1rem;
     line-height: 1.5rem;
     letter-spacing: -0.011em;
-    background-color: ${theme.color.offWhite};
+    background-color: var(--background);
     /* Disable tap highlight */
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
 
   ::selection {
-    background-color: ${theme.color.black};
-    color: ${theme.color.white};
+    background-color: var(--background-inverted);
+    color: var(--font-inverted);
   }
 
   .theme {
-    background-color: ${theme.color.offWhite};
-    color: ${theme.color.secondary};
+    background-color: var(--background);
+    color: var(--font-secondary);
     height: 100%;
     width: 100vw;
 
