@@ -16,6 +16,12 @@ const Tech = () => (
         <p className="larger">
           Tech stack used for front-end, back-end services, and deployments.
         </p>
+        <p>
+          High-level overview of my go-to tool set for development projects,
+          back-end services, and deployments. Taking a component-based approach
+          to building responsive websites with a focus on design and user
+          experience.
+        </p>
       </Hero>
 
       <Body>
@@ -23,6 +29,7 @@ const Tech = () => (
           <dl>
             <dt>Front-end</dt>
             <dd>React</dd>
+            <dd>Next.js</dd>
             <dd>HTML5</dd>
             <dd>CSS3</dd>
             <dd>JavaScript ES6</dd>
@@ -33,20 +40,15 @@ const Tech = () => (
             <dd>PHP</dd>
             <dd>MySQL</dd>
             <dd>Bash</dd>
-            <dd>LAMP</dd>
+            <dd>SSH</dd>
           </dl>
           <dl>
             <dt>DevOps</dt>
             <dd>Git</dd>
-            <dd>SSH</dd>
-            <dd>CI/CD</dd>
-          </dl>
-          <dl>
-            <dt>Build</dt>
             <dd>NPM/Yarn</dd>
-            <dd>Gulp</dd>
             <dd>Webpack</dd>
             <dd>Babel</dd>
+            <dd>Continuous Deployment</dd>
           </dl>
           <dl>
             <dt>Platforms</dt>
@@ -55,6 +57,7 @@ const Tech = () => (
             <dd>WordPress</dd>
             <dd>Shopify</dd>
             <dd>Prismic</dd>
+            <dd>Firebase</dd>
             <dd>DigitalOcean</dd>
           </dl>
         </div>
@@ -70,7 +73,7 @@ const Tech = () => (
           grid-template-columns: repeat(2, 1fr);
         }
         @media (${theme.breakpoint.lg}) {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
         }
         dl {
           background-color: ${theme.color.white};
@@ -92,9 +95,9 @@ const Tech = () => (
           dd {
             display: inline-block;
             margin: 0 6px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 1.6rem;
-            color: ${theme.color.black};
+            // color: ${theme.color.black};
           }
         }
       }

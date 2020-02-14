@@ -115,8 +115,8 @@ export default css.global`
 
   p.large {
     font-weight: ${theme.font.regular};
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: ${theme.color.black};

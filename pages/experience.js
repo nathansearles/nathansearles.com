@@ -22,8 +22,6 @@ const Experience = () => (
         <p>
           Focusing on the complete digital project lifecycle including planning,
           strategy, design, development, back-end services, and deployments.
-          Taking a component-based approach to building responsive web sites
-          with a focus on design and user experience.
         </p>
       </Hero>
 
