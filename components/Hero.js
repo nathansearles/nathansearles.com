@@ -10,8 +10,8 @@ const Hero = props => {
 
           text-align: center;
           @media (${theme.breakpoint.lg}) {
-            margin: 10vh 0;
-            padding: ${props.project ? "36px 0 0" : "0 calc(100vw / 16)"};
+            margin: ${props.project ? "0" : "15vh 0"};
+            padding: ${props.project ? "36px 0" : "0 calc(100vw / 16)"};
           }
 
           h3:first-of-type {

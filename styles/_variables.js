@@ -1,5 +1,5 @@
 const colorValues = {
-  primary: "#86F9A4",
+  primary: "#3433FF",
   offBlack: "#262626",
   black: "#111111",
   secondary: "rgba(33, 33, 33, 0.75)",

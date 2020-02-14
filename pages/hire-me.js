@@ -18,6 +18,7 @@ const Info = () => (
     <Page>
       <Hero>
         <div className="aspect aspect__square shadow circle">
+          <div className="portrait-mask"></div>
           <Image
             src="nathan-searles-2018-square_o8pgtt.jpg"
             alt="Nathan Searles"
@@ -43,10 +44,19 @@ const Info = () => (
     </Page>
     <style jsx>{`
       .circle {
-        width: 200px;
-        padding-bottom: 200px;
-        border-radius: 200px;
+        width: 225px;
+        padding-bottom: 225px;
+        border-radius: 225px;
         margin: 0 auto 3rem;
+      }
+      .portrait-mask {
+        background: #3433ff;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        position: absolute;
+        mix-blend-mode: color;
+        opacity: 0.75;
       }
     `}</style>
   </>

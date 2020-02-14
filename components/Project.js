@@ -87,7 +87,7 @@ const Project = props => {
           }
 
           .Thumbnail {
-            ${hovered ? `transform: scale(1.045);` : ""}
+            ${hovered ? `transform: scale(1.035);` : ""}
           }
         }
       `}</style>

@@ -138,12 +138,12 @@ export default css.global`
       text-decoration: none;
       font-weight: ${theme.font.semibold};
       transition: color 350ms ease-out;
-      color: ${theme.color.black};
+      color: ${theme.color.primary};
     }
     &:hover,
     &:active,
     &:focus {
-      color: ${theme.color.secondary};
+      color: ${theme.color.primary};
     }
   }
 
