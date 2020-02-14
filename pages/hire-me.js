@@ -11,7 +11,7 @@ import theme from "../styles/_variables";
 
 const Info = () => (
   <>
-    <Title title="Info" />
+    <Title title="Hire Me" />
 
     <Nav />
 
