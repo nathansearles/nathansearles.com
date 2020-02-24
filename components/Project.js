@@ -2,6 +2,7 @@ import theme from "../styles/_variables";
 import Link from "next/link";
 import Image from "../components/Image";
 import { useHover } from "../utilities";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 const Project = props => {
   const [ref, hovered] = useHover();
@@ -15,13 +16,15 @@ const Project = props => {
       >
         <a ref={ref}>
           <div className="Thumbnail aspect aspect__square">
-            <Image
-              src={props.thumbnail}
-              alt={props.name}
-              aspectRatio={"square"}
-              hovering={hovered}
-              hoverable
-            />
+            <LazyLoadComponent>
+              <Image
+                src={props.thumbnail}
+                alt={props.name}
+                aspectRatio={"square"}
+                hovering={hovered}
+                hoverable
+              />
+            </LazyLoadComponent>
           </div>
           <h2>{props.name}</h2>
           <p>{props.desc}</p>
