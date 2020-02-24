@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import theme from "../styles/_variables";
-import Link from "next/link";
 import Project from "../components/Project";
-import Image from "../components/Image";
 
 const Projects = props => {
   return (
