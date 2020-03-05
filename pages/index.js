@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import fetch from "isomorphic-unfetch";
 import { absoluteUrl } from "../utilities";
 
@@ -6,7 +7,8 @@ import Nav from "../components/Nav";
 import Page from "../components/Page";
 import Hero from "../components/Hero";
 import Body from "../components/Body";
-import Projects from "../components/Projects";
+
+const Projects = dynamic(() => import("../components/Projects"));
 
 const Home = ({ projects }) => {
   return (
