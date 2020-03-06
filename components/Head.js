@@ -26,7 +26,7 @@ const Title = ({ title }) => {
         as="font"
         href="/static/fonts/Inter-Regular.woff2"
         type="font/woff2"
-        crossorigin="crossorigin"
+        crossOrigin="crossorigin"
       ></link>
     </Head>
   );
