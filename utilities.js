@@ -20,11 +20,11 @@ export const pageTransition = {
   initial: { opacity: 0 },
   enter: {
     opacity: 1,
-    transition: { duration: 0.4, ease: [0.0, 0.0, 0.2, 1] }
+    transition: { duration: 0.8, ease: [0.0, 0.0, 0.2, 1] }
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.2, ease: [0.4, 0.0, 1, 1] }
+    transition: { duration: 0.4, ease: [0.4, 0.0, 1, 1] }
   }
 };
 
@@ -33,12 +33,12 @@ export const scaleTransition = {
   enter: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.2, ease: [0.0, 0.0, 0.2, 1] }
+    transition: { duration: 0.4, ease: [0.0, 0.0, 0.2, 1] }
   },
   exit: {
     scale: 1.025,
     opacity: 0,
-    transition: { duration: 0.2, ease: [0.4, 0.0, 1, 1] }
+    transition: { duration: 0.4, ease: [0.4, 0.0, 1, 1] }
   }
 };
 
@@ -47,12 +47,12 @@ export const projectTransition = {
   enter: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.2, ease: [0.0, 0.0, 0.2, 1] }
+    transition: { duration: 0.4, ease: [0.0, 0.0, 0.2, 1] }
   },
   exit: {
     scale: 0.975,
     opacity: 0,
-    transition: { duration: 0.2, ease: [0.4, 0.0, 1, 1] }
+    transition: { duration: 0.4, ease: [0.4, 0.0, 1, 1] }
   }
 };
 
