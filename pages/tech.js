@@ -13,9 +13,9 @@ const Tech = () => (
 
     <Page>
       <Hero>
-        <p className="larger">
+        <h1>
           Tech stack used for frontend, backend services, and deployments.
-        </p>
+        </h1>
         <p>
           High-level overview of my go-to tool set for development projects.
           Taking a component-based approach to building responsive websites with

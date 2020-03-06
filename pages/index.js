@@ -19,10 +19,10 @@ const Home = ({ projects }) => {
 
       <Page>
         <Hero>
-          <p className="larger">
+          <h1>
             Frontend engineer focused on technology that drives great user
             experience and design.
-          </p>
+          </h1>
         </Hero>
 
         <Body>

@@ -14,7 +14,7 @@ const Error = ({ projects }) => {
 
       <Page>
         <Hero>
-          <p className="larger">Hmm, this page isn't here. ¯\_(ツ)_/¯</p>
+          <h1>Hmm, this page isn't here. ¯\_(ツ)_/¯</h1>
         </Hero>
       </Page>
     </>

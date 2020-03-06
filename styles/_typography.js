@@ -4,13 +4,18 @@ import theme from "./_variables";
 export default css.global`
   h1,
   .h1 {
-    font-weight: ${theme.font.bold};
-    font-size: 3.3rem;
-    line-height: 3.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
+    font-weight: ${theme.font.regular};
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: var(--font);
+    @media (${theme.breakpoint.md}) {
+      font-size: 2.2rem;
+      line-height: 3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
   }
   h2,
   .h2 {
@@ -100,29 +105,14 @@ export default css.global`
 
   p.larger {
     font-weight: ${theme.font.regular};
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    color: var(--font);
-    @media (${theme.breakpoint.md}) {
-      font-size: 2.2rem;
-      line-height: 3rem;
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  p.large {
-    font-weight: ${theme.font.regular};
     font-size: 1rem;
     line-height: 1.8rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: var(--font);
     @media (${theme.breakpoint.md}) {
-      font-size: 1.4rem;
-      line-height: 2.3rem;
+      font-size: 1.2rem;
+      line-height: 2.1rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
     }

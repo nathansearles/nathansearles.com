@@ -20,14 +20,10 @@ const Title = ({ title }) => {
         content={`${title} | Nathan Searles`}
       />
       <meta name="author" content="Nathan Searles" />
-
       <link
-        rel="preload"
-        as="font"
-        href="/static/fonts/Inter-Regular.woff2"
-        type="font/woff2"
-        crossOrigin="crossorigin"
-      ></link>
+        href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap"
+        rel="stylesheet"
+      />
     </Head>
   );
 };

@@ -15,10 +15,10 @@ const Experience = () => (
 
     <Page>
       <Hero>
-        <p className="larger">
+        <h1>
           A background in frontend engineering,{" "}
           <span className="nowrap">user experience</span> and design.
-        </p>
+        </h1>
         <p>
           Focusing on the complete digital project lifecycle including planning,
           strategy, design, frontend engineering, backend services, and

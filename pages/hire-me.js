@@ -25,18 +25,15 @@ const Info = () => (
             circle
           />
         </div>
-        <p className="larger">
+        <h1>
           Hey, I'm Nathan, a Portland, Oregon based engineer and technical
           leader.
-        </p>
+        </h1>
 
-        <p className="large">
+        <p className="larger">
           I'm currently available for frontend engineering and technical
-          leadership opportunities.
-        </p>
-
-        <p className="large">
-          Have a great opportunity? Shoot me an email and let's chat.{" "}
+          leadership opportunities. Have a great opportunity? Shoot me an email
+          and let's chat.{" "}
           <a href="mailto:nsearles@gmail.com">nsearles@gmail.com</a>
         </p>
       </Hero>
