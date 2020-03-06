@@ -8,28 +8,30 @@ const Project = props => {
   const [ref, hovered] = useHover();
 
   return (
-    <div className="Project" key={props.slug}>
-      <Link
-        scroll={false}
-        href="/projects/[slug]"
-        as={`/projects/${props.slug}`}
-      >
-        <a ref={ref}>
-          <div className="Thumbnail aspect aspect__square">
-            <LazyLoadComponent>
-              <Image
-                src={props.thumbnail}
-                alt={props.name}
-                aspectRatio={"square"}
-                hovering={hovered}
-                hoverable
-              />
-            </LazyLoadComponent>
-          </div>
-          <h2>{props.name}</h2>
-          <p>{props.desc}</p>
-        </a>
-      </Link>
+    <section className="Project" key={props.slug}>
+      <article>
+        <Link
+          scroll={false}
+          href="/projects/[slug]"
+          as={`/projects/${props.slug}`}
+        >
+          <a ref={ref}>
+            <div className="Thumbnail aspect aspect__square">
+              <LazyLoadComponent>
+                <Image
+                  src={props.thumbnail}
+                  alt={props.name}
+                  aspectRatio={"square"}
+                  hovering={hovered}
+                  hoverable
+                />
+              </LazyLoadComponent>
+            </div>
+            <h2>{props.name}</h2>
+            <p>{props.desc}</p>
+          </a>
+        </Link>
+      </article>
       <style jsx>{`
         .Project {
           margin: 16px 0;
@@ -94,7 +96,7 @@ const Project = props => {
           }
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 

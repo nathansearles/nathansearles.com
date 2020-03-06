@@ -12,9 +12,7 @@ import theme from "../styles/_variables";
 const Info = () => (
   <>
     <Title title="Hire Me" />
-
     <Nav />
-
     <Page>
       <Hero>
         <div className="aspect aspect__square shadow circle">
@@ -29,7 +27,6 @@ const Info = () => (
           Hey, I'm Nathan, a Portland, Oregon based engineer and technical
           leader.
         </h1>
-
         <p className="larger">
           I'm currently available for frontend engineering and technical
           leadership opportunities. Have a great opportunity? Shoot me an email

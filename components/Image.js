@@ -111,43 +111,42 @@ const Image = props => {
   }, []);
 
   return (
-    <>
-      <div className="aspect__content">
-        <picture ref={imageRef}>
-          <source
-            media={`(min-width: ${breakpoint.xl}px)`}
-            width={handleDimension("xl", aspectRatio)}
-            height={handleDimension("xl", aspectRatio) * 0.5625}
-            srcSet={handleSrcSet("xl")}
-          />
-          <source
-            media={`(min-width: ${breakpoint.lg}px)`}
-            width={handleDimension("lg", aspectRatio)}
-            height={handleDimension("lg", aspectRatio) * 0.5625}
-            srcSet={handleSrcSet("lg")}
-          />
-          <source
-            media={`(min-width: ${breakpoint.md}px)`}
-            width={handleDimension("md", aspectRatio)}
-            height={handleDimension("md", aspectRatio)}
-            srcSet={handleSrcSet("md")}
-          />
-          <source
-            media={`(min-width: ${breakpoint.sm}px)`}
-            width={handleDimension("sm", aspectRatio)}
-            height={handleDimension("sm", aspectRatio)}
-            srcSet={handleSrcSet("sm")}
-          />
-          <img
-            alt={props.alt}
-            onLoad={handleImageLoaded}
-            width={handleDimension("xs", aspectRatio)}
-            height={handleDimension("xs", aspectRatio)}
-            srcSet={handleSrcSet("xs")}
-            src={handleSrcSet("xs")}
-          />
-        </picture>
-      </div>
+    <div className="aspect__content">
+      <picture ref={imageRef}>
+        <source
+          media={`(min-width: ${breakpoint.xl}px)`}
+          width={handleDimension("xl", aspectRatio)}
+          height={handleDimension("xl", aspectRatio) * 0.5625}
+          srcSet={handleSrcSet("xl")}
+        />
+        <source
+          media={`(min-width: ${breakpoint.lg}px)`}
+          width={handleDimension("lg", aspectRatio)}
+          height={handleDimension("lg", aspectRatio) * 0.5625}
+          srcSet={handleSrcSet("lg")}
+        />
+        <source
+          media={`(min-width: ${breakpoint.md}px)`}
+          width={handleDimension("md", aspectRatio)}
+          height={handleDimension("md", aspectRatio)}
+          srcSet={handleSrcSet("md")}
+        />
+        <source
+          media={`(min-width: ${breakpoint.sm}px)`}
+          width={handleDimension("sm", aspectRatio)}
+          height={handleDimension("sm", aspectRatio)}
+          srcSet={handleSrcSet("sm")}
+        />
+        <img
+          alt={props.alt}
+          onLoad={handleImageLoaded}
+          width={handleDimension("xs", aspectRatio)}
+          height={handleDimension("xs", aspectRatio)}
+          srcSet={handleSrcSet("xs")}
+          src={handleSrcSet("xs")}
+        />
+      </picture>
+
       <style jsx>{`
         picture {
           display: block;
@@ -194,7 +193,7 @@ const Image = props => {
             : ""}
         }
       `}</style>
-    </>
+    </div>
   );
 };
 

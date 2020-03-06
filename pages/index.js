@@ -14,9 +14,7 @@ const Home = ({ projects }) => {
   return (
     <>
       <Title title={"Projects"} />
-
       <Nav />
-
       <Page>
         <Hero>
           <h1>
@@ -24,7 +22,6 @@ const Home = ({ projects }) => {
             experience and design.
           </h1>
         </Hero>
-
         <Body>
           <h3>Select projects</h3>
           <Projects projects={projects} />

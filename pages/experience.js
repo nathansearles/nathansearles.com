@@ -10,9 +10,7 @@ import theme from "../styles/_variables";
 const Experience = () => (
   <>
     <Title title="Experience" />
-
     <Nav />
-
     <Page>
       <Hero>
         <h1>
@@ -28,8 +26,8 @@ const Experience = () => (
 
       <Body>
         <h3>Past experience</h3>
-        <div className="boxes">
-          <div className="box">
+        <article className="boxes">
+          <article className="box">
             <h2>Cinco</h2>
             <p>Technical Director</p>
             <p>
@@ -39,9 +37,9 @@ const Experience = () => (
               with existing code bases and platforms. Clients included The James
               Brand, Nike, Gogoro, and Nextbit.
             </p>
-          </div>
+          </article>
 
-          <div className="box">
+          <article className="box">
             <h2>Fuzzco</h2>
             <p>Director of Technology</p>
             <p>
@@ -51,9 +49,9 @@ const Experience = () => (
               new and existing clients. Worked with Obey, Hugh &amp; Crye and
               range of small to medium-sized business.
             </p>
-          </div>
+          </article>
 
-          <div className="box">
+          <article className="box">
             <h2>The Brigade</h2>
             <p>Partner &amp; Director of Technology</p>
             <p>
@@ -62,17 +60,17 @@ const Experience = () => (
               management, to hands-on engineering for clients including Spotify,
               Intel, and Mindjet.
             </p>
-          </div>
+          </article>
 
-          <div className="box">
+          <article className="box">
             <h2>Pollinate</h2>
             <p>Sr. Frontend Developer</p>
             <p>
               Led frontend engineering for projects with Yakima, Hollywood
               Theaters, and Umpqua Bank, among others.
             </p>
-          </div>
-        </div>
+          </article>
+        </article>
       </Body>
     </Page>
     <style jsx>{`

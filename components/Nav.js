@@ -39,7 +39,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <>
+    <header>
       <nav className="MainNav" role="navigation">
         <div>
           <Link href="/">
@@ -165,7 +165,7 @@ const Nav = () => {
           }
         }
       `}</style>
-    </>
+    </header>
   );
 };
 

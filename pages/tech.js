@@ -8,9 +8,7 @@ import theme from "../styles/_variables";
 const Tech = () => (
   <>
     <Title title="Tech" />
-
     <Nav />
-
     <Page>
       <Hero>
         <h1>
@@ -22,9 +20,8 @@ const Tech = () => (
           a focus on design and user experience.
         </p>
       </Hero>
-
       <Body>
-        <div className="boxes">
+        <article className="boxes">
           <dl>
             <dt>Frontend</dt>
             <dd>React</dd>
@@ -59,7 +56,7 @@ const Tech = () => (
             <dd>Firebase</dd>
             <dd>DigitalOcean</dd>
           </dl>
-        </div>
+        </article>
       </Body>
     </Page>
     <style jsx>{`

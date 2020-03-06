@@ -12,7 +12,7 @@ const Page = props => {
       variants={transition}
     >
       <div className="wrapper">
-        <div className="content">{props.children}</div>
+        <main className="content">{props.children}</main>
       </div>
       <style jsx>{`
         .wrapper {

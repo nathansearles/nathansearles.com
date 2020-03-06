@@ -4,28 +4,25 @@ import Project from "../components/Project";
 
 const Projects = props => {
   return (
-    <div className="Projects">
+    <section className="Projects">
       {props.projects.map(project => (
         <Project key={project.slug} {...project} />
       ))}
-
       <style jsx>{`
-        .Projects {
+        section {
           display: grid;
           grid-template-columns: 1fr;
           column-gap: 24px;
           row-gap: 24px;
-
           @media (${theme.breakpoint.md}) {
             grid-template-columns: repeat(2, 1fr);
           }
-
           @media (${theme.breakpoint.lg}) {
             grid-template-columns: repeat(3, 1fr);
           }
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 
