@@ -12,11 +12,11 @@ const ScrollToTopControlller = ({ children, router }) => {
     if (pathname === "/") {
       setTimeout(() => {
         window.scrollTo(0, scrollPos);
-      }, 360);
+      }, 280);
     } else {
       setTimeout(() => {
         window.scrollTo(0, 0);
-      }, 360);
+      }, 280);
     }
   }, [pathname, scrollPos]);
 

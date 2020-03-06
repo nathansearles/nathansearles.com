@@ -53,7 +53,7 @@ const NavItem = props => {
                 bottom: -4px;
                 margin-left: -50%;
                 transform-origin: 50% 50%;
-                transition: transform 400ms cubic-bezier(0.19, 1, 0.22, 1);
+                transition: transform 250ms cubic-bezier(0.19, 1, 0.22, 1);
               }
             }
             &.active {
