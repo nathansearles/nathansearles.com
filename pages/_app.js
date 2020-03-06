@@ -47,7 +47,7 @@ class Site extends App {
     return (
       <ScrollController>
         <div className="theme" data-theme={this.state.theme}>
-          <AnimatePresence exitBeforeEnter initial={false}>
+          <AnimatePresence initial={false}>
             <Component {...pageProps} key={router.route} />
             <button
               className="themeToggle"
