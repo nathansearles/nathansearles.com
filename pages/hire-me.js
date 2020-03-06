@@ -26,13 +26,13 @@ const Info = () => (
           />
         </div>
         <p className="larger">
-          Hey, I'm Nathan, a Portland, Oregon based developer and technical
+          Hey, I'm Nathan, a Portland, Oregon based engineer and technical
           leader.
         </p>
 
         <p className="large">
-          I'm currently looking for technical leadership and development
-          opportunities with a team that's passionate about UX and design.
+          I'm currently available for frontend engineering and technical
+          leadership opportunities.
         </p>
 
         <p className="large">

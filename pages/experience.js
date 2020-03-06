@@ -16,12 +16,13 @@ const Experience = () => (
     <Page>
       <Hero>
         <p className="larger">
-          A background in front-end development,{" "}
+          A background in frontend engineering,{" "}
           <span className="nowrap">user experience</span> and design.
         </p>
         <p>
           Focusing on the complete digital project lifecycle including planning,
-          strategy, design, development, back-end services, and deployments.
+          strategy, design, frontend engineering, backend services, and
+          deployments.
         </p>
       </Hero>
 
@@ -46,7 +47,7 @@ const Experience = () => (
             <p>
               Managed team of developers and established a technology process.
               Oversaw a roster of existing Wordpress websites, supported new
-              business, day-to-day development and project/account management of
+              business, day-to-day engineering and project/account management of
               new and existing clients. Worked with Obey, Hugh &amp; Crye and
               range of small to medium-sized business.
             </p>
@@ -58,16 +59,16 @@ const Experience = () => (
             <p>
               Co-founded and helped run all aspects of a newly-formed digital
               agency. Oversaw new business, project, account, and team
-              management, to hands-on development for clients including Spotify,
+              management, to hands-on engineering for clients including Spotify,
               Intel, and Mindjet.
             </p>
           </div>
 
           <div className="box">
             <h2>Pollinate</h2>
-            <p>Sr. Front-end Developer</p>
+            <p>Sr. Frontend Developer</p>
             <p>
-              Led front-end development for projects with Yakima, Hollywood
+              Led frontend engineering for projects with Yakima, Hollywood
               Theaters, and Umpqua Bank, among others.
             </p>
           </div>

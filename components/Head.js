@@ -3,7 +3,7 @@ import Head from "next/head";
 const Title = ({ title }) => {
   return (
     <Head>
-      <title>{`${title} | Nathan Searles - Web developer`}</title>
+      <title>{`${title} | Nathan Searles - Frontend engineer`}</title>
       <meta
         name="viewport"
         key="viewport"
@@ -12,7 +12,7 @@ const Title = ({ title }) => {
       <link rel="icon" href="/static/favicon.ico" />
       <meta
         name="Description"
-        content="Web developer focused on technology that drives great user experience and design."
+        content="Frontend engineer focused on technology that drives great user experience and design."
       />
       <meta
         name="title"

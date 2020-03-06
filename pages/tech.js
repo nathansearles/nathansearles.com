@@ -14,7 +14,7 @@ const Tech = () => (
     <Page>
       <Hero>
         <p className="larger">
-          Tech stack used for front-end, back-end services, and deployments.
+          Tech stack used for frontend, backend services, and deployments.
         </p>
         <p>
           High-level overview of my go-to tool set for development projects.
@@ -26,7 +26,7 @@ const Tech = () => (
       <Body>
         <div className="boxes">
           <dl>
-            <dt>Front-end</dt>
+            <dt>Frontend</dt>
             <dd>React</dd>
             <dd>Next.js</dd>
             <dd>HTML5</dd>
@@ -34,7 +34,7 @@ const Tech = () => (
             <dd>JavaScript ES6</dd>
           </dl>
           <dl>
-            <dt>Server-side</dt>
+            <dt>Backend</dt>
             <dd>Node.js</dd>
             <dd>PHP</dd>
             <dd>MySQL</dd>
