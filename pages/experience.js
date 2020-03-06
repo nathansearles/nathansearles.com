@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { pageTransition } from "../utilities";
 import Title from "../components/Head";
 import Page from "../components/Page";
 import Hero from "../components/Hero";

@@ -26,7 +26,6 @@ const NavItem = props => {
             padding: 4px 10px;
             margin: 0 8px;
             display: inline-block;
-
             span {
               position: relative;
             }

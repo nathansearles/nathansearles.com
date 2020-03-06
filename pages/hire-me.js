@@ -1,13 +1,8 @@
-import { motion } from "framer-motion";
-import { pageTransition } from "../utilities";
 import Title from "../components/Head";
 import Nav from "../components/Nav";
 import Page from "../components/Page";
 import Hero from "../components/Hero";
-import Body from "../components/Body";
 import Image from "../components/Image";
-
-import theme from "../styles/_variables";
 
 const Info = () => (
   <>
