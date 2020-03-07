@@ -4,7 +4,7 @@ import theme from "./_variables";
 export default css.global`
   h1,
   .h1 {
-    font-weight: ${theme.font.regular};
+    font-weight: ${theme.font.semibold};
     font-size: 1.8rem;
     line-height: 2.6rem;
     margin-top: 1rem;
@@ -19,7 +19,7 @@ export default css.global`
   }
   h2,
   .h2 {
-    font-weight: ${theme.font.regular};
+    font-weight: ${theme.font.semibold};
     font-size: 1.5rem;
     line-height: 2.2rem;
     margin-top: 1.5rem;
