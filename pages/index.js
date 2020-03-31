@@ -9,18 +9,19 @@ const Home = () => (
     <Head title="Projects" />
     <Container>
       <Navigation />
-      <h1>
+      <h1 className="larger">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias adipisci,
         fugiat exercitationem.
       </h1>
 
-      <p>
+      <p className="larger">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
         unde doloribus omnis voluptates, quae porro officia sunt excepturi
         commodi! Fugit alias unde ducimus ex, corrupti voluptas perferendis
         ipsam repudiandae qui.
       </p>
 
+      <h3>Select projects</h3>
       <div className="grid">
         <Card>
           <h3>Lorem ipsum dolor sit</h3>

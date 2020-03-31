@@ -19,7 +19,7 @@ const Title = ({ title }) => {
       <meta name="author" content="Nathan Searles" />
       <link rel="manifest" href="/site.webmanifest"></link>
       <link
-        href="https://fonts.googleapis.com/css?family=Inter:400,500,800&display=swap"
+        href="https://fonts.googleapis.com/css?family=Inter:400,500,800,900&display=swap"
         rel="stylesheet"
       />
     </Head>
