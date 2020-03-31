@@ -1,0 +1,14 @@
+@import "../../styles/_variables.scss";
+
+.Container {
+  min-height: 100vh;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  max-width: $lg;
+
+  @media (min-width: $md) {
+  }
+}
