@@ -10,21 +10,24 @@ const Project = ({ project }) => {
     <>
       <Head title={project.name} />
       <Container>
-        <Navigation />
-        <h1>{project.name}</h1>
+        <div className="col-12">
+          <Navigation />
 
-        <Image src={project.image} alt={project.name} />
-        {/* <Page project> */}
-        {/* <Hero project>
+          <h1>{project.name}</h1>
+
+          <Image src={project.image} alt={project.name} />
+          {/* <Page project> */}
+          {/* <Hero project>
           <div className="aspect aspect__square aspect__wide--md shadow">
             <Image src={project.image} alt={project.name} />
           </div>
         </Hero> */}
-        {/* <Body project> */}
-        <div dangerouslySetInnerHTML={{ __html: project.body }} />
-        {/* </Body> */}
-        {/* </Page> */}
-        <Footer />
+          {/* <Body project> */}
+          <div dangerouslySetInnerHTML={{ __html: project.body }} />
+          {/* </Body> */}
+          {/* </Page> */}
+          <Footer />
+        </div>
       </Container>
     </>
   ) : (

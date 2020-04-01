@@ -1,3 +1,5 @@
+@import "./_variables.scss";
+
 :root {
   --primary: #3433ff;
   --background: #f4f4f4;
@@ -14,6 +16,16 @@ body {
   margin: 0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  /* Font varient */
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  /* Smoothing */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
   color: var(--font-secondary);
 }
 
@@ -35,8 +47,16 @@ h1,
   font-weight: 800;
   color: var(--font-primary);
   &.larger {
-    font-size: 6.875rem;
-    line-height: 7.1875rem;
+    font-size: 3.4375rem;
+    line-height: 3.90625rem;
+    @media (min-width: $sm) {
+      font-size: 5.5rem;
+      line-height: 5.75rem;
+    }
+    @media (min-width: $md) {
+      font-size: 6.875rem;
+      line-height: 7.1875rem;
+    }
   }
   + h2 {
     margin-top: 0;
@@ -132,6 +152,54 @@ sub {
 
 .grid {
   display: grid;
-  grid-column-gap: 32px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $md) {
+    grid-column-gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.col-8 {
+  grid-column: 1/5;
+}
+.col-10 {
+  grid-column: 1/5;
+}
+.col-11 {
+  grid-column: 1/5;
+}
+.col-12 {
+  grid-column: 1/5;
+}
+
+@media (min-width: $sm) {
+  .col-8 {
+    grid-column: 1/6;
+  }
+  .col-10 {
+    grid-column: 1/9;
+  }
+  .col-11 {
+    grid-column: 1/9;
+  }
+  .col-12 {
+    grid-column: 1/9;
+  }
+}
+
+@media (min-width: $lg) {
+  .col-8 {
+    grid-column: 1/9;
+  }
+  .col-10 {
+    grid-column: 1/11;
+  }
+  .col-11 {
+    grid-column: 1/12;
+  }
+  .col-12 {
+    grid-column: 1/13;
+  }
 }

@@ -1,11 +1,24 @@
 .Card {
-  padding: 2rem 1rem;
+  padding: 3rem 0 0;
   color: var(--font-inverted);
   background: var(--background-inverted);
   text-decoration: none;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   border-radius: 0.5rem;
+  overflow: hidden;
   * {
     color: var(--font-inverted);
+  }
+  h3 {
+    font-size: 1.125rem;
+    opacity: 50%;
+    margin: 0;
+    line-height: 1.40625rem;
+  }
+  picture {
+    margin-top: 3rem;
+  }
+  .title {
+    padding: 0 1rem;
   }
 }

@@ -1,44 +1,54 @@
 import fetch from "node-fetch";
+import Link from "next/link";
 import Head from "../components/Head";
 import Container from "../components/Container";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
-import Image from "../components/Image";
 
 const Home = ({ projects }) => {
   return (
     <>
       <Head title="Projects" />
       <Container>
-        <Navigation />
-        <h1 className="larger">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-          adipisci, fugiat exercitationem.
-        </h1>
-
-        <p className="larger">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          unde doloribus omnis voluptates, quae porro officia sunt excepturi
-          commodi! Fugit alias unde ducimus ex, corrupti voluptas perferendis
-          ipsam repudiandae qui.
-        </p>
-
-        <h3>Select projects</h3>
-        <div className="grid">
-          {projects.map(project => (
-            <Card href={`/projects/${project.slug}`} key={project.id}>
-              <h3>{project.name}</h3>
-              <p>{project.desc}</p>
-              <Image
-                src={project.thumbnail}
-                alt={project.name}
-                aspectRatio={"square"}
-              />
-            </Card>
-          ))}
+        <div className="col-12">
+          <Navigation />
         </div>
-        <Footer />
+
+        <div className="col-10">
+          <h1 className="larger">
+            Hey, I'm Nathan,
+            <br />I build dynamic interfaces and experiences.
+          </h1>
+
+          <p className="larger">
+            I have a background in frontend developent, technical leadership and
+            design. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+
+          <p className="larger">
+            I'm currently available for frontend development and technical
+            leadership opportunities.
+          </p>
+
+          <p>
+            <Link href="/resume">
+              <a className="button">Resume</a>
+            </Link>
+          </p>
+        </div>
+
+        <div className="col-12">
+          <h3>Select projects</h3>
+          <div className="grid">
+            {projects.map(project => (
+              <Card {...project} key={project.id}></Card>
+            ))}
+          </div>
+        </div>
+        <div className="col-12">
+          <Footer />
+        </div>
       </Container>
     </>
   );
