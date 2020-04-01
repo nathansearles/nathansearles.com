@@ -5,7 +5,7 @@ import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import Image from "../../components/Image";
 
-const Project = ({ project, status }) => {
+const Project = ({ project }) => {
   return project ? (
     <>
       <Head title={project.name} />
@@ -40,7 +40,7 @@ export async function getStaticPaths() {
 
   // Get the paths we want to pre-render based on projects
   const paths = projects.map(project => `/projects/${project.slug}`);
-  console.log(paths);
+
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
   return { paths, fallback: false };
@@ -48,13 +48,12 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 export async function getStaticProps({ params }) {
-  console.log("[params]", params);
   // params contains the project `id`.
   // If the route is like /projects/1, then params.id is 1
   const res = await fetch(`http://localhost:3000/api/projects/${params.slug}`);
 
   const project = await res.json();
-  console.log("[project]", project);
+
   // Pass project data to the page via props
   return { props: { project } };
 }

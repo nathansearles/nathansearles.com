@@ -1,9 +1,11 @@
+import Link from "next/link";
 import styles from "./card.module.scss";
+
 const Card = props => {
   return (
-    <a href="#" className={styles.Card}>
-      {props.children}
-    </a>
+    <Link href={props.href}>
+      <a className={styles.Card}>{props.children}</a>
+    </Link>
   );
 };
 
