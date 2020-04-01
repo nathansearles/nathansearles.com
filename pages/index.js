@@ -43,16 +43,13 @@ const Home = ({ projects }) => {
     </>
   );
 };
-
-// This also gets called at build time
-export async function getStaticProps({ params }) {
-  // params contains the project `id`.
-  // If the route is like /projects/1, then params.id is 1
-  const res = await fetch(`http://localhost:3000/api/projects`);
+export async function getStaticProps() {
+  const res = await fetch(
+    `https://nathansearles-f3c20.firebaseio.com/projects.json`
+  );
 
   const projects = await res.json();
 
-  // Pass project data to the page via props
   return { props: { projects } };
 }
 
