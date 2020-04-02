@@ -5,6 +5,7 @@ import Container from "../components/Container";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
+import Button from "../components/Button";
 
 const Home = ({ projects }) => {
   return (
@@ -15,7 +16,7 @@ const Home = ({ projects }) => {
           <Navigation />
         </div>
 
-        <div className="col-10">
+        <div className="col-10 mb5">
           <h1 className="larger">
             Hey, I'm Nathan,
             <br />I build dynamic interfaces and experiences.
@@ -31,10 +32,10 @@ const Home = ({ projects }) => {
             leadership opportunities.
           </p>
 
-          <p>
-            <Link href="/resume">
-              <a className="button">Resume</a>
-            </Link>
+          <p className="larger">
+            <Button href="/resume" classes="underline">
+              Resume
+            </Button>
           </p>
         </div>
 

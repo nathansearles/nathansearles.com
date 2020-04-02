@@ -41,21 +41,24 @@ body {
 h1,
 .h1 {
   font-size: 3.75rem;
-  line-height: 4.5rem;
+  line-height: 4.25rem;
   margin-top: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
   font-weight: 800;
   color: var(--font-primary);
   &.larger {
     font-size: 3.4375rem;
     line-height: 3.90625rem;
+    margin-bottom: 3rem;
+
     @media (min-width: $sm) {
       font-size: 5.5rem;
       line-height: 5.75rem;
     }
     @media (min-width: $md) {
-      font-size: 6.875rem;
-      line-height: 7.1875rem;
+      font-size: 7.5rem;
+      line-height: 8.4375rem;
+      margin-bottom: 5rem;
     }
   }
   + h2 {
@@ -105,10 +108,14 @@ pre,
 table,
 blockquote {
   font-size: 1.5rem;
-  font-weight: 400;
   line-height: 2.25rem;
-  margin-top: 0rem;
+  font-weight: 400;
+  margin-top: 0;
   margin-bottom: 1.5rem;
+  @media (min-width: $md) {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
 }
 ul ul,
 ol ol,
@@ -146,8 +153,12 @@ sub {
 }
 
 .larger {
-  font-size: 2rem;
-  line-height: 2.9375rem;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  @media (min-width: $md) {
+    font-size: 2rem;
+    line-height: 2.9375rem;
+  }
 }
 
 .grid {
@@ -202,4 +213,16 @@ sub {
   .col-12 {
     grid-column: 1/13;
   }
+}
+
+.mb4 {
+  margin-bottom: 4rem;
+}
+
+.mb5 {
+  margin-bottom: 5rem;
+}
+
+.mb6 {
+  margin-bottom: 6rem;
 }

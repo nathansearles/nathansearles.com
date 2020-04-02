@@ -1,0 +1,22 @@
+.Button {
+  display: inline-block;
+  &.solid {
+    background-color: var(--background-inverted);
+    color: var(--font-inverted);
+    font-weight: 900;
+    font-size: 0.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    padding: 1.25rem 2.25rem;
+  }
+  &.underline {
+    background-color: transparent;
+    color: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    text-decoration: none;
+    border-bottom: 6px solid var(--primary);
+    line-height: inherit;
+  }
+}

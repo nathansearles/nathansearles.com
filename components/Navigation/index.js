@@ -1,12 +1,12 @@
 import styles from "./navigation.module.scss";
-import Link from "../Link";
+import Button from "../Button";
 
 const Navigation = props => {
   return (
     <nav className={styles.Navigation}>
-      <Link href="/resume" activeClassName="active">
-        <a>Resume</a>
-      </Link>
+      <Button href="/resume" classes="solid">
+        Resume
+      </Button>
     </nav>
   );
 };

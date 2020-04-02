@@ -12,20 +12,17 @@ const Project = ({ project }) => {
       <Container>
         <div className="col-12">
           <Navigation />
-
-          <h1>{project.name}</h1>
-
-          <Image src={project.image} alt={project.name} />
-          {/* <Page project> */}
-          {/* <Hero project>
-          <div className="aspect aspect__square aspect__wide--md shadow">
-            <Image src={project.image} alt={project.name} />
-          </div>
-        </Hero> */}
-          {/* <Body project> */}
+        </div>
+        <div className="col-10">
           <div dangerouslySetInnerHTML={{ __html: project.body }} />
-          {/* </Body> */}
-          {/* </Page> */}
+        </div>
+        <div className="col-12">
+          <Image src={project.image} alt={project.name} />
+        </div>
+        <div className="col-10">
+          <div dangerouslySetInnerHTML={{ __html: project.details }} />
+        </div>
+        <div className="col-12">
           <Footer />
         </div>
       </Container>
