@@ -1,32 +1,49 @@
 import Head from "../components/Head";
-import Container from "../components/Container";
+import Main from "../components/Main";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import Card from "../components/Card";
+import Image from "../components/Image";
 
-const Home = () => (
+const Resume = () => (
   <>
     <Head title="Projects" />
-    <Container>
-      <div className="col-12">
-        <Navigation />
-      </div>
-      <div className="col-8">
+
+    <div className="col-12">
+      <Navigation />
+    </div>
+    <Main>
+      <div className="col-8 align-center">
+        <div className="portrait">
+          <Image
+            src="nathan-searles-2018-square_o8pgtt.jpg"
+            alt="Nathan Searles"
+            aspectRatio={"square"}
+          />
+        </div>
+
         <h1>Nathan Searles</h1>
 
-        <h2>Technical leader and frontend developer</h2>
+        <h2>Frontend developer and technical leader</h2>
 
         <p>
           Working through the complete project lifecycle including planning,
-          strategy, design, frontend development, backend services, and
-          deployments. Taking a component-based approach to building responsive
-          experiences with a focus on design and user experience.
+          strategy, prototyping, design, frontend development, backend services,
+          and deployments. Taking a component-based approach to building
+          responsive experiences with a focus on design and user experience.
         </p>
 
-        <h3>Experience</h3>
+        <aside>
+          <p>
+            I'm available for frontend development and technical leadership
+            opportunities. Have a great opportunity? Shoot me an email and let's
+            chat. <a href="mailto:nsearles@gmail.com">nsearles@gmail.com</a>
+          </p>
+        </aside>
 
-        <h2>Cinco</h2>
-        <p>Technical Director</p>
+        <h5>Experience</h5>
+
+        <h3>Cinco</h3>
+        <h4>Technical Director</h4>
         <p>
           Supported digital projects across a design-led studio, from proposals
           and SOWs, to project planning, strategy and hands on development. This
@@ -35,8 +52,8 @@ const Home = () => (
           Nextbit.
         </p>
 
-        <h2>Fuzzco</h2>
-        <p>Director of Technology</p>
+        <h3>Fuzzco</h3>
+        <h4>Director of Technology</h4>
         <p>
           Managed team of developers and established a technology process.
           Oversaw a roster of existing Wordpress websites, supported new
@@ -45,8 +62,8 @@ const Home = () => (
           to medium-sized business.
         </p>
 
-        <h2>The Brigade</h2>
-        <p>Partner & Director of Technology</p>
+        <h3>The Brigade</h3>
+        <h4>Partner & Director of Technology</h4>
         <p>
           Co-founded and helped run all aspects of a newly-formed digital
           agency. Oversaw new business, project, account, and team management,
@@ -54,14 +71,14 @@ const Home = () => (
           Mindjet.
         </p>
 
-        <h2>Pollinate</h2>
-        <p>Sr. Frontend Developer</p>
+        <h3>Pollinate</h3>
+        <h4>Sr. Frontend Developer</h4>
         <p>
           Led frontend engineering for projects with Yakima, Hollywood Theaters,
           and Umpqua Bank, among others.
         </p>
 
-        <h3>Technology</h3>
+        <h5>Technology</h5>
 
         <p>
           Taking a component-based approach to building responsive interfaces
@@ -73,15 +90,15 @@ const Home = () => (
           Working with modren frontend frameworks and libraries like{" "}
           <strong>React</strong> and <strong>Next.js</strong>, versioned with{" "}
           <strong>Git</strong>, built with <strong>NPM</strong> and{" "}
-          <strong>Webpack</strong>. And powered by a headless{" "}
-          <strong>CMS</strong> or a <strong>RESTful</strong> database.
+          <strong>Webpack</strong>. And powered by a{" "}
+          <strong>headless CMS</strong> or a <strong>RESTful database</strong>.
         </p>
       </div>
-      <div className="col-12">
-        <Footer />
-      </div>
-    </Container>
+    </Main>
+    <div className="col-12">
+      <Footer />
+    </div>
   </>
 );
 
-export default Home;
+export default Resume;
