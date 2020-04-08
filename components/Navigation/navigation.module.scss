@@ -1,6 +1,8 @@
 .Navigation {
-  display: flex;
-  justify-content: flex-end;
-  padding: 2rem 0;
-  margin: 1rem 0 4rem;
+  padding: 1rem 0;
+  p {
+    font-size: 1.125rem;
+    color: var(--font-primary);
+    margin: 0;
+  }
 }

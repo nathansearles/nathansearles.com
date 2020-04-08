@@ -1,6 +1,7 @@
 .Picture {
   display: block;
-
+  border-radius: 0.75rem;
+  overflow: hidden;
   &.image__loading {
     transition: opacity 600ms ease-out;
     opacity: 0;

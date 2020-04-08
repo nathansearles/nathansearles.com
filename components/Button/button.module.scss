@@ -1,22 +1,31 @@
 .Button {
   display: inline-block;
+  margin: 2rem 0;
+
   &.solid {
-    background-color: var(--background-inverted);
-    color: var(--font-inverted);
-    font-weight: 900;
-    font-size: 0.875rem;
+    background-color: var(--primary);
+    color: var(--font-primary);
+    font-weight: 500;
+    font-size: 1.125rem;
     text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 0.25rem;
-    padding: 1.25rem 2.25rem;
+    border-radius: 0.1875rem;
+    padding: 1.5rem 3rem;
   }
-  &.underline {
-    background-color: transparent;
-    color: inherit;
-    font-weight: 700;
-    font-size: inherit;
-    text-decoration: none;
-    border-bottom: 6px solid var(--primary);
-    line-height: inherit;
+  &:link,
+  &:visited {
+    border: 0;
   }
+  &:hover,
+  &:active {
+    border: 0;
+  }
+  // &.underline {
+  //   background-color: transparent;
+  //   color: inherit;
+  //   font-weight: 700;
+  //   font-size: inherit;
+  //   text-decoration: none;
+  //   border-bottom: 6px solid var(--primary);
+  //   line-height: inherit;
+  // }
 }

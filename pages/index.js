@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import Link from "next/link";
 import Head from "../components/Head";
-import Container from "../components/Container";
+import Main from "../components/Main";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
@@ -11,46 +11,46 @@ const Home = ({ projects }) => {
   return (
     <>
       <Head title="Projects" />
-      <Container>
-        <div className="col-12">
-          <Navigation />
-        </div>
 
-        <div className="col-10 mb5">
+      <div className="col-12">
+        <Navigation />
+      </div>
+
+      <Main>
+        <div className="col-10 align-center">
           <h1 className="larger">
             Hey, I'm Nathan,
             <br />I build dynamic interfaces and experiences.
           </h1>
+        </div>
 
+        <div className="col-8 mb5 align-center">
           <p className="larger">
-            I have a background in frontend developent, technical leadership and
-            design. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            I have a background in frontend development and technical leadership
+            with a focus on design and user experience.
           </p>
 
           <p className="larger">
-            I'm currently available for frontend development and technical
-            leadership opportunities.
+            I'm available for frontend development and technical leadership
+            opportunities.
           </p>
 
-          <p className="larger">
-            <Button href="/resume" classes="underline">
-              Resume
-            </Button>
-          </p>
+          <Button href="/resume" classes="solid">
+            Resume
+          </Button>
         </div>
 
         <div className="col-12">
-          <h3>Select projects</h3>
           <div className="grid">
             {projects.map(project => (
               <Card {...project} key={project.id}></Card>
             ))}
           </div>
         </div>
-        <div className="col-12">
-          <Footer />
-        </div>
-      </Container>
+      </Main>
+      <div className="col-12">
+        <Footer />
+      </div>
     </>
   );
 };

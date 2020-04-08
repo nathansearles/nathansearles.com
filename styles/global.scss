@@ -2,12 +2,12 @@
 
 :root {
   --primary: #3433ff;
-  --background: #f4f4f4;
-  --background-secondary: #ffffff;
-  --background-inverted: #000;
-  --font-primary: rgba(0, 0, 0, 1);
-  --font-secondary: rgba(0, 0, 0, 0.7);
-  --font-inverted: #ffffff;
+  --background: #141421;
+  --background-secondary: #262632;
+  --background-inverted: rgba(0, 0, 0, 0.85);
+  --font-primary: rgba(255, 255, 255, 1);
+  --font-secondary: rgba(255, 255, 255, 0.45);
+  --font-inverted: #fff;
 }
 
 html,
@@ -26,6 +26,7 @@ body {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  background-color: var(--background);
   color: var(--font-secondary);
 }
 
@@ -46,20 +47,23 @@ h1,
   margin-bottom: 0;
   font-weight: 800;
   color: var(--font-primary);
+  &.smaller {
+    font-size: 2.125rem;
+  }
   &.larger {
-    font-size: 3.4375rem;
-    line-height: 3.90625rem;
+    font-size: 5.25rem;
+    line-height: 5.5rem;
     margin-bottom: 3rem;
 
-    @media (min-width: $sm) {
-      font-size: 5.5rem;
-      line-height: 5.75rem;
-    }
-    @media (min-width: $md) {
-      font-size: 7.5rem;
-      line-height: 8.4375rem;
-      margin-bottom: 5rem;
-    }
+    // @media (min-width: $sm) {
+    //   font-size: 5.5rem;
+    //   line-height: 5.75rem;
+    // }
+    // @media (min-width: $md) {
+    //   font-size: 7.5rem;
+    //   line-height: 8.4375rem;
+    //   margin-bottom: 5rem;
+    // }
   }
   + h2 {
     margin-top: 0;
@@ -76,12 +80,12 @@ h2,
 }
 h3,
 .h3 {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 900;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 800;
   color: var(--font-primary);
 }
 h4,
@@ -107,9 +111,9 @@ ol,
 pre,
 table,
 blockquote {
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 2.0625rem;
+  font-weight: 500;
   margin-top: 0;
   margin-bottom: 1.5rem;
   @media (min-width: $md) {
@@ -151,14 +155,22 @@ sup {
 sub {
   bottom: -0.25em;
 }
+a {
+  &:link,
+  &:visited {
+    color: var(--font-primary);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+  &:hover,
+  &:active {
+    border-bottom: 2px solid var(--font-primary);
+  }
+}
 
 .larger {
   font-size: 1.5rem;
   line-height: 2.25rem;
-  @media (min-width: $md) {
-    font-size: 2rem;
-    line-height: 2.9375rem;
-  }
 }
 
 .grid {
@@ -173,10 +185,10 @@ sub {
 }
 
 .col-8 {
-  grid-column: 1/5;
+  grid-column: 3 / span 8;
 }
 .col-10 {
-  grid-column: 1/5;
+  grid-column: 2 / span 10;
 }
 .col-11 {
   grid-column: 1/5;
@@ -202,10 +214,10 @@ sub {
 
 @media (min-width: $lg) {
   .col-8 {
-    grid-column: 1/9;
+    grid-column: 3 / span 8;
   }
   .col-10 {
-    grid-column: 1/11;
+    grid-column: 2 / span 10;
   }
   .col-11 {
     grid-column: 1/12;
@@ -225,4 +237,8 @@ sub {
 
 .mb6 {
   margin-bottom: 6rem;
+}
+
+.align-center {
+  text-align: center;
 }

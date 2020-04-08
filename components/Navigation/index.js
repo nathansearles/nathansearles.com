@@ -1,12 +1,14 @@
+import Link from "next/link";
 import styles from "./navigation.module.scss";
-import Button from "../Button";
 
 const Navigation = props => {
   return (
     <nav className={styles.Navigation}>
-      <Button href="/resume" classes="solid">
-        Resume
-      </Button>
+      <div className="col-12 align-center">
+        <p>
+          👋 <Link href="/resume">Available for new opportunities</Link>
+        </p>
+      </div>
     </nav>
   );
 };

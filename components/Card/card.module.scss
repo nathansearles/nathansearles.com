@@ -1,24 +1,32 @@
 .Card {
-  padding: 3rem 0 0;
-  color: var(--font-inverted);
-  background: var(--background-inverted);
+  padding-bottom: 3rem;
+  // color: var(--font-inverted);
+  // background: var(--background-inverted);
   text-decoration: none;
-  margin-bottom: 3rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  * {
-    color: var(--font-inverted);
+  color: var(--font-secondary);
+  text-align: center;
+  &:link,
+  &:visited {
+    border: 0;
+  }
+  &:hover,
+  &:active {
+    border: 0;
   }
   h3 {
-    font-size: 1.125rem;
-    opacity: 0.5;
+    color: var(--font-primary);
+  }
+  p {
     margin: 0;
-    line-height: 1.40625rem;
+    font-size: 1.125rem;
+    color: var(--font-secondary);
   }
   picture {
     margin-top: 3rem;
   }
   .title {
-    padding: 0 1rem;
+    padding-top: 2rem;
   }
 }

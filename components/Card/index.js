@@ -6,11 +6,11 @@ const Card = props => {
   return (
     <Link href={`/projects/${props.slug}`}>
       <a className={styles.Card}>
+        <Image src={props.thumbnail} alt={props.name} aspectRatio={"square"} />
         <div className={styles.title}>
           <h3>{props.name}</h3>
           <p>{props.desc}</p>
         </div>
-        <Image src={props.thumbnail} alt={props.name} aspectRatio={"square"} />
       </a>
     </Link>
   );
