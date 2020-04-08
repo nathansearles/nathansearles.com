@@ -201,10 +201,10 @@ aside {
 }
 
 .col-8 {
-  grid-column: 3 / span 8;
+  grid-column: 1 / span 4;
 }
 .col-10 {
-  grid-column: 2 / span 10;
+  grid-column: 1 / span 4;
 }
 .col-11 {
   grid-column: 1/5;
@@ -215,10 +215,10 @@ aside {
 
 @media (min-width: $sm) {
   .col-8 {
-    grid-column: 1/6;
+    grid-column: 2 / span 6;
   }
   .col-10 {
-    grid-column: 1/9;
+    grid-column: 2 / span 6;
   }
   .col-11 {
     grid-column: 1/9;
@@ -241,6 +241,14 @@ aside {
   .col-12 {
     grid-column: 1/13;
   }
+}
+
+.p4 {
+  padding: 4rem 0;
+}
+
+.p6 {
+  padding: 6rem 0;
 }
 
 .mb4 {

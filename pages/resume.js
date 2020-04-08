@@ -7,10 +7,7 @@ import Image from "../components/Image";
 const Resume = () => (
   <>
     <Head title="Projects" />
-
-    <div className="col-12">
-      <Navigation />
-    </div>
+    <Navigation />
     <Main>
       <div className="col-8 align-center">
         <div className="portrait">
@@ -95,9 +92,7 @@ const Resume = () => (
         </p>
       </div>
     </Main>
-    <div className="col-12">
-      <Footer />
-    </div>
+    <Footer />
   </>
 );
 

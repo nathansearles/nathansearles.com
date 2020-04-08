@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 import Head from "../../components/Head";
-import Container from "../../components/Container";
+import Main from "../../components/Main";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import Image from "../../components/Image";
@@ -9,23 +9,22 @@ const Project = ({ project }) => {
   return project ? (
     <>
       <Head title={project.name} />
-      <Container>
-        <div className="col-12">
-          <Navigation />
-        </div>
-        <div className="col-10">
-          <div dangerouslySetInnerHTML={{ __html: project.body }} />
-        </div>
-        <div className="col-12">
+      <Navigation />
+      <Main>
+        <div
+          className="col-8"
+          dangerouslySetInnerHTML={{ __html: project.body }}
+        />
+
+        <div className="col-12 p4">
           <Image src={project.image} alt={project.name} />
         </div>
-        <div className="col-10">
-          <div dangerouslySetInnerHTML={{ __html: project.details }} />
-        </div>
-        <div className="col-12">
-          <Footer />
-        </div>
-      </Container>
+        <div
+          className="col-8 mb4"
+          dangerouslySetInnerHTML={{ __html: project.details }}
+        />
+      </Main>
+      <Footer />
     </>
   ) : (
     <h1>error!!</h1>

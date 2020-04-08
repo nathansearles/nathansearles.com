@@ -11,11 +11,7 @@ const Home = ({ projects }) => {
   return (
     <>
       <Head title="Projects" />
-
-      <div className="col-12">
-        <Navigation />
-      </div>
-
+      <Navigation />
       <Main>
         <div className="col-10 align-center">
           <h1 className="larger">
@@ -48,9 +44,7 @@ const Home = ({ projects }) => {
           </div>
         </div>
       </Main>
-      <div className="col-12">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 };
