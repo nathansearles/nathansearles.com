@@ -10,7 +10,10 @@ const Title = ({ title }) => {
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0,minimal-ui"
       />
       <link rel="icon" href="/static/favicon.ico" />
-      <meta name="Description" content="" />
+      <meta
+        name="Description"
+        content="I'm a frontend developer and technical leader based in Portland, Oregon."
+      />
       <meta
         name="title"
         property="og:title"
@@ -19,7 +22,7 @@ const Title = ({ title }) => {
       <meta name="author" content="Nathan Searles" />
       <link rel="manifest" href="/site.webmanifest"></link>
       <link
-        href="https://fonts.googleapis.com/css?family=Inter:400,500,800,900&display=swap"
+        href="https://fonts.googleapis.com/css?family=Inter:500,800&display=swap"
         rel="stylesheet"
       />
     </Head>
