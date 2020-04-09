@@ -1,12 +1,19 @@
 import Link from "next/link";
 import Image from "../../components/Image";
 import styles from "./card.module.scss";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
-const Card = props => {
+const Card = (props) => {
   return (
     <Link href={`/projects/${props.slug}`}>
       <a className={styles.Card}>
-        <Image src={props.thumbnail} alt={props.name} aspectRatio={"square"} />
+        <LazyLoadComponent>
+          <Image
+            src={props.thumbnail}
+            alt={props.name}
+            aspectRatio={"square"}
+          />
+        </LazyLoadComponent>
         <div className={styles.title}>
           <h3>{props.name}</h3>
           <p>{props.desc}</p>

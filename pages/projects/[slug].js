@@ -4,6 +4,7 @@ import Main from "../../components/Main";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import Image from "../../components/Image";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 const Project = ({ project }) => {
   return project ? (
@@ -16,9 +17,12 @@ const Project = ({ project }) => {
           dangerouslySetInnerHTML={{ __html: project.body }}
         />
 
-        <div className="col-12 p4">
-          <Image src={project.image} alt={project.name} />
-        </div>
+        <LazyLoadComponent>
+          <div className="col-12 p4">
+            <Image src={project.image} alt={project.name} />
+          </div>
+        </LazyLoadComponent>
+
         <div
           className="col-8 mb4"
           dangerouslySetInnerHTML={{ __html: project.details }}
