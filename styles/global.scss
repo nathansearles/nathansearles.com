@@ -194,7 +194,7 @@ aside {
   grid-column-gap: 0;
   grid-template-columns: repeat(1, 1fr);
 
-  @media (min-width: $md) {
+  @media (min-width: $sm) {
     grid-column-gap: 32px;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -273,4 +273,7 @@ aside {
   border-radius: 170px;
   overflow: hidden;
   margin: 0 auto 3rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04),
+  0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04),
+  0 16px 32px rgba(0, 0, 0, 0.04), 0 32px 64px rgba(0, 0, 0, 0.04);
 }
