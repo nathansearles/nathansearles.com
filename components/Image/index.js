@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import styles from "./image.module.scss";
 
-const Image = props => {
+const Image = (props) => {
   const imageRef = useRef();
   const cdnBase = "https://res.cloudinary.com/dzlgbk52d/image/upload";
   const imageSrc = props.src;
@@ -13,22 +13,22 @@ const Image = props => {
       sm: "ar_1:1,c_fill,w_639",
       md: "ar_16:9,c_fill,w_853",
       lg: "ar_16:9,c_fill,w_1067",
-      xl: "ar_16:9,c_fill,w_1067"
+      xl: "ar_16:9,c_fill,w_1067",
     },
     portrait: {
       xs: "ar_3:4,c_fill,w_380",
       sm: "ar_3:4,c_fill,w_639",
       md: "ar_3:4,c_fill,w_414",
       lg: "ar_3:4,c_fill,w_331",
-      xl: "ar_3:4,c_fill,w_331"
+      xl: "ar_3:4,c_fill,w_331",
     },
     square: {
-      xs: "ar_1:1,c_fill,w_380",
-      sm: "ar_1:1,c_fill,w_639",
-      md: "ar_1:1,c_fill,w_414",
-      lg: "ar_1:1,c_fill,w_339",
-      xl: "ar_1:1,c_fill,w_339"
-    }
+      xs: "ar_1:1,c_fill,w_800",
+      sm: "ar_1:1,c_fill,w_800",
+      md: "ar_1:1,c_fill,w_400",
+      lg: "ar_1:1,c_fill,w_600",
+      xl: "ar_1:1,c_fill,w_600",
+    },
   };
 
   const handleAspectRatio = (breakpoint, ratio = "landscape") => {
@@ -40,7 +40,7 @@ const Image = props => {
     sm: `${handleAspectRatio("sm", aspectRatio)},f_auto`,
     md: `${handleAspectRatio("md", aspectRatio)},f_auto`,
     lg: `${handleAspectRatio("lg", aspectRatio)},f_auto`,
-    xl: `${handleAspectRatio("xl", aspectRatio)},f_auto`
+    xl: `${handleAspectRatio("xl", aspectRatio)},f_auto`,
   };
 
   const dimension = {
@@ -49,22 +49,22 @@ const Image = props => {
       sm: "639",
       md: "853",
       lg: "1067",
-      xl: "1067"
+      xl: "1067",
     },
     portrait: {
       xs: "380",
       sm: "639",
       md: "414",
       lg: "331",
-      xl: "331"
+      xl: "331",
     },
     square: {
-      xs: "380",
-      sm: "639",
-      md: "414",
-      lg: "339",
-      xl: "339"
-    }
+      xs: "800",
+      sm: "800",
+      md: "600",
+      lg: "600",
+      xl: "600",
+    },
   };
 
   const handleDimension = (breakpoint, ratio = "landscape") => {
@@ -76,7 +76,7 @@ const Image = props => {
     sm: "544",
     md: "768",
     lg: "1024",
-    xl: "1280"
+    xl: "1280",
   };
   const handleSrcSet = (breakpoint, dpr = 2) => {
     // dpr = Device Pixel Ratio
