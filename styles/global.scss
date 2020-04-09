@@ -51,14 +51,15 @@ h1,
     font-size: 2.125rem;
   }
   &.larger {
-    font-size: 5.25rem;
-    line-height: 5.5rem;
+    font-size: 2.8rem;
+    line-height: 3.5rem;
     margin-bottom: 3rem;
 
-    // @media (min-width: $sm) {
-    //   font-size: 5.5rem;
-    //   line-height: 5.75rem;
-    // }
+    @media (min-width: $sm) {
+      font-size: 5.25rem;
+      line-height: 5.5rem;
+      margin-bottom: 3rem;
+    }
     // @media (min-width: $md) {
     //   font-size: 7.5rem;
     //   line-height: 8.4375rem;
