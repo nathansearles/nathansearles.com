@@ -10,7 +10,7 @@ const Project = ({ project }) => {
     <>
       <Head title={project.name} />
       <Navigation />
-      <Main>
+      <Main classes="main-project">
         <div
           className="col-8"
           dangerouslySetInnerHTML={{ __html: project.body }}
@@ -40,7 +40,7 @@ export async function getStaticPaths() {
   const projects = await res.json();
 
   // Get the paths we want to pre-render based on projects
-  const paths = projects.map(project => `/projects/${project.slug}`);
+  const paths = projects.map((project) => `/projects/${project.slug}`);
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.

@@ -38,7 +38,7 @@ const Home = ({ projects }) => {
 
         <div className="col-12">
           <div className="grid">
-            {projects.map(project => (
+            {projects.map((project) => (
               <Card {...project} key={project.id}></Card>
             ))}
           </div>
