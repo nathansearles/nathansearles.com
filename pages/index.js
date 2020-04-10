@@ -1,5 +1,4 @@
 import fetch from "node-fetch";
-import Link from "next/link";
 import Head from "../components/Head";
 import Main from "../components/Main";
 import Navigation from "../components/Navigation";

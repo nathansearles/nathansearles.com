@@ -323,3 +323,20 @@ aside {
   width: 100%;
   height: 100%;
 }
+
+
+.emoji {
+  color: var(--font-primary);
+  opacity: 1;
+  &--larger {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: $sm) {
+      font-size: 5.25rem;
+      line-height: 5.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
