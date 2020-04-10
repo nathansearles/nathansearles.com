@@ -24,6 +24,7 @@ const Title = ({ title }) => {
       <link
         href="https://fonts.googleapis.com/css?family=Inter:500,800&display=swap"
         rel="stylesheet"
+        async
       />
     </Head>
   );
