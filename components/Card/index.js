@@ -5,7 +5,7 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 const Card = (props) => {
   return (
-    <Link href="/projects/[slug]" as={`/projects/${props.slug}`}>
+    <Link href="/projects/[slug]" as={`/projects/${props.slug}`} scroll={false}>
       <a className={styles.Card}>
         <LazyLoadComponent>
           <Image

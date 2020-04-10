@@ -1,9 +1,9 @@
 import Link from "next/link";
 import styles from "./button.module.scss";
 
-const Button = props => {
+const Button = (props) => {
   return (
-    <Link href={props.href}>
+    <Link href={props.href} scroll={false}>
       <a className={[styles.Button, styles[props.classes]].join(" ")}>
         {props.children}
       </a>
