@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "framer-motion": "^1.10.3",
     "next": "9.3.3",
     "node-fetch": "^2.6.0",
     "react": "16.13.1",
