@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 import { pageTransition } from "../../utilities";
 import styles from "./main.module.scss";
 

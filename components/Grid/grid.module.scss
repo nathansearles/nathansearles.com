@@ -1,0 +1,121 @@
+@import "../../styles/_variables.scss";
+
+.Grid {
+  // Setup grid
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 1rem;
+
+  // Allow layer to be clicked through
+  pointer-events: none;
+
+  // Position on top of all content & center
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  // Set width
+  max-width: $lg;
+  min-height: 100vh;
+
+  //  Set left container gutter
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1rem;
+    background-color: rgba(255,255,0,0.15);
+    @media (min-width: $md) {
+      width: 3rem;
+    }
+  }
+
+  //  Set right container gutter
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 1px;
+    height: 100%;
+    width: 1rem;
+    background-color: rgba(255,255,0,0.15);
+    @media (min-width: $md) {
+      width: 3rem;
+    }
+  }
+
+  // Setup grid
+  @media (min-width: $sm) {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @media (min-width: $md) {
+    padding: 0 3rem;
+  }
+
+  @media (min-width: $lg) {
+    grid-column-gap: 2rem;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  // Setup each column as a div
+  > div {
+    display: none;
+    height: 100%;
+    background-color: rgba(255,0,0,0.15);
+    position: relative;
+
+    // Set column left grid line
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255,0,0,0.25);
+    }
+
+    // Set column right grid line
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255,0,0,0.25);
+    }
+
+    // Only show 4 columns (mobile)
+    &:nth-child(-n+4) {
+      display: block;
+    }
+
+    // Only show 8 columns (sm and above)
+    @media (min-width: $sm) {
+      &:nth-child(-n+8) {
+        display: block;
+      }
+    }
+
+    // Show all 12 columns (lg and above)
+    @media (min-width: $lg) {
+      &:nth-child(-n+12) {
+        display: block;
+      }
+    }
+  }
+}
