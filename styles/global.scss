@@ -195,89 +195,6 @@ aside {
   line-height: 2.25rem;
 }
 
-.grid {
-  display: grid;
-  grid-column-gap: 0;
-  grid-template-columns: repeat(1, 1fr);
-
-  @media (min-width: $sm) {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: $lg) {
-    grid-column-gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.col-8 {
-  grid-column: 1 / span 4;
-}
-.col-10 {
-  grid-column: 1 / span 4;
-}
-.col-11 {
-  grid-column: 1/5;
-}
-.col-12 {
-  grid-column: 1/5;
-}
-
-@media (min-width: $sm) {
-  .col-8 {
-    grid-column: 2 / span 6;
-  }
-  .col-10 {
-    grid-column: 2 / span 6;
-  }
-  .col-11 {
-    grid-column: 1/9;
-  }
-  .col-12 {
-    grid-column: 1/9;
-  }
-}
-
-@media (min-width: $lg) {
-  .col-8 {
-    grid-column: 3 / span 8;
-  }
-  .col-10 {
-    grid-column: 2 / span 10;
-  }
-  .col-11 {
-    grid-column: 1/12;
-  }
-  .col-12 {
-    grid-column: 1/13;
-  }
-}
-
-.p4 {
-  padding: 4rem 0;
-}
-
-.p6 {
-  padding: 6rem 0;
-}
-
-.mb4 {
-  margin-bottom: 4rem;
-}
-
-.mb5 {
-  margin-bottom: 5rem;
-}
-
-.mb6 {
-  margin-bottom: 6rem;
-}
-
-.align-center {
-  text-align: center;
-}
-
 .portrait {
   width: 170px;
   height: 170px;
@@ -329,7 +246,6 @@ aside {
   height: 100%;
 }
 
-
 .emoji {
   color: var(--font-primary);
   opacity: 1;
@@ -344,4 +260,13 @@ aside {
       margin-bottom: 1rem;
     }
   }
+}
+
+.projects-grid {
+  margin-top: 5rem;
+}
+
+.project-image {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
 }

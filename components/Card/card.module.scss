@@ -1,12 +1,12 @@
 .Card {
+  display: block;
   padding-bottom: 3rem;
-  // color: var(--font-inverted);
-  // background: var(--background-inverted);
   text-decoration: none;
   border-radius: 0.5rem;
   overflow: hidden;
   color: var(--font-secondary);
   text-align: center;
+
   &:link,
   &:visited {
     border: 0;

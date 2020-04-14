@@ -6,23 +6,4 @@
   margin-bottom: 4rem;
   max-width: $lg;
   min-height: 100vh;
-  padding: 0 1rem;
-
-  display: grid;
-  grid-column-gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
-
-  @media (min-width: $sm) {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  @media (min-width: $md) {
-    padding: 0 3rem;
-  }
-
-  @media (min-width: $lg) {
-    grid-column-gap: 2rem;
-    grid-template-columns: repeat(12, 1fr);
-  }
 }

@@ -1,37 +1,40 @@
 import fetch from "node-fetch";
 import Head from "../../components/Head";
 import Main from "../../components/Main";
-import Navigation from "../../components/Navigation";
+import { Container, Row, Column } from "../../components/Grid";
+import TopBar from "../../components/TopBar";
 import Footer from "../../components/Footer";
 import Image from "../../components/Image";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 const Project = ({ project }) => {
-  return project ? (
-    <>
-      <Head title={project.name} />
-      <Navigation />
-      <Main classes="main-project">
-        <div
-          className="col-8"
-          dangerouslySetInnerHTML={{ __html: project.body }}
-        />
-
-        <LazyLoadComponent>
-          <div className="col-12 p4">
-            <Image src={project.image} alt={project.name} />
-          </div>
-        </LazyLoadComponent>
-
-        <div
-          className="col-8 mb4"
-          dangerouslySetInnerHTML={{ __html: project.details }}
-        />
-      </Main>
-      <Footer />
-    </>
-  ) : (
-    <h1>error!!</h1>
+  return (
+    project && (
+      <>
+        <Head title={project.name} />
+        <TopBar />
+        <Main classes="main-project">
+          <Container>
+            <Row justify="center" text="left">
+              <Column xs={12} sm={10} md={8}>
+                <div dangerouslySetInnerHTML={{ __html: project.body }} />
+              </Column>
+              <Column xs={12}>
+                <LazyLoadComponent>
+                  <div className="project-image">
+                    <Image src={project.image} alt={project.name} />
+                  </div>
+                </LazyLoadComponent>
+              </Column>
+              <Column xs={12} sm={10} md={8}>
+                <div dangerouslySetInnerHTML={{ __html: project.details }} />
+              </Column>
+            </Row>
+          </Container>
+        </Main>
+        <Footer />
+      </>
+    )
   );
 };
 
