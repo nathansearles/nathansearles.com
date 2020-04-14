@@ -1,10 +1,10 @@
-import styles from "./grid.module.scss";
+import styles from "./layout.module.scss";
 
-const Grid = (props) => {
+const Layout = (props) => {
   return (
     <>
       {props.isActive && (
-        <div className={styles.Grid}>
+        <div className={styles.Layout}>
           <div></div>
           <div></div>
           <div></div>
@@ -23,4 +23,4 @@ const Grid = (props) => {
   );
 };
 
-export default Grid;
+export default Layout;

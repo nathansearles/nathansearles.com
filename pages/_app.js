@@ -2,15 +2,15 @@ import { useState, useEffect } from "react";
 import ScrollManager from "../components/ScrollManager";
 import Page from "../components/Page";
 import { AnimatePresence } from "framer-motion";
-import Grid from "../components/Grid";
+import Layout from "../components/Layout";
 import "../styles/global.scss";
 
 function MyApp({ Component, pageProps, router }) {
-  const [gridActive, setGridActive] = useState(false);
+  const [layoutActive, setLayoutGrid] = useState(false);
 
   const toggleGrid = ({ key }) => {
     if (key === "g") {
-      setGridActive((prevState) => !prevState);
+      setLayoutGrid((prevState) => !prevState);
     }
   };
 
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps, router }) {
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </Page>
-      <Grid isActive={gridActive} />
+      <Layout isActive={layoutActive} />
     </ScrollManager>
   );
 }
