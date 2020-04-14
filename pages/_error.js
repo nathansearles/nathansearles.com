@@ -2,14 +2,11 @@ import Link from "next/link";
 import Head from "../components/Head";
 import Main from "../components/Main";
 import { Container, Row, Column } from "../components/Grid";
-import TopBar from "../components/TopBar";
-import Footer from "../components/Footer";
 
 const Error = ({ projects }) => {
   return (
     <>
       <Head title={"Error"} />
-      <TopBar />
       <Main>
         <Container>
           <Row>
@@ -27,7 +24,6 @@ const Error = ({ projects }) => {
           </Row>
         </Container>
       </Main>
-      <Footer />
     </>
   );
 };

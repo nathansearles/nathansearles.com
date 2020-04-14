@@ -2,8 +2,6 @@ import fetch from "node-fetch";
 import Head from "../../components/Head";
 import Main from "../../components/Main";
 import { Container, Row, Column } from "../../components/Grid";
-import TopBar from "../../components/TopBar";
-import Footer from "../../components/Footer";
 import Image from "../../components/Image";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
@@ -12,7 +10,6 @@ const Project = ({ project }) => {
     project && (
       <>
         <Head title={project.name} />
-        <TopBar />
         <Main classes="main-project">
           <Container>
             <Row justify="center" text="left">
@@ -32,7 +29,6 @@ const Project = ({ project }) => {
             </Row>
           </Container>
         </Main>
-        <Footer />
       </>
     )
   );

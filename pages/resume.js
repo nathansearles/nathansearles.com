@@ -1,14 +1,11 @@
 import Head from "../components/Head";
 import Main from "../components/Main";
 import { Container, Row, Column } from "../components/Grid";
-import TopBar from "../components/TopBar";
-import Footer from "../components/Footer";
 import Image from "../components/Image";
 
 const Resume = () => (
   <>
     <Head title="Projects" />
-    <TopBar />
     <Main>
       <Container>
         <Row>
@@ -100,7 +97,6 @@ const Resume = () => (
         </Row>
       </Container>
     </Main>
-    <Footer />
   </>
 );
 

@@ -2,8 +2,6 @@ import fetch from "node-fetch";
 import Head from "../components/Head";
 import Main from "../components/Main";
 import { Container, Row, Column } from "../components/Grid";
-import TopBar from "../components/TopBar";
-import Footer from "../components/Footer";
 import Card from "../components/Card";
 import Button from "../components/Button";
 
@@ -11,7 +9,6 @@ const Home = ({ projects }) => {
   return (
     <>
       <Head title="Projects" />
-      <TopBar />
       <Main>
         <Container>
           <Row>
@@ -48,7 +45,6 @@ const Home = ({ projects }) => {
           </Row>
         </Container>
       </Main>
-      <Footer />
     </>
   );
 };
