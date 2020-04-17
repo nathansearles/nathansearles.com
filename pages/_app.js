@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import ScrollManager from "../components/ScrollManager";
-import Page from "../components/Page";
 import { AnimatePresence } from "framer-motion";
 import TopBar from "../components/TopBar";
 import Footer from "../components/Footer";
