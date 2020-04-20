@@ -11,6 +11,7 @@ const Home = ({ projects }) => {
   const lowerLayerRef = useRef();
   useEffect(() => {
     handleContentOffset();
+    handleBackButton();
 
     window.addEventListener("scroll", handelScroll);
     window.addEventListener("resize", handleContentOffset);
@@ -27,6 +28,21 @@ const Home = ({ projects }) => {
     lowerLayerRef.current.style.bottom = `${
       window.innerHeight - lowerLayerRef.current.offsetHeight
     }px`;
+    lowerLayerRef.current.style.height = `${
+      lowerLayerRef.current.offsetHeight + 4 * 16
+    }px`;
+  };
+
+  // Handles back button use case
+  // If scrolled past window height set opacity layer to 0
+  const handleBackButton = () => {
+    if (window.pageYOffset >= window.innerHeight) {
+      // Set CSS variable property to 0
+      lowerLayerRef.current.style.setProperty(
+        "--content-layer-mask-opacity",
+        0
+      );
+    }
   };
 
   const handelScroll = () => {
@@ -48,8 +64,8 @@ const Home = ({ projects }) => {
       <Head title="Projects" />
       <TopBar />
       <Main>
-        <Container>
-          <div className="topLayer">
+        <div className="topLayer">
+          <Container>
             <Row>
               <Column xs={12} sm={10}>
                 <h1 className="larger">
@@ -75,8 +91,10 @@ const Home = ({ projects }) => {
                 </Button>
               </Column>
             </Row>
-          </div>
-          <div className="lowerLayer" ref={lowerLayerRef}>
+          </Container>
+        </div>
+        <div className="lowerLayer" ref={lowerLayerRef}>
+          <Container>
             <Row className="projects-grid">
               {projects.map((project) => (
                 <Column xs={12} sm={6} key={project.id}>
@@ -84,8 +102,8 @@ const Home = ({ projects }) => {
                 </Column>
               ))}
             </Row>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </Main>
     </>
   );

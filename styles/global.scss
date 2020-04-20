@@ -288,19 +288,19 @@ aside {
 .lowerLayer {
   position: sticky;
   min-height: 100vh;
-  padding-top: 2rem;
-  height: 2500px;
+  padding-top: 4rem;
   --content-layer-mask-opacity: 1;
 
   &:after {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     pointer-events: none;
     background-color: var(--background);
+    transition: opacity 500ms ease-out;
     opacity: var(--content-layer-mask-opacity);
   }
 }
