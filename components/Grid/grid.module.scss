@@ -8,10 +8,11 @@ $breakpoints: (
 );
 
 .Grid {
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   max-width: $lg;
   padding: 0 1rem;
-
+  overflow-x: hidden;
   @media (min-width: $md) {
     padding: 0 3rem;
   }
