@@ -270,3 +270,36 @@ aside {
   padding-top: 4rem;
   padding-bottom: 5rem;
 }
+
+.topLayer {
+  margin-top: calc(-8rem - 20px);
+  padding: 4rem 0;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  background-color: var(--background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lowerLayer {
+  position: sticky;
+  min-height: 100vh;
+  height: 2500px;
+  --content-layer-mask-opacity: 1;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background-color: var(--background);
+    opacity: var(--content-layer-mask-opacity);
+  }
+}

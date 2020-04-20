@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import ScrollManager from "../components/ScrollManager";
 import { AnimatePresence } from "framer-motion";
-import TopBar from "../components/TopBar";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import "../styles/global.scss";
@@ -31,7 +30,6 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <ScrollManager>
-      <TopBar />
       <AnimatePresence exitBeforeEnter initial={true}>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
