@@ -1,5 +1,6 @@
 .Card {
   display: block;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -26,9 +27,7 @@
     font-size: 1.125rem;
     color: var(--font-secondary);
   }
-  picture {
-    margin-top: 3rem;
-  }
+ 
   .title {
     padding-top: 2rem;
   }

@@ -1,3 +1,5 @@
+@import "../../styles/_variables.scss";
+
 .Picture {
   display: block;
   border-radius: 0.75rem;
@@ -21,4 +23,38 @@
   width: 100%;
   height: auto;
   position: relative;
+}
+
+.AspectRatio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  &.landscape {
+    padding-bottom: 56.25%;
+  }
+  &.square {
+    padding-bottom: 100%;
+  }
+  &.portrait {
+    padding-bottom: 133%;
+  }
+  picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  img,
+  picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  embed,
+  iframe,
+  object {
+    width: 100%;
+    height: 100%;
+  }
 }

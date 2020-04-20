@@ -111,8 +111,14 @@ const Image = (props) => {
     handleImageLoaded();
   }, []);
 
+  const handleAspectRatioClasses = (ratio = "landscape") => {
+    const classes = [styles.AspectRatio, styles[ratio]].join(" ");
+
+    return classes;
+  };
+
   return (
-    <div className="aspect__content">
+    <div className={handleAspectRatioClasses(aspectRatio)}>
       <picture ref={imageRef} className={styles.Picture}>
         <source
           media={`(min-width: ${breakpoint.xl}px)`}
