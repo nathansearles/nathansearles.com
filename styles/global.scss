@@ -71,6 +71,9 @@ h1,
   }
   + h2 {
     margin-top: 0;
+    @media (min-width: $sm) {
+      margin-top: -3rem;
+    }
   }
 }
 h2,

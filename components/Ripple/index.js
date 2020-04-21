@@ -50,7 +50,6 @@ const Ripple = ({ duration = 850, color = "#f00" }) => {
     >
       {rippleArray.length > 0 &&
         rippleArray.map((ripple, index) => {
-          console.log(ripple);
           return (
             <span
               key={"span" + index}
