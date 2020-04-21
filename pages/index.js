@@ -97,7 +97,7 @@ const Home = ({ projects }) => {
           <Container>
             <Row className="projects-grid">
               {projects.map((project) => (
-                <Column xs={12} sm={6} key={project.id}>
+                <Column xs={12} sm={6} md={5} key={project.id}>
                   <Card {...project} />
                 </Column>
               ))}
