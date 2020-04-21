@@ -3,7 +3,6 @@ import Head from "../../components/Head";
 import Main from "../../components/Main";
 import { Container, Row, Column } from "../../components/Grid";
 import Image from "../../components/Image";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 const Project = ({ project }) => {
   return (
@@ -17,11 +16,9 @@ const Project = ({ project }) => {
                 <div dangerouslySetInnerHTML={{ __html: project.body }} />
               </Column>
               <Column xs={12}>
-                <LazyLoadComponent>
-                  <div className="project-image">
-                    <Image src={project.image} alt={project.name} />
-                  </div>
-                </LazyLoadComponent>
+                <div className="project-image">
+                  <Image src={project.image} alt={project.name} />
+                </div>
               </Column>
               <Column xs={12} sm={10} md={8}>
                 <div dangerouslySetInnerHTML={{ __html: project.details }} />

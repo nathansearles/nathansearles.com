@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 import styles from "./image.module.scss";
 
 const Image = (props) => {
@@ -99,11 +100,13 @@ const Image = (props) => {
 
   function handleImageLoaded() {
     const picture = imageRef.current;
-    const image = picture.querySelector("img");
-    picture.classList.remove("image__loaded");
-    picture.classList.add("image__loading");
-    if (image.complete) {
-      picture.classList.add("image__loaded");
+    if (picture) {
+      const image = picture.querySelector("img");
+      picture.classList.remove(styles.loaded);
+      picture.classList.add(styles.loading);
+      if (image.complete) {
+        picture.classList.add(styles.loaded);
+      }
     }
   }
 
@@ -119,40 +122,42 @@ const Image = (props) => {
 
   return (
     <div className={handleAspectRatioClasses(aspectRatio)}>
-      <picture ref={imageRef} className={styles.Picture}>
-        <source
-          media={`(min-width: ${breakpoint.xl}px)`}
-          width={handleDimension("xl", aspectRatio)}
-          height={handleDimension("xl", aspectRatio) * 0.5625}
-          srcSet={handleSrcSet("xl")}
-        />
-        <source
-          media={`(min-width: ${breakpoint.lg}px)`}
-          width={handleDimension("lg", aspectRatio)}
-          height={handleDimension("lg", aspectRatio) * 0.5625}
-          srcSet={handleSrcSet("lg")}
-        />
-        <source
-          media={`(min-width: ${breakpoint.md}px)`}
-          width={handleDimension("md", aspectRatio)}
-          height={handleDimension("md", aspectRatio)}
-          srcSet={handleSrcSet("md")}
-        />
-        <source
-          media={`(min-width: ${breakpoint.sm}px)`}
-          width={handleDimension("sm", aspectRatio)}
-          height={handleDimension("sm", aspectRatio)}
-          srcSet={handleSrcSet("sm")}
-        />
-        <img
-          alt={props.alt}
-          onLoad={handleImageLoaded}
-          width={handleDimension("xs", aspectRatio)}
-          height={handleDimension("xs", aspectRatio)}
-          srcSet={handleSrcSet("xs")}
-          src={handleSrcSet("xs")}
-        />
-      </picture>
+      <LazyLoadComponent>
+        <picture ref={imageRef} className={styles.Picture}>
+          <source
+            media={`(min-width: ${breakpoint.xl}px)`}
+            width={handleDimension("xl", aspectRatio)}
+            height={handleDimension("xl", aspectRatio) * 0.5625}
+            srcSet={handleSrcSet("xl")}
+          />
+          <source
+            media={`(min-width: ${breakpoint.lg}px)`}
+            width={handleDimension("lg", aspectRatio)}
+            height={handleDimension("lg", aspectRatio) * 0.5625}
+            srcSet={handleSrcSet("lg")}
+          />
+          <source
+            media={`(min-width: ${breakpoint.md}px)`}
+            width={handleDimension("md", aspectRatio)}
+            height={handleDimension("md", aspectRatio)}
+            srcSet={handleSrcSet("md")}
+          />
+          <source
+            media={`(min-width: ${breakpoint.sm}px)`}
+            width={handleDimension("sm", aspectRatio)}
+            height={handleDimension("sm", aspectRatio)}
+            srcSet={handleSrcSet("sm")}
+          />
+          <img
+            alt={props.alt}
+            onLoad={handleImageLoaded}
+            width={handleDimension("xs", aspectRatio)}
+            height={handleDimension("xs", aspectRatio)}
+            srcSet={handleSrcSet("xs")}
+            src={handleSrcSet("xs")}
+          />
+        </picture>
+      </LazyLoadComponent>
     </div>
   );
 };
