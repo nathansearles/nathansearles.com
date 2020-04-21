@@ -12,9 +12,9 @@ const TopBar = (props) => {
       transition: { delay: 0.5, type: "spring", damping: 100, mass: 1 },
     },
     exit: {
-      opacity: 0,
-      y: "-100%",
-      transition: { type: "spring", damping: 100, mass: 1 },
+      // opacity: 0,
+      // y: "-100%",
+      // transition: { type: "spring", damping: 100, mass: 1 },
     },
   };
   return (
