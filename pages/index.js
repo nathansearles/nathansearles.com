@@ -9,28 +9,17 @@ import Button from "../components/Button";
 
 const Home = ({ projects }) => {
   const lowerLayerRef = useRef();
-  useEffect(() => {
-    handleContentOffset();
-    handleBackButton();
-
-    window.addEventListener("scroll", handelScroll);
-    window.addEventListener("resize", handleContentOffset);
-
-    return () => {
-      window.removeEventListener("scroll", handelScroll);
-      window.removeEventListener("resize", handelScroll);
-    };
-  }, []);
 
   // Offset the content layer based on viewport height
   // bottom = window height - element height
   const handleContentOffset = () => {
+    const content = lowerLayerRef.current.querySelectorAll("div")[0];
+    console.log("[handleContentOffset]: ", content);
     lowerLayerRef.current.style.bottom = `${
       window.innerHeight - lowerLayerRef.current.offsetHeight
     }px`;
-    lowerLayerRef.current.style.height = `${
-      lowerLayerRef.current.offsetHeight + 4 * 16
-    }px`;
+
+    lowerLayerRef.current.style.height = `${content.offsetHeight + 4 * 16}px`;
   };
 
   // Handles back button use case
@@ -49,16 +38,30 @@ const Home = ({ projects }) => {
     if (window.pageYOffset <= window.innerHeight) {
       // Calculate scroll amount and convert to a percentage
       // (scroll Y amount - window height) / window height
-      const srollPercentage =
+      const scrollPercentage =
         Math.abs(window.pageYOffset - window.innerHeight) / window.innerHeight;
 
       // Set CSS variables as properties based on scrollPercentage
       lowerLayerRef.current.style.setProperty(
         "--content-layer-mask-opacity",
-        srollPercentage
+        scrollPercentage
       );
     }
   };
+
+  useEffect(() => {
+    handleContentOffset();
+    handleBackButton();
+
+    window.addEventListener("scroll", handelScroll);
+    window.addEventListener("resize", handleContentOffset);
+
+    return () => {
+      window.removeEventListener("scroll", handelScroll);
+      window.removeEventListener("resize", handleContentOffset);
+    };
+  }, []);
+
   return (
     <>
       <Head title="Projects" />
