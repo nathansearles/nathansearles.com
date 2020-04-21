@@ -164,6 +164,7 @@ p strong {
   color: var(--font-primary);
 }
 a {
+  cursor: pointer;
   &:link,
   &:visited {
     color: var(--font-primary);

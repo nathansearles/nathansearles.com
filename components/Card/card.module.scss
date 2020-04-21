@@ -1,15 +1,16 @@
 .Card {
   display: block;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   text-decoration: none;
-  border-radius: 0.5rem;
-  overflow: hidden;
+
+
   color: var(--font-secondary);
   text-align: center;
 
   &:link,
   &:visited {
+    cursor: pointer;
     border: 0;
   }
   &:hover,

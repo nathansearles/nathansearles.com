@@ -14,7 +14,6 @@ const Home = ({ projects }) => {
   // bottom = window height - element height
   const handleContentOffset = () => {
     const content = lowerLayerRef.current.querySelectorAll("div")[0];
-    console.log("[handleContentOffset]: ", content);
     lowerLayerRef.current.style.bottom = `${
       window.innerHeight - lowerLayerRef.current.offsetHeight
     }px`;
