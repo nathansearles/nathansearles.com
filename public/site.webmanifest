@@ -1,7 +1,8 @@
 {
   "name": "Nathan Searles",
   "short_name": "Nathan Searles",
-  "theme_color": "#f4f4f4",
-  "background_color": "#f4f4f4",
+  "start_url": "/",
+  "theme_color": "#141421",
+  "background_color": "#141421",
   "display": "standalone"
 }

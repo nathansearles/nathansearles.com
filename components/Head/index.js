@@ -20,7 +20,8 @@ const Title = ({ title }) => {
         content={`${title} | Nathan Searles`}
       />
       <meta name="author" content="Nathan Searles" />
-      <link rel="manifest" href="/site.webmanifest"></link>
+      <meta name="theme-color" content="#141421" />
+      <link rel="manifest" href="/site.webmanifest" />
       <link
         href="https://fonts.googleapis.com/css?family=Inter:500,800&display=swap"
         rel="stylesheet"
