@@ -1,7 +1,11 @@
+@import "../../styles/variables.scss";
+
 .Button {
   display: inline-block;
-  margin: 2rem 0;
-
+  margin: 1rem 0;
+  @media (min-width: $sm) {
+    margin: 2rem 0;
+  }
   &.solid {
     background-color: var(--primary);
     color: var(--font-primary);

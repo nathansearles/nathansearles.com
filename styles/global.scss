@@ -56,20 +56,16 @@ h1,
     font-size: 2.125rem;
   }
   &.larger {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     line-height: 3.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
 
     @media (min-width: $sm) {
       font-size: 5.25rem;
       line-height: 5.5rem;
       margin-bottom: 3rem;
     }
-    // @media (min-width: $md) {
-    //   font-size: 7.5rem;
-    //   line-height: 8.4375rem;
-    //   margin-bottom: 5rem;
-    // }
   }
   + h2 {
     margin-top: 0;
@@ -191,8 +187,12 @@ aside {
 }
 
 .larger {
-  font-size: 1.5rem;
-  line-height: 2.25rem;
+  font-size: 1.25rem;
+    line-height: 2rem;
+  @media (min-width: $sm) {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
 }
 
 .portrait {
@@ -272,9 +272,9 @@ aside {
 }
 
 .topLayer {
-  margin-top: calc(-8rem - 20px);
-  padding: 4rem 0;
-  min-height: 100vh;
+  margin-top: -8rem;
+  padding: 3rem 0 2rem;
+  min-height: calc(100vh - 65px);
   position: relative;
   z-index: 10;
   background-color: var(--background);
@@ -283,13 +283,21 @@ aside {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media (min-width: $sm) {
+    padding: 4rem 0;
+  }
 }
 
 .lowerLayer {
   position: sticky;
   min-height: 100vh;
-  padding-top: 4rem;
+  padding-top: 2rem;
   --content-layer-mask-opacity: 1;
+
+  @media (min-width: $sm) {
+    padding-top: 4rem;
+  }
 
   &:after {
     content: "";
