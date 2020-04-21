@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
+import Ripple from "../Ripple";
 import styles from "./image.module.scss";
 
 const Image = (props) => {
@@ -158,6 +159,7 @@ const Image = (props) => {
           />
         </picture>
       </LazyLoadComponent>
+      {props.ripple && <Ripple />}
     </div>
   );
 };

@@ -21,9 +21,9 @@ const Card = (props) => {
             src={props.thumbnail}
             alt={props.name}
             aspectRatio={"square"}
+            ripple
           />
         </motion.div>
-
         <div className={styles.title}>
           <h3>{props.name}</h3>
           <p>{props.desc}</p>
