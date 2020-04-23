@@ -275,8 +275,8 @@ aside {
 
 .topLayer {
   margin-top: -8rem;
-  padding: 3rem 0 2rem;
-  min-height: calc(100vh - 65px);
+  padding: 2rem 0;
+  min-height: calc(100vh);
   position: relative;
   z-index: 10;
   background-color: var(--background);

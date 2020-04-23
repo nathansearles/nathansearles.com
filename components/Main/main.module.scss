@@ -2,7 +2,7 @@
 
 .Main {
   margin: 0 auto;
-  margin-top: 8rem;
+  margin-top: calc(8rem + 44px);
   margin-bottom: 4rem;
   max-width: $lg;
   min-height: 100vh;

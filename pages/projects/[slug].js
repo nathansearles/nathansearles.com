@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import Head from "../../components/Head";
+import Navigation from "../../components/Navigation";
 import Main from "../../components/Main";
 import { Container, Row, Column } from "../../components/Grid";
 import Image from "../../components/Image";
@@ -9,6 +10,7 @@ const Project = ({ project }) => {
     project && (
       <>
         <Head title={project.name} />
+        <Navigation />
         <Main classes="main-project">
           <Container>
             <Row justify="center" text="left">

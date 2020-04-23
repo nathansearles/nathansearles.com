@@ -1,4 +1,5 @@
 import Head from "../components/Head";
+import Navigation from "../components/Navigation";
 import Main from "../components/Main";
 import { Container, Row, Column } from "../components/Grid";
 import Image from "../components/Image";
@@ -6,6 +7,7 @@ import Image from "../components/Image";
 const Resume = () => (
   <>
     <Head title="Projects" />
+    <Navigation />
     <Main>
       <Container>
         <Row>

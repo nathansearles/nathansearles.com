@@ -1,11 +1,11 @@
 import { useRef, useEffect } from "react";
 import fetch from "node-fetch";
 import Head from "../components/Head";
-import TopBar from "../components/TopBar";
+import Alert from "../components/Alert";
+import Navigation from "../components/Navigation";
 import Main from "../components/Main";
 import { Container, Row, Column } from "../components/Grid";
 import Card from "../components/Card";
-import Button from "../components/Button";
 
 const Home = ({ projects }) => {
   const lowerLayerRef = useRef();
@@ -64,10 +64,11 @@ const Home = ({ projects }) => {
   return (
     <>
       <Head title="Projects" />
-      <TopBar />
+      <Navigation />
       <Main>
         <div className="topLayer">
           <Container>
+            <Alert />
             <Row>
               <Column xs={12} sm={10}>
                 <h1 className="larger">
@@ -87,10 +88,6 @@ const Home = ({ projects }) => {
                   I'm available for frontend development and technical
                   leadership opportunities.
                 </p>
-
-                <Button href="/resume" classes="solid">
-                  Resume
-                </Button>
               </Column>
             </Row>
           </Container>

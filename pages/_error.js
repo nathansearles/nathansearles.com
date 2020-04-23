@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Head from "../components/Head";
 import Main from "../components/Main";
+import Navigation from "../components/Navigation";
 import { Container, Row, Column } from "../components/Grid";
 
 const Error = ({ projects }) => {
   return (
     <>
       <Head title={"Error"} />
+      <Navigation />
       <Main>
         <Container>
           <Row>
