@@ -65,4 +65,19 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  a {
+    &:link,
+    &:visited {
+      border: 0;
+    }
+    &:hover,
+    &:active {
+      border: 0;
+    }
+  }
+  .iconArrow {
+    display: inline-block;
+    transform: translateY(1px) scale(0.95);
+    margin-right: 0.5rem;
+  }
 }

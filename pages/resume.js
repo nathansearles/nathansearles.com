@@ -7,7 +7,7 @@ import Image from "../components/Image";
 const Resume = () => (
   <>
     <Head title="Projects" />
-    <Navigation />
+    <Navigation subpage />
     <Main>
       <Container>
         <Row>

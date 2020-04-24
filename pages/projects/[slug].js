@@ -10,7 +10,7 @@ const Project = ({ project }) => {
     project && (
       <>
         <Head title={project.name} />
-        <Navigation />
+        <Navigation subpage />
         <Main classes="main-project">
           <Container>
             <Row justify="center" text="left">
