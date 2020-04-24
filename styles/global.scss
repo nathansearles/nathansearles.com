@@ -276,7 +276,7 @@ aside {
 .topLayer {
   margin-top: -8rem;
   padding: 2rem 0;
-  min-height: calc(100vh);
+  min-height: calc(100vh - 2rem);
   position: relative;
   z-index: 10;
   background-color: var(--background);
@@ -287,6 +287,7 @@ aside {
   flex-direction: column;
 
   @media (min-width: $sm) {
+    min-height: calc(100vh - 4rem);
     padding: 4rem 0;
   }
 }

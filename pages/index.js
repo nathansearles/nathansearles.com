@@ -83,11 +83,6 @@ const Home = ({ projects }) => {
                   I have a background in frontend development and technical
                   leadership with a focus on design and user experience.
                 </p>
-
-                <p className="larger">
-                  I'm available for frontend development and technical
-                  leadership opportunities.
-                </p>
               </Column>
             </Row>
           </Container>
