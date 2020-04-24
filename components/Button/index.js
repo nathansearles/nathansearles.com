@@ -5,7 +5,7 @@ const Button = (props) => {
   return (
     <Link href={props.href} scroll={false}>
       <a className={[styles.Button, styles[props.classes]].join(" ")}>
-        {props.children}
+        <span>{props.children}</span>
       </a>
     </Link>
   );

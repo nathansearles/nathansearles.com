@@ -72,8 +72,10 @@ const Home = ({ projects }) => {
             <Row>
               <Column xs={12} sm={10}>
                 <h1 className="larger">
-                  Hey, I'm Nathan,
-                  <br />I build dynamic interfaces and experiences.
+                  <span>
+                    Hey, I'm Nathan,
+                    <br />I build dynamic interfaces and experiences.
+                  </span>
                 </h1>
               </Column>
             </Row>
