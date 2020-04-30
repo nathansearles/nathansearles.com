@@ -44,9 +44,9 @@ body {
 h1,
 .h1 {
   font-size: 3.75rem;
-  line-height: 4.25rem;
+  line-height: 3.95rem;
   margin-top: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   font-weight: 800;
   color: var(--font-primary);
   @media (min-width: $sm) {
@@ -299,7 +299,7 @@ aside {
 .lowerLayer {
   position: sticky;
   min-height: 100vh;
-  padding-top: 2rem;
+  padding-top: 5rem;
   --content-layer-mask-opacity: 1;
 
   @media (min-width: $sm) {
@@ -315,7 +315,6 @@ aside {
     width: 100%;
     pointer-events: none;
     background-color: var(--background);
-    transition: opacity 500ms ease-out;
     opacity: var(--content-layer-mask-opacity);
   }
 }
