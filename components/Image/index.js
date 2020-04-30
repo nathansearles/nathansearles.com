@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
 import Ripple from "../Ripple";
 import styles from "./image.module.scss";
 
@@ -123,42 +122,40 @@ const Image = (props) => {
 
   return (
     <div className={handleAspectRatioClasses(aspectRatio)}>
-      <LazyLoadComponent>
-        <picture ref={imageRef} className={styles.Picture}>
-          <source
-            media={`(min-width: ${breakpoint.xl}px)`}
-            width={handleDimension("xl", aspectRatio)}
-            height={handleDimension("xl", aspectRatio) * 0.5625}
-            srcSet={handleSrcSet("xl")}
-          />
-          <source
-            media={`(min-width: ${breakpoint.lg}px)`}
-            width={handleDimension("lg", aspectRatio)}
-            height={handleDimension("lg", aspectRatio) * 0.5625}
-            srcSet={handleSrcSet("lg")}
-          />
-          <source
-            media={`(min-width: ${breakpoint.md}px)`}
-            width={handleDimension("md", aspectRatio)}
-            height={handleDimension("md", aspectRatio)}
-            srcSet={handleSrcSet("md")}
-          />
-          <source
-            media={`(min-width: ${breakpoint.sm}px)`}
-            width={handleDimension("sm", aspectRatio)}
-            height={handleDimension("sm", aspectRatio)}
-            srcSet={handleSrcSet("sm")}
-          />
-          <img
-            alt={props.alt}
-            onLoad={handleImageLoaded}
-            width={handleDimension("xs", aspectRatio)}
-            height={handleDimension("xs", aspectRatio)}
-            srcSet={handleSrcSet("xs")}
-            src={handleSrcSet("xs")}
-          />
-        </picture>
-      </LazyLoadComponent>
+      <picture ref={imageRef} className={styles.Picture}>
+        <source
+          media={`(min-width: ${breakpoint.xl}px)`}
+          width={handleDimension("xl", aspectRatio)}
+          height={handleDimension("xl", aspectRatio) * 0.5625}
+          srcSet={handleSrcSet("xl")}
+        />
+        <source
+          media={`(min-width: ${breakpoint.lg}px)`}
+          width={handleDimension("lg", aspectRatio)}
+          height={handleDimension("lg", aspectRatio) * 0.5625}
+          srcSet={handleSrcSet("lg")}
+        />
+        <source
+          media={`(min-width: ${breakpoint.md}px)`}
+          width={handleDimension("md", aspectRatio)}
+          height={handleDimension("md", aspectRatio)}
+          srcSet={handleSrcSet("md")}
+        />
+        <source
+          media={`(min-width: ${breakpoint.sm}px)`}
+          width={handleDimension("sm", aspectRatio)}
+          height={handleDimension("sm", aspectRatio)}
+          srcSet={handleSrcSet("sm")}
+        />
+        <img
+          alt={props.alt}
+          onLoad={handleImageLoaded}
+          width={handleDimension("xs", aspectRatio)}
+          height={handleDimension("xs", aspectRatio)}
+          srcSet={handleSrcSet("xs")}
+          src={handleSrcSet("xs")}
+        />
+      </picture>
       {props.ripple && <Ripple />}
     </div>
   );
