@@ -1,5 +1,7 @@
 import { useRef, useEffect } from "react";
 import fetch from "node-fetch";
+import { motion } from "framer-motion";
+import { fadeUpInTransition } from "../utilities";
 import Head from "../components/Head";
 import Alert from "../components/Alert";
 import Navigation from "../components/Navigation";
@@ -51,10 +53,8 @@ const Home = ({ projects }) => {
   useEffect(() => {
     handleContentOffset();
     handleBackButton();
-
     window.addEventListener("scroll", handelScroll);
     window.addEventListener("resize", handleContentOffset);
-
     return () => {
       window.removeEventListener("scroll", handelScroll);
       window.removeEventListener("resize", handleContentOffset);
@@ -71,18 +71,57 @@ const Home = ({ projects }) => {
             <Alert />
             <Row>
               <Column xs={12} sm={10}>
-                <h1 className="larger">
+                <motion.h1
+                  initial="initial"
+                  animate="enter"
+                  exit="exit"
+                  variants={{
+                    initial: { opacity: 0, y: -15 },
+                    enter: {
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.25,
+                        type: "spring",
+                        damping: 100,
+                        mass: 4,
+                      },
+                    },
+                    exit: {},
+                  }}
+                  className="larger"
+                >
                   Hey, I'm Nathan,
                   <br />I build dynamic interfaces and experiences.
-                </h1>
+                </motion.h1>
               </Column>
             </Row>
             <Row marginBottom={5}>
               <Column xs={12} sm={10} md={8}>
-                <p className="larger">
+                <motion.p
+                  initial="initial"
+                  animate="enter"
+                  exit="exit"
+                  variants={{
+                    initial: { opacity: 0, y: -15 },
+                    enter: {
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.5,
+                        type: "spring",
+                        damping: 100,
+                        mass: 4,
+                      },
+                    },
+                    exit: {},
+                  }}
+                  transition={{ delay: 2 }}
+                  className="larger"
+                >
                   I have a background in frontend development and technical
                   leadership with a focus on design and user experience.
-                </p>
+                </motion.p>
               </Column>
             </Row>
           </Container>
