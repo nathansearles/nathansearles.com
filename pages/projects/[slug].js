@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import fetch from "node-fetch";
 import Head from "../../components/Head";
 import Navigation from "../../components/Navigation";
@@ -6,6 +7,10 @@ import { Container, Row, Column } from "../../components/Grid";
 import Image from "../../components/Image";
 
 const Project = ({ project }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     project && (
       <>

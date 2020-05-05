@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import ScrollManager from "../components/ScrollManager";
+import ScrollContext from "../components/ScrollContext";
 import { AnimatePresence } from "framer-motion";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import "../styles/global.scss";
 
 function MyApp({ Component, pageProps, router }) {
+  const [scrollPos, setScrollPos] = useState(0);
   const [layoutActive, setLayoutGrid] = useState(false);
 
+  console.log("app");
   const toggleGrid = ({ key }) => {
     if (key === "g") {
       setLayoutGrid((prevState) => !prevState);
@@ -28,14 +30,23 @@ function MyApp({ Component, pageProps, router }) {
     }
   }, []);
 
+  const handleScrollPos = (value) => {
+    setScrollPos(value);
+  };
+
   return (
-    <ScrollManager>
+    <ScrollContext.Provider
+      value={{
+        currentScroll: scrollPos,
+        updateScroll: handleScrollPos,
+      }}
+    >
       <AnimatePresence exitBeforeEnter initial={true}>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
       <Layout isActive={layoutActive} />
       <Footer />
-    </ScrollManager>
+    </ScrollContext.Provider>
   );
 }
 

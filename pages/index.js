@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
 import fetch from "node-fetch";
 import { motion } from "framer-motion";
 import { fadeUpInTransition } from "../utilities";
@@ -8,9 +8,12 @@ import Navigation from "../components/Navigation";
 import Main from "../components/Main";
 import { Container, Row, Column } from "../components/Grid";
 import Card from "../components/Card";
+import ScrollContext from "../components/ScrollContext";
 
 const Home = ({ projects }) => {
   const lowerLayerRef = useRef();
+
+  const { currentScroll, updateScroll } = useContext(ScrollContext);
 
   // Offset the content layer based on viewport height
   // bottom = window height - element height
@@ -58,6 +61,35 @@ const Home = ({ projects }) => {
     return () => {
       window.removeEventListener("scroll", handelScroll);
       window.removeEventListener("resize", handleContentOffset);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (currentScroll >= window.innerHeight / 1.75) {
+      // Set CSS variable property to 0
+      lowerLayerRef.current.style.setProperty(
+        "--content-layer-mask-opacity",
+        0
+      );
+    }
+
+    if (
+      currentScroll >= window.innerHeight / 2 &&
+      currentScroll <= window.innerHeight
+    ) {
+      // if .topLayer is scrolled past middle point
+      window.scrollTo(0, window.innerHeight);
+    } else if (currentScroll < window.innerHeight / 2) {
+      // if .topLayer is scrolled less than middle point
+      window.scrollTo(0, 0);
+    } else {
+      // Scroll to currentScroll value
+      window.scrollTo(0, currentScroll);
+    }
+
+    return () => {
+      console.log("[update scroll]", window.scrollY);
+      updateScroll(window.scrollY);
     };
   }, []);
 
