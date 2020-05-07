@@ -28,8 +28,8 @@ const Error = ({ projects }) => {
               <h1 className="larger">This page isn't here.</h1>
               <p className="larger">
                 Let's head back to the{" "}
-                <Link href="/resume">
-                  <a>main page</a>
+                <Link href="/">
+                  <a>projects page</a>
                 </Link>
                 .
               </p>
