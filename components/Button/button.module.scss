@@ -9,7 +9,7 @@
   &.solid {
     background-color: var(--primary);
     // color: var(--font-primary);
-    font-weight: 600;
+    font-weight: 800;
     font-size: 0.75rem;
     text-decoration: none;
     border-radius: 0.1875rem;
@@ -39,14 +39,4 @@
     padding: 0.75rem 1rem;
     margin: 0;
   }
-
-  // &.underline {
-  //   background-color: transparent;
-  //   color: inherit;
-  //   font-weight: 700;
-  //   font-size: inherit;
-  //   text-decoration: none;
-  //   border-bottom: 6px solid var(--primary);
-  //   line-height: inherit;
-  // }
 }

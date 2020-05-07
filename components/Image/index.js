@@ -122,7 +122,10 @@ const Image = (props) => {
 
   return (
     <div className={handleAspectRatioClasses(aspectRatio)}>
-      <picture ref={imageRef} className={styles.Picture}>
+      <picture
+        ref={imageRef}
+        className={[styles.Picture, styles[props.className]].join(" ")}
+      >
         <source
           media={`(min-width: ${breakpoint.xl}px)`}
           width={handleDimension("xl", aspectRatio)}

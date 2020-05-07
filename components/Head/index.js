@@ -9,7 +9,7 @@ const Title = ({ title }) => {
         key="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0,minimal-ui"
       />
-      <link rel="icon" href="/static/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
       <meta
         name="Description"
         content="I'm a frontend developer and technical leader based in Portland, Oregon."

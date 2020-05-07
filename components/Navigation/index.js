@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Button from "../Button";
 import styles from "./navigation.module.scss";
 
@@ -8,7 +8,17 @@ const Navigation = (props) => {
     <div className={styles.Navigation}>
       <nav>
         {props.subpage ? (
-          <h1>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 0.65, ease: [0.0, 0.0, 0.2, 1] },
+            }}
+            exit={{
+              opacity: 0,
+              transition: { duration: 0.3, ease: [0.4, 0.0, 1, 1] },
+            }}
+          >
             <Link href="/" scroll={false}>
               <a>
                 <svg
@@ -50,13 +60,23 @@ const Navigation = (props) => {
                 Projects
               </a>
             </Link>
-          </h1>
+          </motion.h1>
         ) : (
-          <h1>
+          <motion.h1
+            initial={{ opacity: 1 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 0.65, ease: [0.0, 0.0, 0.2, 1] },
+            }}
+            exit={{
+              opacity: 0,
+              transition: { duration: 0.3, ease: [0.4, 0.0, 1, 1] },
+            }}
+          >
             <Link href="/" scroll={false}>
               <a>Nathan Searles</a>
             </Link>
-          </h1>
+          </motion.h1>
         )}
 
         <div>

@@ -21,7 +21,8 @@ const Resume = () => {
                 <Image
                   src="nathan-searles-2018-square_o8pgtt.jpg"
                   alt="Nathan Searles"
-                  aspectRatio={"square"}
+                  aspectRatio="square"
+                  className="rounded"
                 />
               </div>
 

@@ -14,7 +14,14 @@ const Alert = (props) => {
           exit="exit"
           variants={dropInTransition}
         >
-          👋{" "}
+          <span
+            className="emoji"
+            aria-hidden="true"
+            aria-label="Hey!"
+            role="img"
+          >
+            👋
+          </span>{" "}
           <Link href="/resume">
             <a>Available for new opportunities</a>
           </Link>

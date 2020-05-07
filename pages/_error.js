@@ -17,7 +17,14 @@ const Error = ({ projects }) => {
         <Container>
           <Row>
             <Column xs={12} sm={10} md={8}>
-              <div className="emoji emoji--larger">🤦‍♂️</div>
+              <div
+                className="emoji emoji--larger"
+                aria-hidden="true"
+                aria-label="Facepalm"
+                role="img"
+              >
+                🤦‍♂️
+              </div>
               <h1 className="larger">This page isn't here.</h1>
               <p className="larger">
                 Let's head back to the{" "}

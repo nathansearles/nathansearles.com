@@ -8,14 +8,24 @@ const Card = (props) => {
   const hoverVariant = {
     initial: { scale: 0.99, y: 0 },
     hover: {
-      scale: 1.01,
+      scale: 1.02,
       y: -2,
-      transition: { type: "spring", damping: 300, mass: 2 },
+      transition: { type: "spring", damping: 100, mass: 4 },
+    },
+    tap: {
+      scale: 1.02,
+      y: -2,
+      transition: { type: "spring", damping: 100, mass: 4 },
     },
   };
   return (
     <Link href="/projects/[slug]" as={`/projects/${props.slug}`} scroll={false}>
-      <motion.a initial="initial" whileHover="hover" className={styles.Card}>
+      <motion.a
+        initial="initial"
+        whileHover="hover"
+        whileTap="tap"
+        className={styles.Card}
+      >
         <motion.div variants={hoverVariant}>
           <Image
             src={props.thumbnail}

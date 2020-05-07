@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps, router }) {
   const [scrollPos, setScrollPos] = useState(0);
   const [layoutActive, setLayoutGrid] = useState(false);
 
-  console.log("app");
   const toggleGrid = ({ key }) => {
     if (key === "g") {
       setLayoutGrid((prevState) => !prevState);

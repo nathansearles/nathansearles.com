@@ -88,7 +88,6 @@ const Home = ({ projects }) => {
     }
 
     return () => {
-      console.log("[update scroll]", window.scrollY);
       updateScroll(window.scrollY);
     };
   }, []);
