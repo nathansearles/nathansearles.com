@@ -1,3 +1,3 @@
-My 2020 portfolio website built with [React](https://reactjs.org/) using [Next.js](https://nextjs.org/) with [Framer Motion](https://www.framer.com/motion/) and data from [Firebase](https://firebase.google.com/).
+My 2020 website built with [React](https://reactjs.org/) using [Next.js](https://nextjs.org/) with [Framer Motion](https://www.framer.com/motion/) and data from [Airtable](https://airtable.com/).
 
-I'm available for frontend development and technical leadership opportunities. Shoot me an email and let's chat. [nsearles@gmail.com](mailto:nsearles@gmail.com). :v:
+I'm available for frontend development and technical leadership opportunities. Shoot me an email and let's chat. [nsearles@gmail.com](mailto:nsearles@gmail.com).

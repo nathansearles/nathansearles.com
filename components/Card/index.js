@@ -28,7 +28,7 @@ const Card = (props) => {
       >
         <motion.div variants={hoverVariant}>
           <Image
-            src={props.thumbnail}
+            src={props.preview}
             alt={props.name}
             aspectRatio={"square"}
             ripple
@@ -36,7 +36,7 @@ const Card = (props) => {
         </motion.div>
         <div className={styles.title}>
           <h3>{props.name}</h3>
-          <p>{props.desc}</p>
+          <p>{props.description}</p>
         </div>
       </motion.a>
     </Link>

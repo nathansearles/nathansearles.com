@@ -1,7 +1,6 @@
 import { useRef, useEffect, useContext } from "react";
-import fetch from "node-fetch";
+import Airtable from "airtable";
 import { motion } from "framer-motion";
-import { fadeUpInTransition } from "../utilities";
 import Head from "../components/Head";
 import Alert from "../components/Alert";
 import Navigation from "../components/Navigation";
@@ -172,14 +171,35 @@ const Home = ({ projects }) => {
     </>
   );
 };
+
 export async function getStaticProps() {
-  const res = await fetch(
-    `https://nathansearles-f3c20.firebaseio.com/projects.json`
-  );
+  const airtable = new Airtable({
+    apiKey: "keyhQSCW2r12XG1Cq",
+  });
 
-  const projects = await res.json();
+  const records = await airtable
+    .base("appzSbuz48Xw3C6UV")("Projects")
+    .select({
+      fields: ["Id", "Slug", "Name", "Description", "Preview"],
+      sort: [{ field: "Id", direction: "asc" }],
+    })
+    .all();
 
-  return { props: { projects } };
+  const projects = records.map((project) => {
+    return {
+      id: project.get("Id"),
+      slug: project.get("Slug"),
+      name: project.get("Name"),
+      description: project.get("Description"),
+      preview: project.get("Preview"),
+    };
+  });
+
+  return {
+    props: {
+      projects,
+    },
+  };
 }
 
 export default Home;
