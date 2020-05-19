@@ -63,8 +63,8 @@ const Resume = () => {
               <h4>Director of Technology</h4>
               <p>
                 Managed team of developers and established a technology process.
-                Oversaw a roster of existing Wordpress websites, supported new
-                business, day-to-day engineering and project/account management
+                Oversaw a roster of existing WordPress websites, supported new
+                business, day-to-day development and project/account management
                 of new and existing clients. Worked with Obey, Hugh & Crye and a
                 range of small to medium-sized businesses.
               </p>
@@ -74,14 +74,14 @@ const Resume = () => {
               <p>
                 Co-founded and helped run all aspects of a newly-formed digital
                 agency. Oversaw new business, project, account, and team
-                management, to hands-on engineering for clients including
+                management, to hands-on development for clients including
                 Spotify, Intel, and Mindjet.
               </p>
 
               <h3>Pollinate</h3>
               <h4>Sr. Frontend Developer</h4>
               <p>
-                Led frontend engineering for projects with Yakima, Hollywood
+                Led frontend development for projects with Yakima, Hollywood
                 Theaters, and Umpqua Bank, among others.
               </p>
 
