@@ -10,7 +10,7 @@
   "dependencies": {
     "airtable": "^0.8.1",
     "framer-motion": "^1.10.3",
-    "next": "9.3.6",
+    "next": "9.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-markdown": "^4.3.1",
