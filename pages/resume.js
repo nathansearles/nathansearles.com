@@ -65,8 +65,8 @@ const Resume = () => {
                 Managed team of developers and established a technology process.
                 Oversaw a roster of existing Wordpress websites, supported new
                 business, day-to-day engineering and project/account management
-                of new and existing clients. Worked with Obey, Hugh & Crye and
-                range of small to medium-sized business.
+                of new and existing clients. Worked with Obey, Hugh & Crye and a
+                range of small to medium-sized businesses.
               </p>
 
               <h3>The Brigade</h3>
@@ -88,18 +88,27 @@ const Resume = () => {
               <h5>Technology</h5>
 
               <p>
-                Taking a component-based approach to building responsive
-                interfaces using the latest in <strong>HTML5</strong>,{" "}
-                <strong>CSS3</strong> and <strong>JavaScript ES6</strong>.
+                Building responsive interfaces using the latest in{" "}
+                <strong>HTML5</strong>, <strong>CSS3</strong> and{" "}
+                <strong>JavaScript ES6</strong>.
               </p>
 
               <p>
-                Working with modren frontend frameworks and libraries like{" "}
+                Working with modern frontend frameworks and libraries like{" "}
                 <strong>React</strong> and <strong>Next.js</strong>, versioned
                 with <strong>Git</strong>, built with <strong>NPM</strong> and{" "}
                 <strong>Webpack</strong>. And powered by a{" "}
                 <strong>headless CMS</strong> or a{" "}
                 <strong>RESTful database</strong>.
+              </p>
+
+              <p>
+                Interested in how this site was built? You can review the source
+                on{" "}
+                <a href="https://github.com/nathansearles/nathansearles.com">
+                  GitHub
+                </a>
+                .
               </p>
             </Column>
           </Row>
