@@ -98,7 +98,6 @@ const Home = ({ projects }) => {
       <Main>
         <div className="topLayer">
           <Container>
-            <Alert />
             <Row>
               <Column xs={12} sm={10}>
                 <motion.h1

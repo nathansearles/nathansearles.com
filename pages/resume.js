@@ -38,16 +38,13 @@ const Resume = () => {
                 design and user experience.
               </p>
 
-              <aside>
-                <p>
-                  I'm available for frontend development and technical
-                  leadership opportunities. Have a great opportunity? Shoot me
-                  an email and let's chat.{" "}
-                  <a href="mailto:nsearles@gmail.com">nsearles@gmail.com</a>
-                </p>
-              </aside>
-
               <h5>Experience</h5>
+
+              <h3>Studio Mega</h3>
+              <h4>Tech Director</h4>
+              <p>
+                Currently building something awesome with the Studio Mega crew.
+              </p>
 
               <h3>Cinco</h3>
               <h4>Technical Director</h4>
