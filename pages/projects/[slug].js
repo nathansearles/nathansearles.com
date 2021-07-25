@@ -1,6 +1,8 @@
 import Airtable from "airtable";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utilities";
 import Head from "../../components/Head";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
@@ -15,23 +17,30 @@ const Project = ({ project }) => {
         <Head title={project.name} />
         <Navigation subpage />
         <Main classes="main-project">
-          <Container>
-            <Row justify="center" text="left">
-              <Column xs={12} sm={10} md={8}>
-                <ReactMarkdown>{project.body}</ReactMarkdown>
-              </Column>
-              <Column xs={12}>
-                <div className="project-image">
-                  <Image src={project.feature} alt={project.name} />
-                </div>
-              </Column>
-              <Column xs={12} sm={10} md={8}>
-                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                  {project.details}
-                </ReactMarkdown>
-              </Column>
-            </Row>
-          </Container>
+          <motion.div
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            variants={fadeIn}
+          >
+            <Container>
+              <Row justify="center" text="left">
+                <Column xs={12} sm={10} md={8}>
+                  <ReactMarkdown>{project.body}</ReactMarkdown>
+                </Column>
+                <Column xs={12}>
+                  <div className="project-image">
+                    <Image src={project.feature} alt={project.name} />
+                  </div>
+                </Column>
+                <Column xs={12} sm={10} md={8}>
+                  <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                    {project.details}
+                  </ReactMarkdown>
+                </Column>
+              </Row>
+            </Container>
+          </motion.div>
         </Main>
         <Footer />
       </>
