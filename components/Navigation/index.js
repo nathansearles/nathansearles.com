@@ -3,11 +3,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import Button from "../Button";
 import styles from "./navigation.module.scss";
 
-const Navigation = (props) => {
+const Navigation = ({ isSubpage }) => {
   return (
     <div className={styles.Navigation}>
       <nav>
-        {props.subpage ? (
+        {isSubpage ? (
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{

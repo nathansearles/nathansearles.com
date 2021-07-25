@@ -15,8 +15,8 @@ const Project = ({ project }) => {
     project && (
       <>
         <Head title={project.name} />
-        <Navigation subpage />
-        <Main classes="main-project">
+        <Navigation isSubpage />
+        <Main className="main-project">
           <motion.div
             initial="initial"
             animate="enter"

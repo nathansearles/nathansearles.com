@@ -11,7 +11,7 @@ const Resume = () => {
   return (
     <>
       <Head title="Projects" />
-      <Navigation subpage />
+      <Navigation isSubpage />
       <Main>
         <Container>
           <Row>
