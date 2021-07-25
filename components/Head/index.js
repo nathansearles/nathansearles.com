@@ -12,7 +12,7 @@ const Title = ({ title }) => {
       <link rel="icon" href="/favicon.ico" />
       <meta
         name="Description"
-        content="I'm a frontend developer and technical leader based in Portland, Oregon."
+        content="I'm a front-end developer and technical leader based in Portland, Oregon."
       />
       <meta
         name="title"

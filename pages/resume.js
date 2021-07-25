@@ -33,11 +33,11 @@ const Resume = () => {
 
                 <h1>Nathan Searles</h1>
 
-                <h2>Frontend developer and technical leader</h2>
+                <h2>Front-end developer and technical leader</h2>
 
                 <p>
                   Working through the complete project lifecycle including
-                  planning, strategy, prototyping, design, frontend development,
+                  planning, strategy, prototyping, design, front-end development,
                   backend services, and deployments. Taking a component-based
                   approach to building responsive experiences with a focus on
                   design and user experience.
@@ -83,9 +83,9 @@ const Resume = () => {
                 </p>
 
                 <h3>Pollinate</h3>
-                <h4>Sr. Frontend Developer</h4>
+                <h4>Sr. Front-end Developer</h4>
                 <p>
-                  Led frontend development for projects with Yakima, Hollywood
+                  Led front-end development for projects with Yakima, Hollywood
                   Theaters, and Umpqua Bank, among others.
                 </p>
 
@@ -98,7 +98,7 @@ const Resume = () => {
                 </p>
 
                 <p>
-                  Working with modern frontend frameworks and libraries like{" "}
+                  Working with modern front-end frameworks and libraries like{" "}
                   <strong>React</strong> and <strong>Next.js</strong>, versioned
                   with <strong>Git</strong>, built with <strong>NPM</strong> and{" "}
                   <strong>Webpack</strong>. And powered by a{" "}

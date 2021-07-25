@@ -64,7 +64,7 @@ const Home = ({ projects }) => {
                 transition={{ delay: 2 }}
                 className="larger"
               >
-                I have a background in frontend development and technical
+                I have a background in front-end development and technical
                 leadership with a focus on design and user experience.
               </motion.p>
             </Column>
