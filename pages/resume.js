@@ -44,7 +44,7 @@ const Resume = () => {
                 </p>
 
                 <p>
-                  I'm currently the Technical Director at{" "}
+                  Currently I'm the Technical Director at{" "}
                   <a href="https://studiomega.com/">Studio Mega</a> where I lead
                   all things digital.
                 </p>
@@ -68,8 +68,8 @@ const Resume = () => {
                   process. Oversaw a roster of existing WordPress websites,
                   supported new business, day-to-day development and
                   project/account management of new and existing clients. Worked
-                  with Obey, Hugh & Crye and a range of small to medium-sized
-                  businesses.
+                  with Obey, Hugh &amp; Crye and a range of small to
+                  medium-sized businesses.
                 </p>
 
                 <h3>The Brigade</h3>
@@ -100,8 +100,8 @@ const Resume = () => {
                   Working with modern front-end frameworks and libraries like{" "}
                   <strong>React</strong> and <strong>Next.js</strong>, versioned
                   with <strong>Git</strong>, built with <strong>NPM</strong> and{" "}
-                  <strong>Webpack</strong>. And powered by a{" "}
-                  <strong>headless CMS</strong> or an <strong>API</strong>.
+                  <strong>Webpack</strong>, hooked up to a{" "}
+                  <strong>headless CMS</strong> or custom <strong>API</strong>.
                 </p>
 
                 <p>
