@@ -1,39 +1,49 @@
-import { useEffect } from "react";
 import Airtable from "airtable";
-const ReactMarkdown = require("react-markdown/with-html");
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utilities";
 import Head from "../../components/Head";
 import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
 import Main from "../../components/Main";
-import { Container, Row, Column } from "../../components/Grid";
 import Image from "../../components/Image";
+import styles from "../../styles/Project.module.scss";
 
 const Project = ({ project }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     project && (
       <>
         <Head title={project.name} />
-        <Navigation subpage />
-        <Main classes="main-project">
-          <Container>
-            <Row justify="center" text="left">
-              <Column xs={12} sm={10} md={8}>
-                <ReactMarkdown source={project.body} />
-              </Column>
-              <Column xs={12}>
-                <div className="project-image">
-                  <Image src={project.feature} alt={project.name} />
-                </div>
-              </Column>
-              <Column xs={12} sm={10} md={8}>
-                <ReactMarkdown source={project.details} escapeHtml={false} />
-              </Column>
-            </Row>
-          </Container>
+        <Navigation isSubpage />
+        <Main>
+          <motion.div
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            variants={fadeIn}
+            className={styles.project}
+          >
+            <div className={styles.projectContent}>
+              <ReactMarkdown>{project.body}</ReactMarkdown>
+            </div>
+            <div className={styles.projectImage}>
+              <Image
+                src={project.feature}
+                alt={`Preview image for the ${project.name.replace(
+                  /^t|The./,
+                  ""
+                )} project`}
+              />
+            </div>
+            <div className={styles.projectContent}>
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {project.details}
+              </ReactMarkdown>
+            </div>
+          </motion.div>
         </Main>
+        <Footer />
       </>
     )
   );

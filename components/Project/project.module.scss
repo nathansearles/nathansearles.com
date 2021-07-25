@@ -1,13 +1,10 @@
-.Card {
+.project {
   display: block;
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-decoration: none;
-
-
   color: var(--font-secondary);
   text-align: center;
-
   &:link,
   &:visited {
     cursor: pointer;
@@ -28,7 +25,7 @@
     font-size: 1.125rem;
     color: var(--font-secondary);
   }
- 
+
   .title {
     padding-top: 2rem;
   }

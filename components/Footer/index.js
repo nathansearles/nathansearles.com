@@ -10,7 +10,7 @@ const Footer = (props) => {
         </a>{" "}
         or send me an <a href="mailto:nsearles@gmail.com">email</a>.{" "}
         <span
-          className="emoji"
+          className={styles.emoji}
           aria-hidden="true"
           aria-label="Peace"
           role="img"

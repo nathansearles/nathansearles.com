@@ -1,0 +1,27 @@
+.container {
+  margin: 2rem 0 6rem;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 1rem;
+  p {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 48ch;
+  }
+}
+
+.portraitContainer {
+  width: 100%;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portrait {
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+}

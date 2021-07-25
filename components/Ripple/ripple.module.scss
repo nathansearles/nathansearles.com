@@ -1,4 +1,4 @@
-.RippleContainer {
+.container {
   position: absolute;
   top: 0;
   right: 0;
@@ -8,16 +8,16 @@
   overflow: hidden;
 }
 
-.Ripple {
+.ripple {
   transform: scale(0);
   border-radius: 100%;
   position: absolute;
-  opacity: 0.45;
+  opacity: 0.25;
   background-color: #fff;
   animation-name: ripple;
   animation-duration: 600ms;
-  animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
-  mix-blend-mode: screen;  
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  mix-blend-mode: screen;
 }
 
 @keyframes ripple {

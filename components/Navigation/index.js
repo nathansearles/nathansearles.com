@@ -3,11 +3,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import Button from "../Button";
 import styles from "./navigation.module.scss";
 
-const Navigation = (props) => {
+export default function Navigation({ isSubpage }) {
   return (
-    <div className={styles.Navigation}>
+    <div className={styles.navigation}>
       <nav>
-        {props.subpage ? (
+        {isSubpage ? (
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{
@@ -19,7 +19,7 @@ const Navigation = (props) => {
               transition: { duration: 0.3, ease: [0.4, 0.0, 1, 1] },
             }}
           >
-            <Link href="/" scroll={false}>
+            <Link href="/">
               <a>
                 <svg
                   className={styles.iconArrow}
@@ -73,7 +73,7 @@ const Navigation = (props) => {
               transition: { duration: 0.3, ease: [0.4, 0.0, 1, 1] },
             }}
           >
-            <Link href="/" scroll={false}>
+            <Link href="/">
               <a>Nathan Searles</a>
             </Link>
           </motion.h1>
@@ -87,6 +87,4 @@ const Navigation = (props) => {
       </nav>
     </div>
   );
-};
-
-export default Navigation;
+}
