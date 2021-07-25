@@ -48,18 +48,12 @@
     }
   }
   h1 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: auto;
-    font-weight: 800;
-    line-height: 1rem;
-    background: -webkit-linear-gradient(
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.85)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    line-height: 1;
   }
   a {
     &:link,

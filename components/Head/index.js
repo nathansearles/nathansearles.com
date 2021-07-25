@@ -23,7 +23,7 @@ const Title = ({ title }) => {
       <meta name="theme-color" content="#141421" />
       <link rel="manifest" href="/site.webmanifest" />
       <link
-        href="https://fonts.googleapis.com/css?family=Inter:500,800&display=swap"
+        href="https://fonts.googleapis.com/css?family=Inter:500,700&display=swap"
         rel="stylesheet"
         async
       />

@@ -5,18 +5,14 @@ import styles from "./card.module.scss";
 
 const Card = (props) => {
   const hoverVariant = {
-    initial: { scale: 0.99, y: 0 },
+    initial: { scale: 1, y: 0 },
     hover: {
-      scale: 1.02,
+      scale: 1.03,
       y: -2,
-      transition: { type: "spring", damping: 50, mass: 2 },
-    },
-    tap: {
-      scale: 1.02,
-      y: -2,
-      transition: { type: "spring", damping: 100, mass: 2 },
+      transition: { duration: 1.2, delay: 0.2, ease: [0.33, 1, 0.68, 1] },
     },
   };
+
   return (
     <Link href={`/projects/${props.slug}`}>
       <a className={styles.Card}>
@@ -24,7 +20,6 @@ const Card = (props) => {
           variants={hoverVariant}
           initial="initial"
           whileHover="hover"
-          whileTap="tap"
         >
           <Image
             src={props.preview}
