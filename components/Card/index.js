@@ -23,7 +23,10 @@ const Card = (props) => {
         >
           <Image
             src={props.preview}
-            alt={props.name}
+            alt={`Preview image for the ${props.name.replace(
+              /^t|The./,
+              ""
+            )} project`}
             aspectRatio={"square"}
             ripple
           />

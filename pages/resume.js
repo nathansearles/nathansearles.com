@@ -25,7 +25,7 @@ const Resume = () => {
                 <div className="portrait">
                   <Image
                     src="nathan-searles-2018-square_o8pgtt.jpg"
-                    alt="Nathan Searles"
+                    alt="A photo of Nathan Searles"
                     aspectRatio="square"
                     className="rounded"
                   />
@@ -37,20 +37,19 @@ const Resume = () => {
 
                 <p>
                   Working through the complete project lifecycle including
-                  planning, strategy, prototyping, design, front-end development,
-                  backend services, and deployments. Taking a component-based
-                  approach to building responsive experiences with a focus on
-                  design and user experience.
+                  planning, strategy, prototyping, design, front-end
+                  development, backend services, and deployments. Taking a
+                  component-based approach to building responsive experiences
+                  with a focus on design, user experience and accessability.
+                </p>
+
+                <p>
+                  I'm currently the Technical Director at{" "}
+                  <a href="https://studiomega.com/">Studio Mega</a> where I lead
+                  all things digital.
                 </p>
 
                 <h5>Experience</h5>
-
-                <h3>Studio Mega</h3>
-                <h4>Tech Director</h4>
-                <p>
-                  Currently building something awesome with the Studio Mega
-                  crew.
-                </p>
 
                 <h3>Cinco</h3>
                 <h4>Technical Director</h4>
@@ -93,8 +92,8 @@ const Resume = () => {
 
                 <p>
                   Building responsive interfaces using the latest in{" "}
-                  <strong>HTML5</strong>, <strong>CSS3</strong> and{" "}
-                  <strong>JavaScript ES6</strong>.
+                  <strong>HTML</strong>, <strong>CSS</strong> and{" "}
+                  <strong>JavaScript</strong>.
                 </p>
 
                 <p>
@@ -102,8 +101,7 @@ const Resume = () => {
                   <strong>React</strong> and <strong>Next.js</strong>, versioned
                   with <strong>Git</strong>, built with <strong>NPM</strong> and{" "}
                   <strong>Webpack</strong>. And powered by a{" "}
-                  <strong>headless CMS</strong> or a{" "}
-                  <strong>RESTful database</strong>.
+                  <strong>headless CMS</strong> or an <strong>API</strong>.
                 </p>
 
                 <p>

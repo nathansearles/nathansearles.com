@@ -30,7 +30,13 @@ const Project = ({ project }) => {
                 </Column>
                 <Column xs={12}>
                   <div className="project-image">
-                    <Image src={project.feature} alt={project.name} />
+                    <Image
+                      src={project.feature}
+                      alt={`Preview image for the ${project.name.replace(
+                        /^t|The./,
+                        ""
+                      )} project`}
+                    />
                   </div>
                 </Column>
                 <Column xs={12} sm={10} md={8}>
