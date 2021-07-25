@@ -1,14 +1,11 @@
-import { useEffect } from "react";
 import Head from "../components/Head";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import Main from "../components/Main";
 import { Container, Row, Column } from "../components/Grid";
 import Image from "../components/Image";
 
 const Resume = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <Head title="Projects" />
@@ -111,6 +108,7 @@ const Resume = () => {
           </Row>
         </Container>
       </Main>
+      <Footer />
     </>
   );
 };

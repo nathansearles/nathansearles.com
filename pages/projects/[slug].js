@@ -1,17 +1,14 @@
-import { useEffect } from "react";
 import Airtable from "airtable";
-const ReactMarkdown = require("react-markdown/with-html");
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import Head from "../../components/Head";
 import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
 import Main from "../../components/Main";
 import { Container, Row, Column } from "../../components/Grid";
 import Image from "../../components/Image";
 
 const Project = ({ project }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     project && (
       <>
@@ -21,7 +18,7 @@ const Project = ({ project }) => {
           <Container>
             <Row justify="center" text="left">
               <Column xs={12} sm={10} md={8}>
-                <ReactMarkdown source={project.body} />
+                <ReactMarkdown>{project.body}</ReactMarkdown>
               </Column>
               <Column xs={12}>
                 <div className="project-image">
@@ -29,11 +26,14 @@ const Project = ({ project }) => {
                 </div>
               </Column>
               <Column xs={12} sm={10} md={8}>
-                <ReactMarkdown source={project.details} escapeHtml={false} />
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                  {project.details}
+                </ReactMarkdown>
               </Column>
             </Row>
           </Container>
         </Main>
+        <Footer />
       </>
     )
   );

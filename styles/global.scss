@@ -194,7 +194,7 @@ aside {
 
 .larger {
   font-size: 1.25rem;
-    line-height: 2rem;
+  line-height: 2rem;
   @media (min-width: $sm) {
     font-size: 1.5rem;
     line-height: 2.25rem;
@@ -212,11 +212,13 @@ aside {
     margin-bottom: 0;
   }
   a {
-    &:link, &:visited {
-      color: var(--font-secondary)
+    &:link,
+    &:visited {
+      color: var(--font-secondary);
     }
-    &:hover, &:active {
-      border-color: var(--font-secondary)
+    &:hover,
+    &:active {
+      border-color: var(--font-secondary);
     }
   }
 }
@@ -228,7 +230,7 @@ aside {
   max-width: 100%;
   overflow: hidden;
   margin: 72px 0px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: block;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -239,7 +241,9 @@ aside {
   display: block;
 }
 
-.embed-container embed, .embed-container iframe, .embed-container object {
+.embed-container embed,
+.embed-container iframe,
+.embed-container object {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -266,6 +270,10 @@ aside {
 .project-image {
   padding-top: 4rem;
   padding-bottom: 5rem;
+}
+
+.intro {
+  margin-bottom: 4rem;
 }
 
 .topLayer {

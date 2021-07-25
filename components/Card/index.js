@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "../../components/Image";
-
 import styles from "./card.module.scss";
 
 const Card = (props) => {
@@ -19,8 +18,8 @@ const Card = (props) => {
     },
   };
   return (
-    <Link href="/projects/[slug]" as={`/projects/${props.slug}`} scroll={false}>
-      <motion.a className={styles.Card}>
+    <Link href={`/projects/${props.slug}`}>
+      <a className={styles.Card}>
         <motion.div
           variants={hoverVariant}
           initial="initial"
@@ -38,7 +37,7 @@ const Card = (props) => {
           <h3>{props.name}</h3>
           <p>{props.description}</p>
         </div>
-      </motion.a>
+      </a>
     </Link>
   );
 };

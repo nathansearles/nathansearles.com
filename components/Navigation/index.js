@@ -19,7 +19,7 @@ const Navigation = (props) => {
               transition: { duration: 0.3, ease: [0.4, 0.0, 1, 1] },
             }}
           >
-            <Link href="/" scroll={false}>
+            <Link href="/">
               <a>
                 <svg
                   className={styles.iconArrow}
@@ -73,7 +73,7 @@ const Navigation = (props) => {
               transition: { duration: 0.3, ease: [0.4, 0.0, 1, 1] },
             }}
           >
-            <Link href="/" scroll={false}>
+            <Link href="/">
               <a>Nathan Searles</a>
             </Link>
           </motion.h1>

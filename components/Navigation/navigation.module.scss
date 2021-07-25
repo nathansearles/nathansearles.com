@@ -8,35 +8,28 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  // background-color:  rgba(20,20,33,0.97);
   background: linear-gradient(
-      to bottom,
-      hsl(240, 25%, 10%) 0%,
-      hsla(240, 25%, 10%, 0.987) 8.1%,
-      hsla(240, 25%, 10%, 0.951) 15.5%,
-      hsla(240, 25%, 10%, 0.896) 22.5%,
-      hsla(240, 25%, 10%, 0.825) 29%,
-      hsla(240, 25%, 10%, 0.741) 35.3%,
-      hsla(240, 25%, 10%, 0.648) 41.2%,
-      hsla(240, 25%, 10%, 0.55) 47.1%,
-      hsla(240, 25%, 10%, 0.45) 52.9%,
-      hsla(240, 25%, 10%, 0.352) 58.8%,
-      hsla(240, 25%, 10%, 0.259) 64.7%,
-      hsla(240, 25%, 10%, 0.175) 71%,
-      hsla(240, 25%, 10%, 0.104) 77.5%,
-      hsla(240, 25%, 10%, 0.049) 84.5%,
-      hsla(240, 25%, 10%, 0.013) 91.9%,
-      hsla(240, 25%, 10%, 0) 100%
-    );
-
-  // backdrop-filter: blur(2px);
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    to bottom,
+    hsl(240, 25%, 10%) 0%,
+    hsla(240, 25%, 10%, 0.987) 8.1%,
+    hsla(240, 25%, 10%, 0.951) 15.5%,
+    hsla(240, 25%, 10%, 0.896) 22.5%,
+    hsla(240, 25%, 10%, 0.825) 29%,
+    hsla(240, 25%, 10%, 0.741) 35.3%,
+    hsla(240, 25%, 10%, 0.648) 41.2%,
+    hsla(240, 25%, 10%, 0.55) 47.1%,
+    hsla(240, 25%, 10%, 0.45) 52.9%,
+    hsla(240, 25%, 10%, 0.352) 58.8%,
+    hsla(240, 25%, 10%, 0.259) 64.7%,
+    hsla(240, 25%, 10%, 0.175) 71%,
+    hsla(240, 25%, 10%, 0.104) 77.5%,
+    hsla(240, 25%, 10%, 0.049) 84.5%,
+    hsla(240, 25%, 10%, 0.013) 91.9%,
+    hsla(240, 25%, 10%, 0) 100%
+  );
   height: calc(44px * 3);
   display: flex;
   align-items: flex-start;
-  // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1),
-  // 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1),
-  // 0 16px 32px rgba(0, 0, 0, 0.1), 0 32px 64px rgba(0, 0, 0, 0.1);
   nav {
     pointer-events: auto;
     display: flex;
@@ -53,7 +46,7 @@
     @media (min-width: $md) {
       padding: 0 3rem;
     }
-  } 
+  }
   h1 {
     font-size: 0.85rem;
     margin-top: 0;
@@ -61,7 +54,10 @@
     margin-right: auto;
     font-weight: 800;
     line-height: 1rem;
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.85));
+    background: -webkit-linear-gradient(
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.85)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

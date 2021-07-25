@@ -1,14 +1,11 @@
-import { useEffect } from "react";
 import Link from "next/link";
 import Head from "../components/Head";
+import Footer from "../components/Footer";
 import Main from "../components/Main";
 import Navigation from "../components/Navigation";
 import { Container, Row, Column } from "../components/Grid";
 
 const Error = ({ projects }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <Head title={"Error"} />
@@ -37,6 +34,7 @@ const Error = ({ projects }) => {
           </Row>
         </Container>
       </Main>
+      <Footer />
     </>
   );
 };
