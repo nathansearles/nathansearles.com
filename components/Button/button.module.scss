@@ -8,7 +8,7 @@
   }
   &.solid {
     background-color: var(--primary);
-    color: var(--font-primary);
+    color: var(--background);
     font-weight: 700;
     font-size: 0.7rem;
     text-decoration: none;
@@ -22,17 +22,5 @@
     &:active {
       border: 0;
     }
-  }
-  &.outline {
-    color: var(--primary);
-    border: 2px solid var(--primary);
-    // background-color: rgba(52,51,255,0.5);
-    color: var(--font-primary);
-    font-weight: 500;
-    font-size: 0.75rem;
-    text-decoration: none;
-    border-radius: 0.25rem;
-    padding: 0.75rem 1rem;
-    margin: 0;
   }
 }

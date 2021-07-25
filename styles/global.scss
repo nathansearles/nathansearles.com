@@ -1,7 +1,7 @@
 @import "./_variables.scss";
 
 :root {
-  --primary: #4a49ff;
+  --primary: #4bd8ff;
   --background: #141421;
   --background-secondary: #262632;
   --background-inverted: rgba(0, 0, 0, 0.85);
@@ -43,37 +43,15 @@ body {
 
 h1,
 .h1 {
-  font-size: 3.75rem;
-  line-height: 3.95rem;
+  font-size: clamp(3rem, 10vw, 5.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
   color: var(--font-primary);
-  @media (min-width: $sm) {
-    font-size: 5.25rem;
-    line-height: 5.5rem;
-    margin-bottom: 3rem;
-  }
-  &.smaller {
-    font-size: 2.125rem;
-  }
-  &.larger {
-    font-size: 2.6rem;
-    line-height: 3.5rem;
-    margin-bottom: 2.5rem;
-    margin-top: 0;
-
-    @media (min-width: $sm) {
-      font-size: 5.25rem;
-      line-height: 5.5rem;
-      margin-bottom: 3rem;
-    }
-  }
   + h2 {
     margin-top: 0;
-    @media (min-width: $sm) {
-      margin-top: -2.5rem;
-    }
   }
 }
 h2,
@@ -191,37 +169,6 @@ aside {
   }
 }
 
-.larger {
-  font-size: 1.25rem;
-  line-height: 2rem;
-  @media (min-width: $sm) {
-    font-size: 1.5rem;
-    line-height: 2.25rem;
-  }
-}
-
-.portrait {
-  width: 170px;
-  height: 170px;
-  margin: 0 auto 3rem;
-}
-
-.main-project {
-  h4 {
-    margin-bottom: 0;
-  }
-  a {
-    &:link,
-    &:visited {
-      color: var(--font-secondary);
-    }
-    &:hover,
-    &:active {
-      border-color: var(--font-secondary);
-    }
-  }
-}
-
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -248,75 +195,4 @@ aside {
   left: 0px;
   width: 100%;
   height: 100%;
-}
-
-.emoji {
-  color: var(--font-primary);
-  opacity: 1;
-  &--larger {
-    font-size: 2.8rem;
-    line-height: 3.5rem;
-    margin-bottom: 2rem;
-
-    @media (min-width: $sm) {
-      font-size: 5.25rem;
-      line-height: 5.5rem;
-      margin-bottom: 1rem;
-    }
-  }
-}
-
-.project-image {
-  padding-top: 4rem;
-  padding-bottom: 5rem;
-}
-
-.intro {
-  margin-bottom: 4rem;
-}
-
-.topLayer {
-  margin-top: calc(-6rem - 44px);
-  padding: 4rem 0;
-  min-height: calc(100vh);
-  position: relative;
-  z-index: 10;
-  background-color: var(--background);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  @media (min-width: $sm) {
-    margin-top: calc(-8rem - 44px);
-    min-height: calc(100vh);
-    padding: 4rem 0;
-  }
-  p {
-    margin-bottom: 0;
-  }
-}
-
-.lowerLayer {
-  position: sticky;
-  min-height: 100vh;
-  padding-top: 5rem;
-  --content-layer-mask-opacity: 1;
-
-  @media (min-width: $sm) {
-    padding-top: 4rem;
-  }
-
-  &:after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    background-color: var(--background);
-    opacity: var(--content-layer-mask-opacity);
-  }
 }

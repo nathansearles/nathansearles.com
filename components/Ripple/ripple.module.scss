@@ -1,4 +1,4 @@
-.RippleContainer {
+.container {
   position: absolute;
   top: 0;
   right: 0;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.Ripple {
+.ripple {
   transform: scale(0);
   border-radius: 100%;
   position: absolute;

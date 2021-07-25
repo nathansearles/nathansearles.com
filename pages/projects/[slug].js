@@ -7,8 +7,8 @@ import Head from "../../components/Head";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import Main from "../../components/Main";
-import { Container, Row, Column } from "../../components/Grid";
 import Image from "../../components/Image";
+import styles from "../../styles/Project.module.scss";
 
 const Project = ({ project }) => {
   return (
@@ -16,36 +16,31 @@ const Project = ({ project }) => {
       <>
         <Head title={project.name} />
         <Navigation isSubpage />
-        <Main className="main-project">
+        <Main>
           <motion.div
             initial="initial"
             animate="enter"
             exit="exit"
             variants={fadeIn}
+            className={styles.project}
           >
-            <Container>
-              <Row justify="center" text="left">
-                <Column xs={12} sm={10} md={8}>
-                  <ReactMarkdown>{project.body}</ReactMarkdown>
-                </Column>
-                <Column xs={12}>
-                  <div className="project-image">
-                    <Image
-                      src={project.feature}
-                      alt={`Preview image for the ${project.name.replace(
-                        /^t|The./,
-                        ""
-                      )} project`}
-                    />
-                  </div>
-                </Column>
-                <Column xs={12} sm={10} md={8}>
-                  <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                    {project.details}
-                  </ReactMarkdown>
-                </Column>
-              </Row>
-            </Container>
+            <div className={styles.projectContent}>
+              <ReactMarkdown>{project.body}</ReactMarkdown>
+            </div>
+            <div className={styles.projectImage}>
+              <Image
+                src={project.feature}
+                alt={`Preview image for the ${project.name.replace(
+                  /^t|The./,
+                  ""
+                )} project`}
+              />
+            </div>
+            <div className={styles.projectContent}>
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {project.details}
+              </ReactMarkdown>
+            </div>
           </motion.div>
         </Main>
         <Footer />

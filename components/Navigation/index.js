@@ -3,9 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import Button from "../Button";
 import styles from "./navigation.module.scss";
 
-const Navigation = ({ isSubpage }) => {
+export default function Navigation({ isSubpage }) {
   return (
-    <div className={styles.Navigation}>
+    <div className={styles.navigation}>
       <nav>
         {isSubpage ? (
           <motion.h1
@@ -87,6 +87,4 @@ const Navigation = ({ isSubpage }) => {
       </nav>
     </div>
   );
-};
-
-export default Navigation;
+}

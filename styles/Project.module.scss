@@ -1,0 +1,29 @@
+.project {
+  width: 100%;
+  h4 {
+    margin-bottom: 0;
+  }
+  a {
+    &:link,
+    &:visited {
+      color: var(--font-secondary);
+    }
+    &:hover,
+    &:active {
+      border-color: var(--font-secondary);
+    }
+  }
+}
+
+.projectContent {
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.projectImage {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}

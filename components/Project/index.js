@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "../../components/Image";
-import styles from "./card.module.scss";
+import Image from "../Image";
+import styles from "./project.module.scss";
 
-const Card = (props) => {
+export default function Project(props) {
   const hoverVariant = {
     initial: { scale: 1, y: 0 },
     hover: {
@@ -15,7 +15,7 @@ const Card = (props) => {
 
   return (
     <Link href={`/projects/${props.slug}`}>
-      <a className={styles.Card}>
+      <a className={styles.project}>
         <motion.div
           variants={hoverVariant}
           initial="initial"
@@ -38,6 +38,4 @@ const Card = (props) => {
       </a>
     </Link>
   );
-};
-
-export default Card;
+}

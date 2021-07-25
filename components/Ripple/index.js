@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./ripple.module.scss";
 
 const useDebouncedRippleCleanUp = (rippleCount, duration, cleanUpFunction) => {
@@ -17,7 +17,7 @@ const useDebouncedRippleCleanUp = (rippleCount, duration, cleanUpFunction) => {
   }, [rippleCount, duration, cleanUpFunction]);
 };
 
-const Ripple = ({ duration = 850, color = "#f00" }) => {
+export default function Ripple({ duration = 850, color = "#f00" }) {
   const [rippleArray, setRippleArray] = useState([]);
 
   useDebouncedRippleCleanUp(rippleArray.length, duration, () => {
@@ -43,7 +43,7 @@ const Ripple = ({ duration = 850, color = "#f00" }) => {
 
   return (
     <div
-      className={styles.RippleContainer}
+      className={styles.container}
       duration={duration}
       color={color}
       onMouseDown={addRipple}
@@ -53,7 +53,7 @@ const Ripple = ({ duration = 850, color = "#f00" }) => {
           return (
             <span
               key={"span" + index}
-              className={styles.Ripple}
+              className={styles.ripple}
               style={{
                 top: ripple.y,
                 left: ripple.x,
@@ -65,6 +65,4 @@ const Ripple = ({ duration = 850, color = "#f00" }) => {
         })}
     </div>
   );
-};
-
-export default Ripple;
+}
