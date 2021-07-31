@@ -1,6 +1,6 @@
 import styles from "./footer.module.scss";
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <footer className={styles.Footer}>
       <small>
