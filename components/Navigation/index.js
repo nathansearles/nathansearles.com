@@ -24,7 +24,7 @@ export default function Navigation() {
   return (
     <nav className={styles.navigation}>
       <div>
-        <Link href="/">
+        <Link href="/" scroll={false}>
           <a>{pathname === "/" ? `Nathan Searles` : <BackButton />}</a>
         </Link>
         <Link href="/resume">
