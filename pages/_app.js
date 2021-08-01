@@ -1,7 +1,10 @@
-import "../styles/global.scss";
+import Layout from "../components/Layout";
+// import "focus-visible";
 
-function Website({ Component, pageProps, router }) {
-  return <Component {...pageProps} key={router.route} />;
+import "../styles/globals.scss";
+
+export default function Website({ Component, pageProps, router }) {
+  const getLayout =
+    Component.getLayout || ((page) => <Layout children={page} />);
+  return getLayout(<Component {...pageProps} key={router.route} />);
 }
-
-export default Website;

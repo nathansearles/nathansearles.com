@@ -1,6 +1,8 @@
-@import "../../styles/_variables.scss";
+@import "../../styles/variables";
 
 .navigation {
+  padding: 0 1rem;
+  min-height: calc(44px * 3);
   pointer-events: none;
   position: fixed;
   top: 0;
@@ -8,66 +10,78 @@
   left: 0;
   width: 100%;
   z-index: 1000;
+  background-color: var(--background);
   background: linear-gradient(
     to bottom,
-    hsl(240, 25%, 10%) 0%,
-    hsla(240, 25%, 10%, 0.987) 8.1%,
-    hsla(240, 25%, 10%, 0.951) 15.5%,
-    hsla(240, 25%, 10%, 0.896) 22.5%,
-    hsla(240, 25%, 10%, 0.825) 29%,
-    hsla(240, 25%, 10%, 0.741) 35.3%,
-    hsla(240, 25%, 10%, 0.648) 41.2%,
-    hsla(240, 25%, 10%, 0.55) 47.1%,
-    hsla(240, 25%, 10%, 0.45) 52.9%,
-    hsla(240, 25%, 10%, 0.352) 58.8%,
-    hsla(240, 25%, 10%, 0.259) 64.7%,
-    hsla(240, 25%, 10%, 0.175) 71%,
-    hsla(240, 25%, 10%, 0.104) 77.5%,
-    hsla(240, 25%, 10%, 0.049) 84.5%,
-    hsla(240, 25%, 10%, 0.013) 91.9%,
-    hsla(240, 25%, 10%, 0) 100%
+    hsl(231, 25%, 10%) 0%,
+    hsla(231, 25%, 10%, 0.987) 8.1%,
+    hsla(231, 25%, 10%, 0.951) 15.5%,
+    hsla(231, 25%, 10%, 0.896) 22.5%,
+    hsla(231, 25%, 10%, 0.825) 29%,
+    hsla(231, 25%, 10%, 0.741) 35.3%,
+    hsla(231, 25%, 10%, 0.648) 41.2%,
+    hsla(231, 25%, 10%, 0.55) 47.1%,
+    hsla(231, 25%, 10%, 0.45) 52.9%,
+    hsla(231, 25%, 10%, 0.352) 58.8%,
+    hsla(231, 25%, 10%, 0.259) 64.7%,
+    hsla(231, 25%, 10%, 0.175) 71%,
+    hsla(231, 25%, 10%, 0.104) 77.5%,
+    hsla(231, 25%, 10%, 0.049) 84.5%,
+    hsla(231, 25%, 10%, 0.013) 91.9%,
+    hsla(231, 25%, 10%, 0) 100%
   );
-  height: calc(44px * 3);
-  display: flex;
-  align-items: flex-start;
-  nav {
-    pointer-events: auto;
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
-    height: 44px;
-    width: 100%;
-    max-width: $lg;
-    padding: 0 1rem;
-    overflow-x: hidden;
-    @media (min-width: $md) {
-      padding: 0 3rem;
-    }
+  @media (min-width: $md) {
+    padding: 0 2rem;
   }
-  h1 {
-    font-size: 0.8rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: auto;
-    font-weight: 700;
-    line-height: 1;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 44px;
   }
   a {
     &:link,
     &:visited {
-      border: 0;
+      pointer-events: all;
+      color: var(--font-primary);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
     }
     &:hover,
     &:active {
-      border: 0;
+      color: #fff;
     }
   }
-  .iconArrow {
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.arrowLeft {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+a.button {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--font-primary);
     display: inline-block;
-    transform: translateY(1px) scale(0.95);
-    margin-right: 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 0.1875rem;
+    padding: 0.3rem 1rem 0.25rem;
+  }
+  &:hover,
+  &:active {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--font-primary);
   }
 }

@@ -1,0 +1,83 @@
+@import "../styles/variables";
+
+.intro {
+  margin: 2rem 0 0;
+  text-align: center;
+  min-height: 635px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @media (min-width: $md) {
+    margin: 8rem 0 4rem;
+  }
+
+  h1 {
+    margin: 0 auto 2rem;
+    width: 100%;
+    max-width: 1024px;
+    font-size: clamp(2.65rem, 10vw, 5.75rem);
+    line-height: 1.1;
+    font-weight: 800;
+
+    animation-name: fadeInUp;
+    animation-duration: 950ms;
+    animation-delay: 200ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+  }
+
+  p {
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    max-width: 44ch;
+
+    animation-name: fadeInUp;
+    animation-duration: 950ms;
+    animation-delay: 1000ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+  }
+}
+
+.projects {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $lg;
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-template-columns: 1fr;
+
+  // animation-name: fadeIn;
+  // animation-duration: 950ms;
+  // animation-delay: 1400ms;
+  // animation-fill-mode: both;
+  // animation-timing-function: ease-out;
+
+  @media (min-width: $sm) {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
