@@ -1,1 +1,1 @@
-My portfolio website built with [React](https://reactjs.org/) using [Next.js](https://nextjs.org/) with [Framer Motion](https://www.framer.com/motion/) and data from [Airtable](https://airtable.com/).
+My portfolio website built with [Next.js](https://nextjs.org/).

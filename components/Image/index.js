@@ -11,10 +11,11 @@ const Image = (props) => {
   const aspectRatios = {
     landscape: {
       xs: "ar_1:1,c_fill,w_380",
-      sm: "ar_1:1,c_fill,w_639",
+      sm: "ar_16:9,c_fill,w_639",
       md: "ar_16:9,c_fill,w_853",
       lg: "ar_16:9,c_fill,w_1067",
       xl: "ar_16:9,c_fill,w_1067",
+      xxl: "ar_16:9,c_fill,w_1067",
     },
     portrait: {
       xs: "ar_3:4,c_fill,w_380",
@@ -22,6 +23,7 @@ const Image = (props) => {
       md: "ar_3:4,c_fill,w_414",
       lg: "ar_3:4,c_fill,w_331",
       xl: "ar_3:4,c_fill,w_331",
+      xxl: "ar_3:4,c_fill,w_331",
     },
     square: {
       xs: "ar_1:1,c_fill,w_800",
@@ -29,6 +31,7 @@ const Image = (props) => {
       md: "ar_1:1,c_fill,w_400",
       lg: "ar_1:1,c_fill,w_600",
       xl: "ar_1:1,c_fill,w_600",
+      xxl: "ar_1:1,c_fill,w_600",
     },
   };
 
@@ -42,6 +45,7 @@ const Image = (props) => {
     md: `${handleAspectRatio("md", aspectRatio)},f_auto`,
     lg: `${handleAspectRatio("lg", aspectRatio)},f_auto`,
     xl: `${handleAspectRatio("xl", aspectRatio)},f_auto`,
+    xxl: `${handleAspectRatio("xxl", aspectRatio)},f_auto`,
   };
 
   const dimension = {
@@ -51,13 +55,15 @@ const Image = (props) => {
       md: "853",
       lg: "1067",
       xl: "1067",
+      xxl: "1067",
     },
     portrait: {
       xs: "380",
       sm: "639",
       md: "414",
-      lg: "331",
-      xl: "331",
+      lg: "250",
+      xl: "250",
+      xxl: "250",
     },
     square: {
       xs: "800",
@@ -65,6 +71,7 @@ const Image = (props) => {
       md: "600",
       lg: "600",
       xl: "600",
+      xxl: "800",
     },
   };
 
@@ -73,13 +80,15 @@ const Image = (props) => {
   };
 
   const breakpoint = {
-    xs: "480",
-    sm: "544",
-    md: "768",
-    lg: "1024",
-    xl: "1280",
+    xs: "512",
+    sm: "720",
+    md: "1024",
+    lg: "1280",
+    xl: "1440",
+    xxl: "1680",
   };
-  const handleSrcSet = (breakpoint, dpr = 2) => {
+
+  const handleSrcSet = (breakpoint, dpr = 3) => {
     // dpr = Device Pixel Ratio
 
     // Define the pixel density from dpr
@@ -116,7 +125,6 @@ const Image = (props) => {
 
   const handleAspectRatioClasses = (ratio = "landscape") => {
     const classes = [styles.AspectRatio, styles[ratio]].join(" ");
-
     return classes;
   };
 

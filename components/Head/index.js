@@ -1,9 +1,9 @@
 import Head from "next/head";
 
-const Title = ({ title }) => {
+export default function Header({ title }) {
   return (
     <Head>
-      <title>{`${title} | Nathan Searles`}</title>
+      <title>{title ? `${title} | Nathan Searles` : `Nathan Searles`}</title>
       <meta
         name="viewport"
         key="viewport"
@@ -22,13 +22,12 @@ const Title = ({ title }) => {
       <meta name="author" content="Nathan Searles" />
       <meta name="theme-color" content="#141421" />
       <link rel="manifest" href="/site.webmanifest" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-        href="https://fonts.googleapis.com/css?family=Inter:500,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap"
         rel="stylesheet"
-        async
       />
     </Head>
   );
-};
-
-export default Title;
+}

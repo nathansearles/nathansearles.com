@@ -1,40 +1,27 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Image from "../Image";
 import styles from "./project.module.scss";
 
-export default function Project(props) {
-  const hoverVariant = {
-    initial: { scale: 1, y: 0 },
-    hover: {
-      scale: 1.03,
-      y: -2,
-      transition: { duration: 1.2, delay: 0.2, ease: [0.33, 1, 0.68, 1] },
-    },
-  };
-
+export default function Project({ slug, title, previewImage, description }) {
   return (
-    <Link href={`/projects/${props.slug}`}>
-      <a className={styles.project}>
-        <motion.div
-          variants={hoverVariant}
-          initial="initial"
-          whileHover="hover"
-        >
+    <Link href={`/project/${slug}`}>
+      <a
+        className={styles.project}
+        aria-label={`Go to the ${title.replace(/^t|The./, "")} project page`}
+      >
+        <div className={styles.previewImage}>
           <Image
-            src={props.preview}
-            alt={`Preview image for the ${props.name.replace(
+            src={previewImage}
+            alt={`Preview image for the ${title.replace(
               /^t|The./,
               ""
             )} project`}
             aspectRatio={"square"}
             ripple
           />
-        </motion.div>
-        <div className={styles.title}>
-          <h3>{props.name}</h3>
-          <p>{props.description}</p>
         </div>
+        <h2>{title}</h2>
+        <h3>{description}</h3>
       </a>
     </Link>
   );

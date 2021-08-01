@@ -1,32 +1,44 @@
+@import "../../styles/variables";
+
 .project {
   display: block;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  text-decoration: none;
-  color: var(--font-secondary);
-  text-align: center;
-  &:link,
-  &:visited {
-    cursor: pointer;
-    border: 0;
+  will-change: transform;
+  width: 100%;
+  margin: 1rem 0;
+  @media (min-width: $sm) {
+    margin: 2rem 0;
   }
-  &:hover,
-  &:active {
-    border: 0;
-  }
-  h3 {
+  h2 {
     margin-top: 0;
-    font-size: 1.875rem;
-    line-height: 1.875rem;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1;
     color: var(--font-primary);
   }
-  p {
+  h3 {
     margin: 0;
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--font-secondary);
   }
 
-  .title {
-    padding-top: 2rem;
+  &:link,
+  &:visited {
+    .previewImage {
+      transform: scale(1);
+      transition: transform ease-in 350ms;
+    }
   }
+  &:hover,
+  &:active {
+    .previewImage {
+      transform: scale(1.05);
+      transition: transform ease-out 1250ms;
+    }
+  }
+}
+
+.previewImage {
+  width: 100%;
+  margin-bottom: 1rem;
 }
