@@ -1,7 +1,9 @@
 {
   "name": "nathansearles",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "My portfolio website built with Next.js",
+  "author": "Nathan Searles",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
