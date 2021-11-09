@@ -1,24 +1,10 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
-  @media (min-width: $md) {
-    padding: 2rem;
-  }
-  a {
-    &:link,
-    &:visited {
-      color: #fff;
-    }
-    &:hover,
-    &:active {
-      color: #fff;
-      text-decoration: underline;
-    }
-  }
+  margin: 4rem 0;
 }
 
 .emoji {

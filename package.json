@@ -1,6 +1,6 @@
 {
   "name": "nathansearles",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "My portfolio website built with Next.js",
   "author": "Nathan Searles",
   "license": "UNLICENSED",
@@ -11,12 +11,9 @@
   },
   "dependencies": {
     "focus-visible": "^5.2.0",
-    "gray-matter": "^4.0.3",
-    "next": "11.1.0",
+    "next": "12.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-markdown": "^7.0.0",
-    "rehype-raw": "^6.0.0",
-    "sass": "^1.37.5"
+    "sass": "^1.43.4"
   }
 }

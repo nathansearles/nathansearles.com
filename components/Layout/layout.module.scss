@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
 
 .main {
   z-index: 0;
@@ -8,13 +8,26 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  text-align: center;
+  margin: 3rem 0;
+  opacity: 0;
+  animation: fadeIn 1800ms ease-out 180ms forwards;
+  @media (min-width: variables.$md) {
+    margin: 6rem 0;
+  }
 }
 
 .container {
   width: 100%;
   padding: 0 1rem;
-  @media (min-width: $md) {
-    padding: 0 2rem;
+  max-width: 45rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

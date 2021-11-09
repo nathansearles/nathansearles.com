@@ -1,31 +1,59 @@
 import Head from "next/head";
 
-export default function Header({ title }) {
+export default function CustomHead() {
   return (
     <Head>
-      <title>{title ? `${title} | Nathan Searles` : `Nathan Searles`}</title>
+      <title>Nathan Searles</title>
       <meta
         name="viewport"
         key="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0,minimal-ui"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, minimal-ui, viewport-fit=cover"
       />
-      <link rel="icon" href="/favicon.ico" />
+      <meta name="title" content="Nathan Searles" />
       <meta
-        name="Description"
-        content="I'm a front-end developer and technical leader based in Portland, Oregon."
+        name="description"
+        content="Portland, Oregon based front-end developer and technical director with a focus on design, user experience and accessability."
       />
-      <meta
-        name="title"
-        property="og:title"
-        content={`${title} | Nathan Searles`}
+      <link
+        rel="alternate icon"
+        class="js-site-favicon"
+        type="image/png"
+        href="/favicon.png"
       />
-      <meta name="author" content="Nathan Searles" />
-      <meta name="theme-color" content="#141421" />
+      <link
+        rel="icon"
+        class="js-site-favicon"
+        type="image/svg+xml"
+        href="/favicon.svg"
+      />
+      <meta name="theme-color" content="#141621" />
       <link rel="manifest" href="/site.webmanifest" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://nathansearles.com/" />
+      <meta property="og:title" content="Nathan Searles" />
+      <meta
+        property="og:description"
+        content="Portland, Oregon based front-end developer and technical director with a focus on design, user experience and accessability."
+      />
+      <meta
+        property="og:image"
+        content="https://nathansearles.com/preview.jpg"
+      />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://nathansearles.com/" />
+      <meta property="twitter:title" content="Nathan Searles" />
+      <meta
+        property="twitter:description"
+        content="Portland, Oregon based front-end developer and technical director with a focus on design, user experience and accessability."
+      />
+      <meta
+        property="twitter:image"
+        content="https://nathansearles.com/preview.jpg"
+      />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
       />
     </Head>
