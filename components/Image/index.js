@@ -78,22 +78,6 @@ const Image = ({ src, aspectRatio, className, alt, width }) => {
     return set;
   };
 
-  // function handleImageLoaded() {
-  //   const picture = imageRef.current;
-  //   if (picture) {
-  //     const image = picture.querySelector("img");
-  //     picture.classList.remove(styles.loaded);
-  //     picture.classList.add(styles.loading);
-  //     if (image.complete) {
-  //       picture.classList.add(styles.loaded);
-  //     }
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   handleImageLoaded();
-  // }, []);
-
   function handleImageLoaded() {
     const image = imageRef.current;
     if (!image.complete) {
