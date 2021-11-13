@@ -3,13 +3,13 @@
 .footer {
   width: 100%;
   max-width: 45rem;
-  margin: 2rem 0 5rem;
+  margin: 2.5rem 0 5rem;
   padding: 0 1rem;
 }
 
-.peace {
-  fill: var(--font-primary);
-  width: 14px;
-  height: auto;
-  transform: translateY(4px);
+.emoji {
+  color: var(--font-primary);
+  font-size: 1.25rem;
+  display: inline-block;
+  transform: translateY(2px);
 }

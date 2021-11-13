@@ -24,6 +24,11 @@
   --background: #141621;
   --font-primary: #fff;
   --font-secondary: #8389a5;
+
+  // Adjusted theme
+  --primary: #325aec;
+  --background: #1a1c29;
+  --font-secondary: #858cad;
 }
 
 html,
@@ -91,16 +96,13 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 1.15;
   letter-spacing: -0.035rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
   color: var(--font-primary);
   font-weight: 600;
-  @media (min-width: variables.$md) {
-    font-size: 2rem;
-  }
 }
 h3,
 .h3 {
@@ -109,7 +111,7 @@ h3,
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   color: var(--font-primary);
-  font-weight: 400;
+  font-weight: 600;
 }
 h4,
 .h4 {
@@ -138,9 +140,10 @@ blockquote {
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: -0.015rem;
+  margin-top: 0;
   margin-bottom: 1.5rem;
+
   strong {
-    font-weight: 400;
     color: var(--font-primary);
   }
 }
@@ -174,6 +177,7 @@ p {
 a {
   &:link,
   &:visited {
+    font-weight: 600;
     color: var(--font-primary);
     text-decoration: underline;
     transition: color 180ms ease-in-out;
