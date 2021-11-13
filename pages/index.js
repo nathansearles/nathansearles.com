@@ -97,6 +97,15 @@ export default function Home() {
             <strong>headless CMS</strong> or custom-built <strong>API</strong>.
           </p>
         </ScrollAnimation>
+        <ScrollAnimation>
+          <p className={styles.label}>Connect</p>
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <p>
+            Feel free to hit me up at{" "}
+            <a href="mailto:nsearles@gmail.com">nsearles@gmail.com</a>.
+          </p>
+        </ScrollAnimation>
       </div>
     </>
   );

@@ -40,6 +40,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background);
   color: var(--font-secondary);
+  display: flex;
+  justify-content: center;
 }
 
 * {

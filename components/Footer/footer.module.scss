@@ -1,14 +1,15 @@
 @use "../../styles/variables";
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 4rem 0;
+  width: 100%;
+  max-width: 45rem;
+  margin: 2rem 0 5rem;
+  padding: 0 1rem;
 }
 
-.emoji {
-  color: var(--font-primary);
-  opacity: 1;
-  font-size: 1.15rem;
+.peace {
+  fill: var(--font-primary);
+  width: 14px;
+  height: auto;
+  transform: translateY(4px);
 }
