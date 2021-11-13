@@ -26,7 +26,7 @@ export default function CustomHead() {
         type="image/svg+xml"
         href="/favicon.svg"
       />
-      <meta name="theme-color" content="#141621" />
+      <meta name="theme-color" content="#1a1c29" />
       <link rel="manifest" href="/site.webmanifest" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://nathansearles.com/" />
