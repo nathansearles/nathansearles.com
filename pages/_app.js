@@ -1,7 +1,6 @@
-import Layout from "../components/Layout";
-// import "focus-visible";
-
-import "../styles/globals.scss";
+import Layout from "@components/Layout";
+import "focus-visible";
+import "@styles/globals.scss";
 
 export default function Website({ Component, pageProps, router }) {
   const getLayout =

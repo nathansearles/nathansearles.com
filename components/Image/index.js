@@ -1,37 +1,24 @@
-import React, { useRef, useEffect } from "react";
-import Ripple from "../Ripple";
+import React, { useRef, useState, useEffect } from "react";
+import { classNames } from "@lib/utilities";
 import styles from "./image.module.scss";
 
-const Image = (props) => {
+const Image = ({ src, aspectRatio, className, alt, width }) => {
+  const [cached, setCached] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const imageRef = useRef();
   const cdnBase = "https://res.cloudinary.com/dzlgbk52d/image/upload";
-  const imageSrc = props.src;
-  const aspectRatio = props.aspectRatio;
+  const imageSrc = src;
 
   const aspectRatios = {
-    landscape: {
-      xs: "ar_1:1,c_fill,w_380",
-      sm: "ar_16:9,c_fill,w_639",
-      md: "ar_16:9,c_fill,w_853",
-      lg: "ar_16:9,c_fill,w_1067",
-      xl: "ar_16:9,c_fill,w_1067",
-      xxl: "ar_16:9,c_fill,w_1067",
-    },
-    portrait: {
-      xs: "ar_3:4,c_fill,w_380",
-      sm: "ar_3:4,c_fill,w_639",
-      md: "ar_3:4,c_fill,w_414",
-      lg: "ar_3:4,c_fill,w_331",
-      xl: "ar_3:4,c_fill,w_331",
-      xxl: "ar_3:4,c_fill,w_331",
-    },
     square: {
-      xs: "ar_1:1,c_fill,w_800",
-      sm: "ar_1:1,c_fill,w_800",
-      md: "ar_1:1,c_fill,w_400",
-      lg: "ar_1:1,c_fill,w_600",
-      xl: "ar_1:1,c_fill,w_600",
-      xxl: "ar_1:1,c_fill,w_600",
+      xs: `ar_1:1,c_fill,w_${width}`,
+      sm: `ar_1:1,c_fill,w_${width}`,
+      md: `ar_1:1,c_fill,w_${width}`,
+      lg: `ar_1:1,c_fill,w_${width}`,
+      xl: `ar_1:1,c_fill,w_${width}`,
+      xxl: `ar_1:1,c_fill,w_${width}`,
     },
   };
 
@@ -49,29 +36,13 @@ const Image = (props) => {
   };
 
   const dimension = {
-    landscape: {
-      xs: "380",
-      sm: "639",
-      md: "853",
-      lg: "1067",
-      xl: "1067",
-      xxl: "1067",
-    },
-    portrait: {
-      xs: "380",
-      sm: "639",
-      md: "414",
-      lg: "250",
-      xl: "250",
-      xxl: "250",
-    },
     square: {
-      xs: "800",
-      sm: "800",
-      md: "600",
-      lg: "600",
-      xl: "600",
-      xxl: "800",
+      xs: width,
+      sm: width,
+      md: width,
+      lg: width,
+      xl: width,
+      xxl: width,
     },
   };
 
@@ -97,7 +68,7 @@ const Image = (props) => {
     // Create empty storage array
     let set = [];
 
-    density.map((item, index) => {
+    density.map((_, index) => {
       const transform = `${transformation[breakpoint]},dpr_${index + 1}.0`;
       const src = `${cdnBase}/${transform}/${imageSrc} ${index + 1}x`;
       return set.push(src);
@@ -108,19 +79,21 @@ const Image = (props) => {
   };
 
   function handleImageLoaded() {
-    const picture = imageRef.current;
-    if (picture) {
-      const image = picture.querySelector("img");
-      picture.classList.remove(styles.loaded);
-      picture.classList.add(styles.loading);
-      if (image.complete) {
-        picture.classList.add(styles.loaded);
-      }
+    const image = imageRef.current;
+    if (!image.complete) {
+      setLoading(true);
+    } else {
+      setLoaded(true);
     }
   }
 
   useEffect(() => {
-    handleImageLoaded();
+    const image = imageRef.current;
+    if (image.complete) {
+      setCached(true);
+    } else {
+      setLoading(true);
+    }
   }, []);
 
   const handleAspectRatioClasses = (ratio = "landscape") => {
@@ -131,8 +104,13 @@ const Image = (props) => {
   return (
     <div className={handleAspectRatioClasses(aspectRatio)}>
       <picture
-        ref={imageRef}
-        className={[styles.Picture, styles[props.className]].join(" ")}
+        className={classNames([
+          styles.picture,
+          styles[className],
+          cached ? styles.cached : "",
+          loading ? styles.loading : "",
+          loaded ? styles.loaded : "",
+        ])}
       >
         <source
           media={`(min-width: ${breakpoint.xl}px)`}
@@ -159,7 +137,8 @@ const Image = (props) => {
           srcSet={handleSrcSet("sm")}
         />
         <img
-          alt={props.alt}
+          ref={imageRef}
+          alt={alt}
           onLoad={handleImageLoaded}
           width={handleDimension("xs", aspectRatio)}
           height={handleDimension("xs", aspectRatio)}
@@ -167,7 +146,6 @@ const Image = (props) => {
           src={handleSrcSet("xs")}
         />
       </picture>
-      {props.ripple && <Ripple />}
     </div>
   );
 };

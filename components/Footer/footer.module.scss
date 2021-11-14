@@ -1,28 +1,15 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 1rem;
-  @media (min-width: $md) {
-    padding: 2rem;
-  }
-  a {
-    &:link,
-    &:visited {
-      color: #fff;
-    }
-    &:hover,
-    &:active {
-      color: #fff;
-      text-decoration: underline;
-    }
-  }
+  width: 100%;
+  max-width: 45rem;
+  margin: 2.5rem 0 5rem;
+  padding: 0 1rem;
 }
 
 .emoji {
   color: var(--font-primary);
-  opacity: 1;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  display: inline-block;
+  transform: translateY(2px);
 }
