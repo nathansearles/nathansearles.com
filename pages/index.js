@@ -1,6 +1,7 @@
 import Head from "@components/Head";
 import { getLayout } from "@components/Layout/PageLayout";
 import Image from "@components/Image";
+import Footer from "@components/Footer";
 import ScrollAnimation from "@components/ScrollAnimation";
 import styles from "@styles/Home.module.scss";
 
@@ -97,6 +98,7 @@ export default function Home() {
           or custom-built <strong>API</strong>.
         </p>
       </ScrollAnimation>
+      <Footer />
     </>
   );
 }
