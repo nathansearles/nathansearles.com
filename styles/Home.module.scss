@@ -8,7 +8,7 @@ p.label {
   line-height: 1.1;
   margin-top: 3.5rem;
   margin-bottom: 2rem;
-  font-weight: 800;
+  font-weight: 900;
   &::before {
     content: " ";
     position: absolute;
@@ -20,22 +20,8 @@ p.label {
   }
 }
 
-p.marginBottom {
+.marginBottom {
   margin-bottom: 3rem;
-}
-
-.portraitContainer {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.portrait {
-  width: 100%;
-  max-width: 110px;
-  height: auto;
-  opacity: 0;
-  transform: scale(0);
-  animation: fadeIn 600ms ease-out 200ms forwards;
 }
 
 @keyframes fadeIn {

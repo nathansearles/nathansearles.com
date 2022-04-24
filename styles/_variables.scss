@@ -1,7 +1,10 @@
-// breakpoint variables used across the site
-$xs: 32rem; // ~512px
-$sm: 45rem; // ~720px
-$md: 64rem; // ~1024px
-$lg: 80rem; // ~1280px
-$xl: 90rem; // ~1440px
-$xxl: 105rem; // ~1680px
+// Breakpoint values
+// Import: @use "./_breakpoint.scss";
+// Usage: @media (min-width: breakpoint.$sm) { /* styles go here */ }
+
+$xs: 20rem; // 320px
+$sm: 40rem; // 640
+$md: 60rem; // 960
+$lg: 80rem; // 1280
+$xl: 90rem; // 1440
+$xxl: 120rem; // 1920

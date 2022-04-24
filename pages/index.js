@@ -9,18 +9,6 @@ export default function Home() {
   return (
     <>
       <Head />
-
-      <div className={styles.portraitContainer}>
-        <div className={styles.portrait}>
-          <Image
-            src="nathan-searles-2018-square_o8pgtt.jpg"
-            alt="A photo of Nathan Searles"
-            aspectRatio="square"
-            className="rounded"
-            width="115"
-          />
-        </div>
-      </div>
       <ScrollAnimation>
         <h1>Nathan Searles</h1>
       </ScrollAnimation>
@@ -41,44 +29,52 @@ export default function Home() {
         <p className={styles.label}>Previous Experience</p>
       </ScrollAnimation>
       <ScrollAnimation>
-        <h2>Cinco</h2>
-        <h3>Technical Director</h3>
-        <p className={styles.marginBottom}>
-          Supported digital projects across a design-led studio, from proposals
-          and SOWs, to project planning, strategy and hands on development. This
-          included complete website rebuilds to working with existing code bases
-          and platforms. Clients included The James Brand, Nike, Gogoro, and
-          Nextbit.
-        </p>
+        <div className={styles.marginBottom}>
+          <h2>Cinco</h2>
+          <h3>Technical Director</h3>
+          <p>
+            Supported digital projects across a design-led studio, from
+            proposals and SOWs, to project planning, strategy and hands on
+            development. This included complete website rebuilds to working with
+            existing code bases and platforms. Clients included The James Brand,
+            Nike, Gogoro, and Nextbit.
+          </p>
+        </div>
       </ScrollAnimation>
       <ScrollAnimation>
-        <h2>Fuzzco</h2>
-        <h3>Director of Technology</h3>
-        <p className={styles.marginBottom}>
-          Managed team of developers and established a technology process.
-          Oversaw a roster of existing WordPress websites, supported new
-          business, day-to-day development and project/account management of new
-          and existing clients. Worked with Obey, Hugh &amp; Crye and a range of
-          small to medium-sized businesses.
-        </p>
+        <div className={styles.marginBottom}>
+          <h2>Fuzzco</h2>
+          <h3>Director of Technology</h3>
+          <p>
+            Managed team of developers and established a technology process.
+            Oversaw a roster of existing WordPress websites, supported new
+            business, day-to-day development and project/account management of
+            new and existing clients. Worked with Obey, Hugh &amp; Crye and a
+            range of small to medium-sized businesses.
+          </p>
+        </div>
       </ScrollAnimation>
       <ScrollAnimation>
-        <h2>The Brigade</h2>
-        <h3>Partner &amp; Director of Technology</h3>
-        <p className={styles.marginBottom}>
-          Co-founded and helped run all aspects of a newly-formed digital
-          agency. Oversaw new business, project, account, and team management,
-          to hands-on development for clients including Spotify, Intel, and
-          Mindjet.
-        </p>
+        <div className={styles.marginBottom}>
+          <h2>The Brigade</h2>
+          <h3>Partner &amp; Director of Technology</h3>
+          <p>
+            Co-founded and helped run all aspects of a newly-formed digital
+            agency. Oversaw new business, project, account, and team management,
+            to hands-on development for clients including Spotify, Intel, and
+            Mindjet.
+          </p>
+        </div>
       </ScrollAnimation>
       <ScrollAnimation>
-        <h2>Pollinate</h2>
-        <h3>Sr. Front-end Developer</h3>
-        <p>
-          Led front-end development for projects with Yakima, Hollywood
-          Theaters, and Umpqua Bank, among others.
-        </p>
+        <div>
+          <h2>Pollinate</h2>
+          <h3>Sr. Front-end Developer</h3>
+          <p>
+            Led front-end development for projects with Yakima, Hollywood
+            Theaters, and Umpqua Bank, among others.
+          </p>
+        </div>
       </ScrollAnimation>
       <ScrollAnimation>
         <p className={styles.label}>Technology</p>

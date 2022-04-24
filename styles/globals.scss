@@ -1,4 +1,5 @@
 @use "./variables";
+@import "./reset";
 
 :root {
   // Light theme
@@ -8,10 +9,10 @@
   // --font-secondary: #777;
 
   // Default theme
-  --primary: #325aec;
-  --background: #1a1c29;
+  --primary: #00a9fd;
+  --background: #141414;
   --font-primary: #fff;
-  --font-secondary: #858cad;
+  --font-secondary: #a1a1a1;
 }
 
 html,
@@ -71,35 +72,36 @@ a {
 
 h1,
 .h1 {
-  font-size: 2.65rem;
-  line-height: 1.15;
+  font-size: 8rem;
+  line-height: 1;
   letter-spacing: -0.035rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--font-primary);
-  font-weight: 600;
+  font-weight: 900;
+  text-transform: uppercase;
   @media (min-width: variables.$md) {
-    font-size: 3.35rem;
+    font-size: 8rem;
   }
 }
 h2,
 .h2 {
-  font-size: 2.25rem;
-  line-height: 1.15;
+  font-size: 4rem;
+  line-height: 1;
   letter-spacing: -0.035rem;
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   color: var(--font-primary);
-  font-weight: 600;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 h3,
 .h3 {
   font-size: 1.25rem;
-  line-height: 1.3;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
   color: var(--font-primary);
-  font-weight: 600;
 }
 h4,
 .h4 {
@@ -116,7 +118,7 @@ h5,
   line-height: 1.3rem;
   margin-top: 1.3rem;
   margin-bottom: 0rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 p,
 ul,
@@ -126,7 +128,7 @@ table,
 blockquote {
   font-size: 1.25rem;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.015rem;
   margin-top: 0;
   margin-bottom: 1.5rem;
@@ -158,7 +160,7 @@ p {
     line-height: 1.1;
     margin-top: 3rem;
     margin-bottom: 0rem;
-    font-weight: 800;
+    font-weight: 900;
   }
 }
 
