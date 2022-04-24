@@ -72,10 +72,10 @@ a {
 
 h1,
 .h1 {
-  font-size: 8rem;
-  line-height: 1;
-  letter-spacing: -0.035rem;
-  margin-top: 1.5rem;
+  font-size: 7.5rem;
+  line-height: 0.9;
+  letter-spacing: 0.015em;
+  margin-top: 0;
   margin-bottom: 1.5rem;
   color: var(--font-primary);
   font-weight: 900;
@@ -86,39 +86,26 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 4rem;
+  font-size: 2.75rem;
   line-height: 1;
-  letter-spacing: -0.035rem;
+  letter-spacing: 0.015em;
   margin-top: 1rem;
   margin-bottom: 0.75rem;
   color: var(--font-primary);
   font-weight: 900;
   text-transform: uppercase;
+  @media (min-width: variables.$md) {
+    font-size: 4rem;
+  }
 }
 h3,
 .h3 {
   font-size: 1.25rem;
-  line-height: 1;
+  line-height: 1.25;
+  letter-spacing: 0.015em;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   color: var(--font-primary);
-}
-h4,
-.h4 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0rem;
-  color: var(--font-primary);
-  font-weight: 700;
-}
-h5,
-.h5 {
-  font-size: 1rem;
-  line-height: 1.3rem;
-  margin-top: 1.3rem;
-  margin-bottom: 0rem;
-  font-weight: 500;
 }
 p,
 ul,
@@ -129,10 +116,9 @@ blockquote {
   font-size: 1.25rem;
   line-height: 1.5;
   font-weight: 500;
-  letter-spacing: -0.015rem;
+  letter-spacing: 0.015em;
   margin-top: 0;
   margin-bottom: 1.5rem;
-
   strong {
     color: var(--font-primary);
   }
@@ -149,19 +135,6 @@ hr,
 .hr {
   border: 1px solid var(--font-secondary);
   margin: 3rem 0 3.5rem;
-}
-
-p {
-  &.label {
-    color: var(--primary);
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    letter-spacing: 0.15rem;
-    line-height: 1.1;
-    margin-top: 3rem;
-    margin-bottom: 0rem;
-    font-weight: 900;
-  }
 }
 
 a {

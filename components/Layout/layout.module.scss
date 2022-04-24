@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 3rem 0 2rem;
+  margin: 2rem 0;
   opacity: 0;
   animation: fadeIn 1800ms ease-out 180ms forwards;
   @media (min-width: variables.$md) {
