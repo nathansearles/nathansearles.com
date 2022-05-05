@@ -3,12 +3,13 @@ p.label {
   position: relative;
   color: var(--primary);
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1;
   letter-spacing: 0.15em;
-  line-height: 1.1;
+  font-weight: 1000;
+  font-variation-settings: "wght" 1000, "wdth" 100;
   margin-top: 3.5rem;
   margin-bottom: 2rem;
-  font-weight: 900;
   padding-left: 2.25rem;
   &::before {
     content: " ";

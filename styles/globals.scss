@@ -19,7 +19,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: "Robot Flex", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-text-size-adjust: 100%;
   font-variant-ligatures: none;
@@ -72,40 +72,41 @@ a {
 
 h1,
 .h1 {
-  font-size: 7.5rem;
+  font-size: 6rem;
   line-height: 0.9;
-  letter-spacing: 0.015em;
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: var(--font-primary);
-  font-weight: 900;
+  font-weight: 1000;
+  font-variation-settings: "wght" 1000, "wdth" 125;
   text-transform: uppercase;
   @media (min-width: variables.$md) {
-    font-size: 8rem;
+    font-size: 7.25rem;
   }
 }
 h2,
 .h2 {
-  font-size: 2.75rem;
+  font-size: 2.85rem;
   line-height: 1;
-  letter-spacing: 0.015em;
   margin-top: 1rem;
   margin-bottom: 0.75rem;
   color: var(--font-primary);
-  font-weight: 900;
+  font-weight: 800;
+  font-variation-settings: "wght" 800, "wdth" 125;
   text-transform: uppercase;
   @media (min-width: variables.$md) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 h3,
 .h3 {
   font-size: 1.25rem;
   line-height: 1.25;
-  letter-spacing: 0.015em;
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: var(--font-primary);
+  font-weight: 800;
+  font-variation-settings: "wght" 800, "wdth" 100;
 }
 p,
 ul,
@@ -115,12 +116,13 @@ table,
 blockquote {
   font-size: 1.25rem;
   line-height: 1.5;
-  font-weight: 500;
-  letter-spacing: 0.015em;
+  font-weight: 400;
+  font-variation-settings: "wght" 400, "wdth" 100;
   margin-top: 0;
   margin-bottom: 1.5rem;
   strong {
     font-weight: 600;
+    font-variation-settings: "wght" 600, "wdth" 100;
     color: var(--font-primary);
   }
 }
@@ -141,8 +143,9 @@ hr,
 a {
   &:link,
   &:visited {
-    font-weight: 600;
     color: var(--font-primary);
+    font-weight: 600;
+    font-variation-settings: "wght" 600, "wdth" 100;
     text-decoration: underline;
     transition: color 180ms ease-in-out;
   }
