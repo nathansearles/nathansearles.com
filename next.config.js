@@ -65,7 +65,7 @@ const securityHeaders = [
 
 module.exports = {
   async headers() {
-    if (isDev) {
+    if (!isDev) {
       return [
         {
           source: "/:path*",
