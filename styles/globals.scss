@@ -2,20 +2,12 @@
 @import "./reset";
 
 :root {
-  // Light theme
-  // --primary: #325aec;
-  // --background: #fefefe;
-  // --font-primary: #111;
-  // --font-secondary: #777;
-
-  // Default theme
   --primary: #00a9fd;
   --background: #121212;
   --font-primary: #fff;
   --font-secondary: #a1a1a1;
-
-  --font-size-xl: clamp(3rem, 2.5vw + 2.5rem, 4.5rem);
-  --font-size-lg: clamp(2rem, 1.7vw + 1.7rem, 3rem);
+  --font-size-xl: 4.5rem;
+  --font-size-lg: 3rem;
   --font-size-md: 1.5rem;
 }
 
@@ -76,6 +68,7 @@ h1,
   line-height: 1;
   font-size: var(--font-size-xl);
 }
+
 h2,
 .h2 {
   margin-top: 1rem;
@@ -86,6 +79,7 @@ h2,
   line-height: 1;
   font-size: var(--font-size-lg);
 }
+
 h3,
 .h3 {
   margin-top: 0;
@@ -96,6 +90,7 @@ h3,
   line-height: 1;
   font-size: var(--font-size-md);
 }
+
 p,
 ul,
 ol,
@@ -112,6 +107,7 @@ blockquote {
     color: var(--font-primary);
   }
 }
+
 ul ul,
 ol ol,
 ul ol,
