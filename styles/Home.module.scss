@@ -1,16 +1,28 @@
+.portraitContainer {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  opacity: 0;
+  animation: fadeIn 600ms ease-out 200ms forwards;
+}
+
 p.label {
   display: inline-block;
   position: relative;
-  color: var(--primary);
   text-transform: uppercase;
   font-size: 0.95rem;
-  line-height: 1;
   letter-spacing: 0.15em;
-  font-weight: 1000;
-  font-variation-settings: "wght" 1000, "wdth" 100;
+  font-weight: 800;
   margin-top: 3.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
   padding-left: 2.25rem;
+  color: var(--primary);
+
   &::before {
     content: " ";
     position: absolute;
@@ -23,17 +35,15 @@ p.label {
 }
 
 .marginBottom {
-  margin-bottom: 3rem;
+  margin-bottom: 4.5rem;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
   }
 
   to {
     opacity: 1;
-    transform: scale(1);
   }
 }

@@ -10,6 +10,17 @@ export default function Home() {
     <>
       <Head />
       <ScrollAnimation>
+        <div className={styles.portraitContainer}>
+          <div className={styles.portrait}>
+            <Image
+              src="nathan-searles-2018-square_o8pgtt.jpg"
+              alt=""
+              aspectRatio="square"
+              className="rounded"
+              width="150"
+            />
+          </div>
+        </div>
         <h1>Nathan Searles</h1>
       </ScrollAnimation>
       <ScrollAnimation>
@@ -20,7 +31,7 @@ export default function Home() {
       </ScrollAnimation>
       <ScrollAnimation>
         <p>
-          I'm a Technical Director at{" "}
+          I'm the Technical Director at{" "}
           <a href="https://studiomega.com/">Studio Mega</a> where I lead all
           things digital.
         </p>
@@ -55,7 +66,7 @@ export default function Home() {
         </div>
       </ScrollAnimation>
       <ScrollAnimation>
-        <div className={styles.marginBottom}>
+        <div>
           <h2>The Brigade</h2>
           <h3>Partner &amp; Director of Technology</h3>
           <p>
@@ -63,16 +74,6 @@ export default function Home() {
             agency. Oversaw new business, project, account, and team management,
             to hands-on development for clients including Spotify, Intel, and
             Mindjet.
-          </p>
-        </div>
-      </ScrollAnimation>
-      <ScrollAnimation>
-        <div>
-          <h2>Pollinate</h2>
-          <h3>Sr. Front-end Developer</h3>
-          <p>
-            Led front-end development for projects with Yakima, Hollywood
-            Theaters, and Umpqua Bank, among others.
           </p>
         </div>
       </ScrollAnimation>

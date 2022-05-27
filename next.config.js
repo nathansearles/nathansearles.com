@@ -13,7 +13,7 @@ const ContentSecurityPolicy = `
   object-src 'none';
   style-src 'self' 'unsafe-inline' fonts.googleapis.com;
   media-src 'none';
-  img-src 'self';
+  img-src 'self' res.cloudinary.com;
   font-src 'self' fonts.googleapis.com fonts.gstatic.com;
   frame-src 'self';
   manifest-src 'self'

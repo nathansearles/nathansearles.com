@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <ScrollAnimation>
       <footer className={styles.footer}>
-        <small>
+        <p>
           Find me on{" "}
           <a href="https://www.linkedin.com/in/nathan-searles-62761b4a">
             LinkedIn
@@ -18,7 +18,7 @@ export default function Footer() {
           >
             ✌️
           </span>
-        </small>
+        </p>
       </footer>
     </ScrollAnimation>
   );

@@ -3,12 +3,16 @@
 .footer {
   width: 100%;
   max-width: 45rem;
-  margin: 2.5rem 0 5rem;
+  margin: 5rem 0 0;
+  p {
+    margin: 0;
+    font-size: 1rem;
+  }
 }
 
 .emoji {
   color: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   display: inline-block;
   transform: translateY(2px);
 }
