@@ -13,9 +13,9 @@ export default function Custom404() {
       >
         🤦‍♂️
       </div>
-      <h1 className="larger">This page isn't here.</h1>
-      <p className="larger">
-        Let's head back to the{" "}
+      <h1>Bummer dude, this page isn't here.</h1>
+      <p>
+        Get back to the{" "}
         <Link href="/">
           <a>homepage</a>
         </Link>
