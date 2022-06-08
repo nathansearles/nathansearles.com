@@ -1,10 +1,11 @@
 import Link from "next/link";
-import Head from "@components/Head";
+import CustomHead from "@components/CustomHead";
 import { getLayout } from "@components/Layout/PageLayout";
 
 export default function Custom404() {
   return (
     <>
+      <CustomHead />
       <div
         className="emoji"
         aria-hidden="true"

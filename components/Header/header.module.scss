@@ -1,0 +1,26 @@
+@use "@styles/variables";
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 1rem var(--gutter);
+  @media (min-width: variables.$sm) {
+    justify-content: flex-end;
+  }
+  h1,
+  ul {
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    // justify-content: space-between;
+    gap: 1rem;
+  }
+}

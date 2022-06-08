@@ -1,6 +1,6 @@
-import Head from "@components/Head";
+import CustomHead from "@components/CustomHead";
 import { getLayout } from "@components/Layout/PageLayout";
-import Image from "@components/Image";
+
 import Footer from "@components/Footer";
 import ScrollAnimation from "@components/ScrollAnimation";
 import styles from "@styles/Home.module.scss";
@@ -8,21 +8,8 @@ import styles from "@styles/Home.module.scss";
 export default function Home() {
   return (
     <>
-      <Head />
-      <ScrollAnimation>
-        <div className={styles.portraitContainer}>
-          <div className={styles.portrait}>
-            <Image
-              src="nathan-searles-2018-square_o8pgtt.jpg"
-              alt=""
-              aspectRatio="square"
-              className="rounded"
-              width="150"
-            />
-          </div>
-        </div>
-        <h1>Nathan Searles</h1>
-      </ScrollAnimation>
+      <CustomHead />
+      <h1 className="visually-hidden">Nathan Searles</h1>
       <ScrollAnimation>
         <p>
           Front-end developer and technical director with a focus on design,
@@ -37,12 +24,12 @@ export default function Home() {
         </p>
       </ScrollAnimation>
       <ScrollAnimation>
-        <p className={styles.label}>Previous Experience</p>
+        <h2 className={styles.label}>Previous Experience</h2>
       </ScrollAnimation>
       <ScrollAnimation>
         <div className={styles.marginBottom}>
-          <h2>Cinco</h2>
-          <h3>Technical Director</h3>
+          <h3>Cinco</h3>
+          <h4>Technical Director</h4>
           <p>
             Supported digital projects across a design-led studio, from
             proposals and SOWs, to project planning, strategy and hands on
@@ -54,8 +41,8 @@ export default function Home() {
       </ScrollAnimation>
       <ScrollAnimation>
         <div className={styles.marginBottom}>
-          <h2>Fuzzco</h2>
-          <h3>Director of Technology</h3>
+          <h3>Fuzzco</h3>
+          <h4>Director of Technology</h4>
           <p>
             Managed team of developers and established a technology process.
             Oversaw a roster of existing WordPress websites, supported new
@@ -67,8 +54,8 @@ export default function Home() {
       </ScrollAnimation>
       <ScrollAnimation>
         <div>
-          <h2>The Brigade</h2>
-          <h3>Partner &amp; Director of Technology</h3>
+          <h3>The Brigade</h3>
+          <h4>Partner &amp; Director of Technology</h4>
           <p>
             Co-founded and helped run all aspects of a newly-formed digital
             agency. Oversaw new business, project, account, and team management,
@@ -78,7 +65,7 @@ export default function Home() {
         </div>
       </ScrollAnimation>
       <ScrollAnimation>
-        <p className={styles.label}>Technology</p>
+        <h2 className={styles.label}>Technology</h2>
       </ScrollAnimation>
       <ScrollAnimation>
         <p>
@@ -95,7 +82,6 @@ export default function Home() {
           or custom-built <strong>API</strong>.
         </p>
       </ScrollAnimation>
-      <Footer />
     </>
   );
 }

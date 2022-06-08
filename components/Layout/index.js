@@ -1,6 +1,8 @@
+import Header from "@components/Header";
 export default function Layout({ children }) {
   return (
     <>
+      <Header />
       {children}
       <div hidden>
         <span id="new-window-0">Opens in a new window</span>

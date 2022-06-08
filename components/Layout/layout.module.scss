@@ -5,7 +5,6 @@
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   padding: 2rem 0;
   opacity: 0;
@@ -16,9 +15,9 @@
 }
 
 .container {
+  padding: 0 var(--gutter);
   width: 100%;
-  padding: 0 2rem;
-  max-width: 45rem;
+  max-width: 90rem;
 }
 
 @keyframes fadeIn {
