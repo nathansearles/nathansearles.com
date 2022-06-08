@@ -1,0 +1,21 @@
+.splash {
+  z-index: 5000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--font-primary);
+  font-size: var(--font-size-xl);
+  letter-spacing: -0.0625rem;
+  font-weight: 400;
+}
