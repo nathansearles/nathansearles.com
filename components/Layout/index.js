@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   useEffect(() => {
     const splashTimer = setTimeout(() => {
       setSplashActive(false);
-    }, 2150);
+    }, 2200);
     return () => {
       clearTimeout(splashTimer);
     };

@@ -29,13 +29,6 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--background);
   color: var(--font-secondary);
-  display: flex;
-  justify-content: left;
-}
-
-body,
-body > div {
-  width: 100%;
 }
 
 * {
