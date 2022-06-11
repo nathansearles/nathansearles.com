@@ -20,15 +20,18 @@ export default function Splash() {
     initial: {
       scale: 1.25,
       opacity: 0,
+      letterSpacing: "0.15em",
     },
     enter: {
       scale: 1,
       opacity: 1,
+      letterSpacing: "0em",
       transition: { type: "spring", damping: 80, stiffness: 400, delay: 0.5 },
     },
     exit: {
       scale: 0.85,
       opacity: 0,
+      letterSpacing: "0em",
       transition: {
         scale: { type: "spring", damping: 80, stiffness: 400 },
         opacity: { type: "spring", bounce: 0.1, duration: 0.35 },

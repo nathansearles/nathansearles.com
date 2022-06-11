@@ -14,8 +14,9 @@
 .text {
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--font-primary);
+  color: var(--font-secondary);
   font-size: var(--font-size-xl);
-  letter-spacing: -0.0625rem;
-  font-weight: 400;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
 }
