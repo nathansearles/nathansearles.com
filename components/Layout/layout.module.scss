@@ -6,11 +6,9 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem 0;
-  opacity: 0;
-  animation: fadeIn 1800ms ease-out 180ms forwards;
+  padding: 4rem 0 8rem;
   @media (min-width: variables.$md) {
-    padding: 6rem 0;
+    padding: 10rem 0 8rem;
   }
   &::after {
     pointer-events: none;
@@ -40,25 +38,6 @@
       hsla(0, 0%, 7%, 0.987) 91.6%,
       hsl(0, 0%, 7%) 100%
     );
-    // background: linear-gradient(
-    //   to bottom,
-    //   hsla(0, 100%, 50%, 0) 0%,
-    //   hsla(0, 100%, 50%, 0.013) 10.3%,
-    //   hsla(0, 100%, 50%, 0.049) 19.3%,
-    //   hsla(0, 100%, 50%, 0.104) 27.2%,
-    //   hsla(0, 100%, 50%, 0.175) 34.2%,
-    //   hsla(0, 100%, 50%, 0.259) 40.4%,
-    //   hsla(0, 100%, 50%, 0.352) 46%,
-    //   hsla(0, 100%, 50%, 0.45) 51.2%,
-    //   hsla(0, 100%, 50%, 0.55) 56.2%,
-    //   hsla(0, 100%, 50%, 0.648) 61.2%,
-    //   hsla(0, 100%, 50%, 0.741) 66.3%,
-    //   hsla(0, 100%, 50%, 0.825) 71.7%,
-    //   hsla(0, 100%, 50%, 0.896) 77.6%,
-    //   hsla(0, 100%, 50%, 0.951) 84.2%,
-    //   hsla(0, 100%, 50%, 0.987) 91.6%,
-    //   hsl(0, 100%, 50%) 100%
-    // );
   }
 }
 
@@ -68,12 +47,11 @@
   max-width: 90rem;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.transparencyBlocker {
+  position: fixed;
+  left: 0;
+  bottom: -150px;
+  width: 100%;
+  height: 150px;
+  background-color: var(--background);
 }
