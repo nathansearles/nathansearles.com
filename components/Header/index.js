@@ -1,4 +1,3 @@
-import Image from "@components/Image";
 import styles from "./header.module.scss";
 
 export default function Header() {
