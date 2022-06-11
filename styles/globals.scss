@@ -1,29 +1,34 @@
-@use "./variables";
-@import "./reset";
+@use "@styles/variables";
+@import "@styles/reset";
 
 :root {
-  --primary: #00a9fd;
+  --primary: #fde300;
   --background: #121212;
   --font-primary: #fff;
-  --font-secondary: #a1a1a1;
-  --font-size-xl: 4.5rem;
-  --font-size-lg: 3rem;
+  --font-secondary: #a8a8a8;
+  --font-size-xl: 1.875rem;
+  --font-size-lg: 1.25rem;
   --font-size-md: 1.5rem;
+  --spacing-xl: 2.25rem;
+  --gutter: 16px;
+  --dash-width: 1.75rem;
+  --dash-height: 2px;
+  @media (min-width: variables.$md) {
+    --font-size-xl: 4rem;
+    --font-size-lg: 2rem;
+    --spacing-xl: 4.5rem;
+    --gutter: 48px;
+    --dash-width: 3rem;
+    --dash-height: 4px;
+  }
 }
 
 html,
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--background);
   color: var(--font-secondary);
-  display: flex;
-  justify-content: center;
-}
-
-body,
-body > div {
-  width: 100%;
 }
 
 * {
@@ -32,13 +37,9 @@ body > div {
 
 ::selection {
   background-color: var(--primary);
-  color: #fff;
+  color: var(--background);
 }
 
-/*
-  This will hide the focus indicator if the element receives focus via the mouse,
-  but it will still show up on keyboard focus.
-*/
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
@@ -53,6 +54,20 @@ body > div {
   outline-style: auto;
 }
 
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -63,10 +78,8 @@ h1,
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: var(--font-primary);
-  font-weight: 600;
-  letter-spacing: 0.012em;
-  line-height: 1;
   font-size: var(--font-size-xl);
+  font-weight: 400;
 }
 
 h2,
@@ -74,21 +87,26 @@ h2,
   margin-top: 1rem;
   margin-bottom: 0.75rem;
   color: var(--font-primary);
-  font-weight: 600;
-  letter-spacing: 0.012em;
-  line-height: 1;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
 }
 
 h3,
 .h3 {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--font-primary);
-  font-weight: 600;
-  letter-spacing: 0.012em;
-  line-height: 1;
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+}
+
+h4,
+.h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--font-primary);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
 }
 
 p,
@@ -97,13 +115,12 @@ ol,
 pre,
 table,
 blockquote {
-  font-size: 1.45rem;
-  letter-spacing: 0.03em;
-  font-weight: 400;
   margin-top: 0;
   margin-bottom: 1.5rem;
+  font-size: var(--font-size-xl);
+  font-weight: 400;
   strong {
-    font-weight: 500;
+    font-weight: 400;
     color: var(--font-primary);
   }
 }
@@ -112,21 +129,15 @@ ul ul,
 ol ol,
 ul ol,
 ol ul {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-}
-
-hr,
-.hr {
-  border: 1px solid var(--font-secondary);
-  margin: 3rem 0 3.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
   &:link,
   &:visited {
     color: var(--font-primary);
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: underline;
     transition: color 180ms ease-in-out;
   }
@@ -135,9 +146,4 @@ a {
     color: var(--primary);
     text-decoration: underline;
   }
-}
-
-.emoji {
-  font-size: 5.25rem;
-  margin-bottom: 2rem;
 }
