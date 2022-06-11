@@ -6,20 +6,12 @@ export default function Custom404() {
   return (
     <>
       <CustomHead />
-      <div
-        className="emoji"
-        aria-hidden="true"
-        aria-label="Facepalm"
-        role="img"
-      >
-        🤦‍♂️
-      </div>
-      <h1>Bummer dude, this page isn't here.</h1>
+      <p>Bummer dude, this page isn't here.</p>
       <p>
         Get back to the{" "}
         <Link href="/">
           <a>homepage</a>
-        </Link>
+        </Link>{" "}
         .
       </p>
     </>
