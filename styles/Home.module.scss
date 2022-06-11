@@ -1,11 +1,10 @@
 .label {
   display: inline-block;
   position: relative;
-  margin: calc(var(--spacing-xl) / 2) 0 var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
   padding-left: calc(var(--dash-width) + 1.25rem);
   font-size: var(--font-size-xl);
   color: var(--font-secondary);
-  letter-spacing: -0.0625rem;
   font-weight: 400;
   &::before {
     content: " ";
