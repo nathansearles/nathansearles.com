@@ -1,8 +1,5 @@
 import CustomHead from "@components/CustomHead";
 import { getLayout } from "@components/Layout/PageLayout";
-
-import Footer from "@components/Footer";
-import ScrollAnimation from "@components/ScrollAnimation";
 import styles from "@styles/Home.module.scss";
 
 export default function Home() {
