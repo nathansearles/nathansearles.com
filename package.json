@@ -10,13 +10,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^0.1.8",
+    "@studio-freight/lenis": "^0.1.9",
     "focus-visible": "^5.2.0",
-    "framer-motion": "^6.3.1",
-    "next": "12.1.5",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
+    "framer-motion": "^6.3.11",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
     "react-focus-on": "^3.6.0",
-    "sass": "^1.50.1"
+    "sass": "^1.52.3"
   }
 }
