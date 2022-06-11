@@ -14,18 +14,8 @@ export default function CustomHead() {
         name="description"
         content="Portland, Oregon based front-end developer and technical director with a focus on design, user experience and accessability."
       />
-      <link
-        rel="alternate icon"
-        class="js-site-favicon"
-        type="image/png"
-        href="/favicon.png"
-      />
-      <link
-        rel="icon"
-        class="js-site-favicon"
-        type="image/svg+xml"
-        href="/favicon.svg"
-      />
+      <link rel="alternate icon" type="image/png" href="/favicon.png" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <meta name="theme-color" content="#141414" />
       <link rel="manifest" href="/site.webmanifest" />
       <meta property="og:type" content="website" />
