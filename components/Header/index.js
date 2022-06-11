@@ -15,15 +15,6 @@ export default function Header() {
           </a>
         </li>
         <li>
-          <a
-            href="https://www.linkedin.com/in/nathan-searles-62761b4a"
-            target="_blank"
-            rel="noopener"
-          >
-            LinkedIn
-          </a>
-        </li>
-        <li>
           <a href="mailto:nsearles@gmail.com" target="_blank" rel="noopener">
             Email
           </a>
