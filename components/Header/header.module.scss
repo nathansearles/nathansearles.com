@@ -5,7 +5,12 @@
   justify-content: flex-start;
   align-items: center;
   font-size: 1.6rem;
-  padding: 1rem var(--gutter);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  --safe-area-inset-left: env(safe-area-inset-left);
+  padding-left: calc(var(--gutter) + var(--safe-area-inset-left));
+  --safe-area-inset-right: env(safe-area-inset-right);
+  padding-right: calc(var(--gutter) + var(--safe-area-inset-right));
   @media (min-width: variables.$sm) {
     justify-content: flex-end;
   }
@@ -20,7 +25,6 @@
   ul {
     list-style-type: none;
     display: flex;
-    // justify-content: space-between;
     gap: 1rem;
   }
 }
