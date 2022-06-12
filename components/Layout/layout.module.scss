@@ -42,9 +42,12 @@
 }
 
 .container {
-  padding: 0 var(--gutter);
   width: 100%;
   max-width: 90rem;
+  --safe-area-inset-left: env(safe-area-inset-left);
+  padding-left: calc(var(--gutter) + var(--safe-area-inset-left));
+  --safe-area-inset-right: env(safe-area-inset-right);
+  padding-right: calc(var(--gutter) + var(--safe-area-inset-right));
 }
 
 .transparencyBlocker {
