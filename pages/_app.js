@@ -16,6 +16,7 @@ export default function Website({ Component, pageProps, router }) {
     }
     requestAnimationFrame(raf);
   }, []);
+
   const getLayout =
     Component.getLayout || ((page) => <Layout children={page} />);
   return getLayout(<Component {...pageProps} key={router.route} />);
