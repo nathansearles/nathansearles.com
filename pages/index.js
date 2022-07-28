@@ -9,7 +9,7 @@ export default function Home() {
       <h1 className="visually-hidden">Nathan Searles</h1>
       <p>
         Front-end developer and technical director with a focus on design, user
-        experience and accessability.
+        experience and accessibility.
       </p>
       <p>
         I'm the Technical Director at{" "}
