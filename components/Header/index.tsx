@@ -1,4 +1,4 @@
-import styles from "./header.module.scss";
+import styles from "./header.module.css";
 
 export default function Header() {
   return (
@@ -8,13 +8,13 @@ export default function Header() {
           <a
             href="https://codesandbox.io/u/nathansearles"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             CodeSandbox
           </a>
         </li>
         <li>
-          <a href="mailto:nsearles@gmail.com" target="_blank" rel="noopener">
+          <a href="mailto:nsearles@gmail.com" target="_blank" rel="noopener noreferrer">
             Email
           </a>
         </li>

@@ -1,4 +1,4 @@
-.splash {
+.intro {
   z-index: 5000;
   position: fixed;
   top: 0;
@@ -8,15 +8,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background);
+  background-color: var(--background-color);
+  overflow: hidden;
 }
 
 .text {
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--font-secondary);
+  color: var(--font-color-secondary);
   font-size: var(--font-size-xl);
-  font-weight: 600;
   white-space: nowrap;
   text-transform: uppercase;
+  display: flex;
+  letter-spacing: 0.05em;
+}
+
+.text span {
+  display: block;
 }

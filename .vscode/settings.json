@@ -1,0 +1,24 @@
+{
+  "editor.bracketPairColorization.enabled": true,
+  "editor.rulers": [80],
+  "eslint.alwaysShowStatus": true,
+  "editor.formatOnSave": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  // Set Prettier as default formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // turn it off for JS and JSX, we will do this via eslint
+  "[javascript, javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  // tell the ESLint plugin to run on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  // resolves jsonconfig.json errors
+  "typescript.tsdk": "./node_modules/typescript/lib"
+}

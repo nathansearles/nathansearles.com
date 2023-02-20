@@ -1,5 +1,3 @@
-@use "@styles/variables";
-
 .header {
   display: flex;
   justify-content: flex-start;
@@ -11,22 +9,25 @@
   padding-left: calc(var(--gutter) + var(--safe-area-inset-left));
   --safe-area-inset-right: env(safe-area-inset-right);
   padding-right: calc(var(--gutter) + var(--safe-area-inset-right));
-  @media (min-width: variables.$sm) {
+}
+
+@media (min-width: 640px) {
+  .header {
     justify-content: flex-end;
   }
+}
 
-  h1,
-  ul {
-    font-size: var(--font-size-lg);
-    font-weight: 400;
-    white-space: nowrap;
-    margin: 0;
-    padding: 0;
-  }
+.header h1,
+.header ul {
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
 
-  ul {
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-  }
+.header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
 }
