@@ -80,7 +80,7 @@ export default function Home() {
           <p>
             I specialize in crafting responsive interfaces using the Jamstack
             architecture, powered by the latest advancements in{" "}
-            <strong>HTML</strong>, <strong>CSS</strong>, and
+            <strong>HTML</strong>, <strong>CSS</strong>, and{" "}
             <strong>JavaScript</strong>. By utilizing contemporary front-end
             libraries like <strong>React</strong> and frameworks such as{" "}
             <strong>Next.js</strong>, I ensure robust development practices.
