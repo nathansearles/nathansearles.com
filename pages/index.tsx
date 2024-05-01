@@ -82,12 +82,12 @@ export default function Home() {
             architecture, powered by the latest advancements in{" "}
             <strong>HTML</strong>, <strong>CSS</strong>, and
             <strong>JavaScript</strong>. By utilizing contemporary front-end
-            libraries like <strong>React</strong>
-            and frameworks such as <strong>Next.js</strong>, I ensure robust
-            development practices. Each project is meticulously versioned with{" "}
-            <strong>Git</strong> and seamlessly connected to either a{" "}
-            <strong>headless CMS</strong> or a bespoke <strong>API</strong>,
-            delivering unparalleled user experiences.
+            libraries like <strong>React</strong> and frameworks such as{" "}
+            <strong>Next.js</strong>, I ensure robust development practices.
+            Each project is meticulously versioned with <strong>Git</strong> and
+            seamlessly connected to either a <strong>headless CMS</strong> or a
+            bespoke <strong>API</strong>, delivering unparalleled user
+            experiences.
           </p>
         </section>
       </main>
