@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import GitHub from "../components/GitHub.astro";
 import CodeSandbox from "../components/CodeSandbox.astro";
@@ -9,7 +10,12 @@ import CodeSandbox from "../components/CodeSandbox.astro";
     <div class="mx-auto max-w-screen-md">
       <section class="flow" aria-label="About">
         <div class="w-16 h-16 rounded-full overflow-hidden">
-          <img src="/images/nathan-searles.jpg" alt="Nathan Searles" />
+          <Image
+            src="/images/nathan-searles.jpg"
+            alt="Nathan Searles"
+            width={64}
+            height={64}
+          />
         </div>
         <p class="max-w-prose text-xl">
           Hi, I&apos;m Nathan, I&apos;m a frontend developer with a focus on
