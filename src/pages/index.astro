@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import GitHub from "../components/GitHub.astro";
 import CodeSandbox from "../components/CodeSandbox.astro";
+import avatar from "../../public/images/nathan-searles.jpg";
 ---
 
 <Layout title="Nathan Searles – Frontend Developer">
@@ -11,10 +12,12 @@ import CodeSandbox from "../components/CodeSandbox.astro";
       <section class="flow" aria-label="About">
         <div class="w-16 h-16 rounded-full overflow-hidden">
           <Image
-            src="/images/nathan-searles.jpg"
+            src={avatar}
             alt="Nathan Searles"
             width={64}
             height={64}
+            densities={[1, 2, 3]}
+            loading="eager"
           />
         </div>
         <p class="max-w-prose text-xl">
