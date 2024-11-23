@@ -17,6 +17,9 @@ importers:
       '@fontsource-variable/inter':
         specifier: ^5.1.0
         version: 5.1.0
+      '@vercel/analytics':
+        specifier: ^1.4.1
+        version: 1.4.1
       astro:
         specifier: ^4.16.10
         version: 4.16.10(rollup@4.24.4)(typescript@5.6.3)
@@ -760,6 +763,32 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+
+  '@vercel/analytics@1.4.1':
+    resolution: {integrity: sha512-ekpL4ReX2TH3LnrRZTUKjHHNpNy9S1I7QmS+g/RQXoSUQ8ienzosuX7T9djZ/s8zPhBx1mpHP/Rw5875N+zQIQ==}
+    peerDependencies:
+      '@remix-run/react': ^2
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
 
   '@volar/kit@2.4.10':
     resolution: {integrity: sha512-ul+rLeO9RlFDgkY/FhPWMnpFqAsjvjkKz8VZeOY5YCJMwTblmmSBlNJtFNxSBx9t/k1q80nEthLyxiJ50ZbIAg==}
@@ -3173,6 +3202,8 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@ungap/structured-clone@1.2.0': {}
+
+  '@vercel/analytics@1.4.1': {}
 
   '@volar/kit@2.4.10(typescript@5.6.3)':
     dependencies:

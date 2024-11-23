@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import "@fontsource-variable/inter";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -21,6 +22,7 @@ import "@fontsource-variable/inter";
     <meta property="og:image" content="/images/preview.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <Analytics />
   </head>
   <body>
     <slot />
