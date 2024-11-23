@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GitHub from "../components/GitHub.astro";
+import CodeSandbox from "../components/CodeSandbox.astro";
+---
+
+<Layout title="Nathan Searles – Frontend Developer">
+  <main class="py-24">
+    <div class="mx-auto max-w-screen-md">
+      <section class="flow" aria-label="About">
+        <div class="w-16 h-16 rounded-full overflow-hidden">
+          <img src="/images/nathan-searles.jpg" alt="Nathan Searles" />
+        </div>
+        <p class="max-w-prose text-xl">
+          Hi, I&apos;m Nathan, I&apos;m a frontend developer with a focus on
+          design, user experience, and accessibility. I&apos;m the Technical
+          Director at <a
+            href="https://studiomega.com/"
+            target="_blank"
+            rel="noopener noreferrer">Studio Mega</a
+          >.
+        </p>
+      </section>
+
+      <section aria-label="Find me on" class="mt-16">
+        <h2>Find me on</h2>
+        <ul class="list-none flex flex-wrap gap-4 content-center mt-6">
+          <li class="flex bg-backgroundColorMuted rounded-md">
+            <a
+              href="https://codesandbox.io/u/nathansearles"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-32 p-4 flex justify-center content-center"
+              aria-label="CodeSandbox"><CodeSandbox /></a
+            >
+          </li>
+          <li class="flex bg-backgroundColorMuted rounded-md">
+            <a
+              href="https://github.com/nathansearles"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-20 p-4 flex justify-center content-center"
+              aria-label="GitHub"><GitHub /></a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section aria-label="Previous Experience" class="mt-16">
+        <h2>Previous Experience</h2>
+        <article
+          class="mt-8 flex flex-col md:flex-row gap-6 md:gap-12 justify-between"
+        >
+          <div class="md:basis-56 shrink-0">
+            <h3>Cinco</h3>
+            <h4 class="mt-2">Technical Director</h4>
+          </div>
+          <p class="max-w-prose muted">
+            Led digital projects in a design-driven studio, handling everything
+            from proposals and SOWs to project planning, strategy, and hands-on
+            development. Projects ranged from full website rebuilds to
+            optimizing existing codebases and platforms. Clients included The
+            James Brand, Nike, Gogoro, and Nextbit.
+          </p>
+        </article>
+        <article
+          class="mt-16 flex flex-col md:flex-row gap-6 md:gap-12 justify-between"
+        >
+          <div class="md:basis-56 shrink-0">
+            <h3>Fuzzco</h3>
+            <h4 class="mt-2">Director of Technology</h4>
+          </div>
+          <p class="max-w-prose muted">
+            Managed a team of developers and implemented a streamlined
+            technology process. Oversaw a portfolio of WordPress websites,
+            supported new business opportunities, and handled day-to-day
+            development as well as project and account management for both new
+            and existing clients. Collaborated with brands like Obey, Hugh &
+            Crye, and various small to medium-sized businesses.
+          </p>
+        </article>
+        <article
+          class="mt-16 flex flex-col md:flex-row gap-6 md:gap-12 justify-between"
+        >
+          <div class="md:basis-56 shrink-0">
+            <h3>The Brigade</h3>
+            <h4 class="mt-2">Partner &amp; Director of Technology</h4>
+          </div>
+          <p class="max-w-prose muted">
+            Co-founded and managed all aspects of a newly established digital
+            agency. Directed new business development, project and account
+            management, team leadership, and hands-on development for clients
+            such as Spotify, Intel, and Mindjet.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+</Layout>

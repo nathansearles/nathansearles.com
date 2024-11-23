@@ -1,0 +1,227 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import "@fontsource-variable/inter";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <meta property="og:image" content="/images/preview.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <div class="transparencyBlocker"></div>
+  </body>
+</html>
+<style is:global>
+  @property --s {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: true;
+  }
+
+  :root {
+    --black: hsl(0, 0%, 7%); /* #121212 */
+    --black-muted: hsl(0, 0%, 14%); /* #242424 */
+    --white: hsl(0, 0%, 98%); /* #fafafa */
+    --white-muted: hsl(0, 0%, 63%); /* #a1a1a1 */
+
+    --background-color: var(--black);
+    --background-color-muted: var(--black-muted);
+    --foreground-color: var(--white);
+    --foreground-color-muted: var(--white-muted);
+    --accent-color: hsl(54, 100%, 50%);
+    --page-gradient: hsla(0, 0%, 7%, 0) 0%, hsla(0, 0%, 7%, 0.013) 10.3%,
+      hsla(0, 0%, 7%, 0.049) 19.3%, hsla(0, 0%, 7%, 0.104) 27.2%,
+      hsla(0, 0%, 7%, 0.175) 34.2%, hsla(0, 0%, 7%, 0.259) 40.4%,
+      hsla(0, 0%, 7%, 0.352) 46%, hsla(0, 0%, 7%, 0.45) 51.2%,
+      hsla(0, 0%, 7%, 0.55) 56.2%, hsla(0, 0%, 7%, 0.648) 61.2%,
+      hsla(0, 0%, 7%, 0.741) 66.3%, hsla(0, 0%, 7%, 0.825) 71.7%,
+      hsla(0, 0%, 7%, 0.896) 77.6%, hsla(0, 0%, 7%, 0.951) 84.2%,
+      hsla(0, 0%, 7%, 0.987) 91.6%, hsl(0, 0%, 7%) 100%;
+    --flow-space-s: 0.25rem;
+    --flow-space: 1.125rem;
+    --flow-space-l: 3rem;
+
+    /* Handles the fade in of the top gradient */
+    animation: scroll;
+    animation-timeline: scroll();
+  }
+
+  @font-face {
+    font-family: "CommitMono";
+    src: url("/fonts/commit-mono/CommitMono-VariableFont.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 200 700;
+  }
+
+  @keyframes scroll {
+    to {
+      --s: 100;
+    }
+  }
+
+  html {
+    font-family: "Inter", sans-serif;
+    background: var(--background-color);
+    color: var(--foreground-color);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .flow * + * {
+    margin-block-start: var(--flow-space, 1em);
+  }
+
+  .flow :is(h1, h2, h3) + * {
+    --flow-space: var(--flow-space-s, 1em);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 400;
+  }
+
+  h2 {
+    letter-spacing: 0.1em;
+    font-size: 0.825rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-weight: 400;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-block: 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: var(--accent-color);
+  }
+
+  .muted {
+    color: var(--foreground-color-muted);
+  }
+
+  article p {
+    font-size: 1.125rem;
+  }
+
+  strong {
+    color: var(--foreground-color);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  *:focus-visible {
+    outline-color: currentColor;
+    outline-style: solid;
+    outline-offset: 0.25em;
+    outline-width: 0.25em;
+    border-radius: 0.125em;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    *:focus-visible {
+      animation: outline-bounce 0.5s ease-in-out;
+    }
+  }
+
+  @keyframes outline-bounce {
+    0% {
+      outline-offset: 0.25em;
+    }
+    50% {
+      outline-offset: 0.5rem;
+    }
+    100% {
+      outline-offset: 0.25em;
+    }
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  main {
+    padding-inline: clamp(1.5rem, 0.8182rem + 3.4091vw, 3rem);
+  }
+
+  main::after {
+    pointer-events: none;
+    content: " ";
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(to bottom, var(--page-gradient));
+  }
+
+  main::before {
+    @supports (animation-timeline: auto) {
+      --opacity: calc(var(--s) * 0.1);
+      opacity: clamp(0, var(--opacity), 1);
+    }
+    pointer-events: none;
+    content: " ";
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(to top, var(--page-gradient));
+  }
+
+  .transparencyBlocker {
+    position: fixed;
+    left: 0;
+    bottom: -150px;
+    width: 100%;
+    height: 150px;
+    background-color: var(--background-color);
+  }
+</style>
