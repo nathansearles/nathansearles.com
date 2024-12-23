@@ -41,13 +41,14 @@ import Analytics from "@vercel/analytics/astro";
     --black-muted: hsl(0, 0%, 14%); /* #242424 */
     --white: hsl(0, 0%, 98%); /* #fafafa */
     --white-muted: hsl(0, 0%, 63%); /* #a1a1a1 */
-    --yellow: hsl(54, 100%, 50%);
+    --yellow: hsl(54, 100%, 50%); /* #fff200 */
 
     --background-color: var(--black);
     --background-color-muted: var(--black-muted);
     --foreground-color: var(--white);
     --foreground-color-muted: var(--white-muted);
     --accent-color: var(--yellow);
+
     --page-gradient: hsla(0, 0%, 7%, 0) 0%, hsla(0, 0%, 7%, 0.013) 10.3%,
       hsla(0, 0%, 7%, 0.049) 19.3%, hsla(0, 0%, 7%, 0.104) 27.2%,
       hsla(0, 0%, 7%, 0.175) 34.2%, hsla(0, 0%, 7%, 0.259) 40.4%,
@@ -129,10 +130,14 @@ import Analytics from "@vercel/analytics/astro";
 
   a {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    text-decoration-color: var(--accent-color);
+    transition: text-underline-offset 0.2s ease-in-out;
   }
 
   a:hover {
-    color: var(--accent-color);
+    text-underline-offset: 4px;
   }
 
   .muted {
@@ -208,7 +213,7 @@ import Analytics from "@vercel/analytics/astro";
 
   main::before {
     @supports (animation-timeline: auto) {
-      --opacity: calc(var(--s) * 0.1);
+      --opacity: calc(var(--s) * 0.075);
       opacity: clamp(0, var(--opacity), 1);
     }
     pointer-events: none;
