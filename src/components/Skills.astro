@@ -1,0 +1,67 @@
+---
+const skills = {
+  Technical: {
+    Languages: ["HTML", "CSS", "JavaScript", "TypeScript"],
+    "Frameworks & Libraries": ["React", "Next.js", "Astro", "Tailwind"],
+    Tooling: [
+      "Vercel",
+      "Git",
+      "ESLint",
+      "Prettier",
+      "Lighthouse",
+      "GitHub Actions",
+    ],
+    CMS: ["Prismic", "API-driven CMSs"],
+    "Back-end": ["Node.js", "Supabase"],
+  },
+  Design: {
+    "Design Systems": [
+      "Reusable Components",
+      "Tokens",
+      "Accessibility Best Practices",
+    ],
+    Tools: ["Figma", "Adobe Creative Cloud"],
+    Other: [
+      "Accessibility",
+      "Performance Optimization",
+      "Motion & Interaction Design",
+    ],
+  },
+  Process: {
+    Leadership: ["Technical Direction", "Cross-discipline Collaboration"],
+    Communication: ["Client Communication", "Stakeholder Alignment"],
+    Planning: ["Scoping", "SOW Writing", "Project Planning"],
+    Production: ["Design Handoff", "QA", "Delivery Oversight"],
+  },
+};
+---
+
+<h2 id="skills-title" class="sr-only">Skills</h2>
+<section
+  class="px-10 py-32 min-h-screen flex flex-col gap-y-24 lg:gap-y-32"
+  aria-labelledby="skills-title"
+>
+  {
+    Object.entries(skills).map(([category, items]) => (
+      <div class="grid grid-cols-12 gap-y-2 lg:gap-x-16">
+        <div class="col-span-12 lg:col-span-5 flex flex-col gap-y-2">
+          <h2 class="text-5xl font-tight">{category}</h2>
+        </div>
+        <div class="col-span-12 lg:col-span-7 2xl:col-span-6 flex flex-col gap-y-4">
+          {Object.entries(items).map(([label, list]) => (
+            <div class="flex flex-row items-center gap-x-4">
+              <h3 class="text-gray">{label}</h3>
+              <ul class="flex flex-row gap-x-2 items-center">
+                {list.map((item) => (
+                  <li class="border border-foreground rounded-full px-3 py-1 leading-none text-sm">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</section>
