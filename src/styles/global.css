@@ -154,6 +154,10 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  position: relative;
+}
+
 :root {
   --flow-space-s: 0.75rem;
   --flow-space: 1.5rem;
