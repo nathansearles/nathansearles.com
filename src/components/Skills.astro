@@ -49,11 +49,11 @@ const skills = {
         </div>
         <div class="col-span-12 lg:col-span-7 2xl:col-span-6 flex flex-col gap-y-4">
           {Object.entries(items).map(([label, list]) => (
-            <div class="flex flex-row items-center gap-x-4">
+            <div class="flex flex-wrap items-center gap-x-4">
               <h3 class="text-gray">{label}</h3>
-              <ul class="flex flex-row gap-x-2 items-center">
+              <ul class="flex flex-wrap gap-2 items-center">
                 {list.map((item) => (
-                  <li class="border border-foreground rounded-full px-3 py-1 leading-none text-sm">
+                  <li class="border border-foreground rounded-full px-3 py-1 leading-none text-sm text-nowrap">
                     {item}
                   </li>
                 ))}
