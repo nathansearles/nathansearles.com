@@ -38,7 +38,6 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -47,6 +46,67 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+}
+
+/* Button */
+:root {
+  --button-text: var(--color-foreground);
+  --button-text-hover: var(--color-foreground);
+  --focus-ring: var(--color-foreground);
+  --button-text-transition-duration: 325ms;
+}
+
+/* Line Heights */
+:root {
+  --line-height-none: 1;
+  --line-height-tight: 1.15;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+}
+
+/* Letter Spacings */
+:root {
+  --letter-spacing-tightest: -0.0625em;
+  --letter-spacing-tighter: -0.03125em;
+  --letter-spacing-tight: -0.015625em;
+  --letter-spacing-normal: normal;
+  --letter-spacing-wide: 0.02125em;
+  --letter-spacing-wider: 0.0625em;
+  --letter-spacing-widest: 0.09375em;
+}
+
+/* Animation */
+:root {
+  /* Duration */
+  --duration-immediate: 0s;
+  --duration-faster: 0.15s;
+  --duration-fast: 0.25s;
+  --duration-slow: 0.35s;
+  --duration-slower: 0.45s;
+  --duration-slowest: 0.65s;
+
+  /* Easing */
+  /* @link https://epiceasing.com/ */
+  --ease-in: cubic-bezier(0.25, 0, 0.75, 0.25);
+  --ease-out: cubic-bezier(0.25, 0.75, 0.75, 1);
+  --ease-in-out: cubic-bezier(0.75, 0.25, 0.25, 0.75);
+  --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  --ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-quint: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-in-out-custom: cubic-bezier(0.45, 0, 0.1, 1);
+
+  /* Interaction Delay */
+  --delay-none: 0ms;
+  --delay-fast: 50ms;
+  --delay-slow: 160ms;
 }
 
 /* .dark {
