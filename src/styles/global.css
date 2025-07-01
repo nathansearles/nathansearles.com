@@ -103,6 +103,7 @@ html {
   font-family: var(--font-sans);
   font-variation-settings: "wght" 400;
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
 }
 
 body {
@@ -120,6 +121,16 @@ body {
 
 .flow :is(h1, h2, h3) + * {
   --flow-space: var(--flow-space-s, 1em);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-wrap: pretty;
 }
 
 /* Image events */
