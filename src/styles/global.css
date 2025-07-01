@@ -7,15 +7,19 @@
 @import "@fontsource-variable/inter-tight";
 
 :root {
-  --color-black: #131311;
+  --color-black: #111;
+  --color-white: hsl(203 47% 98% / 1);
+  --color-muted: hsl(203 20% 68% / 1);
+
+  /* --color-black: #131311;
   --color-white: #f3f2ed;
-  --color-gray: #878682;
+  --color-muted: #878682; */
 }
 
 :root {
   --radius: 0.625rem;
-  --background: var(--color-white);
-  --foreground: var(--color-black);
+  --background: var(--color-black);
+  --foreground: var(--color-white);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -144,12 +148,12 @@
   --sidebar-ring: oklch(0.439 0 0);
 } */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--color-black);
     --foreground: var(--color-white);
   }
-}
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -162,7 +166,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
+  --color-muted: var(--color-muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
@@ -203,7 +207,7 @@
   --font-tight: "Inter Tight Variable", "sans-serif";
   --color-black: var(--color-black);
   --color-white: var(--color-white);
-  --color-gray: var(--color-gray);
+  --color-muted: var(--color-muted);
   --color-lime: var(--color-lime);
 }
 

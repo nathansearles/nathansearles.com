@@ -23,6 +23,8 @@ const { title } = Astro.props;
     </main>
     <Footer />
     <div class="noise"></div>
+    <div class="color-overlay-01"></div>
+    <div class="color-overlay-02"></div>
   </body>
 </html>
 <style>
@@ -38,5 +40,23 @@ const { title } = Astro.props;
     mix-blend-mode: difference;
     opacity: 0.38;
     filter: saturate(0) invert(1);
+  }
+  .color-overlay-01 {
+    position: absolute;
+    inset: 0;
+    background: hsl(200, 76%, 92%);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.45;
+    mix-blend-mode: multiply;
+  }
+  .color-overlay-02 {
+    position: absolute;
+    inset: 0;
+    background: hsl(201, 78%, 22%);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.25;
+    mix-blend-mode: lighten;
   }
 </style>
