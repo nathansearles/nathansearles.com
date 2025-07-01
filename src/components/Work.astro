@@ -16,21 +16,21 @@ const sharedClasses = "bg-foreground/8 rounded-xs overflow-hidden relative";
 const patternClasses = {
   1: {
     container: `${sharedClasses} col-span-3 row-span-3 w-full h-full`,
-    layout: "full-width",
-    width: 2884,
-    height: 1622,
+    layout: "constrained",
+    width: 1228,
+    height: 691,
   },
   2: {
     container: `${sharedClasses} w-full h-full col-span-2 row-span-2`,
-    layout: "full-width",
-    width: 2884,
-    height: 1622,
+    layout: "constrained",
+    width: 816,
+    height: 456,
   },
   3: {
     container: `${sharedClasses} aspect-video col-span-1 row-span-1`,
     layout: "constrained",
-    width: 960,
-    height: 540,
+    width: 405,
+    height: 228,
   },
 };
 
@@ -40,7 +40,7 @@ const selectedImages = workImages;
 ---
 
 <h2 id="work-title" class="sr-only">Work</h2>
-<section class="px-6 md:px-10 py-16 md:py-20" aria-labelledby="work-title">
+<section class="px-6 md:px-10 pb-16 md:pb-20" aria-labelledby="work-title">
   <div class="grid grid-cols-3 md:grid-cols-6 gap-2">
     {
       patternList.map((pattern, index) => {
