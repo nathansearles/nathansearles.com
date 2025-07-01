@@ -208,7 +208,31 @@
   --color-black: var(--color-black);
   --color-white: var(--color-white);
   --color-muted: var(--color-muted);
-  --color-lime: var(--color-lime);
+}
+
+@theme {
+  --animate-slide-in-from-top: slide-in-from-top 1.25s var(--ease-in-out-custom)
+    0.25s both;
+  @keyframes slide-in-from-top {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-fade-in: fade-in 1.25s var(--ease-in-out-custom) 0.125s both;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 html {
@@ -239,4 +263,9 @@ body {
 
 .flow :is(h1, h2, h3) + * {
   --flow-space: var(--flow-space-s, 1em);
+}
+img,
+svg {
+  pointer-events: none;
+  user-select: none;
 }
