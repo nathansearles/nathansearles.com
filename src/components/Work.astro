@@ -46,6 +46,7 @@ const selectedImages = workImages;
       patternList.map((pattern, index) => {
         const image = selectedImages[index];
         const style = patternClasses[pattern as keyof typeof patternClasses];
+        const loading = index < 4 ? "eager" : "lazy";
         return (
           <div class={style.container} data-index={index}>
             <WorkImage
@@ -54,6 +55,7 @@ const selectedImages = workImages;
               alt={image.alt}
               width={style.width}
               height={style.height}
+              loading={loading}
             />
             <div class="absolute inset-0 pointer-events-none border border-foreground mix-blend-screen opacity-5" />
           </div>

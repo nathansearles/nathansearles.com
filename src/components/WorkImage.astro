@@ -9,9 +9,11 @@ interface Props {
   height: number;
   alt: string;
   className?: string;
+  loading?: "lazy" | "eager";
 }
 
-const { src, layout, width, height, alt, className, ...rest } = Astro.props;
+const { src, layout, width, height, alt, className, loading, ...rest } =
+  Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/images/work/*.{jpeg,jpg,png,gif}",
 );
@@ -29,5 +31,6 @@ if (!images[src])
   height={height}
   alt={alt}
   class={`w-full h-full object-cover saturate-[.9] ${className ? className : ""}`}
+  loading={loading}
   {...rest}
 />
