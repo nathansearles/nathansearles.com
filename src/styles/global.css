@@ -37,6 +37,10 @@
   --letter-spacing-wider: 0.0625em;
   --letter-spacing-widest: 0.09375em;
 
+  /* Spacing */
+  --flow-space: 1.5rem;
+  --flow-space-s: 1rem;
+
   /* Animation */
   --duration-immediate: 0s;
   --duration-faster: 0.15s;
