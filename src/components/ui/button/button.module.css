@@ -66,11 +66,20 @@
   transform: translateY(100%);
 }
 
-.buttonTransitionText:hover span,
-.buttonTransitionText:focus-visible span,
-.buttonTransitionText:global(.is-active) span {
-  color: var(--button-text-hover);
-  transform: translateY(-100%);
+@media (pointer: fine) and (hover: hover) {
+  .buttonTransitionText:hover span,
+  .buttonTransitionText:focus-visible span,
+  .buttonTransitionText:global(.is-active) span {
+    color: var(--button-text-hover);
+    transform: translateY(-100%);
+  }
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .buttonTransitionText:global(.is-active) span {
+    color: var(--button-text-hover);
+    transform: translateY(-100%);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
