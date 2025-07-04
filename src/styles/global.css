@@ -5,9 +5,9 @@
 
 :root {
   /* Colors */
-  --color-black: #111;
-  --color-white: hsl(203 47% 98% / 1);
-  --color-muted: hsl(203 20% 68% / 1);
+  --color-black: hsl(0, 0%, 7%);
+  --color-white: hsl(0, 0%, 98%);
+  --color-muted: hsl(0, 0%, 55%);
 
   /* Theme */
   --radius: 0.625rem;
