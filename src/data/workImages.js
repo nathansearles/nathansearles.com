@@ -68,8 +68,8 @@ export const workImages = [
     alt: "Neon Zebra: Age Gate",
   },
   {
-    src: "studio-mega-team.png",
-    alt: "Studio Mega: Team",
+    src: "studio-mega-about-services.png",
+    alt: "Studio Mega: About & Services",
   },
   {
     src: "starry-home.png",
