@@ -35,7 +35,7 @@ export function CopyToClipboard({ text }: { text: string }) {
     <Button
       onClick={() => clipboard.copy(text)}
       aria-label={`${label}: ${text}`}
-      className={isCopied ? "is-active" : ""}
+      className={isCopied && wasClicked ? "is-active" : ""}
     >
       <span data-text={label}>{text}</span>
     </Button>
