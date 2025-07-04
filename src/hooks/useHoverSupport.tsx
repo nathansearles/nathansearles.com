@@ -7,11 +7,10 @@ export function useHoverSupport() {
     const match = window.matchMedia("(hover: hover)");
     setIsHoverSupported(match.matches);
 
-    // Optional: update if device capabilities change
     const handler = (e: MediaQueryListEvent) => {
       setIsHoverSupported(e.matches);
     };
-    match.addEventListener?.("change", handler); // modern browsers
+    match.addEventListener?.("change", handler);
     return () => match.removeEventListener?.("change", handler);
   }, []);
 
