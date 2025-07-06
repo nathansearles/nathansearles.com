@@ -108,7 +108,6 @@ body {
   font-family: var(--font-sans);
   font-variation-settings: "wght" 400;
   -webkit-font-smoothing: antialiased;
-  overscroll-behavior: none;
   position: relative;
 }
 
