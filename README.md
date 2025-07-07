@@ -1,48 +1,40 @@
-# Astro Starter Kit: Basics
+# Personal Website
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+My personal website built with [Astro](https://astro.build/) and [Tailwind](https://tailwindcss.com/).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Available Fall 2025
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+I’m available for new opportunities starting Fall 2025. If you're interested in working together, feel free to reach out at [nsearles@gmail.com](mailto:nsearles@gmail.com).
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## About
 
-## 🚀 Project Structure
+I'm a front-end developer and technical lead with a deep understanding of design and development. I build fast, accessible interfaces that feel great to use, whether I'm deep in the code or leading a team. From design systems to complex builds, I focus on thoughtful, design-driven digital experiences.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Skills
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Technical
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+| Category               | Skills                                                    |
+| ---------------------- | --------------------------------------------------------- |
+| Languages              | HTML, CSS, JavaScript, TypeScript                         |
+| Frameworks & Libraries | React, Next.js, Astro, Tailwind                           |
+| Tooling                | Vercel, Git, ESLint, Prettier, Lighthouse, GitHub Actions |
+| CMS                    | Prismic, API-driven CMSs, Content Modeling                |
+| Back-end               | Node.js, Supabase                                         |
 
-## 🧞 Commands
+### Design
 
-All commands are run from the root of the project, from a terminal:
+| Category       | Skills                                                               |
+| -------------- | -------------------------------------------------------------------- |
+| Design Systems | Reusable Components, Tokens, Accessibility Best Practices            |
+| Tools          | Figma, Adobe Creative Cloud                                          |
+| Other          | Accessibility, Performance Optimization, Motion & Interaction Design |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+### Process
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Category      | Skills                                              |
+| ------------- | --------------------------------------------------- |
+| Leadership    | Technical Direction, Cross-discipline Collaboration |
+| Communication | Client Communication, Stakeholder Alignment         |
+| Planning      | Scoping, SOW Writing, Project Planning              |
+| Production    | Design Handoff, QA, Delivery Oversight              |
