@@ -9,35 +9,49 @@ import portrait from "@/assets/images/nathan-searles-portrait.jpg";
   aria-labelledby="values-title"
 >
   <div class="grid grid-cols-12 gap-y-8 md:gap-x-16">
-    <div class="col-span-12 lg:col-span-5 xl:col-span-5 2xl:col-span-5">
+    <div
+      class="col-span-12 sm:col-span-8 lg:col-span-5 xl:col-span-5 2xl:col-span-5"
+    >
       <div class="bbg-foreground/8 rounded-xs overflow-hidden relative">
-        <Image src={portrait} alt="Nathan Searles" width={1112} height={1483} />
+        <Image
+          src={portrait}
+          alt="Nathan Searles"
+          width={1112}
+          height={1483}
+          class="w-full max-w-[520px] rounded-xs overflow-hidden"
+        />
       </div>
     </div>
     <div class="col-span-12 lg:col-span-7 2xl:col-span-5 flow">
-      <h2 class="text-3xl md:text-5xl font-tight">
-        I thrive at the intersection of design and development, translating
-        creative ideas into well-built, user-focused digital experiences.
+      <h2 class="text-3xl md:text-4xl font-[1.125]">
+        I work where design meets development, turning ideas into digital
+        experiences that feel smooth and intuitive.
       </h2>
+
       <p class="text-muted text-lg">
-        My approach is collaborative and detail-oriented. I like to be involved
-        early, working closely with designers, strategists, and clients to shape
-        the vision and define what&rsquo;s possible. I think through
-        performance, accessibility, and responsiveness from the start, so the
-        end product feels smooth, fast, and intuitive.
+        I like getting involved early, collaborating with designers,
+        strategists, and clients to shape the vision and figure out what&rsquo;s
+        possible.
       </p>
+
       <p class="text-muted text-lg">
-        I prioritize design fidelity and consistency, making sure what gets
-        built reflects the original intent, down to the interactions and
-        spacing. I also think systemically, building reusable components and
-        scalable front-end foundations that are easy to maintain and extend.
+        Focusing on the details of UI, UX, spacing, and interactions, while also
+        building scalable components and solid foundations that last. Whether
+        I&rsquo;m coding, reviewing, or leading a team, I focus on clear
+        communication, efficient workflows, and delivering polished,
+        production-ready results.
       </p>
+
       <p class="text-muted text-lg">
-        Whether I&rsquo;m writing code, reviewing work, or leading a team, I
-        prioritize clear communication, efficient workflows, and consistently
-        delivering polished, production-ready experiences.
+        Outside of work, you&rsquo;ll find me on my mountain bike, flying down
+        singletrack through the forests of the Pacific Northwest.
       </p>
-      <p class="handwritten-name">
+
+      <p class="text-muted text-lg">
+        Stay curious. Stay humble. Keep creating.
+      </p>
+
+      <p class="handwritten-name translate-y-3">
         <span class="sr-only">Nathan Searles</span>
       </p>
     </div>
