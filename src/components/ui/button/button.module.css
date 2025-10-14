@@ -42,8 +42,6 @@
   background-color: transparent;
   overflow: hidden; /* fallback */
   overflow: clip;
-  transition-duration: var(--button-text-transition-duration);
-  transition-delay: var(--delay-fast);
 }
 
 .buttonTransitionText span {
@@ -51,7 +49,7 @@
   color: var(--button-text);
   transition-property: transform, color;
   transition-duration: var(--button-text-transition-duration);
-  transition-timing-function: var(--ease-in-out-custom);
+  transition-timing-function: var(--ease-in-out-cubic);
   transition-delay: var(--delay-fast);
   will-change: transform;
 }

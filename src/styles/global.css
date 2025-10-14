@@ -18,7 +18,7 @@
   --button-text: var(--color-foreground);
   --button-text-hover: var(--color-foreground);
   --focus-ring: var(--color-foreground);
-  --button-text-transition-duration: 325ms;
+  --button-text-transition-duration: 250ms;
 
   /* Line Heights */
   --line-height-none: 1;
@@ -49,7 +49,11 @@
   --duration-slower: 0.45s;
   --duration-slowest: 0.65s;
 
-  --ease-in-out-custom: cubic-bezier(0.45, 0, 0.1, 1);
+  /* Easing */
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  /* Delay */
   --delay-none: 0ms;
   --delay-fast: 50ms;
   --delay-slow: 160ms;
@@ -79,12 +83,12 @@
   --color-white: var(--color-white);
   --color-muted: var(--color-muted);
 
-  --animate-slide-in-from-top: slide-in-from-top 1.25s var(--ease-in-out-custom)
+  --animate-slide-in-from-top: slide-in-from-top 0.5s var(--ease-out-cubic)
     0.25s both;
   @keyframes slide-in-from-top {
     0% {
       opacity: 0;
-      transform: translateY(-100%);
+      transform: translateY(-60%);
     }
     100% {
       opacity: 1;
@@ -92,7 +96,7 @@
     }
   }
 
-  --animate-fade-in: fade-in 1.25s var(--ease-in-out-custom) 0.125s both;
+  --animate-fade-in: fade-in 0.65s var(--ease-out-cubic) 0.25s both;
   @keyframes fade-in {
     0% {
       opacity: 0;
