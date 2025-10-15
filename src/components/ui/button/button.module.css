@@ -66,9 +66,6 @@
   .buttonTransitionText:hover,
   .buttonTransitionText:focus-visible,
   .buttonTransitionText:global(.is-active) {
-    span {
-      color: var(--button-text-hover);
-    }
     span:first-of-type {
       transform: translateY(-100%) scale(var(--scale-factor));
       opacity: 0;
@@ -82,14 +79,13 @@
 
 @media (pointer: coarse) and (hover: none) {
   .buttonTransitionText:global(.is-active) {
-    span {
-      color: var(--button-text-hover);
-    }
     span:first-of-type {
-      transform: translateY(-100%);
+      transform: translateY(-100%) scale(var(--scale-factor));
+      opacity: 0;
     }
     span:last-of-type {
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
+      opacity: 1;
     }
   }
 }
