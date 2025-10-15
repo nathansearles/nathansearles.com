@@ -47,12 +47,12 @@
 }
 
 .buttonTransitionText span {
-  --scale-factor: 0.97;
+  --scale-factor: 0.98;
   --translate-factor: 80%;
   grid-area: 1/1;
   color: var(--button-text);
   transition-property: transform, color, opacity;
-  transition-duration: 300ms;
+  transition-duration: 280ms;
   transition-timing-function: var(--ease-in-out-cubic);
   transition-delay: var(--delay-fast);
   will-change: transform;
