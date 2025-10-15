@@ -26,10 +26,10 @@ export function CopyToClipboard({ text }: { text: string }) {
 
   const label =
     wasClicked && clipboard.copied
-      ? "Copied"
+      ? "Copied!"
       : isHoverSupported && !clipboard.copied
         ? "Copy to Clipboard"
-        : "Copied";
+        : "Copied!";
 
   return (
     <Button
@@ -37,7 +37,8 @@ export function CopyToClipboard({ text }: { text: string }) {
       aria-label={`${label}: ${text}`}
       className={isCopied ? "is-active" : ""}
     >
-      <span data-text={label}>{text}</span>
+      <span aria-hidden={true}>{text}</span>
+      <span aria-hidden={true}>{label}</span>
     </Button>
   );
 }
