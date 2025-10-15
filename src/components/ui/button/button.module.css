@@ -48,17 +48,18 @@
 
 .buttonTransitionText span {
   --scale-factor: 0.97;
+  --translate-factor: 80%;
   grid-area: 1/1;
   color: var(--button-text);
   transition-property: transform, color, opacity;
-  transition-duration: 275ms;
-  transition-timing-function: var(--ease-in-out-circ);
+  transition-duration: 300ms;
+  transition-timing-function: var(--ease-in-out-cubic);
   transition-delay: var(--delay-fast);
   will-change: transform;
 }
 
 .buttonTransitionText span:last-of-type {
-  transform: translateY(100%) scale(var(--scale-factor));
+  transform: translateY(var(--translate-factor)) scale(var(--scale-factor));
   opacity: 0;
 }
 
@@ -67,7 +68,8 @@
   .buttonTransitionText:focus-visible,
   .buttonTransitionText:global(.is-active) {
     span:first-of-type {
-      transform: translateY(-100%) scale(var(--scale-factor));
+      transform: translateY(calc(var(--translate-factor) * -1))
+        scale(var(--scale-factor));
       opacity: 0;
     }
     span:last-of-type {
@@ -80,7 +82,8 @@
 @media (pointer: coarse) and (hover: none) {
   .buttonTransitionText:global(.is-active) {
     span:first-of-type {
-      transform: translateY(-100%) scale(var(--scale-factor));
+      transform: translateY(calc(var(--translate-factor) * -1))
+        scale(var(--scale-factor));
       opacity: 0;
     }
     span:last-of-type {
