@@ -55,6 +55,10 @@
   transition-duration: 325ms;
   transition-timing-function: var(--ease-in-out-cubic);
   transition-delay: var(--delay-fast);
+  @supports (transition-timing-function: linear(0, 1)) {
+    transition-duration: 750ms;
+    transition-timing-function: var(--spring-glide);
+  }
 }
 
 .buttonTransitionText span:last-of-type {
