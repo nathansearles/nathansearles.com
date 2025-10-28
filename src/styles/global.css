@@ -83,8 +83,8 @@
   --color-white: var(--color-white);
   --color-muted: var(--color-muted);
 
-  --animate-slide-in-from-top: slide-in-from-top 0.5s var(--ease-out-cubic)
-    0.25s both;
+  --animate-slide-in-from-top: slide-in-from-top 0.65s var(--ease-out-cubic)
+    0.35s both;
   @keyframes slide-in-from-top {
     0% {
       opacity: 0;

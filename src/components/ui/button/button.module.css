@@ -52,10 +52,9 @@
   grid-area: 1/1;
   color: var(--button-text);
   transition-property: transform, color, opacity;
-  transition-duration: 280ms;
+  transition-duration: 325ms;
   transition-timing-function: var(--ease-in-out-cubic);
   transition-delay: var(--delay-fast);
-  will-change: transform;
 }
 
 .buttonTransitionText span:last-of-type {
