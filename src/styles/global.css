@@ -17,6 +17,8 @@
   /* Button */
   --button-text: var(--color-foreground);
   --button-text-hover: var(--color-foreground);
+  --button-text-muted: var(--color-muted);
+  --button-text-muted-hover: var(--color-foreground);
   --focus-ring: var(--color-foreground);
 
   /* Line Heights */
@@ -101,7 +103,7 @@
   --color-muted: var(--color-muted);
 
   --animate-slide-in-from-top: slide-in-from-top 0.65s var(--ease-out-cubic)
-    0.35s both;
+    0.5s both;
   @keyframes slide-in-from-top {
     0% {
       opacity: 0;
@@ -113,13 +115,15 @@
     }
   }
 
-  --animate-fade-in: fade-in 0.65s var(--ease-out-cubic) 0.25s both;
+  --animate-fade-in: fade-in 0.65s var(--ease-out-cubic) 0.5s both;
   @keyframes fade-in {
     0% {
       opacity: 0;
+      transform: translateY(10%);
     }
     100% {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 }
@@ -127,7 +131,6 @@
 html,
 body {
   font-family: var(--font-sans);
-  font-variation-settings: "wght" 400;
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
@@ -145,19 +148,40 @@ body {
   --flow-space: var(--flow-space-s, 1em);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  text-wrap: pretty;
-}
-
 /* Image events */
 img,
 svg {
   pointer-events: none;
   user-select: none;
+}
+
+.header-container::after {
+  pointer-events: none;
+  content: " ";
+  z-index: 100;
+  position: fixed;
+  bottom: 1px; /* 1px is to overlap the bottom of the header */
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  transform: translateY(100%);
+  background: linear-gradient(
+    to top,
+    hsla(0, 0%, 7%, 0) 0%,
+    hsla(0, 0%, 7%, 0.013) 10.3%,
+    hsla(0, 0%, 7%, 0.049) 19.3%,
+    hsla(0, 0%, 7%, 0.104) 27.2%,
+    hsla(0, 0%, 7%, 0.175) 34.2%,
+    hsla(0, 0%, 7%, 0.259) 40.4%,
+    hsla(0, 0%, 7%, 0.352) 46%,
+    hsla(0, 0%, 7%, 0.45) 51.2%,
+    hsla(0, 0%, 7%, 0.55) 56.2%,
+    hsla(0, 0%, 7%, 0.648) 61.2%,
+    hsla(0, 0%, 7%, 0.741) 66.3%,
+    hsla(0, 0%, 7%, 0.825) 71.7%,
+    hsla(0, 0%, 7%, 0.896) 77.6%,
+    hsla(0, 0%, 7%, 0.951) 84.2%,
+    hsla(0, 0%, 7%, 0.987) 91.6%,
+    hsl(0, 0%, 7%) 100%
+  );
 }
