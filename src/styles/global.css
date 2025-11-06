@@ -126,6 +126,18 @@
       transform: translateY(0);
     }
   }
+
+  --animate-fade-in-work: fade-in-work 0.65s var(--ease-out-cubic) 0.55s both;
+  @keyframes fade-in-work {
+    0% {
+      opacity: 0;
+      transform: translateY(4%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 html,
