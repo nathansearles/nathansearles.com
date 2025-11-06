@@ -1,57 +1,66 @@
-<footer>
+<footer aria-label="Site footer">
   <div
-    class="flex justify-between items-center mx-6 md:mx-10 py-4 border-t border-foreground/50 bg-background text-sm gap-y-4 md:gap-y-0"
+    class="flex justify-between items-center px-6 md:px-10 pt-16 md:pt-32 pb-4 md:pb-8"
   >
-    <div class="hidden sm:block">
-      <svg
-        width="16"
-        height="17"
-        viewBox="0 0 16 17"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8 0.90625C6.4981 0.90625 5.02993 1.35162 3.78114 2.18603C2.53236 3.02044 1.55905 4.20642 0.984293 5.594C0.40954 6.98157 0.259159 8.50842 0.552165 9.98147C0.845172 11.4545 1.56841 12.8076 2.63041 13.8696C3.69242 14.9316 5.04549 15.6548 6.51854 15.9478C7.99158 16.2408 9.51843 16.0905 10.906 15.5157C12.2936 14.941 13.4796 13.9676 14.314 12.7189C15.1484 11.4701 15.5938 10.0019 15.5938 8.5C15.5915 6.4867 14.7907 4.5565 13.3671 3.13287C11.9435 1.70925 10.0133 0.908483 8 0.90625ZM13.9063 8.5C13.9079 9.42435 13.6911 10.336 13.2734 11.1606L8.84375 8.06055V2.65492C10.2486 2.85947 11.533 3.56248 12.4625 4.6356C13.3919 5.70872 13.9044 7.08034 13.9063 8.5ZM7.15625 2.65492V8.06055L2.72657 11.1606C2.30303 10.3242 2.08488 9.39888 2.09019 8.46134C2.0955 7.5238 2.32411 6.60101 2.75709 5.76943C3.19006 4.93784 3.81494 4.22138 4.57997 3.67939C5.34499 3.13741 6.22814 2.7855 7.15625 2.65281V2.65492ZM3.69899 12.5416L7.15625 10.1207V14.3451C5.83265 14.1534 4.61352 13.5174 3.69899 12.5416ZM8.84375 14.3451V10.1207L12.301 12.5416C11.3865 13.5174 10.1674 14.1534 8.84375 14.3451Z"
-          fill="currentColor"
+    <div class="flex justify-between items-center w-full max-w-7xl mx-auto">
+      <div class="hidden sm:block text-muted">
+        <svg
+          width="16"
+          height="17"
+          viewBox="0 0 16 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-label="Peace sign icon"
+          role="img"
         >
-        </path>
-      </svg>
-    </div>
+          <path
+            d="M8 0.90625C6.4981 0.90625 5.02993 1.35162 3.78114 2.18603C2.53236 3.02044 1.55905 4.20642 0.984293 5.594C0.40954 6.98157 0.259159 8.50842 0.552165 9.98147C0.845172 11.4545 1.56841 12.8076 2.63041 13.8696C3.69242 14.9316 5.04549 15.6548 6.51854 15.9478C7.99158 16.2408 9.51843 16.0905 10.906 15.5157C12.2936 14.941 13.4796 13.9676 14.314 12.7189C15.1484 11.4701 15.5938 10.0019 15.5938 8.5C15.5915 6.4867 14.7907 4.5565 13.3671 3.13287C11.9435 1.70925 10.0133 0.908483 8 0.90625ZM13.9063 8.5C13.9079 9.42435 13.6911 10.336 13.2734 11.1606L8.84375 8.06055V2.65492C10.2486 2.85947 11.533 3.56248 12.4625 4.6356C13.3919 5.70872 13.9044 7.08034 13.9063 8.5ZM7.15625 2.65492V8.06055L2.72657 11.1606C2.30303 10.3242 2.08488 9.39888 2.09019 8.46134C2.0955 7.5238 2.32411 6.60101 2.75709 5.76943C3.19006 4.93784 3.81494 4.22138 4.57997 3.67939C5.34499 3.13741 6.22814 2.7855 7.15625 2.65281V2.65492ZM3.69899 12.5416L7.15625 10.1207V14.3451C5.83265 14.1534 4.61352 13.5174 3.69899 12.5416ZM8.84375 14.3451V10.1207L12.301 12.5416C11.3865 13.5174 10.1674 14.1534 8.84375 14.3451Z"
+            fill="currentColor"
+          >
+          </path>
+        </svg>
+      </div>
 
-    <nav>
-      <ul class="flex gap-4">
-        <li>
-          <a
-            href="https://github.com/nathansearles"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:underline"
-          >
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://codesandbox.io/u/nathansearles"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:underline"
-          >
-            CodeSandbox
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/nathan-searles/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:underline"
-          >
-            LinkedIn
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <p>© {new Date().getFullYear()}</p>
+      <nav>
+        <ul class="flex gap-4">
+          <li>
+            <a
+              href="https://github.com/nathansearles"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-medium text-md text-muted hover:text-foreground transition-colors hover:underline focus:underline"
+              aria-label="Open GitHub in a new tab"
+            >
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://codesandbox.io/u/nathansearles"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-medium text-md text-muted hover:text-foreground transition-colors hover:underline focus:underline"
+              aria-label="Open CodeSandbox in a new tab"
+            >
+              CodeSandbox
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/nathan-searles/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-medium text-md text-muted hover:text-foreground transition-colors hover:underline focus:underline"
+              aria-label="Open LinkedIn in a new tab"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="font-medium text-md text-muted">
+        © {new Date().getFullYear()}
+      </p>
+    </div>
   </div>
 </footer>
