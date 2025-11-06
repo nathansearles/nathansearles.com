@@ -4,7 +4,7 @@ My personal website built with [Astro](https://astro.build/) and [Tailwind](http
 
 ## About
 
-I'm a design engineer and tech lead building interfaces that feel great to use, whether I’m in the code or leading a project. I’m all about the details, clean UI, smooth UX and a balance of design and dev.
+I’m a design engineer and tech lead building interfaces that feel great to use. My focus is on clean UI, smooth UX, and the balance between design and development.
 
 ## Skills
 

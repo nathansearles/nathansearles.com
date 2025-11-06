@@ -1,4 +1,3 @@
-// @link https://github.com/mantinedev/mantine/blob/master/packages/%40mantine/hooks/src/use-clipboard/use-clipboard.ts
 /* 
     import { useClipboard } from './useClipboard';
 
@@ -17,35 +16,60 @@
 */
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export function useClipboard({ timeout = 2000 } = {}) {
   const [error, setError] = useState<Error | null>(null);
   const [copied, setCopied] = useState(false);
   const [copyTimeout, setCopyTimeout] = useState<number | null>(null);
 
-  const handleCopyResult = (value: boolean) => {
-    window.clearTimeout(copyTimeout!);
-    setCopyTimeout(window.setTimeout(() => setCopied(false), timeout));
-    setCopied(value);
-  };
+  useEffect(() => {
+    return () => {
+      if (copyTimeout !== null) {
+        window.clearTimeout(copyTimeout);
+      }
+    };
+  }, [copyTimeout]);
 
-  const copy = (valueToCopy: any) => {
-    if ("clipboard" in navigator) {
-      navigator.clipboard
-        .writeText(valueToCopy)
-        .then(() => handleCopyResult(true))
-        .catch((err) => setError(err));
-    } else {
-      setError(new Error("useClipboard: navigator.clipboard is not supported"));
-    }
-  };
+  const handleCopyResult = useCallback(
+    (value: boolean) => {
+      if (copyTimeout !== null) {
+        window.clearTimeout(copyTimeout);
+      }
+      const timeoutId = window.setTimeout(() => setCopied(false), timeout);
+      setCopyTimeout(timeoutId);
+      setCopied(value);
+    },
+    [copyTimeout, timeout],
+  );
 
-  const reset = () => {
+  const copy = useCallback(
+    (valueToCopy: string) => {
+      if ("clipboard" in navigator) {
+        navigator.clipboard
+          .writeText(valueToCopy)
+          .then(() => {
+            handleCopyResult(true);
+            setError(null); // Clear previous errors
+          })
+          .catch((err) => setError(err));
+      } else {
+        setError(
+          new Error("useClipboard: navigator.clipboard is not supported"),
+        );
+      }
+    },
+    [handleCopyResult],
+  );
+
+  const reset = useCallback(() => {
     setCopied(false);
     setError(null);
-    window.clearTimeout(copyTimeout!);
-  };
+    if (copyTimeout !== null) {
+      window.clearTimeout(copyTimeout);
+      setCopyTimeout(null);
+    }
+  }, [copyTimeout]);
 
   return { copy, reset, error, copied };
 }
