@@ -17,7 +17,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vercel/analytics": "^1.5.0",
-    "astro": "^5.15.2",
+    "astro": "^5.15.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.523.0",
