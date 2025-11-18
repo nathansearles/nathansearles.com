@@ -49,7 +49,8 @@
   --scale-factor: 0.98;
   --translate-factor: 80%;
   grid-area: 1/1;
-  color: var(--button-text-muted);
+  font-weight: 500;
+  color: var(--button-text);
   transition-property: transform, color, opacity;
   transition-duration: 325ms;
   transition-timing-function: var(--ease-in-out-cubic);
