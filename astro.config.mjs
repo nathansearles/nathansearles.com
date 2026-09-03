@@ -1,14 +1,24 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 
-import react from "@astrojs/react";
-
-import tailwindcss from "@tailwindcss/vite";
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  site: "https://nathansearles.com",
+  base: "/",
+  trailingSlash: "never",
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: "Inter",
+      cssVariable: "--font-inter",
+      styles: ["normal"],
+      weights: [400],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: "Inter Tight",
+      cssVariable: "--font-inter-tight",
+      styles: ["normal"],
+      weights: [600],
+    },
+  ],
 });

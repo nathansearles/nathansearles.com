@@ -1,72 +1,67 @@
 ---
-const skills = {
-  Technical: {
-    Languages: ["HTML", "CSS", "JavaScript", "TypeScript"],
-    "Frameworks & Libraries": ["React", "Next.js", "Astro", "Tailwind"],
-    Tooling: [
-      "Vercel",
-      "Git",
-      "ESLint",
-      "Prettier",
-      "Lighthouse",
-      "GitHub Actions",
-    ],
-    CMS: ["Prismic", "API-driven CMSs", "Content Modeling"],
-    Backend: ["Node.js", "Supabase"],
-  },
-  Design: {
-    "Design Systems": [
-      "Reusable Components",
-      "Tokens",
-      "Accessibility Best Practices",
-    ],
-    Tools: ["Figma", "Adobe Creative Cloud"],
-    Other: [
-      "Accessibility",
-      "Performance Optimization",
-      "Motion & Interaction Design",
-    ],
-  },
-  Process: {
-    Leadership: ["Technical Direction", "Cross-discipline Collaboration"],
-    Communication: ["Client Communication", "Stakeholder Alignment"],
-    Planning: ["Scoping", "SOW Writing", "Project Planning"],
-    Production: ["Design Handoff", "QA", "Delivery Oversight"],
-  },
-};
+import Card from "@/components/SkillCard.astro";
 ---
 
-<h2 id="skills-title" class="sr-only">Skills</h2>
-<section
-  class="px-6 md:px-10 py-16 md:py-32 flex flex-col gap-y-16 md:gap-y-24 lg:gap-y-32"
-  aria-labelledby="skills-title"
->
-  {
-    Object.entries(skills).map(([category, items]) => (
-      <div class="grid grid-cols-12 gap-y-2 lg:gap-x-8 w-full max-w-7xl mx-auto">
-        <div class="col-span-12 lg:col-span-4 flex flex-col">
-          <h3 class="text-xl font-medium">{category}</h3>
-        </div>
-        <div class="col-span-12 lg:col-span-8 flex flex-col gap-y-6 md:gap-y-4">
-          {Object.entries(items).map(([label, list]) => (
-            <div class="flex flex-col md:flex-row items-start gap-y-2 gap-x-4">
-              <h4 class="text-xl font-medium text-muted text-nowrap">
-                {label}
-              </h4>
-              <ul
-                class="flex flex-wrap gap-2 items-center mt-0.5"
-                aria-label={`List of ${label}`}
-              >
-                {list.map((item) => (
-                  <li class="border border-foreground/25 rounded-full px-3 py-1 leading-none text-md font-medium text-nowrap">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    ))
-  }
+<section id="skills" class="section">
+  <article class="section-wrapper">
+    <h2>What I Do</h2>
+
+    <div class="cards">
+      <Card
+        title="Build"
+        description="Front-end development, responsive interfaces, modern web applications"
+      />
+      <Card
+        title="Design"
+        description="UI, interaction, motion, accessibility, design systems"
+      />
+      <Card
+        title="Connect"
+        description="CMS, APIs, backend services, content platforms"
+      />
+      <Card
+        title="Shape"
+        description="Components, patterns, tokens, scalable architectures"
+      />
+      <Card
+        title="Optimize"
+        description="Performance, accessibility, maintainability"
+      />
+      <Card
+        title="Lead"
+        description="Technical direction, project planning, team collaboration"
+      />
+      <Card
+        title="Deliver"
+        description="Scoping, client communication, QA, and launch"
+      />
+    </div>
+  </article>
 </section>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .cards {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1040px) {
+    .cards {
+      grid-template-columns: repeat(9, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .cards {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+</style>

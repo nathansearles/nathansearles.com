@@ -1,0 +1,60 @@
+<div class="gradient gradient-top"></div>
+<div class="gradient gradient-bottom"></div>
+
+<style>
+  .gradient {
+    pointer-events: none;
+    content: " ";
+    z-index: 9998;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: clamp(6rem, 5.413rem + 2.6087vw, 7.5rem);
+  }
+
+  .gradient-top {
+    top: 0;
+    background: linear-gradient(
+      to top,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.013) 10.3%,
+      hsla(0, 0%, 0%, 0.049) 19.3%,
+      hsla(0, 0%, 0%, 0.104) 27.2%,
+      hsla(0, 0%, 0%, 0.175) 34.2%,
+      hsla(0, 0%, 0%, 0.259) 40.4%,
+      hsla(0, 0%, 0%, 0.352) 46%,
+      hsla(0, 0%, 0%, 0.45) 51.2%,
+      hsla(0, 0%, 0%, 0.55) 56.2%,
+      hsla(0, 0%, 0%, 0.648) 61.2%,
+      hsla(0, 0%, 0%, 0.741) 66.3%,
+      hsla(0, 0%, 0%, 0.825) 71.7%,
+      hsla(0, 0%, 0%, 0.896) 77.6%,
+      hsla(0, 0%, 0%, 0.951) 84.2%,
+      hsla(0, 0%, 0%, 0.987) 91.6%,
+      hsl(0, 0%, 0%) 100%
+    );
+  }
+
+  .gradient-bottom {
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.013) 10.3%,
+      hsla(0, 0%, 0%, 0.049) 19.3%,
+      hsla(0, 0%, 0%, 0.104) 27.2%,
+      hsla(0, 0%, 0%, 0.175) 34.2%,
+      hsla(0, 0%, 0%, 0.259) 40.4%,
+      hsla(0, 0%, 0%, 0.352) 46%,
+      hsla(0, 0%, 0%, 0.45) 51.2%,
+      hsla(0, 0%, 0%, 0.55) 56.2%,
+      hsla(0, 0%, 0%, 0.648) 61.2%,
+      hsla(0, 0%, 0%, 0.741) 66.3%,
+      hsla(0, 0%, 0%, 0.825) 71.7%,
+      hsla(0, 0%, 0%, 0.896) 77.6%,
+      hsla(0, 0%, 0%, 0.951) 84.2%,
+      hsla(0, 0%, 0%, 0.987) 91.6%,
+      hsl(0, 0%, 0%) 100%
+    );
+  }
+</style>

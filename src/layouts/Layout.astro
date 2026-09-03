@@ -1,30 +1,27 @@
 ---
-import "@/styles/global.css";
+import { Font } from "astro:assets";
 import Analytics from "@vercel/analytics/astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-
-interface Props {
-  title: string;
-  description?: string;
-  image?: string;
-}
 
 const {
-  title,
-  description = "I'm a design engineer and tech lead, building thoughtful, accessible, design-driven digital experiences.",
+  title = "Nathan Searles – Front-end Developer and Technical Director",
+  description = "I’ve spent my career working where design and technology meet. I lead projects, collaborate across disciplines, and balance technical leadership with hands-on development.",
   image = "https://nathansearles.com/images/nathan-searles-og.jpg",
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://nathansearles.com");
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  Astro.site || "https://nathansearles.com",
+);
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#000000" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -35,33 +32,211 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://nathanse
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1200" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image} />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Nathan Searles, Front-end Developer and Technical Director"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-inter-tight" preload />
   </head>
   <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
-    <div class="noise"></div>
+    <slot />
     <Analytics />
   </body>
 </html>
-<style>
-  .noise {
-    position: fixed;
-    inset: 0;
-    background: url("/images/noise.svg");
-    background-size: 250px;
-    background-position: 0 0;
-    background-repeat: repeat;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    opacity: 0.15;
-    filter: saturate(0) invert(1);
+
+<style is:global>
+  :root {
+    --font-body: var(--font-inter);
+    --font-headline: var(--font-inter-tight);
+    --font-size-sm: 1rem;
+    --font-size-base: clamp(1rem, 0.9022rem + 0.4348vw, 1.25rem);
+    --font-size-xl: clamp(2.25rem, 1.8587rem + 1.7391vw, 3.25rem);
+    --font-size-2xl: clamp(2.625rem, 2.087rem + 2.3913vw, 4rem);
+
+    --color-black: hsl(0, 0%, 0%);
+    --color-black-muted: hsl(0, 0%, 7%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-white-muted: hsl(0, 0%, 60%);
+    --color-neon-green: hsl(75, 88%, 50%);
+
+    --color-background: var(--color-black);
+    --color-text: var(--color-white);
+    --color-text-secondary: var(--color-white-muted);
+    --color-accent: var(--color-neon-green);
+    --color-on-surface: var(--color-black-muted);
+    --color-on-surface-border: hsl(0, 0%, 9%);
+
+    --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    --focus-outline-color: currentColor;
+    --focus-outline-offset: 0.1rem;
+    --focus-outline-style: solid;
+    --focus-outline-width: 2px;
+  }
+
+  /* Reset  */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  *:not(dialog) {
+    margin: 0;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  *:focus-visible {
+    outline-color: var(--focus-outline-color);
+    outline-offset: var(--focus-outline-offset);
+    outline-style: var(--focus-outline-style);
+    outline-width: var(--focus-outline-width);
+    border-radius: 0.25rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    *:focus-visible {
+      animation: outline-bounce 0.5s;
+    }
+  }
+
+  @keyframes outline-bounce {
+    0% {
+      outline-offset: var(--focus-outline-offset);
+    }
+    50% {
+      outline-offset: calc(var(--focus-outline-offset) * 2);
+    }
+    100% {
+      outline-offset: var(--focus-outline-offset);
+    }
+  }
+
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+  }
+
+  h1 {
+    font: 600 var(--font-size-2xl)/110% var(--font-headline);
+    color: var(--color-text);
+  }
+
+  h2 {
+    font: 600 var(--font-size-xl)/110% var(--font-headline);
+    color: var(--color-text);
+  }
+
+  p {
+    color: var(--color-text-secondary);
+    font: 400 var(--font-size-base)/145% var(--font-body);
+    letter-spacing: -0.006em;
+  }
+
+  a:link,
+  a:visited {
+    color: var(--color-text);
+    text-decoration: underline;
+    transition: color 150ms var(--ease-in-out-quad);
+  }
+
+  a:hover {
+    color: var(--color-text-secondary);
+  }
+
+  strong {
+    font-weight: 400;
+    color: var(--color-text);
+  }
+
+  .stack > * + * {
+    margin-block-start: 1.5rem;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  .section-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+    padding-block: clamp(4rem, 3.6087rem + 1.7391vw, 5rem);
+    padding-inline: clamp(2rem, 0.8261rem + 5.2174vw, 5rem);
   }
 </style>
