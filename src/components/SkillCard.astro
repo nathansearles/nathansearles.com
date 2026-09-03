@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div class="card">
+  <h3>{title}</h3>
+  <p>{description}</p>
+</div>
+
+<style>
+  .card {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(1.125rem, 0.7826rem + 1.5217vw, 2rem);
+    padding: clamp(1.125rem, 0.7826rem + 1.5217vw, 2rem);
+    background-color: var(--color-on-surface);
+    border: 1px solid var(--color-on-surface-border);
+    aspect-ratio: 1.33;
+  }
+
+  @media (min-width: 640px) {
+    .card {
+      aspect-ratio: 0.8;
+    }
+  }
+
+  h3,
+  p {
+    font: 400 var(--font-size-base)/145% var(--font-body);
+    letter-spacing: -0.006em;
+  }
+
+  p {
+    color: var(--color-text-secondary);
+  }
+
+  h3 {
+    color: var(--color-text);
+  }
+</style>

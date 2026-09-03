@@ -1,17 +1,34 @@
 ---
-import "@/styles/global.css";
-import Layout from "@/layouts/Layout.astro";
-import Intro from "@/components/Intro.astro";
-import Work from "@/components/Work.astro";
-import Background from "@/components/Background.astro";
-import Skills from "@/components/Skills.astro";
-import Values from "@/components/Values.astro";
+import Layout from "../layouts/Layout.astro";
+import Intro from "../components/Intro.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
+import Technologies from "../components/Technologies.astro";
+import Background from "../components/Background.astro";
+import Footer from "../components/Footer.astro";
+import Gradients from "../components/Gradients.astro";
+import Noise from "../components/Noise.astro";
 ---
 
-<Layout title="Nathan Searles – Design Engineer & Tech Lead">
-  <Intro />
-  <Work />
-  <Background />
-  <Skills />
-  <Values />
+<Layout>
+  <main>
+    <Intro />
+    <About />
+    <Skills />
+    <Technologies />
+    <Background />
+    <Footer />
+    <Gradients />
+    <Noise />
+  </main>
 </Layout>
+
+<style>
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

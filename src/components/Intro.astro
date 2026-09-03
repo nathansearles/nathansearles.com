@@ -1,15 +1,35 @@
-<h2 id="intro-title" class="sr-only">Intro</h2>
-<section
-  class="px-6 md:px-10 py-32 md:min-h-[80vh] flex flex-col justify-center"
-  aria-labelledby="intro-title"
->
-  <p
-    class="text-3xl md:text-4xl font-tight animate-fade-in max-w-[48ch] leading-tight text-pretty text-center mx-auto text-muted"
-  >
-    I&rsquo;m a <strong class="text-foreground font-medium"
-      >design engineer</strong
-    > and <strong class="text-foreground font-medium">tech lead</strong> building
-    interfaces that feel great to use. My focus is on clean UI, smooth UX, and the
-    balance between design and development.
-  </p>
+---
+import Email from "../components/Email.astro";
+---
+
+<section id="intro" class="section">
+  <article class="section-wrapper">
+    <h1>
+      Hey, I&rsquo;m Nathan, a front-end developer and technical director.
+    </h1>
+    <div class="stack">
+      <p>
+        I&rsquo;ve spent my career working where design and technology meet. I
+        lead projects, collaborate across disciplines, and balance technical
+        leadership with hands-on development.
+      </p>
+      <p>
+        Want to connect? Say hello at <Email />.
+      </p>
+    </div>
+  </article>
 </section>
+
+<style>
+  #intro {
+    min-height: clamp(0px, 100vh, 960px);
+  }
+
+  h1 {
+    max-width: 847px;
+  }
+
+  p {
+    max-width: 847px;
+  }
+</style>

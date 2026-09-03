@@ -1,0 +1,16 @@
+<div data-noise-layer></div>
+
+<style>
+  [data-noise-layer] {
+    position: absolute;
+    inset: 0;
+    background: url("/images/noise.png");
+    background-size: 125px;
+    background-position: 0 0;
+    background-repeat: repeat;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    opacity: 0.125;
+  }
+</style>
