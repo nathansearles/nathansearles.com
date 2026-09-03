@@ -1,5 +1,6 @@
 ---
 import { Font } from "astro:assets";
+import Analytics from "@vercel/analytics/astro";
 
 const {
   title = "Nathan Searles – Front-end Developer and Technical Director",
@@ -46,6 +47,7 @@ const canonicalURL = new URL(
   </head>
   <body>
     <slot />
+    <Analytics />
   </body>
 </html>
 
