@@ -11,7 +11,7 @@ export default defineConfig({
       name: "Inter",
       cssVariable: "--font-inter",
       styles: ["normal"],
-      weights: [450],
+      weights: [400],
     },
   ],
 });
