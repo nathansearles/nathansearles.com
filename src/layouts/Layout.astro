@@ -43,7 +43,6 @@ const canonicalURL = new URL(
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
     <Font cssVariable="--font-inter" preload />
-    <Font cssVariable="--font-inter-tight" preload />
   </head>
   <body>
     <slot />
@@ -54,11 +53,11 @@ const canonicalURL = new URL(
 <style is:global>
   :root {
     --font-body: var(--font-inter);
-    --font-headline: var(--font-inter-tight);
     --font-size-sm: 1rem;
-    --font-size-base: clamp(1rem, 0.9022rem + 0.4348vw, 1.25rem);
-    --font-size-xl: clamp(2.25rem, 1.8587rem + 1.7391vw, 3.25rem);
-    --font-size-2xl: clamp(2.625rem, 2.087rem + 2.3913vw, 4rem);
+    /* Clamp: min width: 360px, max width: 1440px */
+    --font-size-base: clamp(1rem, 0.9375rem + 0.2778vw, 1.1875rem);
+    --font-size-xl: clamp(1.75rem, 1.25rem + 2.2222vw, 3.25rem);
+    --font-size-2xl: clamp(3rem, 2.4583rem + 2.4074vw, 4.625rem);
 
     --color-black: hsl(0, 0%, 0%);
     --color-black-muted: hsl(0, 0%, 7%);
@@ -188,19 +187,20 @@ const canonicalURL = new URL(
   }
 
   h1 {
-    font: 600 var(--font-size-2xl)/110% var(--font-headline);
+    font: 450 var(--font-size-2xl)/108% var(--font-body);
     color: var(--color-text);
+    letter-spacing: -0.03em;
   }
 
   h2 {
-    font: 600 var(--font-size-xl)/110% var(--font-headline);
+    font: 450 var(--font-size-xl)/110% var(--font-body);
     color: var(--color-text);
+    letter-spacing: -0.025em;
   }
 
   p {
     color: var(--color-text-secondary);
-    font: 400 var(--font-size-base)/145% var(--font-body);
-    letter-spacing: -0.006em;
+    font: 450 var(--font-size-base)/155% var(--font-body);
   }
 
   a:link,
