@@ -54,7 +54,7 @@ const canonicalURL = new URL(
   :root {
     --font-body: var(--font-inter);
     --font-size-sm: 1rem;
-    /* Clamp: min width: 360px, max width: 1440px */
+    /* Clamp(min: 360px, max: 1440px) used for all calculations */
     --font-size-base: clamp(1rem, 0.9375rem + 0.2778vw, 1.1875rem);
     --font-size-xl: clamp(1.75rem, 1.25rem + 2.2222vw, 3.25rem);
     --font-size-2xl: clamp(3rem, 2.4583rem + 2.4074vw, 4.625rem);
