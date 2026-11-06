@@ -13,12 +13,5 @@ export default defineConfig({
       styles: ["normal"],
       weights: [400],
     },
-    {
-      provider: fontProviders.fontsource(),
-      name: "Inter Tight",
-      cssVariable: "--font-inter-tight",
-      styles: ["normal"],
-      weights: [600],
-    },
   ],
 });
