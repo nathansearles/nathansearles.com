@@ -52,31 +52,31 @@
 
   .indicator {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 16px;
     height: 16px;
-    margin-inline-end: 0.25rem;
-    transform: translateY(1.5px);
+    margin-inline-end: 0.1875rem;
+    transform: translateY(2px);
   }
 
   .icon {
-    --icon-animation-duration: 0.275s;
-    --icon-scale-min: 0.8;
+    --icon-animation-duration: 0.3s;
+    --icon-scale-min: 0.25;
     --icon-scale-max: 1;
-    --icon-blur: 3px;
+    --icon-blur: 4px;
+    --icon-ease: cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     height: 100%;
+    display: block;
     position: absolute;
     inset: 0;
     transition:
-      opacity var(--icon-animation-duration) ease,
-      transform var(--icon-animation-duration) ease,
-      filter var(--icon-animation-duration) ease;
-  }
-
-  .icon-copy {
-    display: inline-block;
-    max-width: none;
+      opacity var(--icon-animation-duration) var(--icon-ease),
+      transform var(--icon-animation-duration) var(--icon-ease),
+      filter var(--icon-animation-duration) var(--icon-ease);
+    will-change: opacity, transform, filter;
   }
 
   .indicator[data-state="copied"] .icon-copy {
@@ -106,8 +106,6 @@
 
   if (button) {
     const indicator = button.querySelector<HTMLElement>(".indicator");
-    const iconCopy = button.querySelector<SVGElement>(".icon-copy");
-    const iconCheck = button.querySelector<SVGElement>(".icon-check");
     const status = document.querySelector("[data-copy-status]");
     const email = button.dataset.email ?? button.textContent?.trim() ?? "";
 
@@ -119,8 +117,6 @@
       } catch {
         return;
       }
-
-      if (!iconCopy || !iconCheck) return;
 
       indicator?.setAttribute("data-state", "copied");
       if (status) status.textContent = "Copied";
