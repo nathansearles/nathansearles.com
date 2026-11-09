@@ -45,9 +45,11 @@
     transition: color 150ms var(--ease-in-out-quad);
   }
 
-  button:hover {
-    color: var(--color-text-secondary);
-    text-decoration: none;
+  @media (pointer: fine) {
+    button:hover {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+    }
   }
 
   .indicator {
@@ -115,6 +117,7 @@
       try {
         await navigator.clipboard.writeText(email);
       } catch {
+        alert("Failed to copy email address. Please copy it manually.");
         return;
       }
 
