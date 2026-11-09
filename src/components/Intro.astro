@@ -22,7 +22,15 @@ import Email from "../components/Email.astro";
 
 <style>
   #intro {
-    min-height: clamp(0px, 100svh, 1024px);
+    min-height: clamp(0px, 100svh, 960px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-wrapper {
+    flex: 1;
+    justify-content: space-between;
   }
 
   h1 {
