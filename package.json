@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
-    "astro": "^7.4.6"
+    "astro": "^7.4.7"
   },
   "packageManager": "pnpm@11.25.0",
   "allowScripts": {
