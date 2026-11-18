@@ -42,7 +42,7 @@ const canonicalURL = new URL(
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
-    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-allo" preload />
   </head>
   <body>
     <slot />
@@ -52,7 +52,7 @@ const canonicalURL = new URL(
 
 <style is:global>
   :root {
-    --font-body: var(--font-inter);
+    --font-body: var(--font-allo);
     --font-size-sm: 1rem;
     /* Clamp(min: 360px, max: 1440px) used for all calculations */
     --font-size-base: clamp(1rem, 0.9375rem + 0.2778vw, 1.1875rem);
@@ -60,16 +60,18 @@ const canonicalURL = new URL(
     --font-size-2xl: clamp(2.5rem, 1.7917rem + 3.1481vw, 4.625rem);
 
     --color-black: oklch(0.16 0 0);
-    --color-white: oklch(0.95 0 0);
-    --color-white-muted: oklch(0.76 0 0);
+    --color-white: oklch(0.96 0 0);
+    --color-white-muted: oklch(0.78 0 0);
     --color-neon-green: oklch(0.884 0.22 125.005);
 
     --color-background: var(--color-black);
     --color-text: var(--color-white);
     --color-text-secondary: var(--color-white-muted);
     --color-accent: var(--color-neon-green);
-    --color-on-surface: oklch(0.14 0 0);
-    --color-on-surface-border: oklch(0.25 0 0);
+    --color-on-surface: oklch(0.23 0 0);
+    --color-on-surface-border: oklch(0.26 0 0);
+    --border-on-surface:
+      inset 0 1px 0 oklch(0.26 0 0), 0 0 0 1px oklch(0.14 0 0);
 
     --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
@@ -188,13 +190,15 @@ const canonicalURL = new URL(
   h1 {
     font: 400 var(--font-size-2xl)/108% var(--font-body);
     color: var(--color-text);
-    letter-spacing: -0.03em;
+    letter-spacing: 0.01em;
+    font-variation-settings: "wght" 550;
   }
 
   h2 {
     font: 400 var(--font-size-xl)/110% var(--font-body);
     color: var(--color-text);
-    letter-spacing: -0.025em;
+    letter-spacing: 0.0125em;
+    font-variation-settings: "wght" 550;
   }
 
   p {

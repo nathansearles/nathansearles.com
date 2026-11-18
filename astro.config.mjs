@@ -7,11 +7,20 @@ export default defineConfig({
   trailingSlash: "never",
   fonts: [
     {
-      provider: fontProviders.fontsource(),
-      name: "Inter",
-      cssVariable: "--font-inter",
-      styles: ["normal"],
-      weights: [400],
+      provider: fontProviders.local(),
+      name: "Allo",
+      cssVariable: "--font-allo",
+      fallbacks: ["system-ui", "sans-serif"],
+      options: {
+        variants: [
+          {
+            src: ["public/fonts/AlloVariable.woff2"],
+            weight: "100 900",
+            style: "normal",
+            variationSettings: '"ROND" 12',
+          },
+        ],
+      },
     },
   ],
 });
