@@ -42,7 +42,7 @@ const canonicalURL = new URL(
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
-    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-allo" preload />
   </head>
   <body>
     <slot />
@@ -52,7 +52,7 @@ const canonicalURL = new URL(
 
 <style is:global>
   :root {
-    --font-body: var(--font-inter);
+    --font-body: var(--font-allo);
     --font-size-sm: 1rem;
     /* Clamp(min: 360px, max: 1440px) used for all calculations */
     --font-size-base: clamp(1rem, 0.9375rem + 0.2778vw, 1.1875rem);
@@ -188,13 +188,15 @@ const canonicalURL = new URL(
   h1 {
     font: 400 var(--font-size-2xl)/108% var(--font-body);
     color: var(--color-text);
-    letter-spacing: -0.03em;
+    letter-spacing: 0.01em;
+    font-variation-settings: "wght" 550;
   }
 
   h2 {
     font: 400 var(--font-size-xl)/110% var(--font-body);
     color: var(--color-text);
-    letter-spacing: -0.025em;
+    letter-spacing: 0.0125em;
+    font-variation-settings: "wght" 550;
   }
 
   p {
