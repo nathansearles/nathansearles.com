@@ -17,7 +17,6 @@ export default defineConfig({
             src: ["public/fonts/AlloVariable.woff2"],
             weight: "100 900",
             style: "normal",
-            variationSettings: '"ROND" 12',
           },
         ],
       },
