@@ -59,19 +59,20 @@ const canonicalURL = new URL(
     --font-size-xl: clamp(1.75rem, 1.25rem + 2.2222vw, 3.25rem);
     --font-size-2xl: clamp(2.5rem, 1.7917rem + 3.1481vw, 4.625rem);
 
-    --color-black: oklch(0.16 0 0);
-    --color-white: oklch(0.96 0 0);
-    --color-white-muted: oklch(0.78 0 0);
+    --color-black: oklch(0.21711 0.00251 248.17);
+    --color-black-muted: oklch(0.238 0.00251 248.17);
+    --color-white: oklch(0.949 0 0);
+    --color-white-muted: oklch(0.615 0.00007 271.152);
     --color-neon-green: oklch(0.884 0.22 125.005);
 
     --color-background: var(--color-black);
     --color-text: var(--color-white);
     --color-text-secondary: var(--color-white-muted);
     --color-accent: var(--color-neon-green);
-    --color-on-surface: oklch(0.23 0 0);
-    --color-on-surface-border: oklch(0.26 0 0);
+    --color-on-surface: var(--color-black-muted);
     --border-on-surface:
-      inset 0 1px 0 oklch(0.26 0 0), 0 0 0 1px oklch(0.14 0 0);
+      inset 0 1px 0 oklch(0.268 0.00251 248.17),
+      0 0 0 1px oklch(0.19 0.00251 248.17);
 
     --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
