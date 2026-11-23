@@ -55,9 +55,12 @@ const canonicalURL = new URL(
     --font-body: var(--font-allo);
     --font-size-sm: 1rem;
     /* Clamp(min: 360px, max: 1440px) used for all calculations */
+    /* 16px to 19px */
     --font-size-base: clamp(1rem, 0.9375rem + 0.2778vw, 1.1875rem);
-    --font-size-xl: clamp(1.75rem, 1.25rem + 2.2222vw, 3.25rem);
-    --font-size-2xl: clamp(2.5rem, 1.7917rem + 3.1481vw, 4.625rem);
+    /* 24px to 48px */
+    --font-size-xl: clamp(1.5rem, 1rem + 2.2222vw, 3rem);
+    /* 32px to 64px */
+    --font-size-2xl: clamp(2rem, 1.3333rem + 2.963vw, 4rem);
 
     --color-black: oklch(0.21711 0.00251 248.17);
     --color-black-muted: oklch(0.238 0.00251 248.17);
