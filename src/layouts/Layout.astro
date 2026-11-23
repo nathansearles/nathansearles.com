@@ -67,10 +67,12 @@ const canonicalURL = new URL(
     --color-white: oklch(0.949 0 0);
     --color-white-muted: oklch(0.615 0.00007 271.152);
     --color-neon-green: oklch(0.884 0.22 125.005);
+    --color-orange: oklch(84.05% 0.11804 78.025);
 
     --color-background: var(--color-black);
     --color-text: var(--color-white);
     --color-text-secondary: var(--color-white-muted);
+    --color-text-accent: var(--color-orange);
     --color-accent: var(--color-neon-green);
     --color-on-surface: var(--color-black-muted);
     --border-on-surface:
@@ -189,34 +191,63 @@ const canonicalURL = new URL(
     background-color: var(--color-background);
     color: var(--color-text);
     font-family: var(--font-body);
+    font-weight: 400;
+    font-variation-settings: "ROND" 24;
+    font-feature-settings: "zero", "liga";
   }
 
   h1 {
-    font: 550 var(--font-size-2xl)/108% var(--font-body);
     color: var(--color-text);
-    letter-spacing: 0.01em;
+    font-size: var(--font-size-2xl);
+    line-height: 1.08;
+    letter-spacing: 0em;
+    font-weight: 550;
   }
 
   h2 {
-    font: 550 var(--font-size-xl)/110% var(--font-body);
     color: var(--color-text);
+    font-size: var(--font-size-xl);
+    line-height: 1.1;
     letter-spacing: 0.0125em;
+    font-weight: 550;
+  }
+
+  h3 {
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    line-height: 1.55;
+    letter-spacing: 0.0125em;
+    font-weight: 550;
+  }
+
+  h4 {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+    line-height: 1.55;
+    letter-spacing: 0.0125em;
+    font-weight: 400;
   }
 
   p {
     color: var(--color-text-secondary);
-    font: 400 var(--font-size-base)/155% var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: 1.55;
+    letter-spacing: 0.0125em;
   }
 
   a:link,
   a:visited {
     color: var(--color-text);
-    text-decoration: underline;
     transition: color 150ms var(--ease-in-out-quad);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: currentColor;
   }
 
-  a:hover {
-    color: var(--color-text-secondary);
+  a:hover,
+  a:focus-visible {
+    color: var(--color-text-accent);
   }
 
   strong {

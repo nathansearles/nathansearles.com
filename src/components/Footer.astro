@@ -60,18 +60,25 @@
   }
 
   ul li {
-    font: 400 var(--font-size-sm)/100% var(--font-body);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1;
   }
 
   a:link,
   a:visited {
     color: var(--color-text-secondary);
+    transition: color 150ms var(--ease-in-out-quad);
     text-decoration: none;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: currentColor;
     transition: color 150ms var(--ease-in-out-quad);
   }
 
-  a:hover {
-    color: var(--color-text);
+  a:hover,
+  a:focus-visible {
+    color: var(--color-text-accent);
     text-decoration: underline;
   }
 </style>
