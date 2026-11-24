@@ -66,14 +66,12 @@ const canonicalURL = new URL(
     --color-black-muted: oklch(0.238 0.00251 248.17);
     --color-white: oklch(0.949 0 0);
     --color-white-muted: oklch(0.615 0.00007 271.152);
-    --color-neon-green: oklch(0.884 0.22 125.005);
-    --color-orange: oklch(84.05% 0.11804 78.025);
+    --color-orange: oklch(0.86102 0.15372 94.334);
 
     --color-background: var(--color-black);
     --color-text: var(--color-white);
     --color-text-secondary: var(--color-white-muted);
     --color-text-accent: var(--color-orange);
-    --color-accent: var(--color-neon-green);
     --color-on-surface: var(--color-black-muted);
     --border-on-surface:
       inset 0 1px 0 oklch(0.268 0.00251 248.17),
@@ -253,6 +251,11 @@ const canonicalURL = new URL(
   strong {
     font-weight: 400;
     color: var(--color-text);
+  }
+
+  ::selection {
+    background-color: var(--color-orange);
+    color: var(--color-black);
   }
 
   .stack > * + * {
